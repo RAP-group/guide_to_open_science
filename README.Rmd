@@ -1,0 +1,17 @@
+---
+output: github_document
+---
+
+# guide_to_open_science
+
+A guide to open science and reproducibility for students, advisors, and early career researchers
+
+
+Last update: `r Sys.Date()`  
+
+**Important info**  
+
+- Due date: 2023-012-20
+- Word limit: 
+- Format: APA
+- Date submitted: 
