@@ -28,7 +28,7 @@ metadata:
 ---
 
 ```{r}
-#| label: setup
+#| label: setup1
 #| include: false
 
 # Set document defaults
@@ -59,6 +59,74 @@ Abstract here
 {{< pagebreak >}}
 
 # `r rmarkdown::metadata$title`
+
+# Open data 
+
+Open data and science is rooted in Aristotle's methodological principles, emphasizes openness and sharing in scientific discovery [@barnes1995complete].
+Open science, as defined by @parsons2022community, is an expansive concept aimed at making scientific knowledge more accessible and inclusive. 
+The approach emphasizes the importance of transparency, rigor, reproducibility, replication, accumulation, and inclusivity in scientific research. 
+
+The importance of open data in scientific research data has become increasingly evident, especially given the reproducibility crisis that spans a range of disciplines, including biology, psychology, and now linguistics. 
+The crisis, characterized by the challenge of replicating studies due to the lack of available supporting materials, highlights the essential need for open data. 
+Access to open data is key not just for upholding ethical standards in research but also for facilitating future scientific progress. 
+
+To address this issue, major academic journals have started mandating the provision of raw data alongside publications. 
+The requirement ensures that research is not only reproducible but also contributes to the cumulative body of knowledge. 
+The Open Science tendency emerged as a response to these widespread issues in scientific research, tackling the lack of accessibility, transparency, credibility, and reproducibility [@spellman2017open; @syed2019open].
+Open data thus becomes a cornerstone for researchers striving to make meaningful contributions to their fields and the broader scientific discourse. 
+
+Narrowing the field of open data to focus specifically on linguistics offers significant benefits. 
+For example, it enhances the study of diverse and underrepresented languages. 
+By making linguistic data from minority communities publicly available, we enable wider access and collaboration. 
+This allows researchers to document and study linguistic elements that might otherwise be overlooked.
+The approach not only aids in preserving endangered languages but also fosters a more inclusive and comprehensive understanding of the global linguistic landscape. 
+At the same time, Ethical considerations are key in this linguistic research example. 
+The privacy and consent of participants must be safeguarded, especially in projects involving sensitive or personal data. 
+This might be particularly challenging in cases of audiovisual sociolinguistic interviews but probably easier to share in phonetic studies, for example.
+
+The ultimate decision of the Principal Investigator (PI) to address ethical concerns in linguistic research is crucial. This involves anonymizing data, obtaining informed consent, and being culturally sensitive, all within legal standards. The PI should strive to make data as open as possible while respecting privacy and legal guidelines. This approach ensures the ethical integrity of the research and the protection of participant rights.
+
+Researchers may initially hesitate to share their data publicly, but gaining an understanding of the benefits of open data can help alleviate these concerns. 
+It is important to note that simply stating "data available on request" is not sufficient to meet the new current standards of effective data sharing [@wicherts2006poor]. 
+Effective data sharing  has to involve a more comprehensive and transparent approach, ensuring that data is readily accessible to other researchers and contributing to the broader scientific community's efforts.
+What follows are the main reasons why a researcher should make the data available.
+
+Firstly, data storage is a critical aspect that researchers must prioritize, focusing on its longevity and accessibility. 
+Some researchers find it beneficial to include all study materials and anonymized data on their project page throughout their research, while others prefer to use the project page solely for final documents. 
+There is also the option to organize a project using various cloud-based storage providers, such as Google Drive, Dropbox, or Box, which can link directly to your computer.
+Many of these providers offer the added convenience of integrating directly with an OSF project, allowing researchers to enjoy the advantages of both systems. 
+This method helps balance the risks of technological failure and privacy concerns. 
+The Open Science Framework (OSF) also provides free, open-source solutions for different research processes [@foster2017open; @nosek2022replicability], ensuring secure and accessible data storage.
+
+Additionally, the development of tools like Git and GitHub has transformed scientific development in the open-data domain.
+These platforms facilitate collaborative efforts and enhance user engagement, revolutionizing the way research is conducted and shared.
+
+Open data significantly benefits individual researchers, the broader research community, and society as a whole. 
+By sharing data, researchers enhance their visibility and credibility, paving the way for academic collaborations and establishing their work as a cornerstone within their field. 
+One effective method of data sharing involves providing a detailed, written version of the code used for data analysis and visualizations, like tables and figures. 
+This practice enables others, including the researchers themselves in the future, to reproduce the exact results reported in their manuscripts.
+
+Sharing comprehensive data and methodologies demonstrates a strong commitment to transparency and reproducibility in research, further reinforcing the researchers' standing in the academic community. 
+For the research community at large, open data serves as a powerful catalyst. 
+It offers rich datasets for training new researchers, reduces redundant experiments to optimize resource use, and ensures robust archiving for future reference. 
+Additionally, this approach greatly aids in critical replication efforts, a fundamental aspect of credible research.
+
+Moreover, open data is instrumental in bridging the gap between complex academic concepts and public understanding. 
+It fosters innovation in various sectors and democratizes access to knowledge, contributing to a knowledge-driven society.
+
+
+In summary, open data is essential for better science and transparency. 
+It enhances collaboration, credibility, and knowledge accessibility.
+Ethical considerations might require data anonymization and privacy preservation. 
+Effective data sharing relies on transparent storage methods. 
+Platforms like Open Science Framework and tools like Git have transformed data sharing in academia.
+Finally, Open data benefits researchers, the community, and society by promoting reproducibility, reducing redundancy, and simplifying complex concepts for the public. 
+Embracing open data is crucial for responsible research and academic progress.
+
+
+
+
+
 
 ```{r}
 #| child: "./sections/0_introduction.qmd"
