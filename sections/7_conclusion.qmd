@@ -3,6 +3,3 @@ title: "Untitled"
 format: docx
 ---
 
-# Introduction
-
-We write the intro here. 
