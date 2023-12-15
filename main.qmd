@@ -20,7 +20,7 @@ author            :
     affiliations: Rutgers University
     email: js2845@scarletmail.rutgers.edu
     orcid: 0009-0003-1323-210X
-  - name: Stephanie Rodríguez
+  - name: Stephanie A. Rodríguez
     affiliations: Rutgers University
     email: srodrig@newark.rutgers.edu
     orcid: 
@@ -36,7 +36,7 @@ author            :
     affiliations: Rutgers University
     email: krl105@scarletmail.rutgers.edu
     orcid: 
-  - name: Johnathan Thatcher
+  - name: John Thatcher
     affiliations: Rutgers University
     email: jet189@scarletmail.rutgers.edu
     orcid: 
@@ -55,7 +55,7 @@ author            :
   - name: Nicole Rodríguez
     affiliations: Rutgers University
     email: nmrodriguez@gmail.com
-    orcid: 
+    orcid: 0000-0003-2941-0399
   - name: Kyle Parrish
     affiliations: Rutgers University
     email: kparrish.linguistics@gmail.com
@@ -125,43 +125,28 @@ Abstract here
 
 # Introduction - What is open science?
 
-@parsons2022community provide the following definition: 
+In recent years, numerous fields of research have seen a push for increased reproducible research practices and transparency. 
+These practices, collectively, have been referred to as Open Science. 
+@parsons2022community refer to Open Science as an umbrella term "[...] reflecting the idea that scientific knowledge of all kinds, where appropriate, should be openly accessible, transparent, rigorous, reproducible, replicable, accumulative, and inclusive, all which are considered fundamental features of the scientific endeavor" (p. 11). 
+Though it may come as a surprise to some, the open, transparent research practices described by @parsons2022community have not been the norm in empirical and quantitative sciences. 
+To properly contextualize the need for open science, one must first consider the reproducibility crisis. 
+In the early 2010's, several fields of research embarked on large-scale replication projects to scrutinize what many considered to be their major findings.
+One example of these projects took place in psychology where a team of researchers attempted to replicate 100 of the most influential findings [@open2015estimating].
+The project found that approximately 53% of the major findings did not replicate and inspired similar large-scale replication projects in other fields, yielding similar results in economics [@camerer2016evaluating], social sciences [@camerer2018evaluating], and cancer research [@errington2021investigating]. 
+Unsurprisingly, the results generated an uproar in the psychological sciences and the alarming findings are now collectively referred to as the replication (or reproducibility) crisis. 
 
-> An umbrella term reflecting the idea that scientific knowledge of all kinds, where appropriate, should be openly accessible, transparent, rigorous, reproducible, replicable, accumulative, and inclusive, all which are considered fundamental features of the scientific endeavour. Open science consists of principles and behaviors that promote transparent, credible, reproducible, and accessible science. Open science has six major aspects: open data, open methodology, open source, open access, open peer review, and open educational resources.
-
-That sounds wonderful, right? 
-But you might be asking yourself *why* the push for Open Science?
-It may come as a surprise to some, but the open, transparent research practices described by @parsons2022community have not been the norm in scholarly research. 
-
-To properly contextualize the need for Open Science, we have to go back to the early 2010's. 
-Around this time, several fields of research embarked on large-scale replication projects to scrutinize some of their major findings.
-One example of these projects took place in psychology. 
-This particular project tested whether they could replicate 100 influential findings [@open2015estimating].
-They found the approximately 53% of the findings did not replicate. 
-This project inspired similar large-scale replication projects in other fields, yielding similar results in economics [@camerer2016evaluating], social sciences [@camerer2018evaluating], and cancer research [@errington2021investigating]. 
-These alarming findings are now referred to as the replication (or reproducibility) crisis. 
-Researchers have pointed to questionable research practices (QRPs), p-hacking, HARKing, small sample sizes, poor theory, lack of transparency, etc. as factors that ultimately led to the replication crisis, though it is likely that other factors are at play. 
-
-<!--
-Take a second to consider your field of study. 
-How many important findings do you think would replicate? 
-If you were to replicate 100 of the most influential findings, how many would need to replicate for you to have confidence in your field?
--->
-
-In the aftermath of the replication crisis we have seen a push for increased transparency and reproducible methodology to help mitigate the effects of questionable research practices. 
+Researchers have pointed to questionable research practices (QRPs), p-hacking, HARKing, small sample sizes, poor theory, lack of transparency, etc. as factors that ultimately led to the replication crisis, though it is likely that other factors were at play. 
+In the aftermath of the replication crisis, there has been a push for increased transparency and reproducible methodology to help mitigate the effects of QRPs. 
 The resulting methodological framework and associated techniques have reshaped research methods in psychology and have slowly but surely made their way into adjacent fields. 
-This website is dedicated to making open science practices understandable and accessible to researchers in the speech sciences from all backgrounds and at every stage, from students/early career researchers to senior researchers. 
+While many agree that open science practices represent a positive step in improving scientific rigor, these practices, by and large, have not been adopted in the field of linguistics []. 
+One reason for this may be related to the fact that engaging in open science is not a trivial feat. 
+It requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
+Given how new open science is, current senior researchers were not trained in these innovative methodologies. 
+As a consequence, many early career researchers (ERC) are forced to learn open science on their own, often without departmental support. 
+The present work intends to help make open science practices understandable and accessible to researchers in the speech sciences from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
+To this end, we highlight X areas in which linguists can engage in open science: Literate programming, Open data, Positionality statements, Preprints, Preregistration, Registered reports, Reproducible code/projects. 
+Specifically, we provide practical examples and detailed descriptions of the aforementioned areas of open science with the goal of helping the interested reader commence their journey of engaging in open science practices in their own research.  
 
-To this end, we have highlighted 7 areas in which speech researchers can engage in Open Science: Literate programming, Open data, Positionality statements,  Preprints, Preregistration, Registered reports, Reproducible code/projects.
-In what follows, we detail the various areas of open science designed to help get the interested reader up to speed in each of these areas so that they can engage in Open Science practices.  
-
-See @fig-open-science-wiki
-
-```{r}
-#| label: fig-open-science-wiki
-#| fig.cap: This is a caption
-knitr::include_graphics("./figs/os_wiki.png")
-```
 
 
 # Open data
