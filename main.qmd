@@ -241,39 +241,48 @@ For the research community and society at large, the adoption of open data pract
 
 # Positionality statements
 
-A positionality statement is a reflective piece of writing that acknowledges researchers' stance - or position - toward a research topic, framework, and even participants. 
+A positionality statement is a reflective piece of writing that acknowledges a researcher's stance, or position, toward a research topic, framework, and even participants. 
 One's positionality encompasses their social, cultural, and personal identity, as well as their biases and assumptions [@holmes2020researcher], and can influence how research is done and how results are interpreted [@rowe2014]. 
-Among others, relevant personal characteristics that may be included in a positionality statement are gender and racial identity, age, sexual orientation, immigration status, ideological stances [@berger2015now]. 
-These traits may indirectly impact research endeavors, since participants may be more willing to engage in a study if they perceive the researcher as sympathetic [@de2006but] or may even offer different responses based on the researcher's perceived identity [@berger2015now]. 
+Among others, relevant personal characteristics that may be included in a positionality statement are gender and racial identity, age, sexual orientation, immigration status, and ideological stances [@berger2015now]. 
+These traits may indirectly impact research endeavors, since participants may be more willing to engage in a study if they perceive the researcher as sympathetic [@de2006but], or may even offer different responses based on the researcher's perceived identity [@berger2015now]. 
+
 While positionality statements have been adopted in some disciplines of the humanities and social sciences as a way of recognizing the various ways in which researchers' backgrounds and identities may intersect with their research endeavors, they are a relatively new incorporation in the field of linguistics, appearing primarily in subfields such as applied linguistics, linguistic anthropology, and linguistic ethnography [@bucholtz2023researcher]. 
 Increasingly, positionality statements are considered crucial components of the research process, as they increase transparency into research practices [@steltenpohl_video] and contextualize the environment in which studies take place, or, in other words, "[define] the boundaries within which research was produced" [@jafar2018positionality, p. 1].
-While traditionally, positionality statements have been more prevalent in qualitative research, they should be considered equally important in quantitative research, since, aside from contributing to ongoing efforts to promote transparency and openness in research practices, recognizing and addressing the researcher's positionality can increase the validity of the findings [@jafar2018positionality]. 
-Moreover, @bucholtz2023researcher note that, considering researchers' positionality may be especially important in linguistics, "which relies on racially minoritized communities as sources of data yet lack adequate (if any) representation of those communities among faculty researchers" (p. 2). 
-However, although many researchers support and advocate for the inclusion of positionality statements in their research publications [e.g., @bucholtz2023researcher; @jafar2018positionality; @steltenpohl_video], others are contesting this practice, pointing to the universalism of research or, in other words, the belief that scholarly endeavors should be assessed on their inherent merits, regardless of the status or personal identity of the person making the contribution [@savolainen2023positionality]. 
-Additionally, @savolainen2023positionality draw connections between positionality statements and conflict of interest statements, arguing that, while researchers are required to disclose any and all financial gains associated with a research project, "positionality statements grant authors the freedom to decide which parts of their biography they choose to share and how they choose to frame it." (p. 1334). 
+While traditionally, positionality statements have been more prevalent in qualitative research, we believe they should be considered equally important in quantitative research, since, aside from contributing to ongoing efforts to promote transparency and openness in research practices, recognizing and addressing the researcher's positionality can increase the validity of their findings [@jafar2018positionality]. 
+Moreover, @bucholtz2023researcher note that, considering a researcher's positionality may be especially important in linguistics, "which relies on racially minoritized communities as sources of data yet lack adequate (if any) representation of those communities among faculty researchers" (p. 2). 
 
-While positionality statements, due to their reflexive nature, may encompass larger pieces of writing, they can also take the form of short paragraphs that illustrate a few personal characteristics deemed relevant for the particular research endeavor: "Gabriela is a white immigrant cis-gender woman from Romania whose research focuses on how non-native speakers are ideologically framed as linguistically deficient in comparison to native speakers characterized by their linguistic authority and expertise."
-Lastly, in showing their commitment to Diversity, Equity, Inclusivity, and Belonging (DEIB) initiatives, journals have started to encourage authors to include positionality statements with their submissions (see the Journal of Social and Personal Relationships). 
-Therefore, researchers should reflect on their positionality before starting a project and write a positionality statement. 
+While many researchers support and advocate for the inclusion of positionality statements in their research publications [e.g., @bucholtz2023researcher; @jafar2018positionality; @steltenpohl_video], others contest this practice, pointing to the universalism of research, that is, the belief that scholarly endeavors should be assessed on their inherent merits, regardless of the status or personal identity of the person making the contribution [@savolainen2023positionality]. 
+@savolainen2023positionality draw connections between positionality statements and conflict of interest statements, arguing that, while researchers are required to disclose any and all financial gains associated with a research project, "positionality statements grant authors the freedom to decide which parts of their biography they choose to share and how they choose to frame it." (p. 1334). 
+
+While positionality statements, due to their reflexive nature, may encompass larger pieces of writing, they can also take the form of short paragraphs that illustrate a few personal characteristics deemed relevant for the particular research endeavor.
+For instance, "Gabriela is a white immigrant cis-gender woman from Romania whose research focuses on how non-native speakers are ideologically framed as linguistically deficient in comparison to native speakers characterized by their linguistic authority and expertise."
+Lastly, in showing their commitment to Diversity, Equity, Inclusivity, and Belonging (DEIB) initiatives, journals have started to encourage authors to include positionality statements with their submissions (e.g., the Journal of Social and Personal Relationships). 
+It is our stance that researchers should reflect on their positionality before starting a project and consider including a positionality statement. 
 When submitting a study for publication, the positionality statement can be included in additional materials if the word limit is a concern. 
+For examples of positionality statements in linguistic research, the interested reader is direction to @bochynska2023reproducible and @baeseberk_2023.
 
-In sum, positionality statements are critical in linguistic research as they promote critical self-reflection, increase transparency, and help address diversity and inclusion concerns. 
-Additionally, including positionality statements in quantitative research can increase the validity of findings. 
+In sum, we believe positionality statements are essential in linguistic research as they promote critical self-reflection, increase transparency, and help address diversity and inclusion concerns. 
+Furthermore, including positionality statements in quantitative research can increase the validity of findings. 
 By reflecting on who it is that does the research, linguistics can become a more diverse, inclusive, and transparent field. 
 
 # Preregistration and registered reports
 
-A preregistration stands as a meticulously timestamped document that delineates comprehensive details about a study, encompassing research questions, hypotheses, methodologies, and analytic strategies. 
-As a pivotal facet of rigorous research, distinguishing itself from fellow open science methodologies like registered reports and preprints, a preregistration is written prior to data collection sans peer review. 
-The depth of content detail within a preregistration spans a spectrum: in the simplest case, a preregistration can comprise merely a hypothesis or perhaps a brief description of the methods; on the other extreme, a detailed preregistration can include code, power analyses, participant exclusion criteria and beyond, supplementing the fundamental information. 
-In this section will delve deeper into the various constituents adaptable to a preregistration, centering on its advantageous impact on linguistic research.
-Specifically, it will expound upon the actors involved (who), the rationale driving this practice(why), its content(what), and the procedural intricacies(how), elucidating the process of preregistering a study within the realm of linguistics.
+INTRO PARAGRAPH
+
+## Preregistration
+
+A preregistration is a meticulously document that provides comprehensive detail about a study, including, but not limited to, research questions, hypotheses, methodologies, and analytic strategies. 
+Preregistrations are written prior to data collection and do not undergo peer review.
+The depth of content detail within a preregistration spans a spectrum: in the simplest case, a preregistration can comprise merely a hypothesis or perhaps a brief description of the methods; on the other extreme, a detailed preregistration can include code, power analyses, participant exclusion criteria and beyond. 
+In this section, we provide information regarding the various components of a preregistration, centering on their advantageous impact on linguistic research.
+Specifically, we expound upon the actors involved (*who*?), the rationale driving this practice (*why*?), its content (*what*?), and the procedural intricacies (*how*?), elucidating the process of preregistering a study within linguistics.
 
 Linguists engaged in empirical studies delve into data collection and observations to explore various dimensions of human language. 
-These investigations span diverse areas such as corpus analysis, interview analysis, experimental analysis, and more. However, as highlighted by @roettger2021preregistration, researchers are human and humans have evolved to filter the world in irrational ways, which can lead to questionable research practices (QRPs) and other problems that may affect the replicability of published research. 
+These investigations span diverse areas such as corpus analysis, interview analysis, experimental analysis, and more. However, as highlighted by @roettger2021preregistration, researchers are human and humans have evolved to filter the world in irrational ways, which can lead to QRPs and other problems that may affect the replicability of published research. 
 Preregistration emerges as a powerful instrument empowering linguists to bolster the trustworthiness and credibility of their inquiries through a systematic and predefined methodology. 
-Moreover, beyond linguists, the practice of preregistration extends its benefits to a broader audience, encompassing students, professionals, and academics alike.
+Moreover, the practice of preregistration extends its benefits to researchers at all levels, including students and ECRs, senior academics, and professionals alike.
 
+<!-- use MSA to clean up --> 
 Researchers face vital decisions while designing and executing research, with an inherent flexibility involved in the process of designing and conducting the experiment, and in analyzing the results [@simmons2011false]. 
 This type of flexibility is termed as "researcher degree of freedom". 
 For instance, envision a phonetician intrigued by exploring lexical stress. In this scenario, the researcher might concentrate on distinct acoustic markers linked with stress, like pitch, duration, and/or intensity. 
@@ -282,13 +291,13 @@ Does it encompass the nucleus of stressed/unstressed syllables or the entirety o
 Where exactly does the measurement occur---at the midpoint or as an average across the entire syllable? 
 These choices wield significant influence on subsequent analyses. 
 Preregistration serves the purpose of meticulously documenting these crucial facets of the study. 
-Moreover, preregistration acts as a deterrent against questionable research practices (QRPs) like HARKing or p-hacking by mandating explicit declaration of decisions in the research trajectory before any data collection commences.
-Preregistering also acts as substantiation that researchers are conducting confirmatory rather than exploratory data analysis by delineating a clear chronology of decisions made prior to and post data collection. 
+Moreover, preregistration acts as a deterrent against QRPs, like HARKing or p-hacking, by mandating explicit declaration of decisions in the research trajectory before any data collection commences.
+Preregistering also acts as substantiation that researchers are conducting confirmatory rather than exploratory data analysis by delineating a clear chronology of decisions made before and after data collection. 
 Additionally, an enhanced level of specificity in the preregistration compels researchers to consider facets of their study that might usually be deferred to a later stage, such as statistical analyses. 
-This proactive approach demands more initial time investment from the researcher but significantly enhances the prospects of uncovering pivotal flaws in the study design.
+This proactive approach demands more initial time investment from the researcher, but significantly enhances the prospects of uncovering pivotal flaws in the study design.
 
 The scope of preregistration extends to any facet of research deemed worthy of temporal documentation preceding the initiation of the study, and the essential components predominantly include Research Questions/Hypotheses, Methodological Framework, and Analytical Approaches.
-The specific elements that will encompass a preregistration document will appear to be considerably diverse dependent upon the specific domain within linguistics and the nuanced nature of the study in question.
+The specific elements that will encompass a preregistration document will appear to be considerably diverse, but depend on the specific domain within linguistics and the nuanced nature of the study in question.
 
 An example illustrating this variability is as follows. 
 Consider the scenario where a psycholinguist is poised to undertake an experiment utilizing the self-paced reading methodology. 
@@ -297,38 +306,34 @@ This encompasses characterization of participant demographics, recruitment strat
 Additionally, the psycholinguist may find it imperative to explain the notable variables subject to manipulation within the experimental design, articulate planned data transformations, and analyze the chosen statistical modeling strategies for subsequent inferential analyses. 
 Not all of the aforementioned components are equally prioritized in a preregistration.
 
-It is important to acknowledge that incorporating the entirety of these components into a preregistration may be a formidable challenge, particularly if Open Science is a new endeavor for the researcher. 
+It is important to acknowledge that incorporating the entirety of these components into a preregistration may be a formidable challenge, particularly if open science is a new endeavor for the researcher. 
 In such instances, a judicious approach is permissible, with researchers encouraged to commence with elements they perceive as most valuable to their study. 
 Over time and through iterative practice, researchers will gain a better discernment of relevance within the Open Science framework.
 
 Many concerns regarding the implementation of Open Science or adopting preregistration revolve around the potential burden of 'extra work'. 
 Conversely, preregistration is intended to streamline our workflow, fostering efficiency both in the short term and the long run. 
 Moreover, it offers complete control over the level of detail one chooses to include. 
-The depth of preregistration directly correlates with the effort invested; the more comprehensive the preregistration, the greater the initial workload, leading to reduced effort in subsequent stages. 
-Presented here are select levels of detail as suggestions to help gauge the extent of information to incorporate into your preregistration (See @fig-detail). 
-The shading denotes the degree of detail; darker shades signify more exhaustive information (thus requiring more work). 
-It's worth noting that flexibility allows for varying levels of detail in different sections.
+The depth of preregistration directly correlates with the effort invested; the more comprehensive the preregistration, the greater the initial workload, leading to reduced effort in subsequent stages (See @fig-detail). 
 
 ```{r}
 #| label: fig-detail
-#| fig-cap: Add caption here.
+#| fig-cap: Select levels of detail as suggestions to help gauge the extent of information to incorporate into a preregistration. The shading indicates the degree of detail; darker shades imply more exhaustive information (thus requiring more upfront work).
 knitr::include_graphics("./figs/levels_of_detail.png")
 ```
 
 
 
-
-<!-- REgistered reports --> 
+## Registered reports
 
 The reproducibility crisis has drawn attention to the shortcomings of the traditional model of publishing scientific research. In the current model, researchers generate hypotheses, design studies, collect data, analyze data, interpret results, and submit their findings for publication. However, this model has been criticized for lending itself to questionable research practices (QRPs), such as p-hacking, harking, and publication bias.
 
-## Attempts at reform
+<!-- Attempts at reform -->
 
 To address these issues, researchers have attempted various reforms, such as meta-analysis and pre-registration. 
 Meta-analysis is a statistical technique that combines the results of multiple studies to increase the power of analysis. 
 Pre-registration involves publicly registering a study's design and methods before collecting data, to mitigate QRPs.
 
-## A New model
+<!-- A New model --> 
 
 Registered Reports (RRs) are a new model that combines pre-registration with peer review. 
 In this model, researchers submit a detailed proposal of their study, including their hypotheses, methods, and analyses, for review before data collection. 
@@ -340,18 +345,18 @@ RRs were first introduced in 2013 by the Center for Open Science (COS), and have
 Pre-registration is often confused with RR, but they differ in that pre-registration is a separate step that occurs before the traditional publishing pipeline, whereas RR is integrated into the publishing process. 
 RRs cannot solve all the problems with the current model, but they can help reduce QRPs and increase transparency in scientific research.
 
-## Current state, future
+<!-- Current state, future --> 
 
 RRs are gaining popularity, but some fields, such as linguistics, have been slow to adopt them. 
 RRs may particularly benefit early-career researchers (ECRs), who can use them to increase their chances of publication and build a reputation for rigor. 
 However, more senior researchers may be resistant to change and may need to be convinced of the benefits of RRs for the field as a whole.
 
-In conclusion, Registered Reports represent a promising new model for publishing scientific research that can help reduce QRPs and increase transparency. 
+In sum, Registered Reports represent a promising new model for publishing scientific research that can help reduce QRPs and increase transparency. 
 As more journals adopt RRs, the scientific community can move towards a more rigorous and trustworthy publishing model.
 
 
 
-# Reproducible code and projects
+# Reproducible code/projects and literate programming
 
 <!-- also include literate programming --> 
 
