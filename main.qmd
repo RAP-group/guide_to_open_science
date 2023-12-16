@@ -1,6 +1,6 @@
 ---
 title             : |
-  Opening open science to all: Demystifying practices of open science in linguistics research
+  Opening open science to all: Demystifying reproducibility and transparency practices in linguistic research
 shorttitle        : "Opening open science to all"
 author            : 
   - name: Joseph V. Casillas
@@ -126,63 +126,63 @@ Abstract here
 # Introduction - What is open science?
 
 In recent years, numerous fields of research have seen a push for increased reproducible research practices and transparency. 
-These practices, collectively, have been referred to as Open Science. 
-@parsons2022community refer to Open Science as an umbrella term "[...] reflecting the idea that scientific knowledge of all kinds, where appropriate, should be openly accessible, transparent, rigorous, reproducible, replicable, accumulative, and inclusive, all which are considered fundamental features of the scientific endeavor" (p. 11). 
-Though it may come as a surprise to some, the open, transparent research practices described by @parsons2022community have not been the norm in empirical and quantitative sciences. 
-To properly contextualize the need for open science, one must first consider the reproducibility crisis. 
-In the early 2010's, several fields of research embarked on large-scale replication projects to scrutinize what many considered to be their major findings.
-One example of these projects took place in psychology where a team of researchers attempted to replicate 100 of the most influential findings [@open2015estimating].
-The project found that approximately 53% of the major findings did not replicate and inspired similar large-scale replication projects in other fields, yielding similar results in economics [@camerer2016evaluating], social sciences [@camerer2018evaluating], and cancer research [@errington2021investigating]. 
-Unsurprisingly, the results generated an uproar in the psychological sciences and the alarming findings are now collectively referred to as the replication (or reproducibility) crisis. 
+These practices, collectively, have been referred to as open science. 
+@parsons2022community refer to open science as an umbrella term "[...] reflecting the idea that scientific knowledge of all kinds, where appropriate, should be openly accessible, transparent, rigorous, reproducible, replicable, accumulative, and inclusive, all which are considered fundamental features of the scientific endeavor" (p. 11). 
+As a result, specific transparency practices have emerged, such as open access publishing, preregistration, sharing data, analyses, and code, performing study replications, and declaring positionality and conflicts of interest. 
+Though it may come as a surprise to some, these open, transparent research practices have not been the norm in empirical and quantitative sciences. 
 
-Researchers have pointed to questionable research practices (QRPs), p-hacking, HARKing, small sample sizes, poor theory, lack of transparency, etc. as factors that ultimately led to the replication crisis, though it is likely that other factors were at play. 
+To properly contextualize the need for open science, one must first consider the so-called reproducibility (replication) crisis. 
+In the early 2010's, a team of researchers in Psychology embarked on large-scale replication project to scrutinize what many considered to be the fields' major findings. 
+Specifically, they attempted to replicate 100 influential studies [@open2015estimating].
+The endeavor produced astounding results---of note, that approximately 53% of the major findings did not replicate---and inspired similar large-scale replication projects in other fields, yielding similar results.^[For Economics, see @camerer2016evaluating; for the Social Sciences, see @camerer2018evaluating; and, for cancer research, see @errington2021investigating.] 
+This is now referred to as the replication (or reproducibility) crisis. 
+Unsurprisingly, the results generated an uproar in the psychological sciences.
+The alarming findings garnered media attention [e.g., ] and have led to periods of introspection and self-reflection in many adjacent fields, among them, linguistics.
+
+Researchers have pointed to questionable research practices (QRPs), p-hacking, HARKing, small sample sizes, poor theory, lack of transparency, etc. as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
 In the aftermath of the replication crisis, there has been a push for increased transparency and reproducible methodology to help mitigate the effects of QRPs. 
-The resulting methodological framework and associated techniques have reshaped research methods in psychology and have slowly but surely made their way into adjacent fields. 
-While many agree that open science practices represent a positive step in improving scientific rigor, these practices, by and large, have not been adopted in the field of linguistics []. 
-One reason for this may be related to the fact that engaging in open science is not a trivial feat. 
-It requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
-Given how new open science is, current senior researchers were not trained in these innovative methodologies. 
-As a consequence, many early career researchers (ERC) are forced to learn open science on their own, often without departmental support. 
-The present work intends to help make open science practices understandable and accessible to researchers in the speech sciences from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
-To this end, we highlight X areas in which linguists can engage in open science: Literate programming, Open data, Positionality statements, Preprints, Preregistration, Registered reports, Reproducible code/projects. 
-Specifically, we provide practical examples and detailed descriptions of the aforementioned areas of open science with the goal of helping the interested reader commence their journey of engaging in open science practices in their own research.  
+The resulting methodological framework and associated techniques have reshaped research methods in Psychology and, slowly but surely, are making their way into related fields. 
+While many agree that open science practices represent a positive step in improving scientific rigor, these practices, by and large, have not been adopted in the field of linguistics [@bochynska2023reproducible]. 
+One reason for the slow adoption in linguistics may be related to the fact that engaging in open science is no trivial feat. 
+To wit, it requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
+It necessitates that researchers implement new techniques with limited pedagogical resources and embrace alternative methods of disseminating their research, all of which constitutes a steep learning curve.
+Given how new open science practices are, it is reasonable to assume that current senior researchers were not trained in these innovative methodologies. 
+As a consequence, many early career researchers (ERC) find themselves at a crossroads in which they are forced to learn open science on their own, often without institutional support, at the same time that they are expected to be implementing these novel tools to be successful in their careers. 
 
+The present work intends to help make open science practices understandable and accessible to researchers in the speech sciences from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
+To this end, we identify and describe five critical areas in which linguists can engage in open science: open data, positionality statements, preregistration and registered reports, reproducible code/projects, and pre-prints. 
+Specifically, we provide practical examples and detailed descriptions of the aforementioned areas of open science with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research.  
 
 
 # Open data
 
-Open data and science is rooted in Aristotle's methodological principles, emphasizes openness and sharing in scientific discovery [@barnes1995complete].
-Open science, as defined by @parsons2022community, is an broad concept aimed at making scientific knowledge more accessible and inclusive. 
-The approach emphasizes the importance of transparency, rigor, reproducibility, replication, accumulation, and inclusivity in scientific research. 
+<!-- why open data is important --> 
 
-The importance of open data in scientific research has grown significantly, particularly in light of the reproducibility crisis affecting fields like biology, psychology, and linguistics. 
-This crisis, characterized by difficulties in replicating study results due to unavailable supporting data, underscores the crucial need for open data. 
+In the wake of the reproducibility crisis, the importance of open data in scientific research has grown significantly, affecting fields like biology, psychology, and linguistics. 
+
+aimed at making scientific knowledge more accessible and inclusive. 
+open data facilitates transparency, rigor, reproducibility, replication, accumulation, and inclusivity in scientific research. 
+
+The case in favor of making data open and accessible is straightforward. 
 Open data practices enable wider access to research information, facilitating validation and replication of studies, which is essential for advancing scientific knowledge and maintaining trust in research findings.
-Access to open data is key not just for upholding ethical standards in research but also for facilitating future scientific progress. 
-
-To address this issue, major academic journals have started mandating the provision of raw data alongside publications. 
-The requirement ensures that research is not only reproducible but also contributes to the cumulative body of knowledge. 
-The Open Science tendency emerged as a response to these widespread issues in scientific research, tackling the lack of accessibility, transparency, credibility, and reproducibility [@spellman2017open; @syed2019open].
-Open data thus becomes a cornerstone for researchers striving to make meaningful contributions to their fields and the broader scientific discourse. 
-
-Narrowing the field of open data to focus specifically on linguistics offers significant benefits. 
-For example, it enhances the study of diverse and underrepresented languages. 
-By making linguistic data from minority communities publicly available, we enable wider access and collaboration. 
-This allows researchers to document and study linguistic elements that might otherwise be overlooked.
-The approach not only aids in preserving endangered languages but also fosters a more inclusive and comprehensive understanding of the global linguistic landscape. 
-At the same time, ethical considerations are key in this linguistic research example. 
-The privacy and consent of participants must be safeguarded, especially in projects involving sensitive or personal data. 
-This might be particularly challenging in cases of audiovisual sociolinguistic interviews but probably easier to share in phonetic studies, for example.
-
-The ultimate decision on the extent and method of data sharing in research rests with the Principal Investigator (PI). 
-The responsibility encompasses several key aspects: anonymizing data to protect individual privacy, obtaining informed consent to ensure participants are aware of how their data will be used, and being culturally sensitive to respect the diverse backgrounds of participants. 
-All these steps need to be aligned with legal standards. 
-The PI's goal is to make data as open as possible while carefully balancing the need for openness with the imperative to respect privacy and legal constraints. This approach is vital for maintaining the ethical integrity of the research and safeguarding the rights of participants.
+Access to open data is key, not just for upholding ethical standards in research, but also for facilitating future scientific progress. 
+This, open data becomes a cornerstone for researchers striving to make meaningful contributions to their fields and the broader scientific discourse. 
 
 Researchers may initially hesitate to share their data publicly, but gaining an understanding of the benefits of open data can help alleviate these concerns. 
 It is important to note that simply stating "data available on request" is not sufficient to meet the new current standards of effective data sharing [@wicherts2006poor]. 
 Effective data sharing  has to involve a more comprehensive and transparent approach, ensuring that data is readily accessible to other researchers and contributing to the broader scientific community's efforts.
-Following are the methods and reasons why a researcher should ensure the availability of their data.
+
+
+
+Open data significantly benefits individual researchers, the broader research community, and society as a whole. 
+By sharing data, researchers enhance their visibility and credibility, paving the way for academic collaborations and establishing their work as a cornerstone within their field. 
+
+
+
+
+<!-- how to make data open and accessible --> 
+
+Gone are the days of "data available upon request", which generally does not result in the sharing of research materials [], as many journals are beginning to strongly encourage, and even require, that researchers make publicly available some version of their data [?].
 
 Firstly, data storage is a critical aspect that researchers must prioritize, focusing on its longevity and accessibility. 
 Some researchers find it beneficial to include all study materials and anonymized data on their project page throughout their research, while others prefer to use the project page solely for final documents. 
@@ -194,15 +194,41 @@ The Open Science Framework (OSF) also provides free, open-source solutions for d
 Additionally, the development of tools like Git and GitHub has transformed scientific development in the open-data domain.
 These platforms facilitate collaborative efforts and enhance user engagement, revolutionizing the way research is conducted and shared.
 
-Open data significantly benefits individual researchers, the broader research community, and society as a whole. 
-By sharing data, researchers enhance their visibility and credibility, paving the way for academic collaborations and establishing their work as a cornerstone within their field. 
-One effective method of data sharing involves providing a detailed, written version of the code used for data analysis and visualizations, like tables and figures. 
-This practice enables others, including the researchers themselves in the future, to reproduce the exact results reported in their manuscripts.
+<!--
+[@spellman2017open; @syed2019open].
+-->
 
-Sharing comprehensive data and methodologies in research not only highlights a commitment to transparency and reproducibility but also strengthens a researcher's reputation within the academic community. 
-Open data acts as a catalyst, enriching the training of new researchers, reducing unnecessary experiments, and ensuring data preservation for future studies. 
-This approach is crucial for replication efforts, a core component of credible research. 
-Furthermore, open data bridges the gap between complex academic work and public understanding, spurring innovation across various sectors and democratizing knowledge access, thereby contributing to the development of a knowledge-driven society.
+
+<!-- why open data is important for ling --> 
+
+Narrowing the field of open data to focus specifically on linguistics offers significant benefits. 
+For example, it enhances the study of diverse and underrepresented languages. 
+By making linguistic data from minority communities publicly available, we enable wider access and collaboration. 
+This allows researchers to document and study linguistic elements that might otherwise be overlooked.
+The approach not only aids in preserving endangered languages but also fosters a more inclusive and comprehensive understanding of the global linguistic landscape. 
+
+
+
+
+<!-- difficulties with open data in ling --> 
+
+That being said, the field of linguistics faces unique challenges with regard to open data.
+There are ethical considerations that must be considered with care. 
+The privacy and consent of participants must be safeguarded, particularly in projects involving sensitive or personal data. 
+This might be particularly challenging in cases of audiovisual sociolinguistic interviews but probably easier to share in phonetic studies, for example.
+
+
+
+
+<!-- solutions to ling difficulties --> 
+
+Though not exhaustive, we now consider some possible solutions to the unique problems linguistics faces. 
+The responsibility encompasses several key aspects: anonymizing data to protect individual privacy, obtaining informed consent to ensure participants are aware of how their data will be used, and being culturally sensitive to respect the diverse backgrounds of participants. 
+All these steps need to be aligned with legal standards. 
+The PI's goal is to make data as open as possible while carefully balancing the need for openness with the imperative to respect privacy and legal constraints. This approach is vital for maintaining the ethical integrity of the research and safeguarding the rights of participants.
+
+
+<!-- summary --> 
 
 In summary, open data is fundamental to advancing scientific excellence and ensuring transparency. 
 It elevates collaboration, bolsters credibility, and improves access to knowledge. 
@@ -326,6 +352,8 @@ As more journals adopt RRs, the scientific community can move towards a more rig
 
 
 # Reproducible code and projects
+
+<!-- also include literate programming --> 
 
 Reproducibility is a crucial aspect of any scientific study, and it has become increasingly important in recent years. 
 Researchers must be able to provide a clear and transparent account of their findings, including the methods used to obtain them. 
