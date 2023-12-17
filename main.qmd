@@ -154,6 +154,36 @@ To this end, we identify and describe five critical areas in which linguists can
 Specifically, we provide practical examples and detailed descriptions of the aforementioned areas with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research.  
 
 
+
+# Positionality statements
+
+A positionality statement is a reflective piece of writing that acknowledges a researcher's stance, or position, toward a research topic, framework, and even participants. 
+One's positionality encompasses their social, cultural, and personal identity, as well as their biases and assumptions [@holmes2020researcher], and can influence how research is done and how results are interpreted [@rowe2014]. 
+Among others, relevant personal characteristics that may be included in a positionality statement are gender and racial identity, age, sexual orientation, immigration status, and ideological stances [@berger2015now]. 
+These traits may indirectly impact research endeavors, since participants may be more willing to engage in a study if they perceive the researcher as sympathetic [@de2006but], or may even offer different responses based on the researcher's perceived identity [@berger2015now]. 
+
+While positionality statements have been adopted in some disciplines of the humanities and social sciences as a way of recognizing the various ways in which researchers' backgrounds and identities may intersect with their research endeavors, they are a relatively new incorporation in the field of linguistics, appearing primarily in subfields such as applied linguistics, linguistic anthropology, and linguistic ethnography [@bucholtz2023researcher]. 
+Increasingly, positionality statements are considered crucial components of the research process, as they increase transparency into research practices [@steltenpohl_video] and contextualize the environment in which studies take place, or, in other words, "[define] the boundaries within which research was produced" [@jafar2018positionality, p. 1].
+Traditionally, positionality statements have been more prevalent in qualitative research. 
+We believe they should be considered equally important in quantitative research, since, aside from contributing to ongoing efforts to promote transparency and openness in research practices, recognizing and addressing a researcher's positionality can increase the validity of their findings [@jafar2018positionality]. 
+Moreover, @bucholtz2023researcher note that considering a researcher's positionality may be especially important in linguistics, "[...] which relies on racially minoritized communities as sources of data yet lack adequate (if any) representation of those communities among faculty researchers" (p. 2). 
+
+Many researchers support and advocate for the inclusion of positionality statements in their research publications [e.g., @bucholtz2023researcher; @jafar2018positionality; @steltenpohl_video]. 
+Nonetheless, others contest this practice, pointing to the universalism of research, that is, the belief that scholarly endeavors should be assessed on their inherent merits, regardless of the status or personal identity of the person making the contribution [@savolainen2023positionality]. 
+@savolainen2023positionality draw connections between positionality statements and conflict of interest statements, arguing that, while researchers are required to disclose any and all financial gains associated with a research project, "positionality statements grant authors the freedom to decide which parts of their biography they choose to share and how they choose to frame it." (p. 1334). 
+
+While positionality statements, due to their reflexive nature, may encompass larger pieces of writing, they can also take the form of short paragraphs that illustrate a few personal characteristics deemed relevant for the particular research endeavor.
+For instance, "Gabriela is a white immigrant cis-gender woman from Romania whose research focuses on how non-native speakers are ideologically framed as linguistically deficient in comparison to native speakers characterized by their linguistic authority and expertise."
+Lastly, in showing their commitment to Diversity, Equity, Inclusivity, and Belonging (DEIB) initiatives, journals have started to encourage authors to include positionality statements with their submissions (e.g., the Journal of Social and Personal Relationships). 
+It is our stance that researchers should reflect on their positionality before starting a project and consider including a positionality statement. 
+When submitting a study for publication, the positionality statement can be included in additional materials if the word limit is a concern. 
+For examples of positionality statements in linguistic research, the interested reader is direction to @bochynska2023reproducible and @baeseberk_2023.
+
+In sum, we believe positionality statements are essential in linguistic research as they promote critical self-reflection, increase transparency, and help address diversity and inclusion concerns. 
+Furthermore, including positionality statements in quantitative research can increase the validity of findings. 
+By reflecting on who it is that does the research, linguistics can become a more diverse, inclusive, and transparent field. 
+
+
 # Open data
 
 The term *open data* refers to data used in research that is freely available to anybody interested in accessing it for any purpose [@open2023]. 
@@ -233,33 +263,48 @@ Open data brings numerous benefits: it underpins reproducibility, minimizes redu
 For the research community and society at large, the adoption of open data practices is not just beneficial but essential for responsible research and continued academic advancement.
 
 
-# Positionality statements
 
-A positionality statement is a reflective piece of writing that acknowledges a researcher's stance, or position, toward a research topic, framework, and even participants. 
-One's positionality encompasses their social, cultural, and personal identity, as well as their biases and assumptions [@holmes2020researcher], and can influence how research is done and how results are interpreted [@rowe2014]. 
-Among others, relevant personal characteristics that may be included in a positionality statement are gender and racial identity, age, sexual orientation, immigration status, and ideological stances [@berger2015now]. 
-These traits may indirectly impact research endeavors, since participants may be more willing to engage in a study if they perceive the researcher as sympathetic [@de2006but], or may even offer different responses based on the researcher's perceived identity [@berger2015now]. 
 
-While positionality statements have been adopted in some disciplines of the humanities and social sciences as a way of recognizing the various ways in which researchers' backgrounds and identities may intersect with their research endeavors, they are a relatively new incorporation in the field of linguistics, appearing primarily in subfields such as applied linguistics, linguistic anthropology, and linguistic ethnography [@bucholtz2023researcher]. 
-Increasingly, positionality statements are considered crucial components of the research process, as they increase transparency into research practices [@steltenpohl_video] and contextualize the environment in which studies take place, or, in other words, "[define] the boundaries within which research was produced" [@jafar2018positionality, p. 1].
-Traditionally, positionality statements have been more prevalent in qualitative research. 
-We believe they should be considered equally important in quantitative research, since, aside from contributing to ongoing efforts to promote transparency and openness in research practices, recognizing and addressing a researcher's positionality can increase the validity of their findings [@jafar2018positionality]. 
-Moreover, @bucholtz2023researcher note that considering a researcher's positionality may be especially important in linguistics, "[...] which relies on racially minoritized communities as sources of data yet lack adequate (if any) representation of those communities among faculty researchers" (p. 2). 
+# Reproducible code/projects and literate programming
 
-Many researchers support and advocate for the inclusion of positionality statements in their research publications [e.g., @bucholtz2023researcher; @jafar2018positionality; @steltenpohl_video]. 
-Nonetheless, others contest this practice, pointing to the universalism of research, that is, the belief that scholarly endeavors should be assessed on their inherent merits, regardless of the status or personal identity of the person making the contribution [@savolainen2023positionality]. 
-@savolainen2023positionality draw connections between positionality statements and conflict of interest statements, arguing that, while researchers are required to disclose any and all financial gains associated with a research project, "positionality statements grant authors the freedom to decide which parts of their biography they choose to share and how they choose to frame it." (p. 1334). 
+<!-- also include literate programming --> 
 
-While positionality statements, due to their reflexive nature, may encompass larger pieces of writing, they can also take the form of short paragraphs that illustrate a few personal characteristics deemed relevant for the particular research endeavor.
-For instance, "Gabriela is a white immigrant cis-gender woman from Romania whose research focuses on how non-native speakers are ideologically framed as linguistically deficient in comparison to native speakers characterized by their linguistic authority and expertise."
-Lastly, in showing their commitment to Diversity, Equity, Inclusivity, and Belonging (DEIB) initiatives, journals have started to encourage authors to include positionality statements with their submissions (e.g., the Journal of Social and Personal Relationships). 
-It is our stance that researchers should reflect on their positionality before starting a project and consider including a positionality statement. 
-When submitting a study for publication, the positionality statement can be included in additional materials if the word limit is a concern. 
-For examples of positionality statements in linguistic research, the interested reader is direction to @bochynska2023reproducible and @baeseberk_2023.
+Reproducibility is a crucial aspect of any scientific study, and it has become increasingly important in recent years. 
+Researchers must be able to provide a clear and transparent account of their findings, including the methods used to obtain them. 
+Reproducibility can help to ensure that research results are valid, reliable, and can be used by others to build on existing knowledge. 
+In this section, we explore the importance of reproducibility, what we know about it in the fields of psychology and linguistics, and how researchers can make their code and projects more reproducible.
 
-In sum, we believe positionality statements are essential in linguistic research as they promote critical self-reflection, increase transparency, and help address diversity and inclusion concerns. 
-Furthermore, including positionality statements in quantitative research can increase the validity of findings. 
-By reflecting on who it is that does the research, linguistics can become a more diverse, inclusive, and transparent field. 
+In general, it helps to increase the credibility of research findings and allows other researchers to verify and build on existing work. 
+At worst, a lack of reproducibility can lead to irreproducible results and wasted resources. 
+This can have serious implications for public health and policy decisions based on research findings.
+
+In order to ensure reproducibility, it is necessary to be transparent about the methods used in research. 
+This includes not only the data collection and analysis methods but also the code used to conduct the analysis. 
+In the fields of psychology and linguistics, there is increasing awareness of the importance of reproducibility, and many researchers are taking steps to improve the transparency of their research.
+
+Researchers have an ethical responsibility to make their code and projects reproducible. 
+There are several steps that researchers can take to make their code and projects more reproducible. 
+One approach is to create reports that document the research process, including the data used, the methods used to analyze the data, and the results obtained. 
+This documentation can then be used to reproduce the research findings.
+
+Another approach is to create reproducible projects. 
+These projects include all of the data, code, and documentation necessary to reproduce the research findings. 
+This approach makes it easier for others to reproduce the research findings and build on the work.
+
+Dependency management tools like renv and targets can also be helpful in ensuring reproducibility. 
+These tools help to manage the dependencies that are necessary to run the code and ensure that the code can be run on different systems.
+Computational reproducibility platforms like Binder and Code Ocean can also be used to ensure reproducibility. 
+These platforms allow researchers to share their code and data in a way that can be easily replicated by others.
+
+It is important to note that there is no way to future-proof code or projects. 
+Researchers must continually work to maintain the reproducibility of their work. 
+This includes updating the code and documentation as needed and testing the code on different systems to ensure that it can be run in different environments.
+
+In conclusion, reproducibility is a crucial aspect of scientific research. 
+It helps to ensure that research findings are valid, reliable, and can be used by others to build on existing knowledge. 
+In the fields of psychology and linguistics, there is increasing awareness of the importance of reproducibility, and many researchers are taking steps to improve the transparency of their research. 
+By creating reports, reproducible projects, and using dependency management tools and computational reproducibility platforms, researchers can make their code and projects more reproducible.
+
 
 # Preregistration and registered reports
 
@@ -353,45 +398,7 @@ As more journals adopt RRs, the scientific community can move towards a more rig
 
 
 
-# Reproducible code/projects and literate programming
 
-<!-- also include literate programming --> 
-
-Reproducibility is a crucial aspect of any scientific study, and it has become increasingly important in recent years. 
-Researchers must be able to provide a clear and transparent account of their findings, including the methods used to obtain them. 
-Reproducibility can help to ensure that research results are valid, reliable, and can be used by others to build on existing knowledge. 
-In this section, we explore the importance of reproducibility, what we know about it in the fields of psychology and linguistics, and how researchers can make their code and projects more reproducible.
-
-In general, it helps to increase the credibility of research findings and allows other researchers to verify and build on existing work. 
-At worst, a lack of reproducibility can lead to irreproducible results and wasted resources. 
-This can have serious implications for public health and policy decisions based on research findings.
-
-In order to ensure reproducibility, it is necessary to be transparent about the methods used in research. 
-This includes not only the data collection and analysis methods but also the code used to conduct the analysis. 
-In the fields of psychology and linguistics, there is increasing awareness of the importance of reproducibility, and many researchers are taking steps to improve the transparency of their research.
-
-Researchers have an ethical responsibility to make their code and projects reproducible. 
-There are several steps that researchers can take to make their code and projects more reproducible. 
-One approach is to create reports that document the research process, including the data used, the methods used to analyze the data, and the results obtained. 
-This documentation can then be used to reproduce the research findings.
-
-Another approach is to create reproducible projects. 
-These projects include all of the data, code, and documentation necessary to reproduce the research findings. 
-This approach makes it easier for others to reproduce the research findings and build on the work.
-
-Dependency management tools like renv and targets can also be helpful in ensuring reproducibility. 
-These tools help to manage the dependencies that are necessary to run the code and ensure that the code can be run on different systems.
-Computational reproducibility platforms like Binder and Code Ocean can also be used to ensure reproducibility. 
-These platforms allow researchers to share their code and data in a way that can be easily replicated by others.
-
-It is important to note that there is no way to future-proof code or projects. 
-Researchers must continually work to maintain the reproducibility of their work. 
-This includes updating the code and documentation as needed and testing the code on different systems to ensure that it can be run in different environments.
-
-In conclusion, reproducibility is a crucial aspect of scientific research. 
-It helps to ensure that research findings are valid, reliable, and can be used by others to build on existing knowledge. 
-In the fields of psychology and linguistics, there is increasing awareness of the importance of reproducibility, and many researchers are taking steps to improve the transparency of their research. 
-By creating reports, reproducible projects, and using dependency management tools and computational reproducibility platforms, researchers can make their code and projects more reproducible.
 
 # Pre-prints
 
@@ -454,6 +461,7 @@ While some researchers may still be hesitant to use this dissemination paradigm,
 By embracing pre-prints, researchers can accelerate the dissemination of knowledge, improve the quality of research, and ensure that their findings are available to the widest possible audience. 
 
 
+
 # Conclusion
 
 The purpose of this article is to help foster open science in linguistics (FOSIL). 
@@ -467,6 +475,7 @@ The FOSIL project aims to make open science practices clear and accessible to pe
 
 
 {{< pagebreak >}}
+
 
 # References {.unnumbered}
 
