@@ -73,6 +73,9 @@ format:
     code-line-numbers: true
     fig-align: center
     tbl-colwidths: true
+    mermaid:
+      theme: neutral
+    mermaid-format: png
 
 editor_options: 
   markdown: 
@@ -152,6 +155,20 @@ As a consequence, many early career researchers (ERC) find themselves at a cross
 The present work intends to help make open science practices understandable and accessible to researchers in the speech sciences from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
 To this end, we identify and describe five critical areas in which linguists can engage in open science: open data, positionality statements, preregistration and registered reports, reproducible code/projects, and pre-prints. 
 Specifically, we provide practical examples and detailed descriptions of the aforementioned areas with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research.  
+
+
+```{mermaid}
+%%| label: fig-os-mermaid
+%%| fig-cap: THis is the caption
+flowchart TD
+    A(Open science)
+    A -->|Stance| B(Positionality statements\nDeclaration of conflicts of interest\nOpen data)
+    style B text-align:left
+    A -->|Workflow| C(Reproducible code/projects\nLiterate programming)
+    style C text-align:left
+    A -->|Dissemination| D(Pre-prints\nPreregistration\nRegistered reports)
+    style D text-align:left
+```
 
 
 
@@ -355,14 +372,13 @@ Over time and through iterative practice, researchers will gain a better discern
 Many concerns regarding the implementation of Open Science or adopting preregistration revolve around the potential burden of 'extra work'. 
 Conversely, preregistration is intended to streamline our workflow, fostering efficiency both in the short term and the long run. 
 Moreover, it offers complete control over the level of detail one chooses to include. 
-The depth of preregistration directly correlates with the effort invested; the more comprehensive the preregistration, the greater the initial workload, leading to reduced effort in subsequent stages (See @fig-detail). 
+The depth of preregistration directly correlates with the effort invested; the more comprehensive the preregistration, the greater the initial workload, leading to reduced effort in subsequent stages (See @fig-pr-detail). 
 
-```{r}
-#| label: fig-detail
-#| fig-cap: Select levels of detail as suggestions to help gauge the extent of information to incorporate into a preregistration. The shading indicates the degree of detail; darker shades imply more exhaustive information (thus requiring more upfront work).
-knitr::include_graphics("./figs/levels_of_detail.png")
+```{dot}
+//| label: fig-pr-detail
+//| fig-cap: "Select levels of detail as suggestions to help gauge the extent of information to incorporate into a preregistration. The shading indicates the degree of detail; darker shades imply more exhaustive information (thus requiring more upfront work)"
+//| file: ./figs/prereg.dot
 ```
-
 
 
 ## Registered reports
