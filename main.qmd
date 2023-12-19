@@ -54,7 +54,7 @@ author            :
     orcid: 
   - name: Nicole Rodríguez
     affiliations: Rutgers University
-    email: nmrodriguez@gmail.com
+    email: nmrodriguez1994@gmail.com
     orcid: 0000-0003-2941-0399
   - name: Kyle Parrish
     affiliations: Rutgers University
@@ -151,6 +151,7 @@ To wit, it requires learning new skills, thoughtful planning, as well as an open
 It necessitates that researchers implement new techniques with limited pedagogical resources and embrace alternative methods of disseminating their research, all of which constitutes a steep learning curve.
 Given how new open science practices are, it is reasonable to assume that current senior researchers were not trained in these innovative methodologies. 
 As a consequence, many early career researchers (ERC) find themselves at a crossroads in which they are forced to learn open science on their own, often without institutional support, at the same time that they are expected to be implementing these novel tools to be successful in their programs/careers. 
+<!--- I had to read this sentence twice to get it, I think its the "at the same time that they are expected part that got me. Maybe just breaking it into two sentences? ---> 
 
 The present work intends to help make open science practices understandable and accessible to researchers in the speech sciences from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
 To this end, we identify and describe five critical areas in which linguists can engage in open science: open data, positionality statements, preregistration and registered reports, reproducible code/projects, and pre-prints. 
@@ -194,7 +195,8 @@ For instance, "Gabriela is a white immigrant cis-gender woman from Romania whose
 Lastly, in showing their commitment to Diversity, Equity, Inclusivity, and Belonging (DEIB) initiatives, journals have started to encourage authors to include positionality statements with their submissions (e.g., the Journal of Social and Personal Relationships). 
 It is our stance that researchers should reflect on their positionality before starting a project and consider including a positionality statement. 
 When submitting a study for publication, the positionality statement can be included in additional materials if the word limit is a concern. 
-For examples of positionality statements in linguistic research, the interested reader is direction to @bochynska2023reproducible and @baeseberk_2023.
+For examples of positionality statements in linguistic research, the interested reader is direction to @bochynska2023reproducible and @baeseberk_2023. 
+<!--- is direction to or is directed to? --->
 
 In sum, we believe positionality statements are essential in linguistic research as they promote critical self-reflection, increase transparency, and help address diversity and inclusion concerns. 
 Furthermore, including positionality statements in quantitative research can increase the validity of findings. 
@@ -220,7 +222,7 @@ Effective data sharing  has to involve a more comprehensive and transparent appr
 
 Open data benefits individual researchers, the broader research community, and society as a whole. 
 By sharing data, researchers enhance their visibility and credibility, paving the way for academic collaborations and establishing their work as a cornerstone within their field. 
-
+<!---- I feel like this sounds out of place here because the following paragraph goes back to "data available upon request" what if you put it before the paragraph at 219? and then continue? ---> 
 
 
 
@@ -228,7 +230,9 @@ By sharing data, researchers enhance their visibility and credibility, paving th
 Gone are the days of "data available upon request", which generally does not result in adequate sharing of research materials [@spellman2017open; @wicherts2006poor], as many journals have begun to strongly encourage that researchers make publicly available some version of their data (e.g., *Language Learning*).
 
 Firstly, data storage is a critical aspect that researchers must prioritize, focusing on its longevity and accessibility. 
+<!--- the firstly here is throwing me off, what's this first about? --->
 Some researchers find it beneficial to include all study materials and anonymized data on their project page throughout their research, while others prefer to use the project page solely for final documents. 
+<!---- are we assuming that people who don't know anything about open science know what a project page is? ---> 
 There is also the option to organize a project using various cloud-based storage providers, such as Google Drive, Dropbox, or Box, which can link directly to your computer.
 Many of these providers offer the added convenience of integrating directly with an OSF project, allowing researchers to enjoy the advantages of both systems. 
 This method helps balance the risks of technological failure and privacy concerns. 
