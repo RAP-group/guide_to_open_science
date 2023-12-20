@@ -1,0 +1,160 @@
+digraph pr {
+
+  graph[ranksep = 0.2]
+  subgraph cluster_0 {
+    node [
+      style="filled,setlinewidth(2)",
+      width=2, 
+      shape=square,
+      fontname = Ubuntu, 
+    ]
+    edge [arrowhead=none]
+    label = "";
+    color=none
+
+    a0 [
+      fillcolor=white
+      fontsize = 24,
+      shape=ellipse,
+      label="Research questions"
+    ]
+    a1 [
+      fillcolor="#F5F5F5"
+      label=""
+    ]
+    a2 [
+      fillcolor="#E0E0E0"
+      label=""
+    ]
+    a3 [
+      fillcolor="#D3D3D3"
+      label=""
+    ]
+    a4 [
+      fillcolor="#C0C0C0"
+      label=""
+    ]
+    
+    a0 -> a1
+    a1 -> a2
+    a2 -> a3
+    a3 -> a4
+
+  }
+
+  subgraph cluster_1 {
+    node [
+      style="filled,setlinewidth(2)",
+      width=2, 
+      shape=square,
+      fontname = Ubuntu, 
+    ]
+    edge [arrowhead=none]
+    label = "";
+    color=none
+    
+    b0 [
+      fillcolor=white
+      fontsize = 24,
+      shape=ellipse,
+      label = "Hypotheses"
+    ]
+    b1 [
+      fillcolor="#F5F5F5"
+      label=""
+    ]
+    b2 [
+      fillcolor="#E0E0E0"
+      label=""
+    ]
+    b3 [
+      fillcolor="#D3D3D3"
+      label=""
+    ]
+
+    b0 -> b1
+    b1 -> b2
+    b2 -> b3
+  }
+  
+  subgraph cluster_2 {
+    node [
+      style="filled,setlinewidth(2)",
+      width=2, 
+      shape=square,
+      fontname = Ubuntu, 
+     ]
+    edge [arrowhead=none]
+    label = "";
+    color=none
+    
+    c0 [
+      fillcolor=white
+      fontsize = 24,
+      shape=ellipse,
+      label = "Methods"
+    ]
+    c1 [
+      fillcolor="#F5F5F5"
+      label=""
+    ]
+    c2 [
+      fillcolor="#E0E0E0"
+      label=""
+    ]
+    c3 [
+      fillcolor="#D3D3D3"
+      label=""
+    ]
+    c4 [
+      fillcolor="#C0C0C0"
+      label=""
+    ]
+    
+    c0 -> c1
+    c1 -> c2
+    c2 -> c3
+    c3 -> c4
+  }
+  
+  subgraph cluster_3 {
+    node [
+      style="filled,setlinewidth(2)",
+      width=2, 
+      shape=square,
+      fontname = Ubuntu, 
+    ]
+    edge [arrowhead=none]
+    label = "";
+    color=none
+
+    d0 [
+      fillcolor=white,
+      fontsize = 24,
+      shape=ellipse,
+      label = "Analysis plan"
+    ]
+    d1 [
+      fillcolor="#F5F5F5"
+      label=""
+    ]
+    d2 [
+      fillcolor="#E0E0E0"
+      label=""
+    ]
+    d3 [
+      fillcolor="#D3D3D3"
+      label=""
+    ]
+    d4 [
+      fillcolor="#C0C0C0"
+      label=""
+    ]
+    
+    d0 -> d1
+    d1 -> d2
+    d2 -> d3
+    d3 -> d4
+  }
+  
+}
