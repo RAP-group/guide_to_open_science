@@ -54,7 +54,7 @@ author            :
     orcid: 
   - name: Nicole Rodríguez
     affiliations: Rutgers University
-    email: nmrodriguez1994@gmail.com
+    email: nmrodriguez@gmail.com
     orcid: 0000-0003-2941-0399
   - name: Kyle Parrish
     affiliations: Rutgers University
@@ -134,11 +134,11 @@ These practices, collectively, have been referred to as open science.
 As a result, specific transparency practices have emerged, such as open access publishing, preregistration, sharing data, analyses, and code, performing study replications, and declaring positionality and conflicts of interest. 
 Though it may come as a surprise to some, these open, transparent research practices have not been the norm in empirical and quantitative sciences. 
 
-To properly contextualize the need for open science, one must first consider the so-called reproducibility (replication) crisis [@forrt2021]. 
-In the early 2010's, a team of researchers in Psychology embarked on large-scale replication project to scrutinize what many considered to be the fields' major findings. 
+To properly contextualize the need for open science, one must first consider the so-called reproducibility (replication) crisis [@forrt2021].
+In the early 2010's, a team of researchers in Psychology embarked on large-scale replication project to scrutinize what many considered to be the fields' major findings. <!--- embarked on A large-scale replication --->
 Specifically, they attempted to replicate 100 influential studies [@open2015estimating].
-The endeavor produced astounding results---of note, that approximately 53% of the major findings did not replicate---and inspired similar large-scale replication projects in other fields, yielding similar results.^[For Economics, see @camerer2016evaluating; for the Social Sciences, see @camerer2018evaluating; and, for cancer research, see @errington2021investigating.] 
-This is now referred to as the replication (or reproducibility) crisis. 
+The endeavor produced astounding results---of note, that approximately 53% of the major findings did not replicate---and inspired similar large-scale replication projects in other fields, yielding similar results.^[For Economics, see @camerer2016evaluating; for the Social Sciences, see @camerer2018evaluating; and, for cancer research, see @errington2021investigating.] <!--- I think this sentence can be reworded. The main idea is that only 53% of studies replicated, which is a single result (the mention of astonishing results had me anticipating the mention of something in addition to the rate of replication. --->
+This is now referred to as the replication (or reproducibility) crisis. <!-- This sentence seems redundant given the first sentence in this paragraph-->
 Unsurprisingly, the results generated an uproar in the psychological sciences.
 The alarming findings garnered media attention [e.g., @oliver2016] and have led to periods of introspection and self-reflection in many adjacent fields, among them, linguistics.
 
@@ -156,6 +156,9 @@ Ironically, there is also a growing expectation that ECRs implement these novel 
 The present work intends to help make open science practices understandable and accessible to researchers in the speech sciences from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
 To this end, we identify and describe five critical areas in which linguists can engage in open science: open data, positionality statements, preregistration and registered reports, reproducible code/projects, and pre-prints. 
 Specifically, we provide practical examples and detailed descriptions of the aforementioned areas with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research.  
+
+<!--- We mention Speech sciences for the first time here. Are we suggesting practices that are speech science specific, or could they be used in many kinds of (behavioral) linguistic studies? --->
+
 See @fig-os-flow
 
 ```{r}
@@ -175,7 +178,6 @@ knitr::include_graphics(
 ```
 
 
-
 # Positionality statements
 
 A positionality statement is a reflective piece of writing that acknowledges a researcher's stance, or position, toward a research topic, framework, and even participants. 
@@ -184,7 +186,7 @@ Among others, relevant personal characteristics that may be included in a positi
 These traits may indirectly impact research endeavors, since participants may be more willing to engage in a study if they perceive the researcher as sympathetic [@de2006but], or may even offer different responses based on the researcher's perceived identity [@berger2015now]. 
 
 While positionality statements have been adopted in some disciplines of the humanities and social sciences as a way of recognizing the various ways in which researchers' backgrounds and identities may intersect with their research endeavors, they are a relatively new incorporation in the field of linguistics, appearing primarily in subfields such as applied linguistics, linguistic anthropology, and linguistic ethnography [@bucholtz2023researcher]. 
-Increasingly, positionality statements are considered crucial components of the research process, as they increase transparency into research practices [@steltenpohl_video] and contextualize the environment in which studies take place, or, in other words, "[define] the boundaries within which research was produced" [@jafar2018positionality, p. 1].
+Increasingly, positionality statements are considered crucial components of the research process, as they increase transparency into research practices [@steltenpohl_video] and contextualize the environment in which studies take place, or, in other words, "[define] the boundaries within which research was produced" [@jafar2018positionality, p. 1]. <!-- This may be missing a word, consider: "in other words, they..."-->
 Traditionally, positionality statements have been more prevalent in qualitative research. 
 We believe they should be considered equally important in quantitative research, since, aside from contributing to ongoing efforts to promote transparency and openness in research practices, recognizing and addressing a researcher's positionality can increase the validity of their findings [@jafar2018positionality]. 
 Moreover, @bucholtz2023researcher note that considering a researcher's positionality may be especially important in linguistics, "[...] which relies on racially minoritized communities as sources of data yet lack adequate (if any) representation of those communities among faculty researchers" (p. 2). 
@@ -194,7 +196,7 @@ Nonetheless, others contest this practice, pointing to the universalism of resea
 @savolainen2023positionality draw connections between positionality statements and conflict of interest statements, arguing that, while researchers are required to disclose any and all financial gains associated with a research project, "positionality statements grant authors the freedom to decide which parts of their biography they choose to share and how they choose to frame it." (p. 1334). 
 
 While positionality statements, due to their reflexive nature, may encompass larger pieces of writing, they can also take the form of short paragraphs that illustrate a few personal characteristics deemed relevant for the particular research endeavor.
-For instance, "Gabriela is a white immigrant cis-gender woman from Romania whose research focuses on how non-native speakers are ideologically framed as linguistically deficient in comparison to native speakers characterized by their linguistic authority and expertise."
+For instance, "Gabriela is a white immigrant cis-gender woman from Romania whose research focuses on how non-native speakers are ideologically framed as linguistically deficient in comparison to native speakers characterized by their linguistic authority and expertise." <!--- Might be missing a few words here - consider "in comparison to native speakers who are characterized" --->
 Lastly, in showing their commitment to Diversity, Equity, Inclusivity, and Belonging (DEIB) initiatives, journals have started to encourage authors to include positionality statements with their submissions (e.g., the Journal of Social and Personal Relationships). 
 It is our stance that researchers should reflect on their positionality before starting a project and consider including a positionality statement. 
 When submitting a study for publication, the positionality statement can be included in additional materials if the word limit is a concern. 
@@ -204,10 +206,31 @@ In sum, we believe positionality statements are essential in linguistic research
 Furthermore, including positionality statements in quantitative research can increase the validity of findings. 
 By reflecting on who it is that does the research, linguistics can become a more diverse, inclusive, and transparent field. 
 
+<!-- I think we have a great argument for the need that positionality statements are needed, but I think we could include more specific instructions about HOW one goes about creating one in terms of the conventions, default information to include etc. Do we want this to be the point of reference people use to find other points of reference or a guide in and of itself? -->
 
 # Open data
 
-The term *open data* refers to data used in research that is freely available to anybody interested in accessing it for any purpose [@open2023]. 
+Open data refers to information collected for the purpose of an experimental study that is as unedited as possible and is easily accessible. 
+These datasets are commonly stored in internet based repositories such as the Open Science Frameworks or the IRIS database which can be accessed simply by being provided an internet link.
+The datasets can be directly downloaded free of any kind of payment or exchange of information (such as an email address) by the user.
+As a general rule, the data in these repositories should not contain potentially identifying information for experimental subjects, yet be as unedited as possible. 
+Online data collection platforms such as prolific typically remove identifying information by default and provide participant specific identification numbers.
+Additional demographic information is often available and connected to these ids, and can be reported as if it is necessary. 
+
+Open data is important to cumulative science for several reasons. Firstly, it allows for the analysis of the original paper to be fully reproduced and ensures that the reporting of statistical outcomes did not contain mistakes. <!--- I recall a paper or presentation by Timo that could bolster this point (that a lot of the  papers in labphon had mistakes)- do you know if I recall correctly? --->
+Secondly, it allows for the same data to be analyzed in distinct ways or for future meta-anaylses. 
+Statistics, like linguistics, is itself a field which advances constantly. 
+Revisiting old datasets from novel statistical perspectives could enhance or contradict past narrative conclusions on the basis of collected data.
+<!--- I also recall the point that we have biases as a product of incentive structure (also from Timo), but not sure we want to work this in. This might fit in with the positionality statement too -->
+
+<!--- other thoughts:
+should we make recommendations on speech data? E.g. for production data with subject's voices, should these be shared, or just the data file and PRAAT script? I feel like Joseph can speak to the best practice here. 
+
+<!--- Ending here given my own limited resources, congrats to all on a great project and thank you for including me --->  
+
+The term *open data* refers to data used in research that is freely available to anybody interested in accessing it for any purpose [@open2023].
+
+
 In the wake of the reproducibility crisis, the importance of open data in scientific research has grown significantly, particularly in fields like biology, psychology, and linguistics. 
 The underlying motivation for open data is relatively straightforward. 
 It facilitates transparency, rigor, reproducibility, replication, accumulation of knowledge, and makes participating in the scientific endeavor more inclusive.
@@ -217,23 +240,25 @@ Open data practices enable wider access to research information, facilitating va
 Access to open data is key, not just for upholding ethical standards in research, but also for facilitating future scientific progress. 
 Thus, open data becomes a cornerstone for researchers striving to make meaningful contributions to their fields and the broader scientific discourse. 
 
-<!-- how to make data open and accessible --> 
-Open data benefits individual researchers, the broader research community, and society as a whole. 
-By sharing data, researchers enhance their visibility and credibility, paving the way for academic collaborations and establishing their work as a cornerstone within their field. 
+<!--
 Researchers may initially hesitate to share their data publicly, but gaining an understanding of the benefits of open data can help alleviate these concerns. 
 It is important to note that simply stating "data available on request" is not sufficient to meet the new current standards of effective data sharing [@wicherts2006poor]. 
-Effective data sharing has to involve a more comprehensive and transparent approach, ensuring that data is readily accessible to other researchers and contributing to the broader scientific community's efforts.
+Effective data sharing  has to involve a more comprehensive and transparent approach, ensuring that data is readily accessible to other researchers and contributing to the broader scientific community's efforts.
+-->
+
+Open data benefits individual researchers, the broader research community, and society as a whole. 
+By sharing data, researchers enhance their visibility and credibility, paving the way for academic collaborations and establishing their work as a cornerstone within their field. 
+
+<!-- how to make data open and accessible --> 
 Gone are the days of "data available upon request", which generally does not result in adequate sharing of research materials [@spellman2017open; @wicherts2006poor], as many journals have begun to strongly encourage that researchers make publicly available some version of their data (e.g., *Language Learning*).
-<!-- not a fan of "gone are the days of" can we just start with "Many journals..." --> 
+
 Firstly, data storage is a critical aspect that researchers must prioritize, focusing on its longevity and accessibility. 
-<!-- the firstly here is throwing me off, what's this first about? Maybe something like "To make data open and available, data storage is a critical aspect that researchers must prioritize." -->
 Some researchers find it beneficial to include all study materials and anonymized data on their project page throughout their research, while others prefer to use the project page solely for final documents. 
-<!-- are we assuming that people who don't know anything about open science know what a project page is? also maybe just delete this sentence--> 
 There is also the option to organize a project using various cloud-based storage providers, such as Google Drive, Dropbox, or Box, which can link directly to your computer.
-<!-- if we delete line 232, we could change 234 to "Data storage options include various cloud-based blah blah blah.." --> 
 Many of these providers offer the added convenience of integrating directly with an OSF project, allowing researchers to enjoy the advantages of both systems. 
 This method helps balance the risks of technological failure and privacy concerns. 
 The Open Science Framework (OSF) also provides free, open-source solutions for different research processes [@foster2017open; @nosek2022replicability], ensuring secure and accessible data storage.
+
 Additionally, the development of tools like Git and GitHub has transformed scientific development in the open-data domain.
 These platforms facilitate collaborative efforts and enhance user engagement, revolutionizing the way research is conducted and shared.
 
@@ -243,19 +268,21 @@ These platforms facilitate collaborative efforts and enhance user engagement, re
 
 
 <!-- why open data is important for ling --> 
-Open data in linguistics offers significant benefits. 
+Narrowing the field of open data to focus specifically on linguistics offers significant benefits. 
 For example, it enhances the study of diverse and underrepresented languages. 
 By making linguistic data from minority communities publicly available, we enable wider access and collaboration. 
 This allows researchers to document and study linguistic elements that might otherwise be overlooked.
 The approach not only aids in preserving endangered languages but also fosters a more inclusive and comprehensive understanding of the global linguistic landscape. 
-<!-- is our only arguement here that it enhances the study of minority languages/communities? what about researchers that don't study that? shouldn't add something that talks more about reproducibility as a whole? or the argument in the first paragraph was about enhancing collaboration and improving access to knowledge -->
+
+
+
 
 <!-- difficulties with open data in ling --> 
 That being said, the field of linguistics faces unique challenges with regard to open data.
 There are ethical considerations that must be considered with care. 
 The privacy and consent of participants must be safeguarded, particularly in projects involving sensitive or personal data. 
 This might be particularly challenging in cases of audiovisual sociolinguistic interviews but probably easier to share in phonetic studies, for example.
-<!-- is line 259 necessarily true? making someone's speech data available is still a privacy issue, but also isn't this a general concern with any data collection in any research study? -->
+
 
 
 
@@ -273,11 +300,9 @@ In summary, open data is fundamental to advancing scientific excellence and ensu
 It elevates collaboration, bolsters credibility, and improves access to knowledge. 
 While embracing open data, ethical considerations necessitate data anonymization and privacy safeguards. 
 The efficacy of data sharing hinges on clear and transparent storage practices. 
-Innovations in this domain, facilitated by platforms like the OSF and tools such as Git, have revolutionized data sharing in the academic sphere. 
+Innovations in this domain, facilitated by platforms like the Open Science Framework and tools such as Git, have revolutionized data sharing in the academic sphere. 
 Open data brings numerous benefits: it underpins reproducibility, minimizes redundant efforts in research, and demystifies complex academic concepts for the general public. 
-<!-- i don't think we mentioned "demystifies complex academic concepts for the general public at all in the above paragraphs should should probably delete unless we want to add about it -->
 For the research community and society at large, the adoption of open data practices is not just beneficial but essential for responsible research and continued academic advancement.
-<!-- there was a huge emphasis on minoritized languages/communities above and then its not here? idk it seems weird to double down on it above and not add it here -->
 
 
 
@@ -294,11 +319,10 @@ In this section, we explore the importance of reproducibility, what we know abou
 In general, it helps to increase the credibility of research findings and allows other researchers to verify and build on existing work. 
 At worst, a lack of reproducibility can lead to irreproducible results and wasted resources. 
 This can have serious implications for public health and policy decisions based on research findings.
-<!-- should i make a Tom comment and say "This what?????" (i already fixed it on line 302, but line 298 doesn't bother me as much) -->
 
 In order to ensure reproducibility, it is necessary to be transparent about the methods used in research. 
-This transparency includes not only the data collection and analysis methods but also the code used to conduct the analysis. 
-In the fields of psychology and linguistics, there is an increasing awareness of the importance of reproducibility, and many researchers are taking steps to improve the transparency of their research.
+This includes not only the data collection and analysis methods but also the code used to conduct the analysis. 
+In the fields of psychology and linguistics, there is increasing awareness of the importance of reproducibility, and many researchers are taking steps to improve the transparency of their research.
 
 Researchers have an ethical responsibility to make their code and projects reproducible. 
 There are several steps that researchers can take to make their code and projects more reproducible. 
@@ -308,13 +332,11 @@ This documentation can then be used to reproduce the research findings.
 Another approach is to create reproducible projects. 
 These projects include all of the data, code, and documentation necessary to reproduce the research findings. 
 This approach makes it easier for others to reproduce the research findings and build on the work.
-<!-- i dont understand the difference between 305-308 and 310-312 --> 
 
 Dependency management tools like renv and targets can also be helpful in ensuring reproducibility. 
 These tools help to manage the dependencies that are necessary to run the code and ensure that the code can be run on different systems.
 Computational reproducibility platforms like Binder and Code Ocean can also be used to ensure reproducibility. 
 These platforms allow researchers to share their code and data in a way that can be easily replicated by others.
-<!-- do those platforms or dependency tools need to be cited? -->
 
 It is important to note that there is no way to future-proof code or projects. 
 Researchers must continually work to maintain the reproducibility of their work. 
@@ -323,7 +345,6 @@ This includes updating the code and documentation as needed and testing the code
 In conclusion, reproducibility is a crucial aspect of scientific research. 
 It helps to ensure that research findings are valid, reliable, and can be used by others to build on existing knowledge. 
 In the fields of psychology and linguistics, there is increasing awareness of the importance of reproducibility, and many researchers are taking steps to improve the transparency of their research. 
-<!-- 327 is exactly the same as line 303 -->
 By creating reports, reproducible projects, and using dependency management tools and computational reproducibility platforms, researchers can make their code and projects more reproducible.
 
 
@@ -336,7 +357,7 @@ These innovations, preregistrations and registered reports, were designed with t
 
 A preregistration is a time-stamped document that provides comprehensive detail about a study, including, but not limited to, research questions, hypotheses, methodologies, and analytic strategies. 
 Preregistrations are written prior to data collection and do not undergo peer review.
-The depth of content detail within a preregistration spans a spectrum: in the simplest case, a preregistration can comprise merely a hypothesis or perhaps a brief description of the methods; on the other extreme, a detailed preregistration can include code, power analyses, participant exclusion criteria, and beyond. 
+The depth of content detail within a preregistration spans a spectrum: in the simplest case, a preregistration can comprise merely a hypothesis or perhaps a brief description of the methods; on the other extreme, a detailed preregistration can include code, power analyses, participant exclusion criteria and beyond. 
 In this section, we provide information regarding the various components of a preregistration, centering on their advantageous impact on linguistic research.
 Specifically, we focus on *who* might want to consider preregistrations, *why* they might want to do so, *what* content they can include, and *how* they can complete a preregistration for a linguistics research project.
 
@@ -373,9 +394,7 @@ Not all of the aforementioned components are equally prioritized in a preregistr
 
 It is important to acknowledge that incorporating the entirety of these components into a preregistration may be a formidable challenge, particularly if open science is a new endeavor for the researcher. 
 In such instances, a judicious approach is permissible, with researchers encouraged to commence with elements they perceive as most valuable to their study. 
-<!-- with researchers encouraged or where researchers are encouraged to? --> 
 Over time and through iterative practice, researchers will gain a better discernment of relevance within the Open Science framework.
-<!-- we already appreviated OSF before so it should change to that, right? or is this now different because the F isn't capitalized here -->
 
 Many concerns regarding the implementation of Open Science or adopting preregistration revolve around the potential burden of 'extra work'. 
 Conversely, preregistration is intended to streamline our workflow, fostering efficiency both in the short term and the long run. 
@@ -415,7 +434,6 @@ RRs cannot solve all the problems with the current model, but they can help redu
 
 RRs are gaining popularity, but some fields, such as linguistics, have been slow to adopt them. 
 RRs may particularly benefit ECRs, who can use them to increase their chances of publication and build a reputation for rigor. 
-<!-- maybe add a few journals that currently accept them or require them? -->
 However, more senior researchers may be resistant to change and may need to be convinced of the benefits of RRs for the field as a whole.
 
 In sum, registered reports represent a promising new model for publishing scientific research that can help reduce QRPs and increase transparency. 
@@ -429,7 +447,6 @@ As more journals adopt RRs, the scientific community can move towards a more rig
 
 In recent years, the concept of open science has gained traction in academic circles. 
 The idea behind open science is to make scientific research and data more accessible, transparent, and reproducible. 
-<!-- at this point in the paper i think these opening sentences are a little late/redundant.. -->
 One of the ways in which open science is being promoted is through the use of pre-prints. 
 
 ## What is a pre-print? 
@@ -449,7 +466,6 @@ One of the primary benefits of pre-prints is that they allow researchers to shar
 This can be especially important in fields where research moves quickly, such as biology or computer science. 
 Pre-prints also allow researchers to receive feedback on their work from their peers, which can help to improve the quality of their research. 
 The provision of commentary and reviews of pre-prints yields benefits not only to the authors but also extends support to the authors, but this process also supports reviewers, journals and publishers, and the reader audience. 
-<!-- "reader audience" sounds funny for me (maybe bc its 10:30pm) -->
 This inclusive process allows more researchers and reviewers to participate in discussing the research findings and reduces the need for repeated rounds of re-review or extensive revisions. 
 
 One of the most significant benefits of pre-prints is their "early view" and "open access" effect, which leads to more attention from readers, increasing visibility and development of the overall research [@biswas2023]. 
@@ -468,7 +484,6 @@ Despite these benefits, some researchers remain hesitant to use pre-prints.
 One concern is that publishing a pre-print may harm their chances of being published in a traditional academic journal. 
 However, this concern is becoming less relevant as more journals are accepting pre-prints as a legitimate form of publication. 
 According to @liu2021open, who conducted a survey asking as to the barriers in sharing preprints and discovered that the following were raised as additional barriers: peer review, journal policy, lack of knowledge of the process, confidentiality issues, data types, utility of sharing preprints, time constraints, and issues in preprint management. 
-<!-- 472 is wordy and confusing -->
 
 One of the concerns about preprints is their ability to secure the steady resources (technologies, expertise, policies, visions, standards, and so on) required to maintain and enhance the value of a service based on a user community's needs [@rieger2012sustainability]. 
 Preprints emerged as a 'public good' and preprint platforms provide a free service to both authors and readers; at the same time, many of the existing preprint services lack a scalable and transparent business model. 
@@ -482,7 +497,6 @@ First, select your pre-print server that aligns with your course of research.
 Next, all pre-prints undergo a short screening, confirming author background, basic research content, and compliance with the ethical standards of the pre-print platform. 
 Once pre-prints pass the screening process, the content is made available online in open access format, encouraging others to comment and share. 
 To learn more about the various methods for preparing linguistic data for archiving and sharing, @thomason2022open shares more on Open Handbook of Linguistic Data Management. 
-<!-- maybe add a sentence at the beginning like "The process of pre-printing is simple." or "Here is an outline of the process of pre-pre-printing." -->
 
 In conclusion, the growing visibility of pre-prints, and their acceptance as valid research outputs by diverse stakeholders, including researchers, funders, and national institutions, has fueled collaborative research efforts and strengthened support for their presence in a variety of research disciplines. 
 Pre-prints play an important role in advancing the tenets of open science by promoting transparency, reproducibility, and collaboration. 
