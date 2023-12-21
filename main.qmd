@@ -135,10 +135,10 @@ As a result, specific transparency practices have emerged, such as open access p
 Though it may come as a surprise to some, these open, transparent research practices have not been the norm in empirical and quantitative sciences. 
 
 To properly contextualize the need for open science, one must first consider the so-called reproducibility (replication) crisis [@forrt2021].
-In the early 2010's, a team of researchers in Psychology embarked on large-scale replication project to scrutinize what many considered to be the fields' major findings. <!--- embarked on A large-scale replication --->
+In the early 2010's, a team of researchers in Psychology embarked on a large-scale replication project to scrutinize what many considered to be the fields' major findings. 
 Specifically, they attempted to replicate 100 influential studies [@open2015estimating].
-The endeavor produced astounding results---of note, that approximately 53% of the major findings did not replicate---and inspired similar large-scale replication projects in other fields, yielding similar results.^[For Economics, see @camerer2016evaluating; for the Social Sciences, see @camerer2018evaluating; and, for cancer research, see @errington2021investigating.] <!--- I think this sentence can be reworded. The main idea is that only 53% of studies replicated, which is a single result (the mention of astonishing results had me anticipating the mention of something in addition to the rate of replication. --->
-This is now referred to as the replication (or reproducibility) crisis. <!-- This sentence seems redundant given the first sentence in this paragraph-->
+The endeavor produced astounding results---of note, that approximately 53% of the major findings did not replicate---and inspired similar large-scale replication projects in other fields, yielding similar results.^[For Economics, see @camerer2016evaluating; for the Social Sciences, see @camerer2018evaluating; and, for cancer research, see @errington2021investigating.] 
+It is this series of events represents what is now referred to as the replication (or reproducibility) crisis. 
 Unsurprisingly, the results generated an uproar in the psychological sciences.
 The alarming findings garnered media attention [e.g., @oliver2016] and have led to periods of introspection and self-reflection in many adjacent fields, among them, linguistics.
 
@@ -153,11 +153,10 @@ Given how new open science practices are, it is reasonable to assume that curren
 As a consequence, many early career researchers (ERC) find themselves at a crossroads in which they are forced to learn open science on their own, often without institutional support. 
 Ironically, there is also a growing expectation that ECRs implement these novel tools in order to be successful in their programs/careers. 
 
-The present work intends to help make open science practices understandable and accessible to researchers in the speech sciences from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
+The present work intends to help make open science practices understandable and accessible to researchers in linguistics from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
 To this end, we identify and describe five critical areas in which linguists can engage in open science: open data, positionality statements, preregistration and registered reports, reproducible code/projects, and pre-prints. 
 Specifically, we provide practical examples and detailed descriptions of the aforementioned areas with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research.  
 
-<!--- We mention Speech sciences for the first time here. Are we suggesting practices that are speech science specific, or could they be used in many kinds of (behavioral) linguistic studies? --->
 
 See @fig-os-flow
 
@@ -186,7 +185,7 @@ Among others, relevant personal characteristics that may be included in a positi
 These traits may indirectly impact research endeavors, since participants may be more willing to engage in a study if they perceive the researcher as sympathetic [@de2006but], or may even offer different responses based on the researcher's perceived identity [@berger2015now]. 
 
 While positionality statements have been adopted in some disciplines of the humanities and social sciences as a way of recognizing the various ways in which researchers' backgrounds and identities may intersect with their research endeavors, they are a relatively new incorporation in the field of linguistics, appearing primarily in subfields such as applied linguistics, linguistic anthropology, and linguistic ethnography [@bucholtz2023researcher]. 
-Increasingly, positionality statements are considered crucial components of the research process, as they increase transparency into research practices [@steltenpohl_video] and contextualize the environment in which studies take place, or, in other words, "[define] the boundaries within which research was produced" [@jafar2018positionality, p. 1]. <!-- This may be missing a word, consider: "in other words, they..."-->
+Positionality statements are increasingly considered crucial components of the research process, as they increase transparency into research practices [@steltenpohl_video] and contextualize the environment in which studies take place, or, in other words, they "[define] the boundaries within which research was produced" [@jafar2018positionality, p. 1]. 
 Traditionally, positionality statements have been more prevalent in qualitative research. 
 We believe they should be considered equally important in quantitative research, since, aside from contributing to ongoing efforts to promote transparency and openness in research practices, recognizing and addressing a researcher's positionality can increase the validity of their findings [@jafar2018positionality]. 
 Moreover, @bucholtz2023researcher note that considering a researcher's positionality may be especially important in linguistics, "[...] which relies on racially minoritized communities as sources of data yet lack adequate (if any) representation of those communities among faculty researchers" (p. 2). 
@@ -196,7 +195,7 @@ Nonetheless, others contest this practice, pointing to the universalism of resea
 @savolainen2023positionality draw connections between positionality statements and conflict of interest statements, arguing that, while researchers are required to disclose any and all financial gains associated with a research project, "positionality statements grant authors the freedom to decide which parts of their biography they choose to share and how they choose to frame it." (p. 1334). 
 
 While positionality statements, due to their reflexive nature, may encompass larger pieces of writing, they can also take the form of short paragraphs that illustrate a few personal characteristics deemed relevant for the particular research endeavor.
-For instance, "Gabriela is a white immigrant cis-gender woman from Romania whose research focuses on how non-native speakers are ideologically framed as linguistically deficient in comparison to native speakers characterized by their linguistic authority and expertise." <!--- Might be missing a few words here - consider "in comparison to native speakers who are characterized" --->
+For instance, "Gabriela is a white immigrant cis-gender woman from Romania whose research focuses on how non-native speakers are ideologically framed as linguistically deficient in comparison to native speakers who are characterized by their linguistic authority and expertise." 
 Lastly, in showing their commitment to Diversity, Equity, Inclusivity, and Belonging (DEIB) initiatives, journals have started to encourage authors to include positionality statements with their submissions (e.g., the Journal of Social and Personal Relationships). 
 It is our stance that researchers should reflect on their positionality before starting a project and consider including a positionality statement. 
 When submitting a study for publication, the positionality statement can be included in additional materials if the word limit is a concern. 
@@ -206,7 +205,6 @@ In sum, we believe positionality statements are essential in linguistic research
 Furthermore, including positionality statements in quantitative research can increase the validity of findings. 
 By reflecting on who it is that does the research, linguistics can become a more diverse, inclusive, and transparent field. 
 
-<!-- I think we have a great argument for the need that positionality statements are needed, but I think we could include more specific instructions about HOW one goes about creating one in terms of the conventions, default information to include etc. Do we want this to be the point of reference people use to find other points of reference or a guide in and of itself? -->
 
 # Open data
 
