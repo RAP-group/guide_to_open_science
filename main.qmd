@@ -150,26 +150,32 @@ One reason for the slow adoption in linguistics may be related to the fact that 
 To wit, it requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
 It necessitates that researchers implement new techniques with limited pedagogical resources and embrace alternative methods of disseminating their research, all of which constitutes a steep learning curve.
 Given how new open science practices are, it is reasonable to assume that current senior researchers were not trained in these innovative methodologies. 
-As a consequence, many early career researchers (ERC) find themselves at a crossroads in which they are forced to learn open science on their own, often without institutional support, at the same time that they are expected to be implementing these novel tools to be successful in their programs/careers. 
+As a consequence, many early career researchers (ERC) find themselves at a crossroads in which they are forced to learn open science on their own, often without institutional support. 
+Ironically, there is also a growing expectation that ECRs implement these novel tools in order to be successful in their programs/careers. 
 
 The present work intends to help make open science practices understandable and accessible to researchers in the speech sciences from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
 To this end, we identify and describe five critical areas in which linguists can engage in open science: open data, positionality statements, preregistration and registered reports, reproducible code/projects, and pre-prints. 
 Specifically, we provide practical examples and detailed descriptions of the aforementioned areas with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research.  
+
 <!--- We mention Speech sciences for the first time here. Are we suggesting practices that are speech science specific, or could they be used in many kinds of (behavioral) linguistic studies? --->
 
-```{mermaid}
-%%| label: fig-os-mermaid
-%%| fig-cap: THis is the caption
-flowchart TD
-    A(Open science)
-    A -->|Stance| B(Positionality statements\nDeclaration of conflicts of interest\nOpen data)
-    style B text-align:left
-    A -->|Workflow| C(Reproducible code/projects\nLiterate programming)
-    style C text-align:left
-    A -->|Dissemination| D(Pre-prints\nPreregistration\nRegistered reports)
-    style D text-align:left
+See @fig-os-flow
+
+```{r}
+#| label: fig-os-flow
+#| fig-cap: This is the cap
+knitr::include_graphics(
+  here("figs", "os-flow", "fig-os-flow.png")
+  )
 ```
 
+```{mermaid fig-os-flow-raw}
+%%| fig-cap: This is the caption
+%%| fig-width: 6
+%%| fig-height: 2
+%%| eval: false
+%%| file: ./figs/os-flow/fig-os-flow.mmd
+```
 
 
 # Positionality statements
@@ -194,7 +200,7 @@ For instance, "Gabriela is a white immigrant cis-gender woman from Romania whose
 Lastly, in showing their commitment to Diversity, Equity, Inclusivity, and Belonging (DEIB) initiatives, journals have started to encourage authors to include positionality statements with their submissions (e.g., the Journal of Social and Personal Relationships). 
 It is our stance that researchers should reflect on their positionality before starting a project and consider including a positionality statement. 
 When submitting a study for publication, the positionality statement can be included in additional materials if the word limit is a concern. 
-For examples of positionality statements in linguistic research, the interested reader is direction to @bochynska2023reproducible and @baeseberk_2023.
+For examples of positionality statements in linguistic research, the interested reader is directed to @bochynska2023reproducible and @baeseberk_2023. 
 
 In sum, we believe positionality statements are essential in linguistic research as they promote critical self-reflection, increase transparency, and help address diversity and inclusion concerns. 
 Furthermore, including positionality statements in quantitative research can increase the validity of findings. 
@@ -222,24 +228,23 @@ should we make recommendations on speech data? E.g. for production data with sub
 
 <!--- Ending here given my own limited resources, congrats to all on a great project and thank you for including me --->  
 
-
-<!--- old text starts here ---> 
 The term *open data* refers to data used in research that is freely available to anybody interested in accessing it for any purpose [@open2023].
 
 
 In the wake of the reproducibility crisis, the importance of open data in scientific research has grown significantly, particularly in fields like biology, psychology, and linguistics. 
-The underlying motivation for open data is to make knowledge more accessible.
+The underlying motivation for open data is relatively straightforward. 
 It facilitates transparency, rigor, reproducibility, replication, accumulation of knowledge, and makes participating in the scientific endeavor more inclusive.
+In this section, we provide more detail regarding the aforementioned benefits and consider the potential challenges to open data in the field of linguistics. 
 
-<!-- why open data is important --> 
-The case in favor of making data open and accessible is straightforward. 
 Open data practices enable wider access to research information, facilitating validation and replication of studies, which is essential for advancing scientific knowledge and maintaining trust in research findings.
 Access to open data is key, not just for upholding ethical standards in research, but also for facilitating future scientific progress. 
 Thus, open data becomes a cornerstone for researchers striving to make meaningful contributions to their fields and the broader scientific discourse. 
 
+<!--
 Researchers may initially hesitate to share their data publicly, but gaining an understanding of the benefits of open data can help alleviate these concerns. 
 It is important to note that simply stating "data available on request" is not sufficient to meet the new current standards of effective data sharing [@wicherts2006poor]. 
 Effective data sharing  has to involve a more comprehensive and transparent approach, ensuring that data is readily accessible to other researchers and contributing to the broader scientific community's efforts.
+-->
 
 Open data benefits individual researchers, the broader research community, and society as a whole. 
 By sharing data, researchers enhance their visibility and credibility, paving the way for academic collaborations and establishing their work as a cornerstone within their field. 
@@ -363,8 +368,10 @@ Moreover, the practice of preregistration extends its benefits to researchers at
 
 <!-- use MSA to clean up --> 
 Researchers face vital decisions while designing and executing research, with an inherent flexibility involved in the process of designing and conducting the experiment, and in analyzing the results [@simmons2011false]. 
-This type of flexibility, termed "researcher degrees of freedom", can have serious down-stream consequences in quantitative research []. 
-For instance, envision a phonetician intrigued by exploring lexical stress. In this scenario, the researcher might concentrate on distinct acoustic markers linked with stress, like pitch, duration, and/or intensity. 
+This type of flexibility, termed "researcher degrees of freedom", can have serious down-stream consequences in quantitative research [].
+<!-- the open brackets i'm assuming are for a citation? -->
+For instance, envision a phonetician intrigued by exploring lexical stress. 
+In this scenario, the researcher might concentrate on distinct acoustic markers linked with stress, like pitch, duration, and/or intensity. 
 Beyond selecting which acoustic markers to assess, they must pinpoint the specific realm for these measurements. 
 Does it encompass the nucleus of stressed/unstressed syllables or the entirety of the syllable? 
 Where exactly does the measurement occur---at the midpoint or as an average across the entire syllable? 
@@ -397,7 +404,7 @@ The depth of preregistration directly correlates with the effort invested; the m
 ```{dot}
 //| label: fig-pr-detail
 //| fig-cap: "Select levels of detail as suggestions to help gauge the extent of information to incorporate into a preregistration. The shading indicates the degree of detail; darker shades imply more exhaustive information (thus requiring more upfront work)"
-//| file: ./figs/prereg.dot
+//| file: ./figs/pr-detail/pr-detail.dot
 ```
 
 
@@ -496,7 +503,23 @@ Pre-prints play an important role in advancing the tenets of open science by pro
 While some researchers may still be hesitant to use this dissemination paradigm, the benefits of open science are becoming increasingly clear. 
 By embracing pre-prints, researchers can accelerate the dissemination of knowledge, improve the quality of research, and ensure that their findings are available to the widest possible audience. 
 
+See @fig-dissemination-cycle.
 
+```{r}
+#| label: fig-dissemination-cycle
+#| fig-cap: This is the cap
+knitr::include_graphics(
+  here("figs", "dissemination-cycle", "fig-dissemination-cycle.png")
+  )
+```
+
+```{mermaid fig-dissemination-cycle-raw}
+%%| fig-cap: This is the cap
+%%| fig-width: 6.5
+%%| fig-height: 4.5
+%%| eval: false
+%%| file: ./figs/dissemination-cycle/fig-dissemination-cycle.mmd
+```
 
 # Conclusion
 
