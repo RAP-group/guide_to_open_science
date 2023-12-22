@@ -57,8 +57,8 @@ author            :
     email: nmrodriguez@gmail.com
     orcid: 0000-0003-2941-0399
   - name: Kyle Parrish
-    affiliations: Rutgers University
-    email: kparrish.linguistics@gmail.com
+    affiliations: Goethe University Frankfurt
+    email: Parrish@em.uni-Frankfurt.de
     orcid: 0000-0001-8227-1370
 
 bibliography      : "./bib/os_refs.bib"
@@ -131,7 +131,7 @@ We outline eight specific open science practices that linguists can adopt to mak
 
 *Keywords:* Open science, Reproducibility, Replicability, Transparency, Positionality, Linguistics
 
-*Word count:* 7,403
+*Word count:* 7,441
 
 {{< pagebreak >}}
 
