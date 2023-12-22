@@ -11,4 +11,4 @@ Last update: 2023-12-22
 - Due date: 2023-12-20
 - Word limit: 8000
 - Format: APA
-- Date submitted: 2023-22-22
+- Date submitted: 2023-12-22
