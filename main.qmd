@@ -180,8 +180,9 @@ knitr::include_graphics(
 
 # Positionality statements
 
-A positionality statement is a reflective piece of writing that acknowledges a researcher's stance, or position, toward a research topic, framework, and even participants. 
-One's positionality encompasses their social, cultural, and personal identity, as well as their biases and assumptions [@holmes2020researcher], and can influence how research is done and how results are interpreted [@rowe2014]. 
+A positionality statement is a reflective piece of writing that acknowledges a researcher's stance/position, toward a research topic, framework, and even participants. 
+Similar to a statement of conflict of interest, a positionality statement can influence how results are interpreted [@rowe2014]. 
+One's positionality differs from a statement of conflict of interest in that it can also influence how research is undertaken and can encompass the researcher's social, cultural, and personal identity, as well as their biases and assumptions [@holmes2020researcher]. 
 Among others, relevant personal characteristics that may be included in a positionality statement are gender and racial identity, age, sexual orientation, immigration status, and ideological stances [@berger2015now]. 
 These traits may indirectly impact research endeavors, since participants may be more willing to engage in a study if they perceive the researcher as sympathetic [@de2006but], or may even offer different responses based on the researcher's perceived identity [@berger2015now]. 
 
@@ -194,6 +195,9 @@ Moreover, @bucholtz2023researcher note that considering a researcher's positiona
 Many researchers support and advocate for the inclusion of positionality statements in their research publications [e.g., @bucholtz2023researcher; @jafar2018positionality; @steltenpohl_video]. 
 Nonetheless, others contest this practice, pointing to the universalism of research, that is, the belief that scholarly endeavors should be assessed on their inherent merits, regardless of the status or personal identity of the person making the contribution [@savolainen2023positionality]. 
 @savolainen2023positionality draw connections between positionality statements and conflict of interest statements, arguing that, while researchers are required to disclose any and all financial gains associated with a research project, "positionality statements grant authors the freedom to decide which parts of their biography they choose to share and how they choose to frame it." (p. 1334). 
+Importantly, statements of conflict of interest are underused in linguistic research. 
+@bochynska2023reproducible surveyed open and transparent practices in linguistics and found that only 10% of the articles sampled included statements of conflict of interest, and, among those 10%, none declared any conflicts [See also @cristea2018; @hardwicke2020empirical; @hardwicke2022]. 
+Positionality statements are likely even less common. 
 
 While positionality statements, due to their reflexive nature, may encompass larger pieces of writing, they can also take the form of short paragraphs that illustrate a few personal characteristics deemed relevant for the particular research endeavor.
 For instance, "Gabriela is a white immigrant cis-gender woman from Romania whose research focuses on how non-native speakers are ideologically framed as linguistically deficient in comparison to native speakers who are characterized by their linguistic authority and expertise." 
