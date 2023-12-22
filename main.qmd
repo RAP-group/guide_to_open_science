@@ -267,43 +267,53 @@ While linguistics does face legitimate, field-specific challenges, ultimately th
 
 # Reproducible code/projects and literate programming
 
-<!-- also include literate programming --> 
-
-Reproducibility is a crucial aspect of any scientific study, and it has become increasingly important in recent years. 
+As we have seen, reproducibility is now a crucial aspect of any scientific study. 
 Researchers must be able to provide a clear and transparent account of their findings, including the methods used to obtain them. 
 Reproducibility can help to ensure that research results are valid, reliable, and can be used by others to build on existing knowledge. 
-In this section, we explore the importance of reproducibility, what we know about it in the fields of psychology and linguistics, and how researchers can make their code and projects more reproducible.
+In this section, we explore the importance of reproducibility, what we know about it in the field of linguistics, and how researchers can make their code and projects more reproducible.
 
-In general, it helps to increase the credibility of research findings and allows other researchers to verify and build on existing work. 
+In general, reproducibility helps to increase the credibility of research findings and allows other researchers to verify and build on existing work. 
 At worst, a lack of reproducibility can lead to irreproducible results and wasted resources. 
 This can have serious implications for public health and policy decisions based on research findings.
-
 In order to ensure reproducibility, it is necessary to be transparent about the methods used in research. 
 This includes not only the data collection and analysis methods but also the code used to conduct the analysis. 
-In the fields of psychology and linguistics, there is increasing awareness of the importance of reproducibility, and many researchers are taking steps to improve the transparency of their research.
 
-Researchers have an ethical responsibility to make their code and projects reproducible. 
+In linguistics there is increasing awareness of the importance of reproducibility, and many researchers are beginning to take steps to improve the reproducibility of their research.
 There are several steps that researchers can take to make their code and projects more reproducible. 
-One approach is to create reports that document the research process, including the data used, the methods used to analyze the data, and the results obtained. 
-This documentation can then be used to reproduce the research findings.
+One approach is to create reports that document the research process by including descriptions of the data, the methods used to analyze the data, and the results.  
+This documentation can then be made publicly available and used by third parties to retrace the steps to reproduce the research findings. 
+While better than nothing at all, a more complete approach includes the analysis code in the same document in which the very manuscript is written. 
+This integration of analysis code and prose into a single, dynamic document is known as literate programming [@knuth1984literate; @knuth1992]. 
+Under the hood, a series of macros and functions are used to tangle the code and prose of the document into a separate file, usually a word document or a pdf, which can then be submitted for publication. 
+Literate programming reduces the likelihood of copy and paste errors that often occur when passing the results of a statistical analysis from the analysis software to the word processing program. 
+If the analysis changes in any way, e.g., more data is included, a different analytic strategy is applied, etc., the document is retangled to update the output file. 
+Currently there are several implementations of literate programming for research purposes, the most common of which are R markdown files (Rmd) and Quarto markdown files (qmd). 
+These formats use the R package `knitr` [@knitr2014; @knitr2015; @knitr2023] to tangle (also "knit" or "render") the output file. 
+In fact, the present manuscript was generated using literate programming and is available for download here: <https://osf.io/bsu2q/>.
 
-Another approach is to create reproducible projects. 
-These projects include all of the data, code, and documentation necessary to reproduce the research findings. 
-This approach makes it easier for others to reproduce the research findings and build on the work.
+While the implementation of literate programming into a research workflow is ideal, the gold standard is to use literate, dynamic documents in conjunction with reproducible projects. 
+These projects include all of the data, code, and documentation necessary to reproduce the research findings, not only in a single report, but rather in many reports and/or presentations, simultaneously. 
+This approach makes it easier for others to reproduce research findings and build on previous work because it obviates the complications involved with user-specific file paths and differing operating systems. 
+Ideally, if the project works on one user's computer, it should work on any computer running the same software. 
+This allows a researcher to download an entire project and reproduce the analyses and reports at the click of a button. 
+A popular choice for reproducible projects is the open source software Posit (formerly RStudio), which utilizes `.Rproj` files called RStudio projects. 
+Examples of completed reproducible projects are available to the interested reader here: <https://osf.io/un45x/> and <https://osf.io/cp9bs/>.
 
-Dependency management tools like renv and targets can also be helpful in ensuring reproducibility. 
-These tools help to manage the dependencies that are necessary to run the code and ensure that the code can be run on different systems.
-Computational reproducibility platforms like Binder and Code Ocean can also be used to ensure reproducibility. 
-These platforms allow researchers to share their code and data in a way that can be easily replicated by others.
+Exciting, new technology that facilitates open science is coming out at a rapid pace. 
+This is excellent news for anybody interested in learning the new tools, but also creates other issues, particularly with regard to outdated software. 
+Dependency management tools like `renv` [@renv2023] and `targets` [@targets2021] can be helpful in future-proofing projects and ensuring reproducibility. 
+These tools help to manage the dependencies that are necessary to run code by providing specific versions of the software used originally by the researchers.
+Computational reproducibility platforms like Binder and Code Ocean can also be used to create virtual environments in which projects can be reproduced online. 
+Thus, these platforms allow researchers to share their code and data in ways that can be easily replicated by anybody with an internet connection.
 
-It is important to note that there is no way to future-proof code or projects. 
-Researchers must continually work to maintain the reproducibility of their work. 
-This includes updating the code and documentation as needed and testing the code on different systems to ensure that it can be run in different environments.
+At this juncture it is important to note that there is no way to completely future-proof code or projects. 
+Researchers must continually strive to maintain the reproducibility of their work. 
+This includes updating code and documentation as needed and testing projects on different operating systems to ensure that it can be run in different environments.
 
-In conclusion, reproducibility is a crucial aspect of scientific research. 
+Summarizing, reproducibility is a crucial aspect of scientific research. 
 It helps to ensure that research findings are valid, reliable, and can be used by others to build on existing knowledge. 
-In the fields of psychology and linguistics, there is increasing awareness of the importance of reproducibility, and many researchers are taking steps to improve the transparency of their research. 
-By creating reports, reproducible projects, and using dependency management tools and computational reproducibility platforms, researchers can make their code and projects more reproducible.
+In linguistics there is increasing awareness of the importance of reproducibility, and many researchers are taking steps to improve the transparency of their research. 
+By creating dynamic reports using literate programming and integrating them into reproducible projects in conjunction with dependency management tools, linguists can make their projects more reproducible and accessible.
 
 
 # Preregistration and registered reports
@@ -319,85 +329,59 @@ The depth of content detail within a preregistration spans a spectrum: in the si
 In this section, we provide information regarding the various components of a preregistration, centering on their advantageous impact on linguistic research.
 Specifically, we focus on *who* might want to consider preregistrations, *why* they might want to do so, *what* content they can include, and *how* they can complete a preregistration for a linguistics research project.
 
-Linguists engaged in empirical studies delve into data collection and observations to explore various dimensions of human language. 
-These investigations span diverse areas such as corpus analysis, interview analysis, experimental analysis, and more. However, as highlighted by @roettger2021preregistration, researchers are human and humans have evolved to filter the world in irrational ways, which can lead to QRPs and other problems that may affect the replicability of published research. 
-Preregistration emerges as a powerful instrument empowering linguists to bolster the trustworthiness and credibility of their inquiries through a systematic and predefined methodology. 
-Moreover, the practice of preregistration extends its benefits to researchers at all levels, including students and ECRs, senior academics, and professionals alike.
+Linguistic research is multifaceted and spans diverse areas such as corpus analysis, conversation/discourse analysis, experimental research, and more. 
+However, as highlighted by @roettger2021preregistration, researchers are human and humans have evolved to filter the world in irrational ways, which can lead to QRPs and other problems that may affect the replicability of published research. 
+Preregistration emerged as a powerful instrument empowering linguists to bolster the trustworthiness and credibility of their inquiries by establishing a systematic and predefined methodology. 
+We believe the practice of preregistration extends its benefits to researchers at all levels, including students and ECRs, senior academics, and professionals alike.
 
-<!-- use MSA to clean up --> 
-Researchers face vital decisions while designing and executing research, with an inherent flexibility involved in the process of designing and conducting the experiment, and in analyzing the results [@simmons2011false]. 
-This type of flexibility, termed "researcher degrees of freedom", can have serious down-stream consequences in quantitative research [].
-<!-- the open brackets i'm assuming are for a citation? -->
-For instance, envision a phonetician intrigued by exploring lexical stress. 
-In this scenario, the researcher might concentrate on distinct acoustic markers linked with stress, like pitch, duration, and/or intensity. 
-Beyond selecting which acoustic markers to assess, they must pinpoint the specific realm for these measurements. 
-Does it encompass the nucleus of stressed/unstressed syllables or the entirety of the syllable? 
-Where exactly does the measurement occur---at the midpoint or as an average across the entire syllable? 
-These choices wield significant influence on subsequent analyses. 
-Preregistration serves the purpose of meticulously documenting these crucial facets of the study. 
-Moreover, preregistration acts as a deterrent against QRPs, like HARKing or p-hacking, by mandating explicit declaration of decisions in the research trajectory before any data collection commences.
-Preregistering also acts as substantiation that researchers are conducting confirmatory rather than exploratory data analysis by delineating a clear chronology of decisions made before and after data collection. 
-Additionally, an enhanced level of specificity in the preregistration compels researchers to consider facets of their study that might usually be deferred to a later stage, such as statistical analyses. 
-This proactive approach demands more initial time investment from the researcher, but significantly enhances the prospects of uncovering pivotal flaws in the study design.
+Researchers face vital decisions while engaging in research, with inherent flexibility involved in the process of designing and conducting experiments, as well as analyzing the results [@simmons2011false]. 
+This type of flexibility, termed "researcher degrees of freedom", can have serious down-stream consequences in quantitative research, particularly in linguistics [e.g., @msa].
+For instance, a researcher studying lexical stress could concentrate on distinct acoustic cues typically associated with stress, i.e., pitch, duration, and intensity. 
+Beyond selecting acoustic cues to measure, she must also select a domain for these measurements, such as the mid-point of stressed/unstressed syllables or an average value over the entirety of the syllable.
+These choices wield significant influence on subsequent outcomes. 
+Preregistration serves the purpose of meticulously documenting these choices *a priori*, thus acting as a deterrent against QRPs, like HARKing or p-hacking. 
+This is because the researcher establishes what decisions will be made, such as measurement choices and analytic strategies, before data collection commences.
+A benefit of including a high level of specificity in the preregistration is that is forces researchers to consider facets of their study that might usually be deferred to a later stage, e.g., specific statistical tests.  
+This proactive approach demands more initial time investment from the researcher, but also increases the likelihood of uncovering crucial flaws in the study design.
 
-The scope of preregistration extends to any facet of research deemed worthy of temporal documentation preceding the initiation of the study, and the essential components predominantly include Research Questions/Hypotheses, Methodological Framework, and Analytical Approaches.
-The specific elements that will encompass a preregistration document will appear to be considerably diverse, but depend on the specific domain within linguistics and the nuanced nature of the study in question.
+The scope of preregistration extends to any facet of research deemed worthy of temporal documentation preceding the initiation of the study. 
+The essential components often include research questions/hypotheses, methodological framework, and analytic approaches.
+The specific elements that will comprise a preregistration can be considerably diverse, as they will depend on the specific domain within linguistics and the nuanced nature of the study in question.
+Consider, for instance, a psycholinguist conducting a self-paced reading study. 
+In this context, the focus of the preregistration might include the formulation of hypotheses, as well as a complete description of the experimental paradigm. 
+Additionally, the researcher may include a characterization of participant demographics, recruitment strategies, sample size considerations, independent variable manipulations, data transformations, and analytic strategies to test hypotheses. 
+Importantly, not all of the aforementioned components are equally prioritized in all preregistrations.
 
-An example illustrating this variability is as follows. 
-Consider the scenario where a psycholinguist is poised to undertake an experiment utilizing the self-paced reading methodology. 
-In this context, the focus of the preregistration would logically revolve around pivotal aspects, including explanations of research inquiries, formulation of hypotheses, and meticulous delineation of methodological intricacies. 
-This encompasses characterization of participant demographics, recruitment strategies, sample size considerations, and analogous critical details.
-Additionally, the psycholinguist may find it imperative to explain the notable variables subject to manipulation within the experimental design, articulate planned data transformations, and analyze the chosen statistical modeling strategies for subsequent inferential analyses. 
-Not all of the aforementioned components are equally prioritized in a preregistration.
+It is important to acknowledge that incorporating the entirety of these components into a preregistration represents a formidable challenge, as it front loads large portions of work that often take place after a study has begun, e.g., determining sample size, statistical models, etc. 
+In such instances, researchers are encouraged to commence with elements they perceive as most valuable to their study. 
+Many concerns about preregistration revolve around the potential burden of 'extra work'. 
+Conversely, preregistration is intended to streamline the workflow, fostering efficiency both in the short term and the long run, as it provides the researcher with complete control over the level of detail she chooses to include. 
+The depth of preregistration directly correlates with the effort invested; the more comprehensive the preregistration, the greater the initial workload, leading to reduced effort in subsequent stages.
+<!-- @fig-pr-detail summarizes some aspects of research projects that are often preregistered. -->
+We provide examples of preregistrations at the following links: <https://osf.io/nprgz> and <https://osf.io/qvjzy>.
 
-It is important to acknowledge that incorporating the entirety of these components into a preregistration may be a formidable challenge, particularly if open science is a new endeavor for the researcher. 
-In such instances, a judicious approach is permissible, with researchers encouraged to commence with elements they perceive as most valuable to their study. 
-Over time and through iterative practice, researchers will gain a better discernment of relevance within the Open Science framework.
-
-Many concerns regarding the implementation of Open Science or adopting preregistration revolve around the potential burden of 'extra work'. 
-Conversely, preregistration is intended to streamline our workflow, fostering efficiency both in the short term and the long run. 
-Moreover, it offers complete control over the level of detail one chooses to include. 
-The depth of preregistration directly correlates with the effort invested; the more comprehensive the preregistration, the greater the initial workload, leading to reduced effort in subsequent stages (See @fig-pr-detail). 
-
+<!--
 ```{dot}
 //| label: fig-pr-detail
 //| fig-cap: "Select levels of detail as suggestions to help gauge the extent of information to incorporate into a preregistration. The shading indicates the degree of detail; darker shades imply more exhaustive information (thus requiring more upfront work)"
 //| file: ./figs/pr-detail/pr-detail.dot
+//| eval: false
 ```
-
+-->
 
 ## Registered reports
 
 The reproducibility crisis has drawn attention to the shortcomings of the traditional model of publishing scientific research. In the current model, researchers generate hypotheses, design studies, collect data, analyze data, interpret results, and submit their findings for publication. However, this model has been criticized for lending itself to QRPs, such as p-hacking and harking, which can result in publication bias.
 
-<!-- Attempts at reform -->
-
-To address these issues, researchers have attempted various reforms, such as meta-analysis and pre-registration. 
+To address these issues, researchers have attempted various reforms, such as meta-analysis and preregistration. 
 Meta-analysis is a statistical technique that combines the results of multiple studies to increase the power of analysis. 
 Preregistration, as we have seen, involves publicly registering a study's design and methods before collecting data, to mitigate QRPs.
-
-<!-- A New model --> 
-
-Registered Reports (RRs) represent a new model that conceptually combines preregistration with peer review. 
+Registered reports (RRs) represent a new publication model that conceptually combines preregistration with peer review. 
 In this model, researchers submit a detailed proposal of their study, including their hypotheses, methods, and analyses, for review before data collection. 
 If the proposal is accepted, the study is guaranteed publication, regardless of the results. 
 This incentivizes rigorous methodology and reduces QRPs, as researchers cannot manipulate their analyses to obtain significant results.
+@fig-dissemination-cycle provides a side-by-side comparison of the standard publishing model and RRs.
 
-RRs were first introduced in 2013 by the Center for Open Science (COS), and have since been adopted by many journals across various fields, including psychology, neuroscience, and medicine.
-
-Pre-registration is often confused with RR, but they differ in that pre-registration is a separate step that occurs before the traditional publishing pipeline, whereas RR is integrated into the publishing process. 
-RRs cannot solve all the problems with the current model, but they can help reduce QRPs and increase transparency in scientific research.
-
-<!-- Current state, future --> 
-
-RRs are gaining popularity, but some fields, such as linguistics, have been slow to adopt them. 
-RRs may particularly benefit ECRs, who can use them to increase their chances of publication and build a reputation for rigor. 
-However, more senior researchers may be resistant to change and may need to be convinced of the benefits of RRs for the field as a whole.
-
-In sum, registered reports represent a promising new model for publishing scientific research that can help reduce QRPs and increase transparency. 
-As more journals adopt RRs, the scientific community can move towards a more rigorous and trustworthy publishing model.
-
-See @fig-dissemination-cycle.
 
 ```{r}
 #| label: fig-dissemination-cycle
@@ -416,15 +400,19 @@ knitr::include_graphics(
 ```
 
 
+RRs were first introduced in 2013 by the Center for Open Science (COS), and have since been adopted by many journals across various fields, including psychology, neuroscience, and medicine.
+Preregistration is often confused with RR, but they differ in that preregistration is a separate step that occurs before the traditional publishing pipeline, whereas RR is integrated into the publishing process. 
+
+RRs cannot solve all the problems with the current model, but they can help reduce QRPs and increase transparency in scientific research.
+RRs are gaining popularity, but some fields, such as linguistics, have been slow to adopt them. 
+RRs may particularly benefit ECRs, who can use them to increase their chances of publication and build a reputation for rigor. 
+However, more senior researchers may be resistant to change and may need to be convinced of the benefits of RRs for the field as a whole.
+
+In sum, registered reports represent a promising new model for publishing scientific research that can help reduce QRPs and increase transparency. 
+As more journals adopt RRs, the scientific community can move towards a more rigorous and trustworthy publishing model.
 
 
 # Pre-prints
-
-In recent years, the concept of open science has gained traction in academic circles. 
-The idea behind open science is to make scientific research and data more accessible, transparent, and reproducible. 
-One of the ways in which open science is being promoted is through the use of pre-prints. 
-
-## What is a pre-print? 
 
 A pre-print is a version of a research article, open and accessible, that has not yet undergone peer review but is publicly available online, through a pre-print server. 
 The general process consists of an initial screening process, followed by a posting of the manuscript on the preprint server within a few days of submission, bypassing peer review, and making the research findings freely accessible online [@puebla_polka_rieger_2021]. 
@@ -435,8 +423,6 @@ This can occur for several reasons, such as authors may choose not to pursue thi
 Pre-prints have become increasingly popular in recent years, particularly in fields such as biology, physics, and computer science. 
 The adoption of pre-prints has been slower in some fields, such as the social sciences and humanities, but this is changing as more researchers become aware of the benefits of open science, and new national and regional platforms by open science advocates continue to emerge. 
 
-## What are the benefits of pre-printing? 
-
 One of the primary benefits of pre-prints is that they allow researchers to share their findings quickly and easily. 
 This can be especially important in fields where research moves quickly, such as biology or computer science. 
 Pre-prints also allow researchers to receive feedback on their work from their peers, which can help to improve the quality of their research. 
@@ -445,7 +431,7 @@ This inclusive process allows more researchers and reviewers to participate in d
 
 One of the most significant benefits of pre-prints is their "early view" and "open access" effect, which leads to more attention from readers, increasing visibility and development of the overall research [@biswas2023]. 
 Pre-prints are not just quick dissemination; they also promote transparency and reproducibility in scientific research. 
-Recognizing these benefits, more major publishers have either launched preprint platforms or entered partnerships over the past 5-7 years, allowing preprints to be incorporated into the workflow [@puebla_polka_rieger_2021]. 
+Recognizing these benefits, more major publishers have either launched pre-print platforms or entered partnerships over the past 5-7 years, allowing pre-prints to be incorporated into the workflow [@puebla_polka_rieger_2021]. 
 By making research findings available to the public before peer-review, pre-prints not only improve the accuracy and reliability of research findings but also encourage collaborative efforts to identify potential errors, refine methodologies, and accelerate knowledge dissemination.
 
 Another benefit of pre-prints is that they can help to reduce publication bias, a widespread challenge in traditional publishing. 
@@ -453,30 +439,26 @@ Publication bias occurs when positive results are more likely to be published th
 This can skew the scientific literature and lead to a misunderstanding of the state of the research. 
 Pre-prints address this obstacle by openly sharing all research findings, regardless of outcome, creating a fairer and more accurate representation of the current scientific landscape of that field. 
 
-## Why the hesitation to pre-print? 
-
 Despite these benefits, some researchers remain hesitant to use pre-prints. 
 One concern is that publishing a pre-print may harm their chances of being published in a traditional academic journal. 
 However, this concern is becoming less relevant as more journals are accepting pre-prints as a legitimate form of publication. 
-According to @liu2021open, who conducted a survey asking as to the barriers in sharing preprints and discovered that the following were raised as additional barriers: peer review, journal policy, lack of knowledge of the process, confidentiality issues, data types, utility of sharing preprints, time constraints, and issues in preprint management. 
+According to @liu2021open, who conducted a survey asking as to the barriers in sharing preprints and discovered that the following were raised as additional barriers: peer review, journal policy, lack of knowledge of the process, confidentiality issues, data types, utility of sharing preprints, time constraints, and issues in pre-print management. 
 
-One of the concerns about preprints is their ability to secure the steady resources (technologies, expertise, policies, visions, standards, and so on) required to maintain and enhance the value of a service based on a user community's needs [@rieger2012sustainability]. 
-Preprints emerged as a 'public good' and preprint platforms provide a free service to both authors and readers; at the same time, many of the existing preprint services lack a scalable and transparent business model. 
+Additional concerns about pre-prints include their ability to secure the steady resources (technologies, expertise, policies, visions, standards, and so on) required to maintain and enhance the value of a service based on a user community's needs [@rieger2012sustainability]. 
+Preprints emerged as a 'public good' and pre-print platforms provide a free service to both authors and readers; at the same time, many of the existing pre-print services lack a scalable and transparent business model. 
+Moreover, data show that more senior researchers had more experience sharing through the format of pre-print than PhD students and ECRs in the 0-4 years group [@liu2021open]. 
+Nonetheless, the data collected from these surveys showed positive attitudes and willingness to contribute to open science through the submission of pre-prints. 
+These findings encourage ECRs to submit their research for pre-prints to receive valuable feedback from established scholars in their field of study and to increase visibility of their research, particularly in rapidly evolving fields. 
 
-Additionally, data shows that more senior researchers had more experience sharing through the format of preprint than PhD students and early-career researchers in the 0-4 years group [@liu2021open]. 
-However, the data collected from these surveys showed positive attitudes and willingness to contribute to open science through the submission of pre-prints. These findings encourage early-career researchers to submit their research for pre-prints to receive valuable feedback from established scholars in their field of study and to increase visibility of their research, particularly in rapidly evolving fields. 
-
-## What is the process to pre-print? 
-
-First, select your pre-print server that aligns with your course of research. 
+Researchers interested in making a pre-print publicly available can follow these simple steps. 
+First, select a pre-print server that aligns with the course of research. 
 Next, all pre-prints undergo a short screening, confirming author background, basic research content, and compliance with the ethical standards of the pre-print platform. 
-Once pre-prints pass the screening process, the content is made available online in open access format, encouraging others to comment and share. 
-To learn more about the various methods for preparing linguistic data for archiving and sharing, @thomason2022open shares more on Open Handbook of Linguistic Data Management. 
+Once the pre-print passes the screening process, the content is made available online in open access format, encouraging others to comment and share. 
 
-In conclusion, the growing visibility of pre-prints, and their acceptance as valid research outputs by diverse stakeholders, including researchers, funders, and national institutions, has fueled collaborative research efforts and strengthened support for their presence in a variety of research disciplines. 
+The growing visibility of pre-prints, and their acceptance as valid research outputs by diverse stakeholders, including researchers, funders, and national institutions, has fueled collaborative research efforts and strengthened support for their presence in a variety of research disciplines. 
 Pre-prints play an important role in advancing the tenets of open science by promoting transparency, reproducibility, and collaboration. 
 While some researchers may still be hesitant to use this dissemination paradigm, the benefits of open science are becoming increasingly clear. 
-By embracing pre-prints, researchers can accelerate the dissemination of knowledge, improve the quality of research, and ensure that their findings are available to the widest possible audience. 
+By embracing pre-prints, linguists can accelerate the dissemination of knowledge, improve the quality of research, and ensure that their findings are available to the widest possible audience. 
 
 
 # Conclusion

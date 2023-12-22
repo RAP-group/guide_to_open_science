@@ -20,11 +20,11 @@ digraph pr {
     ]
     a1 [
       fillcolor="#F5F5F5"
-      label=""
+      label="Type and topic of study"
     ]
     a2 [
       fillcolor="#E0E0E0"
-      label=""
+      label="Factors associated with RQ"
     ]
     a3 [
       fillcolor="#D3D3D3"
