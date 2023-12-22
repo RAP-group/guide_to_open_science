@@ -134,18 +134,18 @@ These practices, collectively, have been referred to as open science.
 As a result, specific transparency practices have emerged, such as open access publishing, preregistration, sharing data, analyses, and code, performing study replications, and declaring positionality and conflicts of interest. 
 Though it may come as a surprise to some, these open, transparent research practices have not been the norm in empirical and quantitative sciences. 
 
-To properly contextualize the need for open science, one must first consider the so-called reproducibility (replication) crisis [@forrt2021].
+To properly contextualize the need for open science, one must first consider the so-called reproducibility (replication) crisis.
 In the early 2010's, a team of researchers in Psychology embarked on a large-scale replication project to scrutinize what many considered to be the fields' major findings. 
 Specifically, they attempted to replicate 100 influential studies [@open2015estimating].
 The endeavor produced astounding results---of note, that approximately 53% of the major findings did not replicate---and inspired similar large-scale replication projects in other fields, yielding similar results.^[For Economics, see @camerer2016evaluating; for the Social Sciences, see @camerer2018evaluating; and, for cancer research, see @errington2021investigating.] 
-It is this series of events represents what is now referred to as the replication (or reproducibility) crisis. 
+This series of events represents what is now referred to as the replication (or reproducibility) crisis [See also @forrt2021]. 
 Unsurprisingly, the results generated an uproar in the psychological sciences.
 The alarming findings garnered media attention [e.g., @oliver2016] and have led to periods of introspection and self-reflection in many adjacent fields, among them, linguistics.
 
 Researchers have pointed to questionable research practices (QRPs), such as p-hacking and HARKing, along with small sample sizes, poor theory, lack of transparency, etc. as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
 In the aftermath of the aforementioned crisis, there has been a push for increased transparency and reproducible methodology to help mitigate the effects of QRPs. 
 The resulting methodological framework and associated techniques have reshaped research methods in Psychology, and, slowly but surely, are making their way into related fields. 
-While many agree that open science practices represent a positive step in improving scientific rigor, these practices, by and large, have not been adopted in the field of linguistics [@bochynska2023reproducible]. 
+While many agree that open science practices represent a positive step forward in improving scientific rigor, these practices, by and large, have not been adopted in the field of linguistics [@bochynska2023reproducible]. 
 One reason for the slow adoption in linguistics may be related to the fact that engaging in open science is no trivial feat. 
 To wit, it requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
 It necessitates that researchers implement new techniques with limited pedagogical resources and embrace alternative methods of disseminating their research, all of which constitutes a steep learning curve.
@@ -154,22 +154,23 @@ As a consequence, many early career researchers (ERC) find themselves at a cross
 Ironically, there is also a growing expectation that ECRs implement these novel tools in order to be successful in their programs/careers. 
 
 The present work intends to help make open science practices understandable and accessible to researchers in linguistics from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
-To this end, we identify and describe five critical areas in which linguists can engage in open science: open data, positionality statements, preregistration and registered reports, reproducible code/projects, and pre-prints. 
-Specifically, we provide practical examples and detailed descriptions of the aforementioned areas with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research.  
+To this end, we identify three areas, stance, workflow, and dissemination, in which linguists can engage in open science.
+The first area, *stance*, refers to practices that focus on the researchers position or attitude towards openness and transparency. 
+The second area, *workflow*, deals with methods and techniques researchers can implement to make their research projects more open and transparent. 
+Finally, *dissemination* refers to novel ways in which researchers can help ensure that their research products are accessible and free from QRPs. 
+In total, we describe eight open science practices, illustrated in @fig-os-flow, within these areas: positionality statements and declarations of conflict of interest, open data, reproducible code/projects and literate programming, preregistration, registered reports, and pre-prints. 
+We provide practical examples and detailed descriptions of the aforementioned practices with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research.  
 
-
-See @fig-os-flow
 
 ```{r}
 #| label: fig-os-flow
-#| fig-cap: This is the cap
+#| fig-cap: Eight open science practices amenable to research in lingusitics.
 knitr::include_graphics(
   here("figs", "os-flow", "fig-os-flow.png")
   )
 ```
 
 ```{mermaid fig-os-flow-raw}
-%%| fig-cap: This is the caption
 %%| fig-width: 6
 %%| fig-height: 2
 %%| eval: false
@@ -208,7 +209,6 @@ By reflecting on who it is that does the research, linguistics can become a more
 
 # Open data
 
-<!-- 1 --> 
 The term *open data* refers to data collected for research that is freely and easily available to anybody interested in accessing it for any purpose [@open2023].
 In academic research, statements such as "data available upon request" are commonplace.
 In spite of such assurances, we now know they do not typically result in adequate sharing of research materials [@spellman2017open; @wicherts2006poor].
@@ -216,7 +216,6 @@ Recent efforts have attempted to encourage researchers to make linguistic data o
 Nonetheless, open data is still the exception rather than the norm in linguistics [@bochynska2023reproducible]. 
 In this section, we provide more detail regarding the benefits of open data and consider the specific challenges researchers face in the field of linguistics. 
 
-<!-- 2 --> 
 The underlying motivation for open data is relatively straightforward, particularly in the wake of the reproducibility crisis.
 Though researchers may understandably hesitate to share their data, we believe understanding the benefits of open data can help alleviate any concerns. 
 Making linguistic data freely available improves credibility in our findings, to other researchers and the general public. 
@@ -227,13 +226,10 @@ Furthermore, it allows for published data to be reanalyzed in novel ways and uti
 Revisiting old data sets using innovative techniques can support or contradict past narrative conclusions [e.g., @casillas2021interlingual].
 In short, open data is a cornerstone of scientific research in the 21st century that enables wider access to research information, which, in turn, facilitates validation, motivates replication, promotes reproducibility, and makes possible future scientific progress. 
 
-
-<!-- 3 --> 
 Open data is particularly important for the field of linguistics, for all of the aforementioned reasons, and also because linguistics is Western, Educated, Industrialized, Rich, and Democratic [WEIRD, @bochynska2023reproducible].
 That is to say, the majority of linguistic research is concentrated on specific language, mainly Indo-Germanic, in overrepresented communities, by privileged scholars. Making linguistic data accessible to all researcher promotes participation in an with underrepresented communities. 
 Furthermore, it can increase the study of diverse and underreported languages, which fosters a more inclusive and comprehensive understanding of the global linguistic landscape. 
 
-<!-- 4 --> 
 Having stated all the above, it is necessary to recognize that the field of linguistics faces unique challenges with regard to open data. 
 At the heart of these challenges are ethical concerns that must be considered with care. 
 The privacy and consent of participants must be safeguarded, particularly in project involving personal data. 
@@ -249,7 +245,6 @@ Tabular data files can easily be anonymized using arbitrary identification codes
 Online data collection platforms, such as Prolific, typically remove identifying information by default and provide participant-specific identification numbers.
 In more uncommon cases in which institutional policies do not permit the sharing of derived data sets, synthetic data containing the same statistical properties can be generated and shared freely [See @quintana2020].
 
-<!-- 6 --> 
 A substantial hurdle that cannot be overlooked revolves around the fact that researchers must learn to use new technologies to participate in open, transparent research. 
 Making data open *and* accessible is as simple as merely uploading a data file. 
 Researchers should include a codebook or README file explaining the metadata of the file(s), as well as an explanation of the variables it contains and the context in which it was obtained. 
@@ -260,7 +255,6 @@ These repositories represent stable, long-term solutions with ample storage capa
 The data sets (and other materials) can be downloaded directly, free of any kind of payment or exchange of personal information (such as an email address) by the user. 
 For relevant examples, we direct the interested reader to <https://osf.io/zx9ky/>, <https://osf.io/3bmcp/>, or <https://github.com/RAP-group/empathy_intonation_perc>. 
 
-<!-- 7 --> 
 To summarize, open data is important because it facilitates transparency, rigor, reproducibility, replication, accumulation of knowledge, and, importantly, it makes participating in the scientific endeavor more inclusive. 
 Linguistics, in general, does not engage in open science practices [@bochynska2023reproducible], including sharing data. 
 While linguistics does face legitimate, field-specific challenges, ultimately the benefits of open data outnumber these challenges, and researchers should take the stance to share what is ethically reasonable. 
@@ -398,6 +392,23 @@ However, more senior researchers may be resistant to change and may need to be c
 In sum, registered reports represent a promising new model for publishing scientific research that can help reduce QRPs and increase transparency. 
 As more journals adopt RRs, the scientific community can move towards a more rigorous and trustworthy publishing model.
 
+See @fig-dissemination-cycle.
+
+```{r}
+#| label: fig-dissemination-cycle
+#| fig-cap: This is the cap
+knitr::include_graphics(
+  here("figs", "dissemination-cycle", "fig-dissemination-cycle.png")
+  )
+```
+
+```{mermaid fig-dissemination-cycle-raw}
+%%| fig-cap: This is the cap
+%%| fig-width: 6.5
+%%| fig-height: 4.5
+%%| eval: false
+%%| file: ./figs/dissemination-cycle/fig-dissemination-cycle.mmd
+```
 
 
 
@@ -462,23 +473,6 @@ Pre-prints play an important role in advancing the tenets of open science by pro
 While some researchers may still be hesitant to use this dissemination paradigm, the benefits of open science are becoming increasingly clear. 
 By embracing pre-prints, researchers can accelerate the dissemination of knowledge, improve the quality of research, and ensure that their findings are available to the widest possible audience. 
 
-See @fig-dissemination-cycle.
-
-```{r}
-#| label: fig-dissemination-cycle
-#| fig-cap: This is the cap
-knitr::include_graphics(
-  here("figs", "dissemination-cycle", "fig-dissemination-cycle.png")
-  )
-```
-
-```{mermaid fig-dissemination-cycle-raw}
-%%| fig-cap: This is the cap
-%%| fig-width: 6.5
-%%| fig-height: 4.5
-%%| eval: false
-%%| file: ./figs/dissemination-cycle/fig-dissemination-cycle.mmd
-```
 
 # Conclusion
 
