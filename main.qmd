@@ -115,11 +115,17 @@ library("stringr")
 
 # Abstract {.unnumbered}
 
-Abstract here
+In recent years, numerous fields of research have seen a push for increased reproducibility and transparency practices. 
+As a result, specific transparency practices have emerged, such as open access publishing, preregistration, sharing data, analyses, and code, performing study replications, and declaring positionality and conflicts of interest. 
+While many agree that open science practices represent a positive step forward in improving scientific rigor, these practices, by and large, have not been adopted in the field of linguistics [@bochynska2023reproducible]. 
+Few, if any, researchers have had explicit instruction on the practices of open science as part of their professional training. 
+Nonetheless, today's speech researcher is expected to be up to date on the current protocols of open science in order incorporate the methodological practices aimed at improving reproducibility/replicability.
+The present work intends to help make open science practices understandable and accessible to researchers in linguistics from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
+We outline eight specific open science practices that linguists can adopt to make their research more open, transparent, inclusive, and accessible to a wider audience.
 
-*Keywords:* Open science, Reproducibility, Transparency, Positionality, Linguistics
+*Keywords:* Open science, Reproducibility, Replicability, Transparency, Positionality, Linguistics
 
-*Word count:* xxx
+*Word count:* 7,403
 
 {{< pagebreak >}}
 
