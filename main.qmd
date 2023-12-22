@@ -216,7 +216,8 @@ By reflecting on who it is that does the research, linguistics can become a more
 The term *open data* refers to data collected for research that is freely and easily available to anybody interested in accessing it for any purpose [@open2023].
 In academic research, statements such as "data available upon request" are commonplace.
 In spite of such assurances, we now know they do not typically result in adequate sharing of research materials [@spellman2017open; @wicherts2006poor].
-Recent efforts have attempted to encourage researchers to make linguistic data open and accessible (e.g., the IRIS database), and, in come cases, even require it (e.g., journals such as *Language Learning*, *Language and Speech*, *Applied Psycholinguistics*).
+Recent efforts have attempted to encourage researchers to make linguistic data open and accessible via servers (e.g., the IRIS database). 
+Some journals offer open science badges (e.g., *Language Learning*, *Language and Speech*), and, in some cases, have made data sharing a requirement for publication (e.g., *Applied Psycholinguistics*). 
 Nonetheless, open data is still the exception rather than the norm in linguistics [@bochynska2023reproducible]. 
 In this section, we provide more detail regarding the benefits of open data and consider the specific challenges researchers face in the field of linguistics. 
 
@@ -230,27 +231,27 @@ Furthermore, it allows for published data to be reanalyzed in novel ways and uti
 Revisiting old data sets using innovative techniques can support or contradict past narrative conclusions [e.g., @casillas2021interlingual].
 In short, open data is a cornerstone of scientific research in the 21st century that enables wider access to research information, which, in turn, facilitates validation, motivates replication, promotes reproducibility, and makes possible future scientific progress. 
 
-Open data is particularly important for the field of linguistics, for all of the aforementioned reasons, and also because linguistics is Western, Educated, Industrialized, Rich, and Democratic [WEIRD, @bochynska2023reproducible].
-That is to say, the majority of linguistic research is concentrated on specific language, mainly Indo-Germanic, in overrepresented communities, by privileged scholars. Making linguistic data accessible to all researcher promotes participation in an with underrepresented communities. 
+Open data are particularly important for the field of linguistics, for all of the aforementioned reasons, and also because linguistics is Western, Educated, Industrialized, Rich, and Democratic [WEIRD, @bochynska2023reproducible].
+That is to say, the majority of linguistic research is concentrated on specific language, mainly Indo-Germanic, in overrepresented communities, by privileged scholars. Making linguistic data accessible to all researchers promotes participation *in* and *with* underrepresented communities. 
 Furthermore, it can increase the study of diverse and underreported languages, which fosters a more inclusive and comprehensive understanding of the global linguistic landscape. 
 
 Having stated all the above, it is necessary to recognize that the field of linguistics faces unique challenges with regard to open data. 
 At the heart of these challenges are ethical concerns that must be considered with care. 
-The privacy and consent of participants must be safeguarded, particularly in project involving personal data. 
+The privacy and consent of participants must be safeguarded.
 Linguistic data often include personal information, which can be especially difficult to anonymize. 
 Though written and behavioral data do not typically pose many issues, audio and video recordings constitute a large portion of linguistic research materials. 
 In such cases, anonymizing participant information can be troublesome, particularly when working with minority languages or smaller communities.
 Sociolinguistic interviews, for instance, represent a substantial and valuable contribution to linguistics and often contain sensitive information. 
 Moreover, the advent of generative artificial intelligence technologies, such as Large Language Models, may pose unknown challenges in the near future that necessitate additional steps to secure the protection of sensitive data against misuse.
-While these challenges are substantial, we believe in many cases acceptable solutions exist. 
-For example, when primary data, such as audio or video files, cannot be shared, derived data in the form of tabular files can take its place. 
-For instance, if institutional policies prohibit the sharing of audio files, a comma-separated or tab-separated files (csv, tsv) containing the variables of interest (e.g., formant values, response times, etc.) can be made public instead. 
-Tabular data files can easily be anonymized using arbitrary identification codes. 
+While these challenges are substantial, we believe acceptable solutions exist in many, if not all, cases. 
+When primary data, such as audio or video files, cannot be shared, derived data in the form of tabular files can take its place. 
+For instance, if institutional policies prohibit the sharing of audio files, a comma-separated or tab-separated file (csv, tsv) containing the variables of interest (e.g., formant values, response times, etc.) can be made public instead. 
+Tabular data files can be anonymized easily using arbitrary identification codes. 
 Online data collection platforms, such as Prolific, typically remove identifying information by default and provide participant-specific identification numbers.
 In more uncommon cases in which institutional policies do not permit the sharing of derived data sets, synthetic data containing the same statistical properties can be generated and shared freely [See @quintana2020].
 
 A substantial hurdle that cannot be overlooked revolves around the fact that researchers must learn to use new technologies to participate in open, transparent research. 
-Making data open *and* accessible is as simple as merely uploading a data file. 
+Making data open *and* accessible is not as simple as merely uploading a data file. 
 Researchers should include a codebook or README file explaining the metadata of the file(s), as well as an explanation of the variables it contains and the context in which it was obtained. 
 Once the data has been prepared for sharing, the researcher must decide where to share it. 
 Platforms such as google drive, dropbox, etc. are not recommended because they are linked to personal accounts that may change or become unavailable over time. 
