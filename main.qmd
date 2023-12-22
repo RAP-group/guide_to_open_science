@@ -385,14 +385,13 @@ This incentivizes rigorous methodology and reduces QRPs, as researchers cannot m
 
 ```{r}
 #| label: fig-dissemination-cycle
-#| fig-cap: This is the cap
+#| fig-cap: Flow chart of the standard publication model and registered reports.
 knitr::include_graphics(
   here("figs", "dissemination-cycle", "fig-dissemination-cycle.png")
   )
 ```
 
 ```{mermaid fig-dissemination-cycle-raw}
-%%| fig-cap: This is the cap
 %%| fig-width: 6.5
 %%| fig-height: 4.5
 %%| eval: false
@@ -461,29 +460,28 @@ While some researchers may still be hesitant to use this dissemination paradigm,
 By embracing pre-prints, linguists can accelerate the dissemination of knowledge, improve the quality of research, and ensure that their findings are available to the widest possible audience. 
 
 
-# Conclusion
+# Concluding remarks
 
-The purpose of this article is to help foster open science in linguistics (FOSIL). 
 The early 2010's saw the reproducibility crisis take hold of the psychological sciences. 
 As a consequence, there has been a push for increased transparency and reproducible methodology to help mitigate the effects of questionable research practices. 
 The resulting methodological framework and associated techniques, now referred to as open science, have reshaped research methods in psychology and have slowly but surely made their way into adjacent fields, such as linguistics.
+In the present work we have outlined eight specific open science practices, classified into three areas, that researchers in linguistics can adopt to make their research more open, transparent, inclusive, and accessible to a wider audience. 
+
 Important considerations often overlooked in the wake of the open science movement deal with (1) how linguists actually learn open science practices and (2) how senior researchers can train the next generation of linguists. 
 Few, if any, researchers have had explicit instruction on the practices of open science as part of their professional training. 
 Nonetheless, today's speech researcher is expected to be up to date on the current protocols of open science in order incorporate the methodological practices aimed at improving reproducibility/replicability. 
-The FOSIL project aims to make open science practices clear and accessible to people conducting research in the field of linguistics.
+What does it mean for the field?
+We believe that researchers---linguists specifically---have to adapt and learn the new methods of open science. 
+Additionally, we must, as a field, concentrate our efforts to train current students/ECRs in open, transparent research practices.
+This necessarily implies providing a framework for senior researchers to learn open science, if we intend for them to train the next generation of linguists.
+Furthermore, linguistic journals must to adapt to new models of publishing. 
 
-
-accumulate practices over time (Bergman, 2018)
-
-Bergmann, C. (2018). How to integrate open science into language acquisition research. Student workshop at the 43rd Boston University Conference on Language Development (BUCLD), Boston, USA. 
-
-
-
-guides for learning open science
-
-Crüwell, S., van Doorn, J., Etz, A., Makel, M. C., Moshontz, H., Niebaum, J. C., Orben, A., Parsons, S., & Schulte-Mecklenbeck, M. (2018). 7 Easy Steps to Open Science: An Annotated Reading List. https://doi.org/10.31234/osf.io/cfzyx
-
-Lewis, N. A. Jr. (2019). Open Communication Science: A Primer on Why and Some Recommendations for How. Communication Methods and Measures, 14(2), 71–82. https://doi.org/10.1080/19312458.2019.1685660
+While open science provides novel techniques and integrates state-of-the-art innovations, it also comes with challenges, particularly with regard to the steep learning curve researchers face when learning these new methods. 
+We advocate for the "buffet" approach, in which select open science practices are integrated into the researcher's workflow slowly over time [e.g., @bergmann2018integrate]. 
+We have provided descriptions and relevant examples of these practices to accompany the many guides already available for learning open science [e.g., @cruwell20187; @lewis2020open]. 
+Crucially, the purpose of this article is to help foster open science in linguistics (FOSIL). 
+We leave the interested reader with a series of tutorials designed for linguists: <https://FOSIL-project.github.io>. 
+The FOSIL project details many of the open, transparent practices described here with crowd sourced translations into various languages other than English with the goal of making open science practices clear and accessible to all individuals conducting research in the field of linguistics.
 
 
 
