@@ -113,6 +113,12 @@ library("stringr")
 
 {{< pagebreak >}}
 
+# Author note {.unnumbered}
+
+Correspondence concerning this article should be addressed to Joseph V. Casillas, Rutgers University - Department of Spanish and Portuguese, 15 Seminary Place, New Brunswick, NJ 08904, USA . E-mail: joseph.casillas@rutgers.edu.
+
+{{< pagebreak >}}
+
 # Abstract {.unnumbered}
 
 In recent years, numerous fields of research have seen a push for increased reproducibility and transparency practices. 
