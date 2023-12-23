@@ -131,7 +131,7 @@ We outline eight specific open science practices that linguists can adopt to mak
 
 *Keywords:* Open science, Reproducibility, Replicability, Transparency, Positionality, Linguistics
 
-*Word count:* 7,441
+*Word count:* 7,455
 
 {{< pagebreak >}}
 
@@ -238,7 +238,7 @@ Though researchers may understandably hesitate to share their data, we believe u
 Making linguistic data freely available improves credibility in our findings, to other researchers and the general public. 
 Prohibiting or impeding access to data collected for publicly funded research is unethical and a detriment to inclusivity. 
 Open data is fundamental for cumulative science in numerous ways. 
-It affords third parties the opportunity to scrutinize original findings, which promotes reproducibility and reduces errors, such as those related to statistical analyses and reporting of outcomes [TIMO]. 
+It affords third parties the opportunity to scrutinize original findings, which promotes reproducibility and reduces errors, such as those related to statistical analyses and reporting of outcomes [e.g., @roettger2021]. 
 Furthermore, it allows for published data to be reanalyzed in novel ways and utilized in meta-analyses. 
 Revisiting old data sets using innovative techniques can support or contradict past narrative conclusions [e.g., @casillas2021interlingual].
 In short, open data is a cornerstone of scientific research in the 21st century that enables wider access to research information, which, in turn, facilitates validation, motivates replication, promotes reproducibility, and makes possible future scientific progress. 
