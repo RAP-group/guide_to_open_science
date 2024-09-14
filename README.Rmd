@@ -6,6 +6,8 @@ output: github_document
 
 Opening open science to all: Demystifying reproducibility and transparency practices in linguistic research
 
+Preprint: https://doi.org/10.31234/osf.io/spz4w  
+Fosil website: https://fosil-project.github.io
 
 Last update: `r Sys.Date()`  
 
@@ -15,3 +17,4 @@ Last update: `r Sys.Date()`
 - Word limit: 8000
 - Format: APA
 - Date submitted: 2023-12-22
+- Round 1 reviews received: 2024-05-09
