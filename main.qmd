@@ -109,6 +109,21 @@ library("fs")
 library("dplyr")
 library("tidyr")
 library("stringr")
+library("glue")
+library("readr")
+library("janitor")
+library("ggplot2")
+
+theme_clean <- function(...) {
+  list(
+    theme_minimal(), 
+    theme(
+      axis.title.y = element_text(size = rel(.9), hjust = 0.95),
+      axis.title.x = element_text(size = rel(.9), hjust = 0.95),
+      panel.grid.major = element_line(colour = 'grey90', linewidth = 0.15),
+      panel.grid.minor = element_line(colour = 'grey90', linewidth = 0.15))
+  )
+}
 ```
 
 {{< pagebreak >}}
@@ -330,10 +345,115 @@ By creating dynamic reports using literate programming and integrating them into
 
 # Preregistration and registered reports
 
+```{r}
+#| label: get-rr-data
+
+# Data downloaded from: 
+# https://docs.google.com/spreadsheets/d/1D4_k-8C_UENTRtbPzXfhjEyu3BfLxdOsn9j-otrO870/edit#gid=0
+
+# Today's date
+file_name <- glue("{Sys.Date()}_registered_reports.csv")
+
+# Import csv and tidy
+#  - remove empty rows
+#  - replace checkmarks with '1'
+#  - search for journals with 'ling' or 'lang' in title
+rr_dat <- read_csv(
+  file = here("data", "raw", "Comparison of Registered Reports - Sheet1.csv"), 
+  skip = 1
+  ) |>
+  filter(!is.na(Journal)) |> 
+  clean_names() |>
+  mutate(across(everything(), ~ str_replace(.x, "✓", "1"))) |> 
+  mutate(is_ling = if_else(str_detect(journal, "ling|Ling|lang|Lang"), 1, 0)) |> 
+  write_csv(here("data", "tidy", file_name))
+
+# Number of journals offering RR in 2019
+n_rr_2019 <- 156
+
+# Number of ling/lang journals offering RR in 2024
+n_rr_2024 <- rr_dat |> 
+  group_by(is_ling) |>
+  count()
+
+# Percent increase in journals offering RR since 2019
+rr_perc_increase <- round((n_rr_2024$n |> sum() - n_rr_2019) / n_rr_2019 * 100)
+```
+
+
+```{r}
+#| label: get-pr-data
+
+# Data pulled from: 
+# https://osf.io/search?resourceType=Registration%2CRegistrationComponent&sort=dateCreated
+# Note: Data available on 20241017 is different from data pulled on 20240222
+# Old data: 3833, 28474, 27175, 25197, 22025, 17180, 13881, 8774, 5707, 3326, 
+#           954, 720, 91, 2
+
+pr_dat <- tibble(
+  year = 2024:2011, 
+  count = c(
+    25163, 30666, 27907, 25521, 23826, 17143, 13832, 8751, 5688, 3314, 
+    954, 717, 91, 2
+  )
+) |> 
+  arrange(year) |> 
+  mutate(cum = cumsum(count))
+
+n_pr_2024 <- max(pr_dat$cum)
+```
+
+
+
 In this section, we will briefly consider two open science innovations that are making a profound impact on how academic research is conducted, evaluated, and, ultimately, disseminated to the public. 
 These innovations, preregistrations and registered reports, were designed with the goal of reducing QRPs and publication bias. 
 
 ## Preregistration
+
+```{r}
+#| label: pr-plot-prep
+
+pr1 <- pr_dat |> 
+  ggplot() + 
+    aes(x = year, y = count) + 
+    geom_segment(
+      aes(x = year, xend = year, y = -1000, yend = count), 
+      color = "#cc0033", linewidth = 5, show.legend = F, lineend = "round"
+      ) + 
+    scale_x_continuous(breaks = seq(2011, 2024, 1)) + 
+    scale_y_continuous(
+      breaks = seq(0, 30000, 5000), 
+      labels = glue("{seq(0, 30, 5)}k")
+      ) + 
+    coord_cartesian(ylim = c(0, 35000), xlim = c(2010, 2025), expand = F) + 
+    labs(title = "OSF registrations by year", y = "Counts", x = NULL) + 
+    theme_clean(base_family = "Palatino")
+
+pr_max <- tibble(
+  year = 2024.5, 
+  cum = 180000, 
+  text = glue("{formatC(n_pr_2024, format = 'd', big.mark = ',')} preregs\nsince 2011")
+)
+
+pr2 <- pr_dat |> 
+  ggplot() + 
+    aes(x = year, y = cum) + 
+    geom_text(
+      data = pr_max, 
+      aes(x = year, y = cum, label = text), 
+      hjust = 1, size = 5
+      ) + 
+    geom_line() + 
+    geom_point(color = "white", fill = "#cc0033", size = 5, pch = 21, stroke = 1) + 
+    scale_x_continuous(breaks = seq(2011, 2024, 1)) + 
+    scale_y_continuous(
+      breaks = seq(0, 200000, 20000), 
+      labels = glue("{seq(0, 200, 20)}k")
+      ) + 
+    coord_cartesian(ylim = c(0, 200000), xlim = c(2011, 2024)) + 
+    labs(title = "Cumulative OSF registrations", y = "Cumulative counts", x = NULL) + 
+    theme_clean(base_family = "Palatino") 
+```
 
 A preregistration is a time-stamped document that provides comprehensive detail about a study, including, but not limited to, research questions, hypotheses, methodologies, and analytic strategies. 
 Preregistrations are written prior to data collection and do not undergo peer review.
