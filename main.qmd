@@ -113,6 +113,7 @@ library("glue")
 library("readr")
 library("janitor")
 library("ggplot2")
+library("googlesheets4")
 
 theme_clean <- function(...) {
   list(
@@ -350,23 +351,27 @@ By creating dynamic reports using literate programming and integrating them into
 
 # Data downloaded from: 
 # https://docs.google.com/spreadsheets/d/1D4_k-8C_UENTRtbPzXfhjEyu3BfLxdOsn9j-otrO870/edit#gid=0
-
 # Today's date
-file_name <- glue("{Sys.Date()}_registered_reports.csv")
+file_name_raw <- glue("{Sys.Date()}_registered_reports_raw.csv")
+file_name_tidy <- glue("{Sys.Date()}_registered_reports.csv")
+
+read_sheet("https://docs.google.com/spreadsheets/d/1D4_k-8C_UENTRtbPzXfhjEyu3BfLxdOsn9j-otrO870/edit#gid=0") |> 
+  write_csv(here("data", "raw", file_name_raw))
+
 
 # Import csv and tidy
 #  - remove empty rows
 #  - replace checkmarks with '1'
 #  - search for journals with 'ling' or 'lang' in title
 rr_dat <- read_csv(
-  file = here("data", "raw", "Comparison of Registered Reports - Sheet1.csv"), 
+  file = here("data", "raw", file_name_raw), 
   skip = 1
   ) |>
   filter(!is.na(Journal)) |> 
   clean_names() |>
   mutate(across(everything(), ~ str_replace(.x, "✓", "1"))) |> 
   mutate(is_ling = if_else(str_detect(journal, "ling|Ling|lang|Lang"), 1, 0)) |> 
-  write_csv(here("data", "tidy", file_name))
+  write_csv(here("data", "tidy", file_name_tidy))
 
 # Number of journals offering RR in 2019
 n_rr_2019 <- 156
