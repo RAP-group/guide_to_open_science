@@ -1,0 +1,42 @@
+
+# Reviewer \#1
+
+:::reviewer
+This is a reviewer comment
+:::
+
+This is our response
+
+\Assignment{First Author}
+\WorkInProgress
+\Easy
+
+
+:::reviewer
+\label{pt:foo}
+This is a reviewer comment
+
+Still a comment
+:::
+
+This is our response.
+
+> This is a section quoted from the revised manuscript to illustrate the change.
+
+\Assignment{Second Author}
+\AlmostDone
+\Medium
+
+
+:::reviewer
+This is a reviewer comment
+:::
+
+This is our response. Also see RC \@ref(pt:foo)
+
+\Assignment{First Author}
+\Done
+\TimeConsuming
+\Hard
+\NotEstimated
+

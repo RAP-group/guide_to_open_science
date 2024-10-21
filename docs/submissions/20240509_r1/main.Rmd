@@ -1,0 +1,61 @@
+---
+title          : "Opening open science to all: Demystifying reproducibility and transparency practices in linguistic research"
+authors        : "Joseph V. Casillas, Gabriela Constantin-Dureci, Iván Rascón Andreu, Jiawei Shao, Stephanie A. Rodríguez, Adrija Gadamsetty, Alexandria Minetti, Krishita Laungani, John Thatcher, Rhode-Taina Gardere, Katherine Taveras, Isabelle Chang, Nicole Rodríguez, Meritxell Feliu Ribas & Kyle Parrish"
+journal        : "Linguistics: An Interdisciplinary Journal of the Language Sciences"
+manuscript-id  : "LING.2023.0249"
+manuscript-src : "headings"
+
+cutout-quotes  : false
+class          : "draft"
+output         : papaja::revision_letter_pdf
+---
+
+
+Dear Dr. Volker Gast, 
+
+Thank you for taking the time to consider our manuscript _`r rmarkdown::metadata$title`_ (`r rmarkdown::metadata$manuscript`) for publication in _`r rmarkdown::metadata$journal`_. 
+Our understanding is that we needed to consider the reviewers' comments and revise accordingly before the manuscript could be reevaluated for publication. 
+We noted X specific areas that were consistently highlighted by the reviewers as needing improvement: x, y, and z. 
+We have considered thoroughly the detailed feedback provided by all three reviewers and resubmit what we believe to be a much improved version of the manuscript. 
+In this letter we address the reviewers' concerns point-by-point. 
+Where feasible, we quote all revised text in this document, otherwise, we refer the reader to the relevant sections of the revised manuscript. 
+We thank you and the three anonymous reviewers for all comments and suggestions and again enthusiastically submit the revised manuscript for consideration in _`r rmarkdown::metadata$journal`_.
+
+
+Sincerely,  
+Joseph Casillas  
+(corresponding author)
+
+\clearpage
+
+# Reviewer \#1
+
+```{r}
+#| child: "reviewer_1.Rmd"
+#| eval: TRUE
+```
+
+\clearpage
+
+# Reviewer \#2
+
+```{r}
+#| child: "reviewer_2.Rmd"
+#| eval: TRUE
+```
+
+\clearpage
+
+# Reviewer \#3
+
+```{r}
+#| child: "reviewer_3.Rmd"
+#| eval: TRUE
+```
+
+\newpage
+
+# References {-}
+
+::: {#refs custom-style="Bibliography"}
+:::
