@@ -319,7 +319,7 @@ In this section, we explore the importance of reproducibility, what we know abou
 
 In general, reproducibility helps to increase the credibility of research findings and allows other researchers to verify and build on existing work. 
 At worst, a lack of reproducibility can lead to irreproducible results and wasted resources. 
-This can have serious implications for public health and policy decisions based on research findings.
+This could hinder advancements in linguistic theory and theories of language acquisition, and could have serious implications for education and language policy decisions based on research findings.
 In order to ensure reproducibility, it is necessary to be transparent about the methods used in research. 
 This includes not only the data collection and analysis methods but also the code used to conduct the analysis. 
 
