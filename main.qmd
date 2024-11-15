@@ -190,19 +190,36 @@ In total, we describe eight open science practices, illustrated in @fig-os-flow,
 We provide practical examples and detailed descriptions of the aforementioned practices with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research.  
 
 
-```{r}
-#| label: fig-os-flow
-#| fig-cap: Eight open science practices amenable to research in lingusitics.
-knitr::include_graphics(
-  here("figs", "os-flow", "fig-os-flow.png")
-  )
-```
-
-```{mermaid fig-os-flow-raw}
-%%| fig-width: 6
-%%| fig-height: 2
-%%| eval: false
-%%| file: ./figs/os-flow/fig-os-flow.mmd
+```{mermaid}
+%%| label: fig-os-flow
+%%| fig-cap: Open science practices amenable to research in linguistics as they pertain to one's stance, workflow, and the dissemination of research products.
+%%| out-width: 100%
+---
+config:
+  theme: base
+  themeVariables:
+    primaryTextColor: '#000'  
+    primaryColor: '#DEF5E5FF' 
+    secondaryColor: '#B7E6C5FF'
+    tertiaryColor: '#84D9B1FF' 
+    fontSize: '13px'
+    fontFamily: 'Times New Roman, Times, serif'
+---
+mindmap
+  root((**Open science**))
+    **Stance**
+      (Positionality statements)
+      (Declaration of<br>conflicts of interest)
+      (Decision to share materials)
+    **Workflow**
+      (Literate programming)
+      (Reproducible code/projects)
+      (Shareable environments)
+    **Dissemination**
+      (Preregistration)
+      (Registered reports)
+      (Pre-prints)
+      ("Publish materials<br>(data, code, stimuli, etc.)")
 ```
 
 

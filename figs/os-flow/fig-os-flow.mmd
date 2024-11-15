@@ -1,8 +1,26 @@
-flowchart TD
-    A(Open science)
-    A -->|Stance| B(* Positionality statements\n* Declaration of conflicts\n &nbsp; &nbsp;of interest\n* Open data)
-    style B text-align:left
-    A -->|Workflow| C(* Reproducible code/projects\n* Literate programming)
-    style C text-align:left
-    A -->|Dissemination| D(* Preregistration\n* Registered reports\n* Pre-prints)
-    style D text-align:left
+---
+config:
+  theme: base
+  themeVariables:
+    primaryTextColor: '#000'  
+    primaryColor: '#DEF5E5FF' 
+    secondaryColor: '#B7E6C5FF'
+    tertiaryColor: '#84D9B1FF' 
+    fontSize: '13px'
+    fontFamily: 'Times New Roman, Times, serif'
+---
+mindmap
+  root((**Open science**))
+    **Stance**
+      (Positionality statements)
+      (Declaration of<br>conflicts of interest)
+      (Decision to share materials)
+    **Workflow**
+      (Literate programming)
+      (Reproducible code/projects)
+      (Shareable environments)
+    **Dissemination**
+      (Preregistration)
+      (Registered reports)
+      (Pre-prints)
+      ("Publish materials<br>(data, code, stimuli, etc.)")
