@@ -160,7 +160,7 @@ In recent years, numerous fields of research have seen a push for increased repr
 These practices, collectively, have been referred to as open science. 
 @parsons2022community refer to open science as an umbrella term "[...] reflecting the idea that scientific knowledge of all kinds, where appropriate, should be openly accessible, transparent, rigorous, reproducible, replicable, accumulative, and inclusive, all which are considered fundamental features of the scientific endeavor" (p. 11). 
 As a result, specific transparency practices have emerged, such as open access publishing, preregistration, sharing data, analyses, and code, performing study replications, and declaring positionality and conflicts of interest. 
-Though it may come as a surprise to some, these open, transparent research practices have not been the norm in empirical and quantitative sciences. 
+Though it may come as a surprise to some, these open, transparent research practices have not been the norm in empirical and quantitative sciences, despite painstaking efforts being made in recent years [e.g., @berez-kroeker2018; @berez-kroeker2022, among others]. 
 
 To properly contextualize the need for open science, one must first consider the so-called reproducibility (replication) crisis.
 In the early 2010's, a team of researchers in Psychology embarked on a large-scale replication project to scrutinize what many considered to be the fields' major findings. 
@@ -168,7 +168,7 @@ Specifically, they attempted to replicate 100 influential studies [@open2015esti
 The endeavor produced astounding results---of note, that approximately 53% of the major findings did not replicate---and inspired similar large-scale replication projects in other fields, yielding similar results.^[For Economics, see @camerer2016evaluating; for the Social Sciences, see @camerer2018evaluating; and, for cancer research, see @errington2021investigating.] 
 This series of events represents what is now referred to as the replication (or reproducibility) crisis [See also @forrt2021]. 
 Unsurprisingly, the results generated an uproar in the psychological sciences.
-The alarming findings garnered media attention [e.g., @oliver2016] and have led to periods of introspection and self-reflection in many adjacent fields, among them, linguistics.
+The alarming findings garnered media attention [e.g., @oliver2016] and have led to periods of introspection and self-reflection in many adjacent fields, among them, linguistics [e.g., @berez-kroeker2018; @bochynska2023reproducible].
 
 Researchers have pointed to questionable research practices (QRPs), such as p-hacking and HARKing, along with small sample sizes, poor theory, lack of transparency, etc. as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
 In the aftermath of the aforementioned crisis, there has been a push for increased transparency and reproducible methodology to help mitigate the effects of QRPs. 
@@ -181,19 +181,29 @@ Given how new open science practices are, it is reasonable to assume that curren
 As a consequence, many early career researchers (ERC) find themselves at a crossroads in which they are forced to learn open science on their own, often without institutional support. 
 Ironically, there is also a growing expectation that ECRs implement these novel tools in order to be successful in their programs/careers. 
 
-The present work intends to help make open science practices understandable and accessible to researchers in linguistics from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
-To this end, we identify three areas, stance, workflow, and dissemination, in which linguists can engage in open science.
+The present work intends to both highlight and contribute to a line of research focused on making open science practices understandable and accessible to researchers in linguistics from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
+To this end, we identify three areas, stance, workflow, and dissemination, in which linguists can engage in open science (see @fig-os-flow-edit).
 The first area, *stance*, refers to practices that focus on the researchers position or attitude towards openness and transparency. 
 The second area, *workflow*, deals with methods and techniques researchers can implement to make their research projects more open and transparent. 
 Finally, *dissemination* refers to novel ways in which researchers can help ensure that their research products are accessible and free from QRPs. 
-In total, we describe eight open science practices, illustrated in @fig-os-flow, within these areas: positionality statements and declarations of conflict of interest, open data, reproducible code/projects and literate programming, preregistration, registered reports, and pre-prints. 
-We provide practical examples and detailed descriptions of the aforementioned practices with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research.  
+While our coverage of these areas cannot be exhaustive, in what follows we dedicate five sections of this paper to highlighting eight open science practices within these areas: positionality statements and declarations of conflict of interest, open data (as both a stance and a dissemination practice), reproducible code/projects and literate programming, preregistration, registered reports, and pre-prints. 
+We provide practical examples and detailed descriptions of the aforementioned practices with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research. 
+Importantly, the present work should be considered a compliment to the extant work fomenting open science practices in the speech sciences. 
+
+```{r}
+#| label: fig-os-flow-edit
+#| out-width: 100%
+#| dpi: 300
+#| fig-cap: Open science practices amenable to research in linguistics as they pertain to one's stance, workflow, and the dissemination of research products.
+
+knitr::include_graphics(here("figs", "os-flow", "fig-os-flow_edit.png"))
+```
 
 
 ```{mermaid}
-%%| label: fig-os-flow
-%%| fig-cap: Open science practices amenable to research in linguistics as they pertain to one's stance, workflow, and the dissemination of research products.
+%%| label: os-flow
 %%| out-width: 100%
+%%| eval: false
 ---
 config:
   theme: base
@@ -268,7 +278,7 @@ In this section, we provide more detail regarding the benefits of open data and 
 
 The underlying motivation for open data is relatively straightforward, particularly in the wake of the reproducibility crisis.
 Though researchers may understandably hesitate to share their data, we believe understanding the benefits of open data can help alleviate any concerns. 
-Making linguistic data freely available improves credibility in our findings, to other researchers and the general public. 
+Making linguistic data freely available improves credibility in our findings, to other researchers, and the general public, and may help develop more accurate generalizations and theories [see @berez-kroeker2022]. 
 Prohibiting or impeding access to data collected for publicly funded research is unethical and a detriment to inclusivity. 
 Open data is fundamental for cumulative science in numerous ways. 
 It affords third parties the opportunity to scrutinize original findings, which promotes reproducibility and reduces errors, such as those related to statistical analyses and reporting of outcomes [e.g., @roettger2021]. 
@@ -277,7 +287,8 @@ Revisiting old data sets using innovative techniques can support or contradict p
 In short, open data is a cornerstone of scientific research in the 21st century that enables wider access to research information, which, in turn, facilitates validation, motivates replication, promotes reproducibility, and makes possible future scientific progress. 
 
 Open data are particularly important for the field of linguistics, for all of the aforementioned reasons, and also because linguistics is Western, Educated, Industrialized, Rich, and Democratic [WEIRD, @bochynska2023reproducible].
-That is to say, the majority of linguistic research is concentrated on specific language, mainly Indo-Germanic, in overrepresented communities, by privileged scholars. Making linguistic data accessible to all researchers promotes participation *in* and *with* underrepresented communities. 
+That is to say, the majority of linguistic research is concentrated on specific language, mainly Indo-Germanic, in overrepresented communities, by privileged scholars. 
+Making linguistic data accessible to all researchers promotes participation *in* and *with* underrepresented communities. 
 Furthermore, it can increase the study of diverse and underreported languages, which fosters a more inclusive and comprehensive understanding of the global linguistic landscape. 
 
 Having stated all the above, it is necessary to recognize that the field of linguistics faces unique challenges with regard to open data. 
@@ -293,7 +304,8 @@ When primary data, such as audio or video files, cannot be shared, derived data 
 For instance, if institutional policies prohibit the sharing of audio files, a comma-separated or tab-separated file (csv, tsv) containing the variables of interest (e.g., formant values, response times, etc.) can be made public instead. 
 Tabular data files can be anonymized easily using arbitrary identification codes. 
 Online data collection platforms, such as Prolific, typically remove identifying information by default and provide participant-specific identification numbers.
-In more uncommon cases in which institutional policies do not permit the sharing of derived data sets, synthetic data containing the same statistical properties can be generated and shared freely [See @quintana2020].
+In more uncommon cases in which institutional policies do not permit the sharing of derived data sets, synthetic data containing the same statistical properties can be generated and shared freely [See @quintana2020]. 
+To quote the Directorate-General for Research & Innovation of the European Commission [-@ecommission2016], we believe the field can follow the principle that data should be "as open as possible, as closed as necessary" (p. 4). 
 
 A substantial hurdle that cannot be overlooked revolves around the fact that researchers must learn to use new technologies to participate in open, transparent research. 
 Making data open *and* accessible is not as simple as merely uploading a data file. 
@@ -306,7 +318,8 @@ The data sets (and other materials) can be downloaded directly, free of any kind
 For relevant examples, we direct the interested reader to <https://osf.io/zx9ky/>, <https://osf.io/3bmcp/>, or <https://github.com/RAP-group/empathy_intonation_perc>. 
 
 To summarize, open data is important because it facilitates transparency, rigor, reproducibility, replication, accumulation of knowledge, and, importantly, it makes participating in the scientific endeavor more inclusive. 
-Linguistics, in general, does not engage in open science practices [@bochynska2023reproducible], including sharing data. 
+According to some accounts, linguistics, in general, does not engage in open science practices, including sharing data [See @bochynska2023reproducible], though others characterize its participation in different terms. 
+For instance, as stated in @berez-kroeker2018 "Practitioners in different subfields 'do transparency' differently, and these practices could serve as models for an eventual amalgamated standard" (p. 9).
 While linguistics does face legitimate, field-specific challenges, ultimately the benefits of open data outnumber these challenges, and researchers should take the stance to share what is ethically reasonable. 
 
 
@@ -477,7 +490,7 @@ pr2 <- pr_dat |>
     theme_clean(base_family = "Palatino") 
 ```
 
-A preregistration is a time-stamped document that provides comprehensive detail about a study, including, but not limited to, research questions, hypotheses, methodologies, and analytic strategies. 
+A preregistration is a time-stamped document that provides comprehensive detail about a study, including, but not limited to, research questions, hypotheses, methodologies, and analytic strategies [@mellor2018]. 
 Preregistrations are written prior to data collection and do not undergo peer review.
 The depth of content detail within a preregistration spans a spectrum: in the simplest case, a preregistration can comprise merely a hypothesis or perhaps a brief description of the methods; on the other extreme, a detailed preregistration can include code, power analyses, participant exclusion criteria and beyond. 
 In this section, we provide information regarding the various components of a preregistration, centering on their advantageous impact on linguistic research.
@@ -493,7 +506,7 @@ This type of flexibility, termed "researcher degrees of freedom", can have serio
 For instance, a researcher studying lexical stress could concentrate on distinct acoustic cues typically associated with stress, i.e., pitch, duration, and intensity. 
 Beyond selecting acoustic cues to measure, she must also select a domain for these measurements, such as the mid-point of stressed/unstressed syllables or an average value over the entirety of the syllable.
 These choices wield significant influence on subsequent outcomes. 
-Preregistration serves the purpose of meticulously documenting these choices *a priori*, thus acting as a deterrent against QRPs, like HARKing or p-hacking. 
+Preregistration serves the purpose of meticulously documenting these choices *a priori*, thus acting as a deterrent against QRPs, like HARKing or p-hacking [@wicherts2016]. 
 This is because the researcher establishes what decisions will be made, such as measurement choices and analytic strategies, before data collection commences.
 A benefit of including a high level of specificity in the preregistration is that is forces researchers to consider facets of their study that might usually be deferred to a later stage, e.g., specific statistical tests.  
 This proactive approach demands more initial time investment from the researcher, but also increases the likelihood of uncovering crucial flaws in the study design.
@@ -530,7 +543,7 @@ The reproducibility crisis has drawn attention to the shortcomings of the tradit
 To address these issues, researchers have attempted various reforms, such as meta-analysis and preregistration. 
 Meta-analysis is a statistical technique that combines the results of multiple studies to increase the power of analysis. 
 Preregistration, as we have seen, involves publicly registering a study's design and methods before collecting data, to mitigate QRPs.
-Registered reports (RRs) represent a new publication model that conceptually combines preregistration with peer review. 
+Registered reports (RRs) represent a new publication model that conceptually combines preregistration with peer review [@nosek2014]. 
 In this model, researchers submit a detailed proposal of their study, including their hypotheses, methods, and analyses, for review before data collection. 
 If the proposal is accepted, the study is guaranteed publication, regardless of the results. 
 This incentivizes rigorous methodology and reduces QRPs, as researchers cannot manipulate their analyses to obtain significant results.
@@ -574,7 +587,7 @@ This process can speed up the dissemination of knowledge and facilitate collabor
 While pre-prints accelerate the dissemination of research, it is vital to remember that this process does not always lead to journal publication. 
 This can occur for several reasons, such as authors may choose not to pursue this route, or the research may be intended for different dissemination avenues [@ettinger_2022]. 
 Pre-prints have become increasingly popular in recent years, particularly in fields such as biology, physics, and computer science. 
-The adoption of pre-prints has been slower in some fields, such as the social sciences and humanities, but this is changing as more researchers become aware of the benefits of open science, and new national and regional platforms by open science advocates continue to emerge. 
+The adoption of pre-prints has been slower in some fields, such as the social sciences and humanities, but this is changing as more researchers become aware of the benefits of open science, and new national and regional platforms by open science advocates continue to emerge [@gawne_styles2022]. 
 
 One of the primary benefits of pre-prints is that they allow researchers to share their findings quickly and easily. 
 This can be especially important in fields where research moves quickly, such as biology or computer science. 
@@ -588,7 +601,7 @@ Recognizing these benefits, more major publishers have either launched pre-print
 By making research findings available to the public before peer-review, pre-prints not only improve the accuracy and reliability of research findings but also encourage collaborative efforts to identify potential errors, refine methodologies, and accelerate knowledge dissemination.
 
 Another benefit of pre-prints is that they can help to reduce publication bias, a widespread challenge in traditional publishing. 
-Publication bias occurs when positive results are more likely to be published than negative results. 
+Publication bias occurs when positive results are more likely to be published than negative results [@matosin2014]. 
 This can skew the scientific literature and lead to a misunderstanding of the state of the research. 
 Pre-prints address this obstacle by openly sharing all research findings, regardless of outcome, creating a fairer and more accurate representation of the current scientific landscape of that field. 
 
