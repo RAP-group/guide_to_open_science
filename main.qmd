@@ -185,9 +185,11 @@ In the aftermath of the aforementioned crisis, there has been a push for increas
 The resulting methodological framework and associated techniques have reshaped research methods in Psychology, and, slowly but surely, are making their way into related fields. 
 While many agree that open science practices represent a positive step forward in improving scientific rigor, these practices, by and large, have not been adopted in the field of linguistics [@bochynska2023reproducible]. 
 One reason for the slow adoption in linguistics may be related to the fact that engaging in open science is no trivial feat. 
-To wit, it requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
-It necessitates that researchers implement new techniques with limited pedagogical resources and embrace alternative methods of disseminating their research, all of which constitute a steep learning curve.
-Given how new open science practices are, it is reasonable to assume that current senior researchers were not trained in these innovative methodologies. 
+To wit, it often requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
+Many researchers need to implement new techniques with limited pedagogical resources and embrace alternative methods of disseminating their research, all of which can constitute a steep learning curve. 
+That being said, what engaging in open science ultimately entails is sure to be field-specific and vary accordingly. 
+In some disciplines, for instance, it may only involve a few of the practices we outline in the present work without the need for innovative methodologies. 
+Nonetheless, given how new open science practices are, it is reasonable to assume that current senior researchers were not trained in these innovative methodologies. 
 As a consequence, many early career researchers (ERC) find themselves at a crossroads in which they are forced to learn open science on their own, often without institutional support. 
 Ironically, there is also a growing expectation that ECRs implement these novel tools in order to be successful in their programs, on the job market, or to advance in their careers. 
 
