@@ -194,7 +194,7 @@ As a consequence, many early career researchers (ERC) find themselves at a cross
 Ironically, there is also a growing expectation that ECRs implement these novel tools in order to be successful in their programs, on the job market, or to advance in their careers. 
 
 The present work intends to both highlight and contribute to a line of research focused on making open science practices understandable and accessible to researchers in linguistics from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
-To this end, we identify three areas, stance, workflow, and dissemination, in which linguists can engage in open science (see @fig-os-flow-edit).
+To this end, we identify the following three areas of stance, workflow and dissemination, in which linguists can engage in open science (see @fig-os-flow-edit).
 The first area, *stance*, refers to practices that focus on the researchers position or attitude towards openness and transparency. 
 The second area, *workflow*, deals with methods and techniques researchers can implement to make their research projects more open and transparent. 
 Finally, *dissemination* refers to novel ways in which researchers can help ensure that their research products are accessible and free from QRPs. 
