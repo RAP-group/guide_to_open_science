@@ -814,6 +814,14 @@ First, select a pre-print server that aligns with the course of research.
 Next, all pre-prints undergo a short screening, confirming author background, basic research content, and compliance with the ethical standards of the pre-print platform. 
 Once the pre-print passes the screening process, the content is made available online in open access format, encouraging others to comment and share. 
 
+```{r}
+#| label: tbl-pp
+#| tbl-cap: Available pre-print servers related to language and/or linguistics.
+
+read_csv(here("tables", "preprint_servers.csv")) |> 
+  knitr::kable()
+```
+
 The growing visibility of pre-prints, and their acceptance as valid research outputs by diverse stakeholders, including researchers, funders, and national institutions, has fueled collaborative research efforts and strengthened support for their presence in a variety of research disciplines. 
 Pre-prints play an important role in advancing the tenets of open science by promoting transparency, reproducibility, and collaboration. 
 While some researchers may still be hesitant to use this dissemination paradigm, the benefits of open science are becoming increasingly clear. 
