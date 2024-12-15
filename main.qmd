@@ -110,6 +110,7 @@ out2fig <- function(out.width, out.width.default = 1, fig.width.default = 6) {
     fig.width.default * out.width / out.width.default 
 }
 
+# Load libraries
 library("here")
 library("fs")
 library("dplyr")
@@ -123,8 +124,9 @@ library("googlesheets4")
 library("patchwork")
 library("rvest")
 library("xfun")
+library("chromote")
 
-
+# Set plotting theme
 theme_clean <- function(...) {
   list(
     theme_minimal(...), 
@@ -202,15 +204,13 @@ While our coverage of these areas cannot be exhaustive, in what follows, we dedi
 We provide practical examples and detailed descriptions of the aforementioned practices with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research. 
 Importantly, the present work should be considered a complement to the extant work fomenting open science practices in the speech sciences. 
 
-```{r}
-#| label: fig-os-flow-edit
-#| fig-width: 6.315
-#| fig-cap: Some open science practices amenable to research in linguistics as they pertain to one's stance, workflow, and the dissemination of research products.
-
-knitr::include_graphics(here("figs", "os-flow", "fig-os-flow_edit.png"))
-```
-
 <!--
+OS workflow chart 
+
+- generated using mermaid
+- post edited for greyscale
+- imported in R chunk 'fig-os-flow-edit'
+
 ```{mermaid}
 %%| label: os-flow
 %%| out-width: 100%
@@ -243,6 +243,16 @@ mindmap
       ("Publish materials<br>(data, code, stimuli, etc.)")
 ```
 -->
+
+
+```{r}
+#| label: fig-os-flow-edit
+#| fig-width: 6.315
+#| fig-cap: Some open science practices amenable to research in linguistics as they pertain to one's stance, workflow, and the dissemination of research products.
+
+# Load OS flow chart image
+knitr::include_graphics(here("figs", "os-flow", "fig-os-flow_edit.png"))
+```
 
 # Positionality statements
 
@@ -361,6 +371,9 @@ For relevant examples, we direct the interested reader to <https://osf.io/zx9ky/
 ```{r}
 #| label: tbl-platform-features
 #| tbl-cap: Common data-sharing platforms and their respective features. 
+
+# Load csv file and convert '-' to unicode minus sign
+# Convert csv to markdown table
 read_csv(here("tables", "platform_features.csv")) |> 
   mutate(across(everything(), \(x) str_replace_all(x, "-", "−"))) |> 
   knitr::kable()
@@ -432,41 +445,54 @@ These innovations, preregistrations and registered reports, were designed with t
 
 ```{r}
 #| label: pr-setup
+#| eval: false
 
-# Data pulled from: 
-# https://osf.io/search?resourceType=Registration%2CRegistrationComponent&sort=dateCreated
-# Note: Data available on 20241017 is different from data pulled on 20240222
-# Old data: 3833, 28474, 27175, 25197, 22025, 17180, 13881, 8774, 5707, 3326, 
-#           954, 720, 91, 2
+#
+# note: this requires an internet connection and the google chrome browser
+#       in order to reproduce the scraping process
 
-pr_dat <- tibble(
-  year = 2024:2011, 
-  count = c(
-    25163, 30666, 27907, 25521, 23826, 17143, 13832, 8751, 5688, 3314, 
-    954, 717, 91, 2
-  )
-) |> 
+# Get preregistration data from the OSF: 
+prereg_url <- "https://osf.io/search?resourceType=Registration"
+
+# Initiate realtime session 
+pr_sess <- read_html_live(prereg_url)
+
+# Open google chrome and load the website
+pr_sess$view()
+
+# Toggle 'Date created' dropdown menu to populate data in margin
+pr_sess$click("[data-test-filter-facet-toggle='Date created']")
+
+# Scrape table for number of preregistrations by year
+pr_sess |> 
+  html_elements(css = "._facet-value_13c61c") |>
+  html_text2() |> 
+  as_tibble() |> 
+  separate(col = "value", into = c("year", "count"), sep = " ") |>
+  mutate_all(as.double) |> 
   arrange(year) |> 
-  mutate(cum = cumsum(count))
-
-n_pr_2024 <- max(pr_dat$cum)
+  mutate(cum = cumsum(count)) |> 
+  write_csv(here("data", "tidy", glue("{Sys.Date()}_preregistrations_osf.csv")))
 ```
+
+
 
 ```{r}
 #| label: pr-plot-prep
 
-pr_max <- tibble(
-  year = 2021, 
-  cum = 180000, 
-  text = glue("{formatC(n_pr_2024, format = 'd', big.mark = ',')} preregistrations\non OSF since 2011")
-)
+# Load pr data
+pr_versions <- dir_ls(
+  here("data", "tidy"), 
+  regexp = "preregistrations_osf.csv"
+  ) |> 
+  as_tibble() 
 
-pr_arrow <- tibble(
-  year = 2021.5, 
-  cum = 185000, 
-  xend = 2023.75, 
-  yend = n_pr_2024 + 5000
-)
+# Find most up to date version
+pr_dat <- read_csv(pull(pr_versions[nrow(pr_versions), 1]))
+
+#
+# Generate left panel of PR figure, 'pr1'
+#
 
 pr1 <- pr_dat |> 
   ggplot() + 
@@ -485,6 +511,29 @@ pr1 <- pr_dat |>
   theme_clean(base_family = "Palatino", base_size = 13) + 
   theme(axis.text.x = element_text(size = 9, angle = 45, hjust = 1))
 
+#
+# Generate right panel of PR figure, 'pr2'
+#
+
+# Get total number of preregistrations
+n_pr_2024 <- max(pr_dat$cum)
+
+# Create tibble for labeling 'pr2' figure
+pr_max <- tibble(
+  year = 2021, 
+  cum = 180000, 
+  text = glue("{formatC(n_pr_2024, format = 'd', big.mark = ',')} preregistrations\non OSF since 2011")
+)
+
+# Create tibble for 'pr2' arrow
+pr_arrow <- tibble(
+  year = 2021.5, 
+  cum = 185000, 
+  xend = 2023.75, 
+  yend = n_pr_2024 + 5000
+)
+
+# Make 'pr2'
 pr2 <- pr_dat |> 
   ggplot() + 
   aes(x = year, y = cum) + 
@@ -565,11 +614,10 @@ We provide examples of preregistrations at the following links: <https://osf.io/
 #| label: fig-pr
 #| fig-asp: 0.45
 #| fig-width: 9
-#| fig-cap: "Charts"
-# fig-subcap: 
-#   - "OSF registrations by year."
-#   - "Cumulative OSF registrations."
-# layout-ncol: 2
+#| fig-path: "./figs/preregistration/"
+#| fig-cap: "Preregistrations on the Open Science Framework. The left panel plots pregistrations as a function of year. The right panel plots cumulative preregistrations since 2011. Data scrapped from <https://osf.io/search> on 12-12-2024."
+
+# Generate pr plot by combining 'pr1' and 'pr2'
 pr1 + pr2
 ```
 
@@ -579,6 +627,7 @@ pr1 + pr2
 ```{r}
 #| label: get-rr-data
 #| eval: false
+
 # Data downloaded from: 
 # https://docs.google.com/spreadsheets/d/1D4_k-8C_UENTRtbPzXfhjEyu3BfLxdOsn9j-otrO870/edit#gid=0
 # Today's date
@@ -627,7 +676,7 @@ rr <- left_join(rr_updated, rr_dat, by = c("journal", "is_ling")) |>
 ```{r}
 #| label: rr-setup
 # Find most up to date version
-versions <- dir_ls(here("data", "tidy"), regexp = "csv") |> 
+versions <- dir_ls(here("data", "tidy"), regexp = "osf.csv", invert = T) |> 
   as_tibble() 
 
 # Load data
@@ -777,6 +826,126 @@ As more journals adopt RRs, the scientific community can move towards a more rig
 
 # Pre-prints
 
+```{r}
+#| label: pp-setup
+#| eval: false
+
+#
+# note: this requires an internet connection and the google chrome browser
+#       in order to reproduce the scraping process
+
+# Scrape OSF table for number of preprints by year from this URL
+preprint_url <- "https://osf.io/search?resourceType=Preprint"
+
+# Initiate realtime session 
+pp_sess <- read_html_live(preprint_url)
+
+# Open google chrome and load the website
+pp_sess$view()
+
+# Toggle 'Date created' dropdown menu to populate data in margin
+pp_sess$click("[data-test-filter-facet-toggle='Date created']")
+
+# Scrape table for number of preprints registered by year
+pp_sess |> 
+  html_elements(css = "._facet-value_13c61c") |>
+  html_text2() |> 
+  as_tibble() |> 
+  separate(col = "value", into = c("year", "count"), sep = " ") |>
+  mutate_all(as.double) |> 
+  arrange(year) |> 
+  mutate(cum = cumsum(count)) |> 
+  write_csv(here("data", "tidy", glue("{Sys.Date()}_preprints_osf.csv")))
+```
+
+```{r}
+#| label: pp-plot-prep
+
+# Load pp data
+pp_versions <- dir_ls(here("data", "tidy"), regexp = "preprints_osf.csv") |> 
+  as_tibble() 
+
+# Find most up to date version
+pp_dat <- read_csv(pull(pp_versions[nrow(pp_versions), 1]))
+
+#
+# Generate left panel of PP figure, 'pp1'
+#
+
+pp1 <- pp_dat |> 
+  ggplot() + 
+  aes(x = year, y = count) + 
+  geom_segment(
+    aes(x = year, xend = year, y = -1000, yend = count), 
+    color = "#cc0033", linewidth = 4.5, show.legend = F, lineend = "round"
+  ) + 
+  scale_x_continuous(breaks = seq(2016, 2024, 1)) + 
+  scale_y_continuous(
+    breaks = seq(0, 30000, 5000), 
+    labels = glue("{seq(0, 30, 5)}k")
+  ) + 
+  coord_cartesian(ylim = c(0, 30000), xlim = c(2015, 2025), expand = F) + 
+  labs(y = "Counts", x = NULL) + 
+  theme_clean(base_family = "Palatino", base_size = 13) + 
+  theme(axis.text.x = element_text(size = 9, angle = 45, hjust = 1))
+
+#
+# Generate right panel of PP figure, 'pp2'
+#
+
+# Get total number of preprints
+n_pp_2024 <- max(pp_dat$cum)
+
+# Create tibble for labeling 'pp2' figure
+pp_max <- tibble(
+  year = 2021, 
+  cum = 150000, 
+  text = glue("{formatC(n_pp_2024, format = 'd', big.mark = ',')} preprints\non OSF since 2016")
+)
+
+# Create tibble for 'pp2' arrow
+pp_arrow <- tibble(
+  year = 2021.5, 
+  cum = 150000, 
+  xend = 2023.75, 
+  yend = n_pp_2024 + 5000
+)
+
+# Make 'pp2'
+pp2 <- pp_dat |> 
+  ggplot() + 
+  aes(x = year, y = cum) + 
+  geom_text(
+    data = pp_max, 
+    aes(x = year, y = cum, label = text), 
+    hjust = 1, size = 3.5
+  ) + 
+  geom_line() + 
+  geom_point(
+    color = "white", fill = "#cc0033", 
+    size = 4, pch = 21, stroke = 1
+  ) + 
+  geom_curve(
+    data = pp_arrow, 
+    aes(x = year, y = cum, xend = xend, yend = yend),
+    arrow = arrow(
+      length = unit(0.025, "npc"), 
+      type = "closed"
+    ),
+    curvature = -0.3, lineend = "round", 
+    colour = "#cc0033", linewidth = 0.75, angle = 90
+  ) + 
+  scale_x_continuous(breaks = seq(2016, 2024, 1)) + 
+  scale_y_continuous(
+    breaks = seq(0, 180000, 30000), 
+    labels = glue("{seq(0, 180, 30)}k")
+  ) + 
+  coord_cartesian(ylim = c(0, 180000), xlim = c(2016, 2024)) + 
+  labs(y = "Cumulative counts", x = NULL) + 
+  theme_clean(base_family = "Palatino", base_size = 13) + 
+  theme(axis.text.x = element_text(size = 9, angle = 45, hjust = 1))
+```
+
 A pre-print is a version of a research article, open and accessible, that has not yet undergone peer review but is publicly available online, through a pre-print server. 
 The general process consists of an initial screening process, followed by a posting of the manuscript on the preprint server within a few days of submission, bypassing peer review, and making the research findings freely accessible online [@puebla_polka_rieger_2021]. 
 Pre-prints allow researchers to share their findings with the scientific community and get feedback before their work is published in a traditional academic journal. 
@@ -785,6 +954,18 @@ While pre-prints accelerate the dissemination of research, it is vital to rememb
 This can occur for several reasons, such as authors may choose not to pursue this route, or the research may be intended for different dissemination avenues [@ettinger_2022]. 
 Pre-prints have become increasingly popular in recent years, particularly in fields such as biology, physics, and computer science. 
 The adoption of pre-prints has been slower in some fields, such as the social sciences and humanities, but this is changing as more researchers become aware of the benefits of open science, and new national and regional platforms by open science advocates continue to emerge [@gawne_styles2022]. 
+
+
+```{r}
+#| label: fig-pp
+#| fig-asp: 0.45
+#| fig-width: 9
+#| fig-path: "./figs/preprints/"
+#| fig-cap: "Preprints on the Open Science Framework. The left panel plots preprints as a function of year. The right panel plots cumulative preprints since 2016. Data scrapped from <https://osf.io/search> on 12-15-2024."
+
+# Generate pr plot by combining 'pr1' and 'pr2'
+pp1 + pp2
+```
 
 One of the primary benefits of pre-prints is that they allow researchers to share their findings quickly and easily. 
 This can be especially important in fields where research moves quickly, such as biology or computer science. 
@@ -864,3 +1045,56 @@ The FOSIL project details many of the open, transparent practices described here
 
 ::: {#refs}
 :::
+
+
+{{< pagebreak >}}
+
+# Supplementary materials
+
+## Author contributions
+
+```{r}
+#| label: fig-credit
+#| fig-asp: 0.45
+#| fig-width: 7
+#| fig-path: "./figs/credit/"
+#| fig-cap: "Author contributions according to the CRediT author roles taxonomy. Contributions are indicated as being substantial (dark diamonds) or moderate (light diamonds)."
+
+contributoR::contributor(
+  contributions = list(
+  "001" = tibble::tibble(role = 1:14, weight = "high"),
+  "002" = tibble::tibble(role = 1:3, weight = "low"),
+  "003" = tibble::tibble(role = 1:3, weight = "low"),
+  "004" = tibble::tibble(role = 1:3, weight = "low"),
+  "005" = tibble::tibble(role = 1:3, weight = "low"),
+  "006" = tibble::tibble(role = 1:3, weight = "low"),
+  "007" = tibble::tibble(role = 1:3, weight = "low"),
+  "008" = tibble::tibble(role = 1:3, weight = "low"),
+  "009" = tibble::tibble(role = 1:3, weight = "low"),
+  "010" = tibble::tibble(role = 1:3, weight = "low"),
+  "011" = tibble::tibble(role = 1:3, weight = "low"),
+  "012" = tibble::tibble(role = 1:3, weight = "low"),
+  "013" = tibble::tibble(role = 1:3, weight = "low"),
+  "014" = tibble::tibble(role = 1:3, weight = "low"), 
+  "015" = tibble::tibble(role = 1:3, weight = "low"), 
+  "016" = tibble::tibble(role = 1:3, weight = "low")
+  ), 
+  weight = TRUE
+)
+```
+
+
+{{< pagebreak >}}
+
+## Reproducibility information
+
+### About this document
+
+This document was written in quarto (version 1.6): <https://quarto.org>.
+
+### Session info
+
+```{r, 'session-info', comment=""}
+devtools::session_info()$platform
+as.data.frame(devtools::package_info())[, c(3, 8)]
+```
