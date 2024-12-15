@@ -354,6 +354,15 @@ Free repositories designed for the purpose of sharing research materials, such a
 These repositories represent stable, long-term solutions with ample storage capacity. 
 The data sets (and other materials) can be downloaded directly, free of any kind of payment or exchange of personal information (such as an email address) by the user. 
 For relevant examples, we direct the interested reader to <https://osf.io/zx9ky/>, <https://osf.io/3bmcp/>, or <https://github.com/RAP-group/empathy_intonation_perc>. 
+@tbl-platform-features summarizes some of the options used by researchers and describes which features are available on each platform. 
+
+```{r}
+#| label: tbl-platform-features
+#| tbl-cap: Common data-sharing platforms and their respective features. 
+read_csv(here("tables", "platform_features.csv")) |> 
+  mutate(across(everything(), \(x) str_replace_all(x, "-", "−"))) |> 
+  knitr::kable()
+```
 
 To summarize, open data is important because it facilitates transparency, rigor, reproducibility, replication, accumulation of knowledge, and, importantly, it makes participating in the scientific endeavor more inclusive. 
 According to some accounts, linguistics, in general, does not engage in open science practices, including sharing data [See @bochynska2023reproducible], though others characterize its participation in different terms. 
