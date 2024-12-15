@@ -343,7 +343,11 @@ To quote the Directorate-General for Research & Innovation of the European Commi
 
 Another substantial hurdle that cannot be overlooked revolves around the fact that researchers must learn to use new technologies to participate in open, transparent research. 
 Making data open *and* accessible is not as simple as merely uploading a data file. 
-Researchers should include a codebook or README file explaining the metadata of the file(s), as well as an explanation of the variables it contains and the context in which it was obtained. 
+Ideally, researchers should include relevant information to contextualize the data set at the project-level (i.e., a project-summary document), the data-level (i.e., a README file explaining the data set), and the variable-level (i.e., a data dictionary) [@lewis2024data]. 
+The inclusion of resources at these three levels is the optimal way for authors to provide the necessary context for an independent researcher to access and utilize the data set. 
+Unfortunately, most publicly available data do not adhere to this standard. 
+For this reason, we direct the interested reader to templates provided in @lewis2024data for documentation at the project-level (<https://osf.io/q6g8d>, <https://osf.io/d3pum>), data-level (<https://osf.io/tk4cb>), and variable-level (<https://osf.io/ynqcu>). 
+
 Once the data has been prepared for sharing, the researcher must decide where to share it. 
 Platforms such as google drive, dropbox, etc. are not recommended because they are linked to personal accounts that may change or become unavailable over time. 
 Free repositories designed for the purpose of sharing research materials, such as the Open Science Framework [@foster2017open], github, etc., are preferable and can be accessed simply by sharing a link. 
