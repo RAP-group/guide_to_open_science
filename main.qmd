@@ -321,6 +321,8 @@ Furthermore, it can increase the study of diverse and underreported languages, w
 
 Having stated all the above, it is necessary to recognize that linguistics faces a unique set of challenges with its multitude of subfields, each potentially working with a variety of data formats. 
 Due to such diversity, one must determine which aspects of open science are relevant to their data. 
+For example, a neurolinguistic study investigating event related potentials (ERPs) could share raw data for transparency, as well as preprocessed data with the code used to transform the raw data and a corresponding description for facilitation of reanalysis. 
+In another field, the creation of a corpus will benefit from open access and the use of standardized file formats; the analysis of a corpus will benefit from sharing the search queries, the analysis code, and a description of the analysis code.
 At the heart of these challenges are ethical concerns that must be considered with care. 
 First and foremost, the privacy and consent of participants must be safeguarded.
 Linguistic data often include personal information, which can be especially difficult to anonymize. 
