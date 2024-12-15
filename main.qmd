@@ -288,8 +288,11 @@ For examples of positionality statements in linguistic research, the interested 
 The term *open data* refers to data collected for research that is freely and easily available to anybody interested in accessing it for any purpose [@open2023].
 In academic research, statements such as "data available upon request" are commonplace [See @hardwicke2018populating].
 In spite of such assurances, we now know they do not typically result in adequate sharing of research materials [@spellman2017open; @wicherts2006poor; @hardwicke2018populating].
-Recent efforts have attempted to encourage researchers to make linguistic data open and accessible via servers (e.g., the IRIS database). 
-Some journals offer open science badges (e.g., *Language Learning*, *Language and Speech*), and, in some cases, have made data sharing a requirement for publication (e.g., *Applied Psycholinguistics*). 
+Recent efforts have attempted to encourage researchers to make linguistic data open and accessible via servers. 
+An illustrative example is the IRIS database (<https://www.iris-database.org>), a language sciences digital repository that is freely accessible and permits the up- and downloading of research instruments and materials.
+Additional efforts include open science badges--visual symbols offered by some journals (e.g., *Language Learning*, *Language and Speech*) on published articles. 
+These badges are awarded to researchers for adhering to certain open science principles, such sharing code and data or preregistering a study. 
+In arguably more extreme cases, other journals have made data sharing a requirement for publication (e.g., *Applied Psycholinguistics*). 
 Nonetheless, open data is still the exception rather than the norm in linguistics [@bochynska2023reproducible]. 
 In this section, we provide more detail regarding the benefits of open data and consider the specific challenges researchers face in the field of linguistics. 
 
