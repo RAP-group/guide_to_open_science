@@ -381,10 +381,11 @@ Reproducibility can help to ensure that research results are valid, reliable, an
 In this section, we explore the importance of reproducibility, what we know about it in the field of linguistics, and how researchers can make their code and projects more reproducible.
 
 In general, reproducibility helps to increase the credibility of research findings and allows other researchers to verify and build on existing work. 
-A lack of reproducibility can lead to irreproducible results and wasted resources, having serious implications for public health and policy decisions based on research findings. 
-It is necessary to be transparent about the methods used in research to ensure reproducibility, which includes not only the data collection and analysis methods, but also the code used to conduct the analysis.
+A lack of reproducibility can lead to findings that cannot be replicated, resulting in wasted resources, and, conceivably, downstream impacts on public health and policy decisions that are often grounded in funded research. 
+For these reasons, among others, transparency in research methods are essential to ensure reproducibility, which includes not only the data collection and analysis methods, but also the code used to conduct the analysis.
+In linguistics there is increasing awareness of the importance of reproducibility and how a lack thereof could potentially impede advancements in linguistic theory and theories of language acquisition, in addition to having implications for education and language policy decisions based on research findings.
+As a consequence, many investigators are showing heightened interest in safeguarding the reproducibility of their research.
 
-In linguistics there is increasing awareness of the importance of reproducibility, and many researchers are beginning to take steps to improve the reproducibility of their research.
 There are several steps that researchers can take to make their code and projects more reproducible. 
 One approach is to create reports that document the research process by including descriptions of the data, the methods used to analyze the data, and the results.  
 This documentation can then be made publicly available and used by third parties to retrace the steps to reproduce the research findings. 
@@ -552,7 +553,6 @@ In such instances, researchers are encouraged to commence with elements they per
 Many concerns about preregistration revolve around the potential burden of 'extra work'. 
 Conversely, preregistration is intended to streamline the workflow, fostering efficiency both in the short term and the long run, as it provides the researcher with complete control over the level of detail she chooses to include. 
 The depth of preregistration directly correlates with the effort invested; the more comprehensive the preregistration, the greater the initial workload, leading to reduced effort in subsequent stages.
-
 
 The Open Science Framework allows researchers to preregister a study. 
 Since its inception, the amount of preregistrations has grown each year (See @fig-pr, left panel) and the cumulative number of registrations totals over `r prettyNum(n_pr_2024, big.mark = ",")` at the time of writing this text (See @fig-pr, right panel). 
