@@ -531,10 +531,13 @@ Preregistration emerged as a powerful instrument empowering linguists to bolster
 We believe the practice of preregistration extends its benefits to researchers at all levels, including students and ECRs, senior academics, and professionals alike.
 
 Researchers face vital decisions while engaging in research, with inherent flexibility involved in the process of designing and carrying out projects, as well as in the analysis of the data and interpretation of the results [@simmons2011false]. 
-This type of flexibility, termed "researcher degrees of freedom", can have serious down-stream consequences in quantitative research, particularly in linguistics [e.g., @msa].
-For instance, a researcher studying lexical stress could concentrate on distinct acoustic cues typically associated with stress, i.e., pitch, duration, and intensity. 
+This type of flexibility, termed "researcher degrees of freedom", can have serious down-stream consequences in quantitative research, particularly in linguistics.
+For instance, @msa provided the same speech-production data set to different research teams and asked them to answer the same research question. 
+They found substantial variability in both the acoustic analyses and the analytic strategies, neither of which could be explained by analysts' prior beliefs, expertise, or the perceived quality of their analyses. 
+Crucially, these decisions, both acoustic and analytic, impacted the teams' answers to the research question. 
+To provide a simple example, a researcher studying lexical stress could concentrate on distinct acoustic cues typically associated with stress, i.e., pitch, duration, and intensity. 
 Beyond selecting acoustic cues to measure, she must also select a domain for these measurements, such as the mid-point of stressed/unstressed syllables or an average value over the entirety of the syllable.
-These choices wield significant influence on subsequent outcomes. 
+Choices such as these, i.e., the researcher degrees of freedom, can wield significant influence on subsequent outcomes. 
 Preregistration serves the purpose of meticulously documenting these choices *a priori*, thus acting as a deterrent against QRPs, like HARKing or p-hacking [@wicherts2016]. 
 This is because the researcher establishes what decisions will be made, such as measurement choices and analytic strategies, before data collection commences.
 A benefit of including a high level of specificity in the preregistration is that is forces researchers to consider facets of their study that might usually be deferred to a later stage, e.g., specific statistical tests.  
