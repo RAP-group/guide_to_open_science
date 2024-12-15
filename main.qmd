@@ -298,6 +298,9 @@ In this section, we provide more detail regarding the benefits of open data and 
 
 The underlying motivation for open data is relatively straightforward, particularly in the wake of the reproducibility crisis.
 Though researchers may understandably hesitate to share their data, we believe understanding the benefits of open data can help alleviate many concerns. 
+Among researchers, there can exist anxieties unrelated to technical considerations about sharing data [@stieglitz2020researchers]. 
+@stieglitz2020researchers, in a study investigating 995 researchers from 13 universities in Germany across various fields, found that there were anxieties about competitive pressures, such as losing the opportunity to publish again from the same data set before another researcher does. 
+In this case, anxieties can be quelled with the knowledge that the data can be made available after all research inquiries by the original researchers have been completed.
 Making linguistic data freely available improves credibility in our findings, to other researchers, and the general public, and may help develop more accurate generalizations and theories [See @berez-kroeker2022]. 
 Prohibiting or impeding access to data collected for publicly funded research is, in many cases, unethical and can be a detriment to inclusivity. 
 Open data is fundamental for cumulative science in numerous ways. 
