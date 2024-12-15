@@ -309,12 +309,12 @@ Furthermore, it allows for published data to be reanalyzed in novel ways and uti
 Revisiting old data sets using innovative techniques can support or contradict past narrative conclusions.
 For instance, using meta-analytic techniques, @casillas2021interlingual reexamined extant research regarding 'compromise categories' in early bilinguals. 
 This line of research posits that bilingual individuals produce speech sounds intermediate to those produced by monolingual speakers of either language. 
-By systematically re-evaluating prior data and incorporating new acoustic analyses of coronal stops from early Spanish–English bilinguals, @casillas2021interlingual suggested that the cumulative evidence for 'compromise' VOT was negligible. 
+By systematically reevaluating prior data and incorporating new acoustic analyses of coronal stops from early Spanish-English bilinguals, @casillas2021interlingual suggested that the cumulative evidence for 'compromise' stop categories was negligible. 
 In lieu of intermediate phonetic categories, the study proposed early bilinguals can exhibit performance mismatches resulting from dynamic interlingual interactions. 
 This reanalysis contradicted earlier assumptions about bilingual phonology and provided in-depth scrutiny of statistical power and evidence accumulation in bilingualism research.
 In short, open data is a cornerstone of scientific research in the 21st century that enables wider access to research information, which, in turn, facilitates validation, motivates replication, promotes reproducibility, and makes possible future scientific progress. 
 
-Open data are particularly important for the field of linguistics, for all of the aforementioned reasons, but also because it may be, as some researchers have put it, mainly Western, Educated, Industrialized, Rich, and Democratic [WEIRD, See @bochynska2023reproducible; @nagle_baese-berk_amengual_casillas_2024; @faytak_wp-preprint].
+Open data are particularly important for the field of linguistics, for all of the aforementioned reasons, and also because some linguists have described the state of the field, as far as English-language publications are concerned, as being Western, Educated, Industrialized, Rich, and Democratic [WEIRD, see @bochynska2023reproducible; @nagle_baese-berk_amengual_casillas_2024; @faytak_wp-preprint].
 That is to say, the majority of linguistic research appears to be concentrated on specific languages, mainly Indo-Germanic, in overrepresented communities, by privileged scholars. 
 Making linguistic data accessible to all researchers can promote participation *in* and *with* underrepresented communities. 
 Furthermore, it can increase the study of diverse and underreported languages, which fosters a more inclusive and comprehensive understanding of the global linguistic landscape. 
