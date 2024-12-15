@@ -720,41 +720,45 @@ Empty cells in @tbl-rr indicate missing data and TBA implies that the relevant p
 #| label: tbl-rr
 #| tbl-cap: Journals related to 'language' or 'linguistics' that include registered reports as a possible article submission type. The data were retrieved from the Open Science Framework on 12-14-2024. The complete list of journals is freely available at <https://www.cos.io/initiatives/registered-reports>. Empty cells indicate missing/unavailable data and TBA implies that a pending decision is 'to be announced'.
 
-rr |> 
-  filter(is_ling == 1) |> 
-  select(
-    Journal = journal, 
-    Permanence = x3_permanence_of_adoption, 
-    `Permits replication studies` = x5_offered_for_replication_studies, 
-    `Permits meta-analytic studies` = x6_offered_for_meta_analysis, 
-    `Permits use of existing data` = x7_offered_for_analyses_of_existing_data_sets, 
-    `Requires data deposition` = x12_requires_public_data_deposition
-  ) |> 
-  mutate(
-    `Permits replication studies` = case_when(
-      `Permits replication studies` == "1" ~ "✓", 
-      `Permits replication studies` == "NA" ~ " ", 
-      `Permits replication studies` == "TBA" ~  "TBA" 
-    ), 
-    `Permits meta-analytic studies` = case_when(
-      `Permits meta-analytic studies` == "1" ~ "✓", 
-      `Permits meta-analytic studies` == "NA" ~ " ", 
-      `Permits meta-analytic studies` == "TBA" ~  "TBA" 
-    ), 
-    `Permits use of existing data` = case_when(
-      `Permits use of existing data` == "1" ~ "✓", 
-      `Permits use of existing data` == "NA" ~ " ", 
-      `Permits use of existing data` == "TBA" ~  "TBA" 
-    ), 
-    `Requires data deposition` = case_when(
-      `Requires data deposition` == "1" ~ "✓", 
-      `Requires data deposition` == "NA" ~ " ", 
-      `Requires data deposition` == "TBA" ~  "TBA" 
-    )
-  ) |> 
+if(F) {
+  rr |> 
+    filter(is_ling == 1) |> 
+    select(
+      Journal = journal, 
+      Permanence = x3_permanence_of_adoption, 
+      `Permits replication studies` = x5_offered_for_replication_studies, 
+      `Permits meta-analytic studies` = x6_offered_for_meta_analysis, 
+      `Permits use of existing data` = x7_offered_for_analyses_of_existing_data_sets, 
+      `Requires data deposition` = x12_requires_public_data_deposition
+    ) |> 
+    mutate(
+      `Permits replication studies` = case_when(
+        `Permits replication studies` == "1" ~ "✓", 
+        `Permits replication studies` == "NA" ~ " ", 
+        `Permits replication studies` == "TBA" ~  "TBA" 
+      ), 
+      `Permits meta-analytic studies` = case_when(
+        `Permits meta-analytic studies` == "1" ~ "✓", 
+        `Permits meta-analytic studies` == "NA" ~ " ", 
+        `Permits meta-analytic studies` == "TBA" ~  "TBA" 
+      ), 
+      `Permits use of existing data` = case_when(
+        `Permits use of existing data` == "1" ~ "✓", 
+        `Permits use of existing data` == "NA" ~ " ", 
+        `Permits use of existing data` == "TBA" ~  "TBA" 
+      ), 
+      `Requires data deposition` = case_when(
+        `Requires data deposition` == "1" ~ "✓", 
+        `Requires data deposition` == "NA" ~ " ", 
+        `Requires data deposition` == "TBA" ~  "TBA" 
+      )
+    ) |> 
+    write_csv(here("tables", "rr_journals.csv"))
+}
+
+read_csv(here("tables", "rr_journals.csv")) |>
   mutate(across(everything(), \(x) replace_na(x, " "))) |>
   knitr::kable()
-
 ```
 
 The majority of the listed journals plan to offer RRs as a possible submission option indefinitely (n = `r n_permanent`), as opposed to only for special issues or during a trial period. 
