@@ -5,10 +5,25 @@ journal        : "Linguistics: An Interdisciplinary Journal of the Language Scie
 manuscript-id  : "LING.2023.0249"
 manuscript-src : "headings"
 
+header-includes:
+  - \usepackage{tipa}
+  - \usepackage{booktabs}
+  - \usepackage{hyperref}
+  - \usepackage{longtable}
+  - \usepackage{array}
+
+bibliography      : "../../../bib/os_refs.bib"
+csl               : "../../../bib/apa-6th-edition.csl"
+
 cutout-quotes  : false
-class          : "draft"
+class          : "final"
 output         : papaja::revision_letter_pdf
 ---
+
+```{r}
+#| label: setup
+library("here")
+```
 
 
 Dear Dr. Volker Gast, 

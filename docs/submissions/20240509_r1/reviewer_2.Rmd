@@ -1,8 +1,691 @@
 
-# Reviewer 2
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/19 -->
 
 :::reviewer
-This is a reviewer comment
+The argumentation and description of methods is generally very abstract. If I understand the title “opening open science to all” correctly, the authors should include more concrete examples and instructions so that readers who are (still) unfamiliar with the practices described can implement new methods. I added concrete suggestions to do so below; this is necessary for the manuscript to fulfill its promise of opening open science and to become an important resource in research and teaching.
+
 :::
 
-This is our response
+Respond to this last
+
+\AlmostDone
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/20 -->
+:::reviewer
+ERC: should be spelled out here for clarity, as it is only explained later in the introduction.
+:::
+
+This acronym has been spelled out in the abstract of the revised manuscript. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/21 -->
+:::reviewer
+“Researchers have pointed to questionable research practices (QRPs), such as p-hacking and HARKing”
+--> HARKing (maybe also p-hacking) needs to be explained briefly here, especially given the goal of the paper.
+:::
+
+\AlmostDone
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/22 -->
+:::reviewer
+“It necessitates that researchers implement new techniques with limited pedagogical
+resources and embrace alternative methods of disseminating their research, all of which constitutes a steep learning curve.”
+--> Does it always, though? For instance, in the field of language typology, there are a number of qualitative studies that are based on a sample and annotations using reference grammars. Those studies do not include any code, making them transparent simply means providing a spreadsheet with the languages and the respective annotations and sources that the authors should have in some form anyway. Can we really speak of “innnovative methodologies”?All this goes to say that, yes, some formats (e.g. using OSF) may involve a learning curve, but this is not necessarily so. It may also be about vulnerability, i.e. making all details of the study and analysis public and thus subject to potential criticism, wheareas before, those could be left partially “hidden” and “proctected”. I suggest that the authors sightly rephrase this paragraph.
+:::
+
+We appreciate the reviewer's thoughtful feedback. 
+We agree that the challenges associated with increasing transparency vary across different fields and methodologies. 
+In response, we have rephrased the paragraph to acknowledge that while some researchers may face a learning curve or feelings of vulnerability when adopting new transparency practices, this is not universally the case. 
+The revised paragraph now reads as follows:
+
+> To wit, it often requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
+Many researchers need to implement new techniques with limited pedagogical resources and embrace alternative methods of disseminating their research, all of which can constitute a steep learning curve. 
+That being said, what engaging in open science ultimately entails is sure to be field-specific and vary accordingly. 
+In some disciplines, for instance, it may only involve a few of the practices we outline in the present work without the need for innovative methodologies. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/23 --> 
+:::reviewer
+“To this end, we identify three areas, stance, workflow, and dissemination, in which linguists can engage in open science.”
+--> rephrase: “... we identify the following three areas of stance, workflow and dissemination, ...
+:::
+
+This change has been included in the revised manuscript. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/24 --> 
+:::reviewer
+Figure 1 --> I am not sure open data is clearly only related to stance; I would also view providing the datasets in a useful form as part of the workflow. Could this point be put in between the two areas?
+:::
+
+
+```{r}
+#| label: fig-os-flow-edit
+#| out-width: "100%"
+#| fig-cap: Some open science practices amenable to research in linguistics as they pertain to one's stance, workflow, and the dissemination of research products.
+
+knitr::include_graphics(here("figs", "os-flow", "fig-os-flow_edit.png"))
+```
+
+\AlmostDone
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/25 -->
+:::reviewer
+Could you give a concrete example of a positionality statement early on? 
+A concrete example is valuable to make this more understandable for researchers not familiar with this practice.
+:::
+
+In the revised manuscript this section has been reorganized to reflect changes suggested by all three reviewers. 
+We follow the reviewers suggestion and now provide an example of a positionality statement in prose in the first paragraph, with links to more examples at the end of the section. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/26 -->
+:::reviewer
+“Moreover, Bucholtz et al. (2023) note that considering a researcher’s positionality may be especially important in linguistics, “[...] which relies on racially minoritized communities as sources of data yet lack adequate (if any) representation of those communities among faculty researchers” (p. 2).”
+--> Does this quote really apply to linguistics in general? I can see how it is very relevant for certain areas of linguistics, but there is much linguistic research on major languages, where this point does not seem to apply. Please rephrase / explain.
+:::
+
+The reviewer's point is duly noted. 
+In the revised manuscript we have rephrased this sentence to make it more clear that we are referring to work on minority languages. 
+The sentence in question now reads as follows: 
+
+> Moreover, Bucholtz et al. (2023) note that considering a researcher's positionality may be especially important in linguistic research on certain language communities, such as indigenous communities, "[...] which relies on racially minoritized communities as sources of data yet lack adequate (if any) representation of those communities among faculty researchers" (p. 2).
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/27 --> 
+:::reviewer
+“Many researchers support and advocate for the inclusion of positionality statements in their research publications (e.g., Bucholtz et al., 2023; Jafar, 2018; Steltenpohl et al., 2022).”
+--> Please specify the research areas here, also those mentioned as arguing against positionality statements.
+:::
+
+\AlmostDone
+
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/28 --> 
+:::reviewer
+“Bochynska et al. (2023) surveyed open and transparent practices in linguistics and found that only 10% of the articles sampled included statements of conflict of interest, and, among those 10%, none declared any conflicts (See also Cristea & Ioannidis, 2018; Hardwicke et al., 2022, 2020).”
+--> Out of curiosity, can you give an example of a statement of conflict of interest from linguistics? Again, concrete examples would help readers less aware of / familiar with these issues understand what those statements can look like.
+:::
+
+We thank the reviewer for this welcomed suggestion. 
+We have added references and links to examples in linguistics, psychiatry, psychology, and the social sciences more broadly. 
+We include the revised text for convenience. 
+
+> @bochynska2023reproducible surveyed open and transparent practices in linguistics and found that only 10% of the articles sampled included statements of conflict of interest, and, among those 10%, none declared any conflicts. For a clear example of what a declaration of conflicts of interest can entail in linguistics, the interested reader is directed to @bochynska2023reproducible. Of particular value are the *Competing interests* section and the coding form available at <https://escholarship.org/uc/item/6m62j7p6#main> and <https://osf.io/ehyx3>, respectively. Additionally, @cristea2018, @hardwicke2022, and @hardwicke2020empirical represent illustrative examples in psychiatry, psychology, and the social sciences more broadly.
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/29 --> 
+:::reviewer
+“While positionality statements, due to their reflexive nature, may encompass larger pieces of writing, they can also take the form of short paragraphs that illustrate a few personal characteristics deemed relevant for the particular research endeavor.”
+--> This whole paragraph should be moved to the beginning of the section.
+:::
+
+This section was heavily edited and this particular part, in its revised form, is not at the beginning of the section. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/30 --> 
+:::reviewer
+“Gabriela is a white immigrant cis-gender woman from Romania whose research focuses on how non-native speakers are ideologically framed as linguistically deficient in comparison to native speakers who are characterized by their linguistic authority and expertise.”
+--> OK, this is what I wanted to see early on in this section. Please add some context: What was the title / topic of the publication that this statement belongs to? Can you give a concrete reference? Or is this a made-up example? Please clarify.
+:::
+
+This particular example, which now appears at the beginning of the section, is for one of the authors of the present work. 
+For the sake of anonymity during the peer review process, more details will be included at a later stage. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/31 --> 
+:::reviewer
+“For examples of positionality statements in linguistic research, the interested reader is directed to Bochynska et al. (2023) and Weissler et al. (2023).”
+--> Great pointer to ressources, but if the purpose of this paper really is to make open science practices more accessible to linguists who are not (yet) familiar with them, a concrete example in the beginning of this section is important. It would also help to make this proposal of including a positionality statement more concrete: In which areas of linguistics is it helpful? In which areas is it necessary? In which areas may it be less relevant? For which methods may this be particularly helpful / important? While I sympathize with the arguments made in this section in general, I think they are too abstract in order to be immediately helpful for a concrete implementation. Please make the argumentation a bit more concrete and geared towards certain / different areas of linguistic research so that the reader has more practical advice on how to include such statements in their future research.
+:::
+
+We thank the reviewer for the aforementioned suggestions. 
+They have guided our rewriting/reorganizing of this section, which we believe is now much more informative and useful. 
+As opposed to copy/pasting the entire section here, we encourage the reviewer to consider the revised section in its entirety (approx. pages 7-10). 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/32 --> 
+:::reviewer
+“In academic research, statements such as “data available upon request” are commonplace.” --> This may be so, but the statement would clearly look better with references or some data to back it up. I do not mean that the authors should single out studies as negative examples, but maybe it would be possible to mention journals and years of publication where this happens. This makes it somewhat more tangible and related to linguistic research. Please rephrase.
+:::
+
+We have added a reference to the aforementioned sentence [See @hardwicke2018populating], which contains enlightening statistics from the field of psychology. 
+
+\Done
+
+
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/33 --> 
+:::reviewer
+“Recent efforts have attempted to encourage researchers to make linguistic data open and accessible via servers (e.g., the IRIS database).”
+--> Given the goal of this paper, please add more explanation about the IRIS database here.
+
+“open science bagdes” --> Can you explain briefly what this is?
+:::
+
+In the revised manuscript we have expanded upon our discussion of the IRIS database and open science badges. 
+The relevant text is included below. 
+
+> Recent efforts have attempted to encourage researchers to make linguistic data open and accessible via servers. 
+An illustrative example is the IRIS database (<https://www.iris-database.org>), a language sciences digital repository that is freely accessible and permits the up- and downloading of research instruments and materials.
+Additional efforts include open science badges--visual symbols offered by some journals (e.g., *Language Learning*, *Language and Speech*) on published articles. 
+These badges are awarded to researchers for adhering to certain open science principles, such sharing code and data or preregistering a study. 
+In arguably more extreme cases, other journals have made data sharing a requirement for publication (e.g., *Applied Psycholinguistics*). 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/34 --> 
+:::reviewer
+“Though researchers may understandably hesitate to share their data, we believe
+understanding the benefits of open data can help alleviate any concerns.”
+--> This point needs to be elaborated more in that there may be very different motivations for preferring not to share data. Corpus data may contain sensitive personal information (e.g. video, audio) and speakers may not consent to making it public. Authors of the study may not have the rights to publish the data that their study is based. In this case, it may be possible to make processed data publicly available, but not the raw data (i.e. data can mean different things, and should be distinguished in more detail here). In other cases, it may simply be the fear of making all data and annotation choices criticiseable by making everything publicly available. Those are very different perspectives that call for very different solutions / approaches. This needs to be discussed and differentiated in more detail.
+:::
+
+We thank the reviewer for these useful insights. 
+In the revised manuscript we have reorganized this section and rewritten many paragraphs to better reflect these concerns. 
+In addition, we have addressed how certain choices become criticiseable upon being made public and included a relevant reference [See @stieglitz2020researchers]. 
+Given the large amount of changes, we do not copy/paste any text here. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/35 -->
+:::reviewer
+“It affords third parties the opportunity to scrutinize original findings, which promotes reproducibility and reduces errors, such as those related to statistical analyses and reporting of outcomes [TIMO].” --> What is [TIMO]?
+:::
+
+We apologize for this oversight. 
+TIMO was a 'note to self' to include a reference that was not deleted before submitting the initial version of the manuscript. 
+This has been corrected in the revised version.
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/36 -->
+:::reviewer
+“Revisiting old data sets using innovative techniques can support or contradict past narrative conclusions (e.g., Casillas, 2021).”
+--> It would be useful to elaborate this in a few sentences and present the Casillas (2021) study in terms of revisiting old data sets and drawing (new?) conclusions.
+:::
+
+The revised manuscript now includes a brief discussion of this study and its relevance for open data, which is included below. 
+
+> Revisiting old data sets using innovative techniques can support or contradict past narrative conclusions.
+For instance, using meta-analytic techniques, @casillas2021interlingual reexamined extant research regarding 'compromise categories' in early bilinguals. 
+This line of research posits that bilingual individuals produce speech sounds intermediate to those produced by monolingual speakers of either language. 
+By systematically reevaluating prior data and incorporating new acoustic analyses of coronal stops from early Spanish-English bilinguals, @casillas2021interlingual suggested that the cumulative evidence for 'compromise' stop categories was negligible. 
+In lieu of intermediate phonetic categories, the study proposed early bilinguals can exhibit performance mismatches resulting from dynamic interlingual interactions. 
+This reanalysis contradicted earlier assumptions about bilingual phonology and provided in-depth scrutiny of statistical power and evidence accumulation in bilingualism research.
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/37 --> 
+:::reviewer
+“Open data are particularly important for the field of linguistics, for all of the aforementioned reasons, and also because linguistics is Western, Educated, Industrialized, Rich, and Democratic (WEIRD, Bochynska et al., 2023).”
+--> I do not disagree, in principle, but there may be one caveat that needs to be mentioned: Bochynska et al. (2023) evaluated publications written in English. This seems slightly self- selecting to me, as it probably excludes relevant linguistic research traditions whose main language of publication is not English (e.g. Chinese linguistics). How sure can we then be that linguistics as a whole is WEIRD? I suggest the authors tone down this statement a bit, as it seems too strong in its current form.
+:::
+
+We agree with the reviewer's assessment and have toned down the message accordingly. 
+In addition, we have added more references that highlight this assertion about the field. 
+The revised text is included below.
+
+> Open data are particularly important for the field of linguistics, for all of the aforementioned reasons, and also because some linguists have described the state of the field, as far as English-language publications are concerned, as being Western, Educated, Industrialized, Rich, and Democratic [WEIRD, see @bochynska2023reproducible; @nagle_baese-berk_amengual_casillas_2024; @faytak_wp-preprint].
+That is to say, the majority of linguistic research appears to be concentrated on specific languages, mainly Indo-Germanic, in overrepresented communities, by privileged scholars. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/38 --> 
+:::reviewer
+“Making linguistic data accessible to all researchers promotes participation in and with underrepresented communities. Furthermore, it can increase the study of diverse and underreported languages, which fosters a more inclusive and comprehensive understanding of the global linguistic landscape.”
+--> Please explain why and how accessible linguistic data promotes the researchers’ participation with the (potentially underrepresented) speaker communities? While I am sympathetic to this argument, it needs to be spelled out more and made more concrete in order to be meaningful.
+:::
+
+
+\AlmostDone
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/39 -->
+:::reviewer
+“Having stated all the above, it is necessary to recognize that the field of linguistics faces unique challenges with regard to open data.”
+--> Are these necessarily unique challenges? I do not think it is important to point this out (and I am not sure if linguistics really faces unique challenges that different from other related disciplines). What would be more important is to go into more detail about which areas of linguistics face which types of challenges, since there are so many different types of data that we as linguists work with (experimental data, corpus data, data from grammars, data from linguistic databases, written, spoken, signed data, historical data, and each oft these types could be distinguished further). This should be discussed in much more detail and made more concrete so that the readers can see their approaches / types of data represented in this discussion.
+:::
+
+We again thank the reviewer for this helpful comment. 
+This section has been reworked to address the challenges researchers face in the field of linguistics, and provide a more nuanced view regarding marginalized communities. 
+We refer the reviewer to pages 11-16 (appox.) of the revised manuscript. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/40 -->
+:::reviewer
+“The privacy and consent of participants must be safeguarded...”
+--> OK, this is the kind of information that I was waiting for earlier; consider moving this paragraph up. Also, not all linguistic studies face ethical issues: What about studies that work with databases / corpora that have been compiled by third parties, which are publicly accessible and which the authors simply use as is. They are far removed from any speakers in this case and had no influence on any decision of data collection and processing that went into compiling the database. Or what about historical linguistics? The role that participants or informants play in different types of linguistic studies deserves a more fine-grained discussion.
+:::
+
+Following the reviewer's suggestion, this section was reorganized to address their concerns. 
+We refer the reviewer to pages 11-16 (appox.) of the revised manuscript. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/41 -->
+:::reviewer
+“Moreover, the advent of generative artificial intelligence technologies, such as Large Language Models, may pose unknown challenges in the near future that necessitate additional steps to secure the protection of sensitive data against misuse.”
+--> Please explain in more detail: Is the idea that LLMs use data compiled by linguists for linguistic research? Or does the potential of misuse lie in the linguistic research with LLMs itself? If the authors wish to mention this, they should discuss in more detail what exactly the risks are. Otherwise, this sentence could be omitted.
+:::
+
+We thank the reviewer for recommending clarity regarding this point. 
+We are referring to the fact that LLMs are new and we don't fully understand how they will be used in the future, by both academics and the general public. 
+Given the fact that they operate using/are trained by large amounts of text data, the availability of open data/corpora could lead to potentially sensitive data (e.g., data derived from marginalized communities) being used in ways that do not adhere to the original agreement of informed consent. 
+We have clarified this point in the revised manuscript and include the relevant text below.
+
+> In addition, generative artificial intelligence technologies, such as Large Language Models, are burgeoning. 
+These technologies will certainly pose currently unknown challenges in the near future and may necessitate additional steps to secure the protection of sensitive data against misuse, particularly regarding adherence to the original agreement of informed consent, and, importantly, in upholding the conditions of use put forth by the stakeholders in marignalized communities.
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/42 -->
+:::reviewer
+“When primary data, such as audio or video files, cannot be shared, derived data in the form of tabular files can take its place...”
+--> This paragraph is very important and constructive. Different types of data (primary data vs. processed data and annotations) should be introduced at the beginning of this section, though, and the entire section should be more precise about what types of data particular arguments refer to.
+:::
+
+As mentioned above, this section has been rewritten/reorganized to reflect suggestions by all reviewers. 
+We refer the reviewer to pages 11-16 (appox.) of the revised manuscript. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/43 -->
+:::reviewer
+Prolific --> add a link, e.g. in a footnote.
+:::
+
+A link to the prolific website has been included in the revised manuscript. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/44 -->
+:::reviewer
+“In more uncommon cases in which institutional policies do not permit the sharing of
+derived data sets, synthetic data containing the same statistical properties can be generated and shared freely (See Quintana, 2020).”
+--> Please elaborate how this would work.
+:::
+
+In the revised manuscript we have included more information regarding how the process works and provided links to code and an example tutorial. 
+
+> In more uncommon cases in which institutional policies do not permit the sharing of derived data sets, synthetic data containing the same statistical properties can be generated and shared freely [See @quintana2020].
+In short, the method consists of capturing the statistical properties of the original data set and using them to simulate new data that preserve the relationships between the variables of interest. 
+A tutorial on the method described in @quintana2020 is freely available on github (<https://github.com/elifesciences-publications/synthpop-primer>), and an online RStudio instance can be accessed at <https://mybinder.org/v2/gh/dsquintana/synthpop-primer/master?urlpath=rstudio>. 
+All relevant materials are available on the OSF: <https://osf.io/z524n/>.
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/45 -->
+:::reviewer
+“A substantial hurdle that cannot be overlooked revolves around the fact that researchers must learn to use new technologies to participate in open, transparent research. Making data open and accessible is not as simple as merely uploading a data file.”
+--> I disagree in that it depends on the linguistic subdiscipline. In large-scale typological studies that are qualitative in nature and use no statistics but are based on a language sample, making research transparent simply consists of adding a supplementary spread sheet file with the names of the languages, all relevant annotations / examples and their sources. Impressionistically, even this is still not done in all studies, so improving on transparency in this case only involves adding a supplementary file to the publication. Also, if the researcher does not provide such supplementary files on their own, many journals offer to host supplementary materials on the journal website together with the publication. This may not be the best solution, but it is a solution where the researcher really does not need to know or consider platforms to host data. Please clarify this.
+:::
+
+The reviewer's disagreement regarding this issue is duly noted. 
+We believe we failed to fully describe and contextualize the difficulties involved with making data open and accessible. 
+In the revised manuscript we have further elaborated, providing examples and templates. 
+For the sake of completeness, we describe the issue here. 
+The logic behind our argument revolves around the fact that simply providing access to data (or a data file) is not sufficient. 
+To elaborate using the reviewer's example, we will consider the case in which a supplementary spread sheet file with the names of languages represent the data in question. 
+In this case, uploading the file, be it on an open, independent server or on the journal's website, does not provide the relevant context for a non-expert to use the data. 
+This is the case because, when publicly sharing data, it is ideal that one also provide three distinct levels of documentation so that an independent researcher has the proper context to use data. 
+It is helpful to have in mind a researcher that may not be completely familiar with the norms of a particular subfield. 
+This part is key because the objective is that any individual be able to use the data. 
+The levels of documentation are *project-level* (i.e., a project summary document), *data-level* (i.e., a README file explaining the data set), and variable-level (i.e., a data dictionary). 
+The different levels will be more or less relevant depending on the subfield. 
+In our example, it could theoretically be critical for an independent researcher to understand how and why the data are relevant to the broader goals of the project (project-level), as well as how and why the contents of the data file (in our case the languages) came to be included and any relevant relationships or hierarchies among them (data-level, e.g., language families, varieties of a single language, etc). 
+In this particular case, a data dictionary (variable-level) could also be relevant to understand how the languages are listed, i.e., whether or not abbreviations are used, or if the names are interpretable to speakers of other languages. 
+If it wasn't obvious, this particular example is not in the area of our (the authors) collective expertise. 
+Nonetheless, we believe this makes the example even more relevant, as the topics we have covered represent aspects of our ignorance in this area that we believe we may need to know in order to make full use of a data set of this nature. 
+Importantly, the type of thoroughness we outline here is virtually non-existent in most data sets publicly available. 
+For this reason we also have included links to templates any researcher could use and adapt for their specific purposes. 
+In the revised manuscript there relevant text reads as follows: 
+
+> Another substantial hurdle that cannot be overlooked revolves around the fact that researchers must learn to use new technologies to participate in open, transparent research. 
+Making data open *and* accessible is not as simple as merely uploading a data file. 
+Ideally, researchers should include relevant information to contextualize the data set at the project-level (i.e., a project-summary document), the data-level (i.e., a README file explaining the data set), and the variable-level (i.e., a data dictionary) [@lewis2024data]. 
+The inclusion of resources at these three levels is the optimal way for authors to provide the necessary context for an independent researcher to access and utilize the data set. 
+Unfortunately, most publicly available data do not adhere to this standard. 
+For this reason, we direct the interested reader to templates provided in @lewis2024data for documentation at the project-level (<https://osf.io/q6g8d>, <https://osf.io/d3pum>), data-level (<https://osf.io/tk4cb>), and variable-level (<https://osf.io/ynqcu>). 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/46 -->
+:::reviewer
+“Free repositories designed for the purpose of sharing research materials, such as the Open Science Framework (Foster & Deardorff, 2017), github, etc., are preferable and can be accessed simply by sharing a link.”
+--> Here, it would actually be helpful to spell this out a bit more and mention e.g. zenodo as another option. For readers less familiar with these options, it would be valuable to add a table with different platforms / systems and provide information about long-term support, version control, possibility of DOI, anonymous links (e.g. what OSF offers and what is very
+useful for sharing data and code during the revision stage of a study), etc.
+:::
+
+We thank the reviewer for this idea. 
+In the revised manuscript we have included a table summarizing some of the available resources. 
+We include the table here for convenience. 
+
+\begin{tabular}{>{\raggedright}p{.75in}>{\raggedright}p{.75in}>{\raggedright}p{.75in}>{\raggedright}p{.75in}>{\raggedright}p{.75in}p{1in}}
+\hline
+Platform & Long-term Support & Version Control & DOI Assignment & Anonymous Sharing & Key Features\\
+\hline
+Open Science Framework (OSF) & + & + & + & + & Project management and collaboration\\
+GitHub & + & + & Integrates with Zenodo & + (public repositories) & Project management/collaboration, ideal for coding\\
+GitLab & + & + & Integrates with Zenodo & Limited & Project management/collaboration, ideal for coding\\
+Bitbucket & + & + & Integrates with Zenodo & Limited & Project management/collaboration, ideal for coding\\
+Zenodo & + & + (via GitHub integration) & + & + & Supports range of file types\\
+Figshare & + & Limited & + & + & Sharing datasets and figures\\
+Box & - & - & - & Limited & Basic file storage and sharing\\
+Google Drive & - & - & - & Limited & Basic file storage and sharing\\
+\hline
+\end{tabular}
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/47 -->
+:::reviewer
+“While linguistics does face legitimate, field-specific challenges, ultimately the benefits of
+open data outnumber these challenges, and researchers should take the stance to share what is ethically reasonable.”
+--> My impression when reading this is that the only field-specific challenge mentioned was the point on sensitive speaker data. I generally agree with the statement, but in order to make this statement at the end of the section, the section would need to be much more explicit about the different challenges taking into account the different areas of linguistics.
+
+Another point to consider is the following, although it may not immediately relate to data and more to the inclusion of lesser studied languages and integration of speaker communities in linguistic research: There are linguistic journals that allow / require an additional abstract of the papers in the target language or another local language besides the usual abstract in English. From personal experience, I know that Linguistics Vanguard offers this as an option (although I am not sure if you can find this information other than submitting a paper). Another journal that makes use of this practice is the Journal of African Languages and Linguistics (just to give some examples from the most recent volume: https://www.degruyter.com/document/doi/10.1515/jall-2023-2008/html, https://www.degruyter.com/document/doi/10.1515/jall-2023-2011/html)
+:::
+
+Again, the reviewer's point is duly noted. 
+We have reorganized and rewritten large portions of this section to include more field-specific challenges. 
+For the sake of convenience we highlight but one here and recommend a reread of the section in its entirety. 
+
+> Having stated all the above, it is necessary to recognize that linguistics faces a unique set of challenges with its multitude of subfields, each potentially working with a variety of data formats. 
+Due to such diversity, one must determine which aspects of open science are relevant to their data. 
+For example, a neurolinguistic study investigating event related potentials (ERPs) could share raw data for transparency, as well as preprocessed data with the code used to transform the raw data and a corresponding description for facilitation of reanalysis. 
+In another field, the creation of a corpus will benefit from open access and the use of standardized file formats; the analysis of a corpus will benefit from sharing the search queries, the analysis code, and a description of the analysis code.
+At the heart of these challenges are ethical concerns that must be considered with care. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/48 -->
+:::reviewer
+“As we have seen, reproducibility is now a crucial aspect of any scientific study.”
+--> Where did we see that? Also, I agree that it should be, but reproducibility is not yet a crucial aspect of any scientific study, unfortunately. Please rephrase.
+:::
+
+We have rephrased this sentence in the revised manuscript. 
+It now reads as follows: 
+
+> Having seen the consequences from the reproducibility crisis in other fields, reproducibility must be a crucial aspect of any scientific study.
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/49 -->
+:::reviewer
+“At worst, a lack of reproducibility can lead to irreproducible results and wasted resources.” --> Is this really the worst consequence? Is it not worse (or equally bad) that we may end up with results that are taken as a given for decades in a given linguistic field, because the original study was not reproducible and never replicated but influential for some reason?
+:::
+
+We have rewritten this paragraph. 
+In the revised manuscript it now appears as follows: 
+
+> In general, reproducibility helps to increase the credibility of research findings and allows other researchers to verify and build on existing work. 
+A lack of reproducibility can lead to findings that cannot be replicated, resulting in wasted resources, and, conceivably, downstream impacts on public health and policy decisions that are often grounded in funded research. 
+For these reasons, among others, transparency in research methods are essential to ensure reproducibility, which includes not only the data collection and analysis methods, but also the code used to conduct the analysis.
+In linguistics there is increasing awareness of the importance of reproducibility and how a lack thereof could potentially impede advancements in linguistic theory and theories of language acquisition, in addition to having implications for education and language policy decisions based on research findings.
+As a consequence, many investigators are showing heightened interest in safeguarding the reproducibility of their research.
+
+\Done
+
+
+
+<!-- 
+https://github.com/RAP-group/guide_to_open_science/issues/50 
+https://github.com/RAP-group/guide_to_open_science/issues/51
+--> 
+:::reviewer
+“This can have serious implications for public health and policy decisions based on research findings.”
+--> Is this statement about linguistics or research in general? Please clarify.
+
+“In linguistics there is increasing awareness of the importance of reproducibility, and many
+researchers are beginning to take steps to improve the reproducibility of their research.”
+--> too many reproducibilities in one sentence, rephrase.
+:::
+
+These concern were addressed in the rewriting of the original paragraph (see response directly above). 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/52 --> 
+:::reviewer
+“There are several steps that researchers can take to make their code and projects more
+reproducible.”
+--> A large portion of linguistic work is qualitative and does not rely on any code. If the paper is meant to be relevant to all linguistic approaches in general, please be more inclusive. Alternatively, the topic of the paper could be specified more and refer to “quantitative linguistics”?
+:::
+
+Again, the reviewer's point is duly noted. 
+There are some areas of open science that are clearly more applicable to certain subfields of linguistics. 
+As the reviewer points out, this particular section is more relevant for quantitative research. 
+We have rewritten the beginning of this paragraph to highlight this fact. 
+The revised text now reads as follows. 
+
+> For quantitative research, there are several steps that researchers can take to make their code and projects more reproducible. 
+One approach is to create reports that document the research process by including descriptions of the data, the methods used to analyze the data, and the results. 
+
+Notably, other sections of the manuscript are more applicable to qualitative research (e.g., preregistration and registered reports) and highlighted at a later juncture. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/53 --> 
+:::reviewer
+- regarding the sharing of code, dependencies, versions & reproducibility: It may be helpful to explain in more detail why it is important to not only share the code, i.e. that different operating systems can react to code differently, functions can differ in different versions of packages, etc. The authors may consider referring to Roberts et al. (2015), who show that functions from the lme4 R package produce different results when used on different operating systems (althouh fixed since then).
+Roberts, Seán, James Winters & Keith Chen. 2015. Future tense and economic decisions: Controlling for cultural evolution. PLOS ONE 10(7). e0132145. https://doi.org/10.1371/journal.pone.0132145.
+
+- The literate coding section is very much focused on R. This may be warranted given that R seems to be the main programming language used for statistical analyses in many (?) linguistic areas, but python is certainly not uncommon either. If the authors go into detail for literate programing in R (e.g. citing the knitr package), they should also do this for python, and potentially mention Julia, which is also, although less commonly, used in linguistics. Here again, a table with programing languages, approaches / formats / packages as well as platforms with virtual environments would be very helpful.
+
+- “This includes updating code and documentation as needed and testing projects on different operating systems to ensure that it can be run in different environments.”
+--> This statement seems to assume that researchers should have access to different OSs, which may not always be the case. Also, it is hardly possible to test for all compatibilities and eventualities on the side of the authors. It is more reasonable to create and publish an, e.g., Docker environment for an R project, so that other researchers can reproduce the original analysis with the exact OS and package versions as in the original study.
+:::
+
+\AlmostDone
+
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/54 -->
+:::reviewer
+“Linguistic research is multifaceted and spans diverse areas such as corpus analysis, conversation/discourse analysis, experimental research, and more.”
+--> This is a very reduced list of linguistic research areas, please add more areas and discuss in more detail for which areas preregistration makes sense. For instance, can it be used in theoretical linguistics? It is mentioned in the beginning that “we focus on who might want to consider preregistrations”, but this does not become very clear. Please add at least a paragraph about what types of linguistic studies can benefit from preregistrations.
+:::
+
+
+\AlmostDone
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/55 -->
+:::reviewer
+“Researchers face vital decisions while engaging in research, with inherent flexibility involved in the process of designing and conducting experiments, as well as analyzing the results (Simmons, Nelson, & Simonsohn, 2011).”
+--> Does this mean you only consider experimental linguistics research? This needs to be framed differently, or, the scope of the paper should be reduced to experimental linguistics.
+:::
+
+We thank the reviewer for this helpful comment. 
+We have taken care to be more inclusive in our wording, and, in turn, more faithful to the point being made by @simmons2011false. 
+The revised text now reads as follows: 
+
+> Researchers face vital decisions while engaging in research, with inherent flexibility involved in the process of designing and carrying out projects, as well as in the analysis of the data and interpretation of the results [@simmons2011false]. 
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/56 -->
+:::reviewer
+Coretta et al. 2023: Please explain in a few sentences what the study did and what it showed; it is impossible to understand (and appreciate) that without knowing the study.
+:::
+
+We have included a description of the @msa study in order to facilitate understanding/appreciating "researcher degrees of freedom". 
+The revised text is included below. 
+
+> This type of flexibility, termed "researcher degrees of freedom", can have serious down-stream consequences in quantitative research, particularly in linguistics.
+For instance, @msa provided the same speech-production data set to different research teams and asked them to answer the same research question. 
+They found substantial variability in both the acoustic analyses and the analytic strategies, neither of which could be explained by analysts' prior beliefs, expertise, or the perceived quality of their analyses. 
+Crucially, these decisions, both acoustic and analytic, impacted the teams' answers to the research question. 
+To provide a simple example, a researcher studying lexical stress could concentrate on distinct acoustic cues typically associated with stress, i.e., pitch, duration, and intensity. 
+Beyond selecting acoustic cues to measure, she must also select a domain for these measurements, such as the mid-point of stressed/unstressed syllables or an average value over the entirety of the syllable.
+Choices such as these, i.e., the researcher degrees of freedom, can wield significant influence on subsequent outcomes. 
+Preregistration serves the purpose of meticulously documenting these choices *a priori*, thus acting as a deterrent against QRPs, like HARKing or p-hacking [@wicherts2016]. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/57 -->
+:::reviewer
+This section needs more concrete pointers to specific platforms, journals, spaces for preregistration. Linguists outside of experimental research may want to do this, but are less likely to know how and where exactly they can preregister their study. The abstract motivations are spelled out clearly in this section, but it is not of much concrete help to those linguists who are convinced about the method but have no experience with it. It would be helpful to see an example of how this can be done outside of experimental studies, e.g. a corpus study, a typological study, etc. What about e.g. a theoretical morphological / phonological / syntactic analysis based on information from grammars? Is preregistration even possible or sensible? Please add more concrete details regarding different areas of linguistics so that this section becomes usefull to the readers
+:::
+
+We thank the reviewer for this excellent suggestion. 
+In the revised manuscript we have included more resources related to preregistration in distinct subfields of linguistics. 
+Though multiple platforms exist for preregistering studies, we have opted not to include a table summarizing the options. 
+We made this decision based on the fact that there are two primary platforms used generally, OSF and aspredicted.org, the former much more commonly used than the latter. 
+The remaining platforms (e.g., ClinicalTrials.gov, European Union Clinical Trials Register, PROSPERO, SRCD, etc.) are all field-specific, and, therefore, not relevant for linguistics. 
+
+
+\AlmostDone
+
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/58 -->
+:::reviewer
+Please give examples of journals / platforms that allow for registered reports.
+:::
+
+We again thank the reviewer for a excellent comment that resulted in the inclusion of extremely relevant information. 
+The revised manuscript now includes data and a summary table regarding registered reports in linguistics. 
+The reviewer is directed to pages 25-26 (approx.) of the revised manuscript. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/59 --> 
+:::reviewer
+“First, select a pre-print server that aligns with the course of research.”
+--> Please give examples of suitable pre-print servers for different linguistic areas. Again, a table would be very helpful.
+:::
+
+At the reviewers request, the revised manuscript now includes examples of suitable pre-print servers, as well as a table summarizing some of the interesting details. 
+
+\footnotesize
+\begin{tabular}{>{\raggedright}p{.95in}>{\raggedright}p{1in}>{\raggedright}p{.4in}>{\raggedright}p{.4in}p{2.3in}}
+\hline
+Server & Discipline(s) & Database Size & Year Created & URL\\
+\hline
+LingBuzz & General Linguistics & +8,000 & 2006 & https://ling.auf.net/lingbuzz\\
+Open Science Framework & Multidisciplinary (includes Linguistics) & +3M & 2011 & https://osf.io/preprints\\
+PsyArXiv & Psychology, Cognitive Sciences, Psycholinguistics, Linguistics & +30,000 & 2016 & https://osf.io/preprints/psyarxiv\\
+Cogprints & Multidisciplinary (includes Cognitive Sciences and Linguistics) & +4,000 & 1995 & https://web-archive.southampton.ac.uk/cogprints.org/\\
+SocArXiv & Social Sciences (includes Sociolinguistics) & +10,000 & 2016 & https://osf.io/preprints/socarxiv\\
+EdArXiv & Education Research (includes Applied Linguistics & +1,000 & 2018 & https://osf.io/preprints/edarxiv\\
+Computational Linguistics Open Archive (CLARIN) & Language-Based Research & N/A & 2012 & https://www.clarin.eu/\\
+ACL Anthology & Computational Linguistics and NLP & +10,000 & 2004 & https://aclanthology.org/\\
+arXiv & Multidisciplinary (includes Computational Linguistics, NLP) & +2,5M & 1991 & https://arxiv.org/\\
+SciELO Preprints & Research pertinent to Latin America, Spain, Portugal and South Africa & +140,000 & 1998 & https://preprints.scielo.org/index.php/scielo/preprints\\
+HAL (Hyper Articles en Ligne) & Multidisciplinary (includes Language-Specific French Linguistics) & +1M & 2001 & https://hal.science/\\
+\hline
+\end{tabular}
+
+\normalsize
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/60 --> 
+:::reviewer
+“We have provided descriptions and relevant examples of these practices to accompany the many guides already available for learning open science (e.g., Crüwell et al., 2018; Lewis, 2020). Crucially, the purpose of this article is to help foster open science in linguistics (FOSIL).”
+--> The current version of this manuscript provided detailed motivations and descriptions, but not sufficient examples and concrete instructions for linguists who are less familiar with these practices. Please add more concrete details, examples, instructions as indicated above.
+--> The FOSIL tutorials should be mentioned much earlier whenever relevant, given that they do include more concrete information.
+:::
+
+Following the reviewer's suggestions, we have included more concrete examples pertaining to linguistics throughout the revised manuscript, and we have referenced the FOSIL tutorials where relevant. 
+The examples are too many to reproduce again here, but we are confident they are more "visible" in the updated version. 
+
+\Done
+
+
+
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/61 -->
+:::reviewer
+Some references contain incomplete author lists
+--> all authors should be cited.
+:::
+
+We have carefully scrutinized there reference section and made the appropriate changes. 
+
+\Done

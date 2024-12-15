@@ -1,42 +1,102 @@
 
-# Reviewer \#1
+
+<!--
+https://github.com/RAP-group/guide_to_open_science/issues/17
+-->
 
 :::reviewer
-This is a reviewer comment
+Let me begin by first clarifying my own positionality with regard to the subject at hand: I am an enthusiastic supporter of open science practices in linguistics, and have been for many years. So in this sense, I am solidly in favor of more exhortations in print to our colleagues to improve their practices, and recognize that many linguists are not trained in these practices and left to more or less fend for themselves. This is a sad state of affairs for our field and others, and needs to be corrected through outreach and education.
+
+This paper, however, seems to me to be quite weak on two fronts. The first is what seems to be a concerning lack of awareness of recent work in linguistics to promote open science, especially with regard to research data. Of particular note is the absence of two fairly recent references in linguistics. The first is a highly-cited, multi-authored position paper calling for reproducible linguistics research that was published in this very journal in 2018:
+
+Berez-Kroeker, Andrea L., Lauren Gawne, Susan Kung, Barbara F. Kelly, Tyler Heston, Gary Holton, Peter Pulsifer, David Beaver, Shobhana Chelliah, Stanley Dubinsky, Richard P. Meier, Nicholas Thieberger, Keren Rice & Anthony Woodbury. 2018. Reproducible research in linguistics: A position statement on data citation and attribution in our field. Linguistics 56(1): 1–18. https://doi.org/10.1515/ling-2017-0032.
+
+The second is an open access handbook from the very prominent MIT Press Open, with 56 chapters on open data management from more than 100 international authors across many subfields (which I refer to later in this review as OHLDM):
+
+Berez-Kroeker, Andrea L., Bradley McDonnell, Eve Koller & Lauren B. Collister (eds.). 2022. The open handbook of linguistic data management. Cambridge, MA: MIT Press Open. https://doi.org/10.7551/mitpress/12200.001.0001.
+
+And then of course there is the 2021 statement from the Linguistic Society of America on the Scholarly Merit of Open Scholarship in Linguistics:
+https://www.linguisticsociety.org/content/statement-scholarly-merit-and-evaluation-open- scholarship-linguistics.
+
+It seems to me that the authors have not done their due diligence in terms of understanding the state of literature in the field, especially in light of their claims that there is no such literature.
+
+That is the first major weakness of this paper. Misrepresenting the current state of the field makes it very easy for readers to dismiss the topic altogether. Papers urging the research culture of the entire field forward need to carefully and accurately describe the problem at hand, so that readers can recognize the problem for what it is. This is turn makes it harder for readers to ignore the problem, and encourages them to think carefully about how they can help solve it in their own work. My own review is a case in point: I don’t recognize the world of linguistics as described in this paper -- that is, one in which no linguists have really thought seriously about this issue before today – and I am writing a negative review despite the fact that I hold this topic dear.
 :::
 
-This is our response
+We would like to begin by thanking the reviewer for their blunt honesty and the time they have taken to provide references and insight regarding both the topic and our manuscript. 
+Without a doubt, their comments have helped us to reflect on the paper's shortcomings and we believe we have revised accordingly in order to address the two main weaknesses highlighted here. 
+First, we have incorporated all of the suggested references -- @berez-kroeker2018 and @berez-kroeker2022, particularly, but also @zwaan2018 and @gawne_styles2022, among others -- throughout the revised manuscript. 
+Importantly, we wish to express that we have given careful thought to the assertion that we have misrepresented the current state of the field, which, without a doubt, was not our intention, and have kept this concern present as we have added these key references. 
+In an effort to save space and time, we will not copy/paste all of the changed text in the revised manuscript here, but note the inclusion of the aforementioned references (and others) in paragraphs 1, 2, and 4 of the introduction and paragraphs 2, 4, and 6 of the open data section  where we have found them to be particularly relevant. 
 
-\Assignment{First Author}
-\WorkInProgress
+Additionally, we would like to use a bit of space to address the following comment made by the reviewer: *It seems to me that the authors have not done their due diligence in terms of understanding the state of literature in the field, especially in light of their claims that there is no such literature*.
+While we disagree with the assertion that we have not done our due diligence, we humbly note that we never make the claim that there is no literature on open science in the field of linguistics. 
+We do, in fact, cite a great deal of it. 
+In the revised manuscript we have made it more clear that our work does not intend to present itself as being singular in this area, but rather as a complement to current efforts. 
+There is no doubt that we did not cite *all* the relevant literature in the original version of the manuscript--certainly this is still the case in the revised version--but we maintain, then and now, that "few, if any, researchers have had explicit instruction on the practices of open science as part of their professional training" and that "current senior researchers were not trained in these innovative methodologies", which has led to a situation in which "[...] all parties are forced to learn open science on their own, often without institutional support". 
+This is the reality of our research team and that of most of the researchers with whom we are acquainted. 
+We know that this is certainly not the experience of everybody. 
+Our intent is merely to address the issue as we understand it head on and to provide a helpful resource that can complement the literature that is currently available. 
+In our humble view, the more books, articles, websites, blogs, voices, etc., pushing for open science practices in the field, the better. 
+We do not claim to be pioneers in any way, but we are certain that our contribution has the potential to reach some individuals that are not familiar with any of the extant literature, and that others can benefit from revisiting familiar issues from our perspective. 
+We view our contribution as additive in nature. 
+
+\Done
 \Easy
 
 
-:::reviewer
-\label{pt:foo}
-This is a reviewer comment
 
-Still a comment
+
+:::reviewer
+The second weakness is that the eight steps outlined here are handled only superficially, and in some cases, in a way that can be potentially harmful. Each section could be a paper unto itself (and interesting special issue idea, perhaps?). Below I highlight a few of the major oversights in the sections.
+
+Positionality statements. The section on positionality statements does not address the counterpoints that have been made regarding the extra burden that required statements put onto BIPOC authors. See, e.g.:
+
+Massoud, Mark Fathi. 2022. The price of positionality: Assessing the benefits and burdens of self- identification in research methods. Journal of Law & Society 1-23.
+
+Roberts, Steven O., et al. 2020. Racial inequality in psychological research: Trends of the past and recommendations for the future. Perspectives on Psychological Science 15: https://doi.org/10.1177/1745691620927709.
+
+Open data. The section on open data, while acknowledging that privacy concerns should be respected, does not mention any discussion of the concerns of Indigenous peoples regarding colonial practices in linguistics and especially around who may own, and therefore share, language data (see eg Holton, Leonard & Pulsifer, chapter 4 of OHLDM and that chapter’s very helpful list of references).
+
+Preregistration and registered reports. The section on registered reports does not take into consideration very real pressures of the systems of academic reward, which bias university researchers against any additional steps in the research process that increase the time to publication (that is, the authors overlook the need for systemic change in academia to encourage open science – see Alperin et al, chapter 13 of OHLDM).
 :::
 
-This is our response.
+To address the second weakness pointed out by the reviewer, particularly with regard to our treatment of positionality statements, open data, preregistration and registered reports, we have considered the specific issues pointed out above, and, where relevant, expanded our discussion, reorganized, and included critical, missing references [e.g., @holten2022; @massoud2022price; @roberts2020racial; @leonard2021centering; @mufwene2020decolonial; @singh2023global; @tsikewa2021reimagining, among others]. 
 
-> This is a section quoted from the revised manuscript to illustrate the change.
+Regarding positionality statements, we have heavily revised and reorganized this section. 
+We have focused on including a discussion of the counterpoints of the inclusion of positionality statements particularly regarding marginalized individuals. 
+As this entire section has been reorganized, we direct the reviewer to pages 7-10 of the revised manuscript. 
 
-\Assignment{Second Author}
+Regarding open data, we have expanded our discussion regarding marginalized communities. 
+We highlight here some of the changes, but also encourage the reviewer to consider the entirety of the revised section in context (see pages 10-14).
+
+> Having stated all the above, it is necessary to recognize that the field of linguistics faces unique challenges with regard to open data. 
+At the heart of these challenges are ethical concerns that must be considered with care. 
+First and foremost, the privacy and consent of participants must be safeguarded.
+Linguistic data often include personal information, which can be especially difficult to anonymize. 
+While on the surface written and behavioral data may not appear to pose as many issues as audio and video recordings, which constitute a large portion of linguistic research materials, it is imperative that one consider the sources from which all types of data are derived.
+As expressed by @holten2022, if we haphazardly take language to represent trivial data points and lose focus on the individual embedded within a community, we are doomed to "dehumanize and decontextualize" it (p. 50). 
+This is particularly true when working with minority languages and/or marginalized communities. 
+In cases such as these, the researcher must be held accountable not only for the anonymization of participant information, but also for respecting and upholding the specific goals and restrictions put forth by the community.
+This includes, but is not limited to, the use, access and storage of all collected data. 
+In sum, careful consideration of the priorities of the researcher and the researched, which often do not align, is paramount [for more detailed views, see @adetula2022psychology; @holten2022; @hudley2020toward; @leonard2021centering; @mufwene2020decolonial; @singh2023global; @tsikewa2021reimagining, among others].
+In addition, generative artificial intelligence technologies, such as Large Language Models, are burgeoning. 
+These technologies will certainly pose currently unknown challenges in the near future that necessitate additional steps to secure the protection of sensitive data against misuse, and uphold the conditions of use put forth by the stakeholders of marignalized communities.
+
+> To summarize, open data is important because it facilitates transparency, rigor, reproducibility, replication, accumulation of knowledge, and, importantly, it makes participating in the scientific endeavor more inclusive. 
+According to some accounts, linguistics, in general, does not engage in open science practices, including sharing data [See @bochynska2023reproducible], though others characterize its participation in different terms. 
+For instance, as stated in @berez-kroeker2018 "Practitioners in different subfields 'do transparency' differently, and these practices could serve as models for an eventual amalgamated standard" (p. 9).
+While linguistics does face legitimate, field-specific challenges related to non-WEIRD communities, ultimately, the benefits of open data outnumber many of these challenges. 
+Researchers should take the stance to share what is reasonable and ethically responsible all the while holding at the forefront the priorities of the individuals from which the data are derived, especially regarding marginalized communities. 
+
+Finally, with regard to preregistration and registered reports, we have included discussion of incentive structure in academia and its effects on HARKing, p-hacking and early career researchers. 
+Again, we highlight some of the changes here, but suggest a reread of the relevant sections in the revised manuscript. 
+
+
 \AlmostDone
 \Medium
 
 
-:::reviewer
-This is a reviewer comment
-:::
 
-This is our response. Also see RC \@ref(pt:foo)
 
-\Assignment{First Author}
-\Done
-\TimeConsuming
-\Hard
-\NotEstimated
 
