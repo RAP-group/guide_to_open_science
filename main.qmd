@@ -337,7 +337,7 @@ While these challenges are substantial, we believe acceptable solutions exist in
 When primary data, such as audio or video files, cannot be shared, derived data in the form of tabular files can take its place. 
 For instance, if institutional policies prohibit the sharing of audio files, a comma-separated or tab-separated file (csv, tsv) containing the variables of interest (e.g., formant values, response times, etc.) can be made public instead. 
 Tabular data files can be anonymized easily using arbitrary identification codes. 
-Online data collection platforms, such as Prolific, typically remove identifying information by default and provide participant-specific identification numbers.
+Online data collection platforms, such as Prolific (<https://www.prolific.com>), typically remove identifying information by default and provide participant-specific identification numbers.
 In more uncommon cases in which institutional policies do not permit the sharing of derived data sets, synthetic data containing the same statistical properties can be generated and shared freely [See @quintana2020]. 
 To quote the Directorate-General for Research & Innovation of the European Commission [-@ecommission2016], we believe the field can follow the principle that data should be "as open as possible, as closed as necessary" (p. 4). 
 
