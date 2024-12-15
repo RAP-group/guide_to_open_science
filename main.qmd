@@ -386,8 +386,8 @@ For these reasons, among others, transparency in research methods are essential 
 In linguistics there is increasing awareness of the importance of reproducibility and how a lack thereof could potentially impede advancements in linguistic theory and theories of language acquisition, in addition to having implications for education and language policy decisions based on research findings.
 As a consequence, many investigators are showing heightened interest in safeguarding the reproducibility of their research.
 
-There are several steps that researchers can take to make their code and projects more reproducible. 
-One approach is to create reports that document the research process by including descriptions of the data, the methods used to analyze the data, and the results.  
+For quantitative research, there are several steps that researchers can take to make their code and projects more reproducible. 
+One approach is to create reports that document the research process by including descriptions of the data, the methods used to analyze the data, and the results. 
 This documentation can then be made publicly available and used by third parties to retrace the steps to reproduce the research findings. 
 While better than nothing at all, a more complete approach includes the analysis code in the same document in which the very manuscript is written. 
 This integration of analysis code and prose into a single, dynamic document is known as literate programming [@knuth1984literate; @knuth1992]. 
