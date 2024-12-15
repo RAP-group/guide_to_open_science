@@ -1,0 +1,17 @@
+---
+format: gfm
+---
+
+# bib
+
+Last update: `r Sys.Date()`  
+
+This directory contains the bibtex file and csl class for APA formatting. 
+
+```{r}
+#| label: dir
+#| echo: false
+
+fs::dir_tree(regexp = ".rmarkdown", invert = TRUE)
+```
+
