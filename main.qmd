@@ -331,7 +331,7 @@ In cases such as these, the researcher must be held accountable, not only for th
 This includes, but is not limited to, the use, access, and storage of all collected data. 
 In sum, careful consideration of the priorities of the researcher and the researched, which often do not align, is paramount [for more detailed views, see @adetula2022psychology; @holten2022; @hudley2020toward; @leonard2021centering; @mufwene2020decolonial; @singh2023global; @tsikewa2021reimagining, among others].
 In addition, generative artificial intelligence technologies, such as Large Language Models, are burgeoning. 
-These technologies will certainly pose currently unknown challenges in the near future and may necessitate additional steps to secure the protection of sensitive data against misuse, and, importantly, to uphold the conditions of use put forth by the stakeholders in marignalized communities.
+These technologies will certainly pose currently unknown challenges in the near future and may necessitate additional steps to secure the protection of sensitive data against misuse, particularly regarding adherence to the original agreement of informed consent, and, importantly, in upholding the conditions of use put forth by the stakeholders in marignalized communities.
 
 While these challenges are substantial, we believe acceptable solutions exist in many, if not all, cases. 
 When primary data, such as audio or video files, cannot be shared, derived data in the form of tabular files can take its place. 
