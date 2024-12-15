@@ -375,7 +375,7 @@ Researchers should take the stance to share what is reasonable and ethically res
 
 # Reproducible code/projects and literate programming
 
-As we have seen, reproducibility is now a crucial aspect of any scientific study. 
+Having seen the consequences from the reproducibility crisis in other fields, reproducibility must be a crucial aspect of any scientific study. 
 Researchers must be able to provide a clear and transparent account of their findings, including the methods used to obtain them. 
 Reproducibility can help to ensure that research results are valid, reliable, and can be used by others to build on existing knowledge. 
 In this section, we explore the importance of reproducibility, what we know about it in the field of linguistics, and how researchers can make their code and projects more reproducible.
