@@ -7,7 +7,10 @@ format: gfm
 Opening open science to all: Demystifying reproducibility and transparency practices in linguistic research
 
 Preprint: https://doi.org/10.31234/osf.io/spz4w  
-FOSIL website: https://fosil-project.github.io
+FOSIL website: https://fosil-project.github.io  
+RStudio server instance via CodeOcean: <add link later>
+
+
 
 Last update: `r Sys.Date()`  
 
