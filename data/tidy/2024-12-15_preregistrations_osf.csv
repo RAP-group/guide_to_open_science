@@ -1,4 +1,4 @@
-year,count,cum
+year,count,cumsum
 2011,2,2
 2012,22,24
 2013,142,166
