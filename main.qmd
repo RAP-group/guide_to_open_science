@@ -619,7 +619,7 @@ Many concerns about preregistration revolve around the potential burden of 'extr
 Conversely, preregistration is intended to streamline the workflow, fostering efficiency both in the short term and the long run, as it provides the researcher with complete control over the level of detail she chooses to include. 
 The depth of preregistration directly correlates with the effort invested; the more comprehensive the preregistration, the greater the initial workload, leading to reduced effort in subsequent stages.
 
-The Open Science Framework allows researchers to preregister a study. 
+The Open Science Framework allows researchers to preregister a study.^[See also <https://aspredicted.org>.]
 Since its inception, the amount of preregistrations has grown each year (See @fig-pr, left panel) and the cumulative number of registrations totals over `r prettyNum(n_pr_2024, big.mark = ",")` at the time of writing this text (See @fig-pr, right panel). 
 We provide useful examples of preregistrations at the following links: <https://osf.io/nprgz> and <https://osf.io/qvjzy>.
 
