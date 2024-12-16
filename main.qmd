@@ -332,7 +332,7 @@ In short, open data is a cornerstone of scientific research in the 21st century 
 Open data are particularly important for the field of linguistics, for all of the aforementioned reasons, and also because some linguists have described the state of the field, as far as English-language publications are concerned, as being Western, Educated, Industrialized, Rich, and Democratic [WEIRD, see @bochynska2023reproducible; @nagle_baese-berk_amengual_casillas_2024; @faytak_wp-preprint].
 That is to say, the majority of linguistic research appears to be concentrated on specific languages, mainly Indo-Germanic, in overrepresented communities, by privileged scholars. 
 Making linguistic data accessible to all researchers can promote participation *in* and *with* underrepresented communities. 
-Furthermore, it can increase the study of diverse and underreported languages, which fosters a more inclusive and comprehensive understanding of the global linguistic landscape. 
+Furthermore, it can increase the study of diverse and underreported languages by affording more researchers the opportunity to interact and learn from data that would otherwise not be available to them, which, in turn, can foster a more inclusive and comprehensive understanding of the global linguistic landscape. 
 
 Having stated all the above, it is necessary to recognize that linguistics faces a unique set of challenges with its multitude of subfields, each potentially working with a variety of data formats. 
 Due to such diversity, one must determine which aspects of open science are relevant to their data. 
