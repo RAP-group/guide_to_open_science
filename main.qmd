@@ -412,28 +412,34 @@ This integration of analysis code and prose into a single, dynamic document is k
 Under the hood, a series of macros and functions are used to tangle the code and prose of the document into a separate file, usually a word document or a pdf, which can then be submitted for publication. 
 Literate programming reduces the likelihood of copy and paste errors that often occur when passing the results of a statistical analysis from the analysis software to the word processing program. 
 If the analysis changes in any way, e.g., more data is included, a different analytic strategy is applied, etc., the document is retangled to update the output file. 
-Currently there are several implementations of literate programming for research purposes, the most common of which are R markdown files (Rmd) and Quarto markdown files (qmd). 
-These formats use the R package `knitr` [@knitr2014; @knitr2015; @knitr2023] to tangle (also "knit" or "render") the output file. 
-In fact, the present manuscript was generated using literate programming and is available for download here: <https://osf.io/bsu2q/>.
+Currently there are several implementations of literate programming for research purposes, the most common of which are RMarkdown files (.Rmd) Quarto markdown files (.qmd), and Jupyter notebooks (.ipynb). 
+In the case of the former two, RMarkdown and Quarto, the R package `knitr` [@knitr2015; @knitr2023] tangles (also "knit" or "render") the output file. 
+Jupyter notebooks require a front-end web page and a back-end kernel. 
+The present manuscript was generated using literate programming via Quarto and is available for download on the Open Science Framework: <https://osf.io/bsu2q/?view_only=68d1e41b327f4a28a9fcd0fc6537ecaf>.
 
 While the implementation of literate programming into a research workflow is ideal, the gold standard is to use literate, dynamic documents in conjunction with reproducible projects. 
 These projects include all of the data, code, and documentation necessary to reproduce the research findings, not only in a single report, but rather in many reports and/or presentations, simultaneously. 
 This approach makes it easier for others to reproduce research findings and build on previous work because it obviates the complications involved with user-specific file paths and differing operating systems. 
 Ideally, if the project works on one user's computer, it should work on any computer running the same software. 
-This allows a researcher to download an entire project and reproduce the analyses and reports at the click of a button. 
+In this sense, any researcher could theoretically download an entire project and reproduce the analyses and reports at the click of a button. 
 A popular choice for reproducible projects is the open source software Posit (formerly RStudio), which utilizes `.Rproj` files called RStudio projects. 
-Examples of completed reproducible projects are available to the interested reader here: <https://osf.io/un45x/> and <https://osf.io/cp9bs/>.
+Posit has recently released a new integrated development environment (IDE) called Positron that also works at the project-level, but has the added benefit of being relatively language-neutral. 
+That is to say, one can use R, Python, Julia, Stan, and a number of other programming languages within a single IDE. 
+Examples of completed reproducible projects are available to the interested reader here: <https://osf.io/un45x/> and <https://osf.io/cp9bs/>. 
+Additionally, the project files of the present work, including data, code, and markdown files, are publicly available on the OSF: <https://osf.io/bsu2q/?view_only=68d1e41b327f4a28a9fcd0fc6537ecaf>. 
 
 Exciting, new technology that facilitates open science is coming out at a rapid pace. 
 This is excellent news for anybody interested in learning the new tools, but also creates other issues, particularly with regard to outdated software. 
 Dependency management tools like `renv` [@renv2023] and `targets` [@targets2021] can be helpful in future-proofing projects and ensuring reproducibility. 
 These tools help to manage the dependencies that are necessary to run code by providing specific versions of the software used originally by the researchers.
-Computational reproducibility platforms like Binder and Code Ocean can also be used to create virtual environments in which projects can be reproduced online. 
-Thus, these platforms allow researchers to share their code and data in ways that can be easily replicated by anybody with an internet connection.
+Computational reproducibility platforms like Binder, Code Ocean, and Nix can also be used to create instances of virtual environments in which projects can be reproduced online. 
+Thus, these platforms allow researchers to share their code and data in ways that can be easily reproduced by anybody with an internet connection. 
+As an example, the present project is also available online in a stable Code Ocean container that captures the original computational environment: <LINK TO BE PROVIDED AFTER PEER REVIEW>. 
+The interested reader is encouraged to re-run our code and re-render our files to further their understanding of how computational reproducibility platforms work in conjunction with literate programming.
 
 At this juncture it is important to note that there is no way to completely future-proof code or projects. 
 Researchers must continually strive to maintain the reproducibility of their work. 
-This includes updating code and documentation as needed and testing projects on different operating systems to ensure that it can be run in different environments.
+This may imply updating code and documentation as needed, and, where feasible, testing projects on different operating systems to ensure that they can be run in different environments.
 
 Summarizing, reproducibility is a crucial aspect of scientific research. 
 It helps to ensure that research findings are valid, reliable, and can be used by others to build on existing knowledge. 
@@ -579,8 +585,9 @@ The depth of content detail within a preregistration spans a spectrum: in the si
 In this section, we provide information regarding the various components of a preregistration, centering on their advantageous impact on linguistic research.
 Specifically, we focus on *who* might want to consider preregistrations, *why* they might want to do so, *what* content they can include, and *how* they can complete a preregistration for a linguistics research project.
 
-Linguistic research is multifaceted and spans diverse areas such as corpus analysis, conversation/discourse analysis, experimental research, and more. 
-However, as highlighted by @roettger2021preregistration, researchers are human and humans have evolved to filter the world in irrational ways, which can lead to QRPs and other problems that may affect the replicability of published research. 
+Linguistic research is multifaceted and spans diverse areas such as phonetics, phonology, syntax, morphology, sociolinguistics, natural language processing, and conversation/discourse analysis, to name just a few. 
+These areas range from purely theoretical to quantitative and experimental, with many falling somewhere in between.
+Importantly, as highlighted by @roettger2021preregistration, researchers are human and humans have evolved to filter the world in irrational ways, which can lead to QRPs and other problems that may affect the replicability of published research. 
 Preregistration emerged as a powerful instrument empowering linguists to bolster the trustworthiness and credibility of their inquiries by establishing a systematic and predefined methodology. 
 We believe the practice of preregistration extends its benefits to researchers at all levels, including students and ECRs, senior academics, and professionals alike.
 
@@ -594,7 +601,7 @@ Beyond selecting acoustic cues to measure, she must also select a domain for the
 Choices such as these, i.e., the researcher degrees of freedom, can wield significant influence on subsequent outcomes. 
 Preregistration serves the purpose of meticulously documenting these choices *a priori*, thus acting as a deterrent against QRPs, like HARKing or p-hacking [@wicherts2016]. 
 This is because the researcher establishes what decisions will be made, such as measurement choices and analytic strategies, before data collection commences.
-A benefit of including a high level of specificity in the preregistration is that is forces researchers to consider facets of their study that might usually be deferred to a later stage, e.g., specific statistical tests.  
+A benefit of including a high level of specificity in the preregistration is that is forces researchers to consider facets of their study that might usually be deferred to a later stage, e.g., specific statistical tests. 
 This proactive approach demands more initial time investment from the researcher, but also increases the likelihood of uncovering crucial flaws in the study design.
 
 The scope of preregistration extends to any facet of research deemed worthy of temporal documentation preceding the initiation of the study. 
@@ -603,9 +610,10 @@ The specific elements that will comprise a preregistration can be considerably d
 Consider, for instance, a psycholinguist conducting a self-paced reading study. 
 In this context, the focus of the preregistration might include the formulation of hypotheses, as well as a complete description of the experimental paradigm. 
 Additionally, the researcher may include a characterization of participant demographics, recruitment strategies, sample size considerations, independent variable manipulations, data transformations, and analytic strategies to test hypotheses. 
-Importantly, not all of the aforementioned components are equally prioritized in all preregistrations.
+Importantly, not all of the aforementioned components are equally prioritized in all preregistrations. 
+In sum, one can preregister any aspect of their research that they deem worthy of documenting *a priori*. 
 
-It is important to acknowledge that incorporating the entirety of these components into a preregistration represents a formidable challenge, as it front loads large portions of work that often take place after a study has begun, e.g., determining sample size, statistical models, etc. 
+It is important to acknowledge that in many cases incorporating the entirety of these components into a preregistration represents a formidable challenge, as it front loads large portions of work that often take place after a study has begun, e.g., determining sample size, statistical models, etc. 
 In such instances, researchers are encouraged to commence with elements they perceive as most valuable to their study. 
 Many concerns about preregistration revolve around the potential burden of 'extra work'. 
 Conversely, preregistration is intended to streamline the workflow, fostering efficiency both in the short term and the long run, as it provides the researcher with complete control over the level of detail she chooses to include. 
@@ -613,14 +621,14 @@ The depth of preregistration directly correlates with the effort invested; the m
 
 The Open Science Framework allows researchers to preregister a study. 
 Since its inception, the amount of preregistrations has grown each year (See @fig-pr, left panel) and the cumulative number of registrations totals over `r prettyNum(n_pr_2024, big.mark = ",")` at the time of writing this text (See @fig-pr, right panel). 
-We provide examples of preregistrations at the following links: <https://osf.io/nprgz> and <https://osf.io/qvjzy>.
+We provide useful examples of preregistrations at the following links: <https://osf.io/nprgz> and <https://osf.io/qvjzy>.
 
 ```{r}
 #| label: fig-pr
 #| fig-asp: 0.45
 #| fig-width: 9
 #| fig-path: "./figs/preregistration/"
-#| fig-cap: "Preregistrations on the Open Science Framework. The left panel plots pregistrations as a function of year. The right panel plots cumulative preregistrations since 2011. Data scrapped from <https://osf.io/search> on 12-12-2024."
+#| fig-cap: "Preregistrations on the Open Science Framework. The left panel plots pregistrations as a function of year. The right panel plots cumulative preregistrations since 2011. Data scraped from <https://osf.io/search> on 12-12-2024."
 
 # Generate pr plot by combining 'pr1' and 'pr2'
 pr1 + pr2
@@ -731,7 +739,7 @@ n_data_dep <- rr |>
 
 The reproducibility crisis has drawn attention to the shortcomings of the traditional model of publishing scientific research. 
 In the current model, researchers generate hypotheses, design studies, collect data, analyze data, interpret results, and submit their findings for publication. 
-However, this model has been criticized for lending itself to QRPs, such as p-hacking and harking, which can result in publication bias.
+However, this model has been criticized for lending itself to QRPs, such as p-hacking and HARKing, which can result in publication bias.
 
 To address these issues, researchers have attempted various reforms, such as meta-analysis and preregistration. 
 Meta-analysis is a statistical technique that combines the results of multiple studies to increase the power of analysis. 
@@ -747,7 +755,7 @@ This incentivizes rigorous methodology and reduces QRPs, as researchers cannot m
 ```{r}
 #| label: fig-dissemination-cycle
 #| fig-asp: 1
-#| fig-cap: Flow chart of the standard publication model and registered reports.
+#| fig-cap: A comparison flow chart of the standard publication model and registered reports.
 knitr::include_graphics(
   here("figs", "dissemination-cycle", "fig-dissemination-cycle.png")
 )
@@ -817,7 +825,7 @@ read_csv(here("tables", "rr_journals.csv")) |>
 
 The majority of the listed journals plan to offer RRs as a possible submission option indefinitely (n = `r n_permanent`), as opposed to only for special issues or during a trial period. 
 Likewise, `r numbers_to_words(n_replications)` of these 14 journals permit RRs as an option for replication studies.
-Only `r numbers_to_words(n_ma)` journal (`r rr_ma_name`) specifically states that it will consider RRs that plan to conduct meta-analyses, and `r numbers_to_words(n_existing_data)` of the journals consider RRs as an option for studies that propose analyzing data sets that already exits.
+Only `r numbers_to_words(n_ma)` journal (`r rr_ma_name`) specifically states that it will consider RRs that plan to conduct meta-analyses, and `r numbers_to_words(n_existing_data)` of the journals consider RRs as an option for studies that propose analyzing data sets that already exist.
 Finally, for `r numbers_to_words(n_data_dep)` of the 14 journals, a public data deposition is a requirement for RRs.^[A public data deposition implies that the authors must publish 'all relevant data collected as part of the research within a freely accessible repository' [See @cos_rr_2024].]
 
 RRs cannot solve all the problems with the current model, but they can help reduce QRPs and increase transparency in scientific research.
@@ -956,17 +964,19 @@ The general process consists of an initial screening process, followed by a post
 Pre-prints allow researchers to share their findings with the scientific community and get feedback before their work is published in a traditional academic journal. 
 This process can speed up the dissemination of knowledge and facilitate collaboration between researchers. 
 While pre-prints accelerate the dissemination of research, it is vital to remember that this process does not always lead to journal publication. 
+<!--
 This can occur for several reasons, such as authors may choose not to pursue this route, or the research may be intended for different dissemination avenues [@ettinger_2022]. 
+-->
 Pre-prints have become increasingly popular in recent years, particularly in fields such as biology, physics, and computer science. 
 The adoption of pre-prints has been slower in some fields, such as the social sciences and humanities, but this is changing as more researchers become aware of the benefits of open science, and new national and regional platforms by open science advocates continue to emerge [@gawne_styles2022]. 
-
+@fig-pp illustrates the growth of pre-prints on the Open Science Framework since 2016. 
 
 ```{r}
 #| label: fig-pp
 #| fig-asp: 0.45
 #| fig-width: 9
 #| fig-path: "./figs/preprints/"
-#| fig-cap: "Preprints on the Open Science Framework. The left panel plots preprints as a function of year. The right panel plots cumulative preprints since 2016. Data scrapped from <https://osf.io/search> on 12-15-2024."
+#| fig-cap: "Preprints on the Open Science Framework. The left panel plots preprints as a function of year. The right panel plots cumulative preprints since 2016. Data scraped from <https://osf.io/search> on 12-15-2024."
 
 # Generate pr plot by combining 'pr1' and 'pr2'
 pp1 + pp2
@@ -975,13 +985,13 @@ pp1 + pp2
 One of the primary benefits of pre-prints is that they allow researchers to share their findings quickly and easily. 
 This can be especially important in fields where research moves quickly, such as biology or computer science. 
 Pre-prints also allow researchers to receive feedback on their work from their peers, which can help to improve the quality of their research. 
-The provision of commentary and reviews of pre-prints yields benefits not only to the authors but also extends support to the authors, but this process also supports reviewers, journals and publishers, and the reader audience. 
-This inclusive process allows more researchers and reviewers to participate in discussing the research findings and reduces the need for repeated rounds of re-review or extensive revisions. 
+The provision of commentary and reviews of pre-prints yields benefits, not only to the authors, but also to reviewers, journals, publishers, and the readership. 
+This inclusive process allows more researchers and reviewers to participate in discussing the research findings and can educe the need for repeated rounds of re-review or extensive revisions. 
 
 One of the most significant benefits of pre-prints is their "early view" and "open access" effect, which leads to more attention from readers, increasing visibility and development of the overall research [@biswas2023]. 
 Pre-prints are not just quick dissemination; they also promote transparency and reproducibility in scientific research. 
 Recognizing these benefits, more major publishers have either launched pre-print platforms or entered partnerships over the past 5-7 years, allowing pre-prints to be incorporated into the workflow [@puebla_polka_rieger_2021]. 
-By making research findings available to the public before peer-review, pre-prints not only improve the accuracy and reliability of research findings but also encourage collaborative efforts to identify potential errors, refine methodologies, and accelerate knowledge dissemination.
+By making research findings available to the public before peer-review, pre-prints not only improve the accuracy and reliability of research findings, but also encourage collaborative efforts to identify potential errors, refine methodologies, and accelerate knowledge dissemination.
 
 Another benefit of pre-prints is that they can help to reduce publication bias, a widespread challenge in traditional publishing. 
 Publication bias occurs when positive results are more likely to be published than negative results [@matosin2014]. 
@@ -999,16 +1009,17 @@ Moreover, data show that more senior researchers had more experience sharing thr
 Nonetheless, the data collected from these surveys showed positive attitudes and willingness to contribute to open science through the submission of pre-prints. 
 These findings encourage ECRs to submit their research for pre-prints to receive valuable feedback from established scholars in their field of study and to increase visibility of their research, particularly in rapidly evolving fields. 
 
-Researchers interested in making a pre-print publicly available can follow these simple steps. 
-First, select a pre-print server that aligns with the course of research. 
-Next, all pre-prints undergo a short screening, confirming author background, basic research content, and compliance with the ethical standards of the pre-print platform. 
-Once the pre-print passes the screening process, the content is made available online in open access format, encouraging others to comment and share. 
+Researchers interested in making a pre-print publicly available will find the process to be quite simple. 
+One must first select a pre-print server that aligns with the course of research (See @tbl-pp). 
+Next, the pre-print is likely to undergo a short screening, confirming author background, basic research content, and compliance with the ethical standards of the pre-print platform. 
+Once the pre-print passes the screening process, the content is made available online in open access format. 
 
 ```{r}
 #| label: tbl-pp
 #| tbl-cap: Available pre-print servers related to language and/or linguistics.
 
 read_csv(here("tables", "preprint_servers.csv")) |> 
+  select(-`Database Size`) |>
   knitr::kable()
 ```
 
