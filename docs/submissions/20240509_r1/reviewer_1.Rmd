@@ -86,7 +86,7 @@ Researchers should take the stance to share what is reasonable and ethically res
 
 Finally, we have also included discussion of incentive structure in academia and its effects on HARKing, p-hacking and early career researchers. 
 
-> Researchers have pointed to questionable research practices (QRPs), such as p-hacking--knowingly manipulating an analysis until a significant p-value is obtained--and HARKing--hypothesizing after the results are known--, along with small sample sizes, poor theory, lack of transparency, misguided incentive structure in academia, etc., as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
+> Researchers have pointed to questionable research practices (QRPs), such as p-hacking--knowingly manipulating an analysis until a significant p-value is obtained [See @head2015extent]--and HARKing--hypothesizing after the results are known [See @murphy2019harking]--, along with small sample sizes, poor theory, lack of transparency, misguided incentive structure in academia, etc., as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
 To wit, many of the aforementioned QRPs may be an unfortunate consequence of misaligned incentive structures in academia, where publication is the universal currency. 
 The pervasive pressure to publish likely leads many researchers to focus on quantity over quality. 
 Couple this with the difficulty of publishing negative or null results, and the result is a research landscape in which many fields suffer from publication bias and there is little to no incentive to prioritize time consuming open science practices. 

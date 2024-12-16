@@ -1,14 +1,16 @@
-
 <!-- https://github.com/RAP-group/guide_to_open_science/issues/19 -->
-
 :::reviewer
 The argumentation and description of methods is generally very abstract. If I understand the title “opening open science to all” correctly, the authors should include more concrete examples and instructions so that readers who are (still) unfamiliar with the practices described can implement new methods. I added concrete suggestions to do so below; this is necessary for the manuscript to fulfill its promise of opening open science and to become an important resource in research and teaching.
-
 :::
 
-Respond to this last
+We thank the reviewer for their thoughtful insight. 
+We took a close look at all of the issues raised and have made substantial revisions to the manuscript. 
+Concretely, we have included many more examples and tried to be more inclusive by including in our discussions more of the distinct subfields of linguistics. 
+Furthermore, we have taken the reviewer's advice and included 3 tables related to preprint servers, registered reports and preregistration, along with 2 new figures. 
+We feel that the manuscript is now greatly improved and we appreciate the time and effort spent giving us such thorough feedback. 
+Below we address all of the concerns raise, and, where relevant, copy/paste prose, figures, and tables. 
 
-\AlmostDone
+\Done
 
 
 
@@ -29,7 +31,15 @@ This acronym has been spelled out in the abstract of the revised manuscript.
 --> HARKing (maybe also p-hacking) needs to be explained briefly here, especially given the goal of the paper.
 :::
 
-\AlmostDone
+In the revised manuscript we have defined both terms, included references, and elaborated a bit more on the relationship between QRPs and incentive structures in academia. 
+
+> Researchers have pointed to questionable research practices (QRPs), such as p-hacking--knowingly manipulating an analysis until a significant p-value is obtained [See @head2015extent]--and HARKing--hypothesizing after the results are known [See @murphy2019harking]--, along with small sample sizes, poor theory, lack of transparency, misguided incentive structure in academia, etc., as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
+To wit, many of the aforementioned QRPs may be an unfortunate consequence of misaligned incentive structures in academia, where publication is the universal currency. 
+The pervasive pressure to publish likely leads many researchers to focus on quantity over quality. 
+Couple this with the difficulty of publishing negative or null results, and the result is a research landscape in which many fields suffer from publication bias and there is little to no incentive to prioritize time consuming open science practices. 
+Taking this into account, it is not hard to understand why QRPs might be perceived as a necessary evil by some.
+
+\Done
 
 
 
@@ -71,6 +81,9 @@ This change has been included in the revised manuscript.
 Figure 1 --> I am not sure open data is clearly only related to stance; I would also view providing the datasets in a useful form as part of the workflow. Could this point be put in between the two areas?
 :::
 
+The reviewer makes a good point. 
+Open data, in theory, could fit in all three areas depending on what exactly one is referring to, i.e., the stance to make data open or not, how making data open is incorporated into one's workflow, and how one goes about actually disseminating the data. 
+We have overhauled the figure and include it here for convenience (see below). 
 
 ```{r}
 #| label: fig-os-flow-edit
@@ -80,7 +93,7 @@ Figure 1 --> I am not sure open data is clearly only related to stance; I would 
 knitr::include_graphics(here("figs", "os-flow", "fig-os-flow_edit.png"))
 ```
 
-\AlmostDone
+\Done
 
 
 
@@ -119,7 +132,11 @@ The sentence in question now reads as follows:
 --> Please specify the research areas here, also those mentioned as arguing against positionality statements.
 :::
 
-\AlmostDone
+This section has been heavily edited and reorganized in the revised manuscript. 
+This particular sentence no longer appears as such. 
+That being said, the revised version now expands the discussion around positionality to include more research areas and dedicates more space to discussing the arguements against them. 
+
+\Done
 
 
 
@@ -284,8 +301,15 @@ That is to say, the majority of linguistic research appears to be concentrated o
 --> Please explain why and how accessible linguistic data promotes the researchers’ participation with the (potentially underrepresented) speaker communities? While I am sympathetic to this argument, it needs to be spelled out more and made more concrete in order to be meaningful.
 :::
 
+We have tried to make this point more clear in the revised manuscript. 
+We include the relevant paragraph here for convenience. 
 
-\AlmostDone
+> Open data are particularly important for the field of linguistics, for all of the aforementioned reasons, and also because some linguists have described the state of the field, as far as English-language publications are concerned, as being Western, Educated, Industrialized, Rich, and Democratic [WEIRD, see @bochynska2023reproducible; @nagle_baese-berk_amengual_casillas_2024; @faytak_wp-preprint].
+That is to say, the majority of linguistic research appears to be concentrated on specific languages, mainly Indo-Germanic, in overrepresented communities, by privileged scholars. 
+Making linguistic data accessible to all researchers can promote participation *in* and *with* underrepresented communities. 
+Furthermore, it can increase the study of diverse and underreported languages by affording more researchers the opportunity to interact and learn from data that would otherwise not be available to them, which, in turn, can foster a more inclusive and comprehensive understanding of the global linguistic landscape. 
+
+\Done
 
 
 
@@ -551,8 +575,18 @@ Roberts, Seán, James Winters & Keith Chen. 2015. Future tense and economic deci
 --> This statement seems to assume that researchers should have access to different OSs, which may not always be the case. Also, it is hardly possible to test for all compatibilities and eventualities on the side of the authors. It is more reasonable to create and publish an, e.g., Docker environment for an R project, so that other researchers can reproduce the original analysis with the exact OS and package versions as in the original study.
 :::
 
-\AlmostDone
+The reviewer brings up excellent points. 
+We address them here together, as they relate to a common theme. 
+In the revised manuscript we have taken care to explain *why* it is important to share more than just code and how reproducibility can be affected by system and platform specific issues. 
+With regard to the literate programming section, we have made sure to discuss more of the available languages and platforms as well. 
+In this particular case, we opted not to include a table. 
+Additionally, we rephrased our treatment of updating and testing code (we do not intend to imply that a researcher has the obligation to test their projects on all conceivable platforms). 
+To underscore the usefulness of creating public instances of projects (e.g., via Docker), we have made our project available there as well. 
+We mention this in this section and will provide the working link upon completing the project. 
+This is also true for the OSF and github repositories. 
+For the time being, the anonymous version of the OSF repo is available here: <https://osf.io/bsu2q/?view_only=68d1e41b327f4a28a9fcd0fc6537ecaf>.
 
+\Done
 
 
 
@@ -562,8 +596,15 @@ Roberts, Seán, James Winters & Keith Chen. 2015. Future tense and economic deci
 --> This is a very reduced list of linguistic research areas, please add more areas and discuss in more detail for which areas preregistration makes sense. For instance, can it be used in theoretical linguistics? It is mentioned in the beginning that “we focus on who might want to consider preregistrations”, but this does not become very clear. Please add at least a paragraph about what types of linguistic studies can benefit from preregistrations.
 :::
 
+We agree with the reviewer's assessment of this sentence. 
+We have rewritten it to better represent some of the subfields of linguistics. 
 
-\AlmostDone
+> Linguistic research is multifaceted and spans diverse areas such as phonetics, phonology, syntax, morphology, sociolinguistics, natural language processing, and conversation/discourse analysis, to name just a few. 
+These areas range from purely theoretical to quantitative and experimental, with many falling somewhere in between.
+
+In addition, we have added more detail throughout this section regarding *who* can/should use preprints and for *what* purpose.
+
+\Done
 
 
 
@@ -614,8 +655,7 @@ Though multiple platforms exist for preregistering studies, we have opted not to
 We made this decision based on the fact that there are two primary platforms used generally, OSF and aspredicted.org, the former much more commonly used than the latter. 
 The remaining platforms (e.g., ClinicalTrials.gov, European Union Clinical Trials Register, PROSPERO, SRCD, etc.) are all field-specific, and, therefore, not relevant for linguistics. 
 
-
-\AlmostDone
+\Done
 
 
 
