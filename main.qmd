@@ -471,7 +471,7 @@ pr_sess |>
   separate(col = "value", into = c("year", "count"), sep = " ") |>
   mutate_all(as.double) |> 
   arrange(year) |> 
-  mutate(cum = cumsum(count)) |> 
+  mutate(cumsum = cumsum(count)) |> 
   write_csv(here("data", "tidy", glue("{Sys.Date()}_preregistrations_osf.csv")))
 ```
 
@@ -516,19 +516,19 @@ pr1 <- pr_dat |>
 #
 
 # Get total number of preregistrations
-n_pr_2024 <- max(pr_dat$cum)
+n_pr_2024 <- max(pr_dat$cumsum)
 
 # Create tibble for labeling 'pr2' figure
 pr_max <- tibble(
   year = 2021, 
-  cum = 180000, 
+  cumsum = 180000, 
   text = glue("{formatC(n_pr_2024, format = 'd', big.mark = ',')} preregistrations\non OSF since 2011")
 )
 
 # Create tibble for 'pr2' arrow
 pr_arrow <- tibble(
   year = 2021.5, 
-  cum = 185000, 
+  cumsum = 185000, 
   xend = 2023.75, 
   yend = n_pr_2024 + 5000
 )
@@ -536,10 +536,10 @@ pr_arrow <- tibble(
 # Make 'pr2'
 pr2 <- pr_dat |> 
   ggplot() + 
-  aes(x = year, y = cum) + 
+  aes(x = year, y = cumsum) + 
   geom_text(
     data = pr_max, 
-    aes(x = year, y = cum, label = text), 
+    aes(x = year, y = cumsum, label = text), 
     hjust = 1, size = 3.5
   ) + 
   geom_line() + 
@@ -549,7 +549,7 @@ pr2 <- pr_dat |>
   ) + 
   geom_curve(
     data = pr_arrow, 
-    aes(x = year, y = cum, xend = xend, yend = yend),
+    aes(x = year, y = cumsum, xend = xend, yend = yend),
     arrow = arrow(
       length = unit(0.025, "npc"), 
       type = "closed"
@@ -854,7 +854,7 @@ pp_sess |>
   separate(col = "value", into = c("year", "count"), sep = " ") |>
   mutate_all(as.double) |> 
   arrange(year) |> 
-  mutate(cum = cumsum(count)) |> 
+  mutate(cumsum = cumsum(count)) |> 
   write_csv(here("data", "tidy", glue("{Sys.Date()}_preprints_osf.csv")))
 ```
 
@@ -894,19 +894,19 @@ pp1 <- pp_dat |>
 #
 
 # Get total number of preprints
-n_pp_2024 <- max(pp_dat$cum)
+n_pp_2024 <- max(pp_dat$cumsum)
 
 # Create tibble for labeling 'pp2' figure
 pp_max <- tibble(
   year = 2021, 
-  cum = 150000, 
+  cumsum = 150000, 
   text = glue("{formatC(n_pp_2024, format = 'd', big.mark = ',')} preprints\non OSF since 2016")
 )
 
 # Create tibble for 'pp2' arrow
 pp_arrow <- tibble(
   year = 2021.5, 
-  cum = 150000, 
+  cumsum = 150000, 
   xend = 2023.75, 
   yend = n_pp_2024 + 5000
 )
@@ -914,10 +914,10 @@ pp_arrow <- tibble(
 # Make 'pp2'
 pp2 <- pp_dat |> 
   ggplot() + 
-  aes(x = year, y = cum) + 
+  aes(x = year, y = cumsum) + 
   geom_text(
     data = pp_max, 
-    aes(x = year, y = cum, label = text), 
+    aes(x = year, y = cumsum, label = text), 
     hjust = 1, size = 3.5
   ) + 
   geom_line() + 
@@ -927,7 +927,7 @@ pp2 <- pp_dat |>
   ) + 
   geom_curve(
     data = pp_arrow, 
-    aes(x = year, y = cum, xend = xend, yend = yend),
+    aes(x = year, y = cumsum, xend = xend, yend = yend),
     arrow = arrow(
       length = unit(0.025, "npc"), 
       type = "closed"
@@ -1062,11 +1062,11 @@ The FOSIL project details many of the open, transparent practices described here
 
 contributoR::contributor(
   contributions = list(
-  "001" = tibble::tibble(role = 1:14, weight = "high"),
+  "001" = tibble::tibble(role = 1:14, weight = "high"), # JVC
   "002" = tibble::tibble(role = 1:3, weight = "low"),
   "003" = tibble::tibble(role = 1:3, weight = "low"),
   "004" = tibble::tibble(role = 1:3, weight = "low"),
-  "005" = tibble::tibble(role = 1:3, weight = "low"),
+  "005" = tibble::tibble(role = c(13, 14), weight = c("low", "high")), #SR
   "006" = tibble::tibble(role = 1:3, weight = "low"),
   "007" = tibble::tibble(role = 1:3, weight = "low"),
   "008" = tibble::tibble(role = 1:3, weight = "low"),
