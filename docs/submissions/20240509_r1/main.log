@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.11)  15 DEC 2024 03:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.11)  15 DEC 2024 23:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -639,7 +639,7 @@ Underfull \vbox (badness 10000) detected at line 307
 <../../../figs/os-flow/fig-os-flow_edit.png, id=261, 1281.78876pt x 690.58pt>
 File: ../../../figs/os-flow/fig-os-flow_edit.png Graphic file (type png)
 <use ../../../figs/os-flow/fig-os-flow_edit.png>
-Package pdftex.def Info: ../../../figs/os-flow/fig-os-flow_edit.png  used on input line 388.
+Package pdftex.def Info: ../../../figs/os-flow/fig-os-flow_edit.png  used on input line 397.
 (pdftex.def)             Requested size: 430.00462pt x 231.66449pt.
 
 
@@ -648,7 +648,7 @@ Package pdftex.def Info: ../../../figs/os-flow/fig-os-flow_edit.png  used on inp
 [8]
 
 [9]
-Overfull \hbox (0.79643pt too wide) in paragraph at lines 545--547
+Overfull \hbox (0.79643pt too wide) in paragraph at lines 554--556
 []\T1/ptm/b/n/10 (-20) ``Revisiting old data sets using innovative techniques can support or contradict past narrative conclusions
  []
 
@@ -657,7 +657,7 @@ Overfull \hbox (0.79643pt too wide) in paragraph at lines 545--547
 [10]
 
 [11]
-Underfull \vbox (badness 10000) detected at line 671
+Underfull \vbox (badness 10000) detected at line 680
  []
 
 
@@ -665,47 +665,47 @@ Underfull \vbox (badness 10000) detected at line 671
 [12]
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 729--730
+Underfull \hbox (badness 10000) in paragraph at lines 738--739
 []|\T1/ptm/m/n/10 (+20) Project man-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 729--730
+Underfull \hbox (badness 10000) in paragraph at lines 738--739
 \T1/ptm/m/n/10 (+20) age-ment and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 730--731
+Underfull \hbox (badness 10000) in paragraph at lines 739--740
 []|\T1/ptm/m/n/10 (+20) Project man-age-
  []
 
 
-Overfull \hbox (2.9679pt too wide) in paragraph at lines 730--731
+Overfull \hbox (2.9679pt too wide) in paragraph at lines 739--740
 \T1/ptm/m/n/10 (-20) ment/collaboration,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 731--732
+Underfull \hbox (badness 10000) in paragraph at lines 740--741
 []|\T1/ptm/m/n/10 (+20) Project man-age-
  []
 
 
-Overfull \hbox (2.9679pt too wide) in paragraph at lines 731--732
+Overfull \hbox (2.9679pt too wide) in paragraph at lines 740--741
 \T1/ptm/m/n/10 (-20) ment/collaboration,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 732--733
+Underfull \hbox (badness 10000) in paragraph at lines 741--742
 []|\T1/ptm/m/n/10 (+20) Project man-age-
  []
 
 
-Overfull \hbox (2.9679pt too wide) in paragraph at lines 732--733
+Overfull \hbox (2.9679pt too wide) in paragraph at lines 741--742
 \T1/ptm/m/n/10 (-20) ment/collaboration,
  []
 
 
-Underfull \hbox (badness 5607) in paragraph at lines 734--735
+Underfull \hbox (badness 5607) in paragraph at lines 743--744
 []|\T1/ptm/m/n/10 (+20) Sharing datasets
  []
 
@@ -716,30 +716,30 @@ Underfull \hbox (badness 5607) in paragraph at lines 734--735
 [15]
 
 [16]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 843.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 852.
 (/Users/casillas/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Overfull \hbox (10.1173pt too wide) in paragraph at lines 858--860
+Overfull \hbox (10.1173pt too wide) in paragraph at lines 867--869
 []\T1/ptm/b/n/10 (-20) ``Linguistic re-search is mul-ti-faceted and spans di-verse ar-eas such as cor-pus anal-y-sis, con-ver-sa-tion/discourse
  []
 
 
 
 [17]
-Overfull \hbox (3.29337pt too wide) in paragraph at lines 887--889
+Overfull \hbox (3.29337pt too wide) in paragraph at lines 896--898
 []\T1/ptm/m/n/10 (-20) We have in-cluded a de-scrip-tion of the Coretta et al. (2023) study in or-der to fa-cil-i-tate un-der-stand-ing/appreciating
  []
 
 
 
 [18]
-Overfull \hbox (0.98721pt too wide) in paragraph at lines 946--947
+Overfull \hbox (0.98721pt too wide) in paragraph at lines 955--956
 []|\T1/ptm/m/n/8 (-20) https://web-archive.southampton.ac.uk/cogprints.org/| 
  []
 
 
-Overfull \hbox (0.99413pt too wide) in paragraph at lines 952--952
+Overfull \hbox (0.99413pt too wide) in paragraph at lines 961--961
 []|\T1/ptm/m/n/8 (-20) +140,000|  
  []
 
@@ -781,7 +781,7 @@ Here is how much of TeX's memory you used:
  36 hyphenation exceptions out of 8191
  75i,8n,117p,1001b,537s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (25 pages, 347441 bytes).
+Output written on main.pdf (25 pages, 348344 bytes).
 PDF statistics:
  482 PDF objects out of 1000 (max. 8388607)
  438 compressed objects within 5 object streams

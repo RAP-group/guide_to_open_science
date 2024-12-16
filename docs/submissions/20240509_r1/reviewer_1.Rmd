@@ -1,9 +1,4 @@
-
-
-<!--
-https://github.com/RAP-group/guide_to_open_science/issues/17
--->
-
+<!-- https://github.com/RAP-group/guide_to_open_science/issues/17 -->
 :::reviewer
 Let me begin by first clarifying my own positionality with regard to the subject at hand: I am an enthusiastic supporter of open science practices in linguistics, and have been for many years. So in this sense, I am solidly in favor of more exhortations in print to our colleagues to improve their practices, and recognize that many linguists are not trained in these practices and left to more or less fend for themselves. This is a sad state of affairs for our field and others, and needs to be corrected through outreach and education.
 
@@ -89,14 +84,15 @@ For instance, as stated in @berez-kroeker2018 "Practitioners in different subfie
 While linguistics does face legitimate, field-specific challenges related to non-WEIRD communities, ultimately, the benefits of open data outnumber many of these challenges. 
 Researchers should take the stance to share what is reasonable and ethically responsible all the while holding at the forefront the priorities of the individuals from which the data are derived, especially regarding marginalized communities. 
 
-Finally, with regard to preregistration and registered reports, we have included discussion of incentive structure in academia and its effects on HARKing, p-hacking and early career researchers. 
-Again, we highlight some of the changes here, but suggest a reread of the relevant sections in the revised manuscript. 
+Finally, we have also included discussion of incentive structure in academia and its effects on HARKing, p-hacking and early career researchers. 
 
+> Researchers have pointed to questionable research practices (QRPs), such as p-hacking--knowingly manipulating an analysis until a significant p-value is obtained--and HARKing--hypothesizing after the results are known--, along with small sample sizes, poor theory, lack of transparency, misguided incentive structure in academia, etc., as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
+To wit, many of the aforementioned QRPs may be an unfortunate consequence of misaligned incentive structures in academia, where publication is the universal currency. 
+The pervasive pressure to publish likely leads many researchers to focus on quantity over quality. 
+Couple this with the difficulty of publishing negative or null results, and the result is a research landscape in which many fields suffer from publication bias and there is little to no incentive to prioritize time consuming open science practices. 
+Taking this into account, it is not hard to understand why QRPs might be perceived as a necessary evil by some.
 
-\AlmostDone
+Again, we only highlight some of the changes here, but suggest a reread of the relevant sections in the revised manuscript. 
+
+\Done
 \Medium
-
-
-
-
-

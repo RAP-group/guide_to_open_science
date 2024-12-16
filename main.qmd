@@ -182,7 +182,12 @@ This series of events represents what is now referred to as the replication (or 
 Unsurprisingly, the results generated an uproar in the psychological sciences.
 The alarming findings garnered media attention [e.g., @oliver2016] and have led to periods of introspection and self-reflection in many adjacent fields, among them, linguistics [e.g., @berez-kroeker2018; @bochynska2023reproducible].
 
-Researchers have pointed to questionable research practices (QRPs), such as p-hacking and HARKing, along with small sample sizes, poor theory, lack of transparency, misguided incentive structure in academia, etc. as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
+Researchers have pointed to questionable research practices (QRPs), such as p-hacking--knowingly manipulating an analysis until a significant p-value is obtained--and HARKing--hypothesizing after the results are known--, along with small sample sizes, poor theory, lack of transparency, misguided incentive structure in academia, etc., as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
+To wit, many of the aforementioned QRPs may be an unfortunate consequence of misaligned incentive structures in academia, where publication is the universal currency. 
+The pervasive pressure to publish likely leads many researchers to focus on quantity over quality. 
+Couple this with the difficulty of publishing negative or null results, and the result is a research landscape in which many fields suffer from publication bias and there is little to no incentive to prioritize time consuming open science practices. 
+Taking this into account, it is not hard to understand why QRPs might be perceived as a necessary evil by some.
+
 In the aftermath of the aforementioned crisis, there has been a push for increased transparency and reproducible methodology to help mitigate the effects of QRPs. 
 The resulting methodological framework and associated techniques have reshaped research methods in Psychology, and, slowly but surely, are making their way into related fields. 
 While many agree that open science practices represent a positive step forward in improving scientific rigor, these practices, by and large, have not been adopted in the field of linguistics [@bochynska2023reproducible]. 
