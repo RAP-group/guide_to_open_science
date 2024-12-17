@@ -60,6 +60,14 @@ author            :
     affiliations: Goethe University Frankfurt
     email: Parrish@em.uni-Frankfurt.de
     orcid: 0000-0001-8227-1370
+  - name: Meritxell Feliu Ribas
+    affiliations: Rutgers University
+    email: mfeliuribas@spanport.rutgers.edu
+    orcid: 
+  - name: Robert Esposito
+    affiliations: Rutgers University
+    email: rme70@rutgers.edu
+    orcid: 
 
 bibliography      : "./bib/os_refs.bib"
 csl               : "./bib/apa-6th-edition.csl"
@@ -125,6 +133,7 @@ library("patchwork")
 library("rvest")
 library("xfun")
 library("chromote")
+library("contributoR")
 
 # Set plotting theme
 theme_clean <- function(...) {
@@ -183,16 +192,17 @@ Unsurprisingly, the results generated an uproar in the psychological sciences.
 The alarming findings garnered media attention [e.g., @oliver2016] and have led to periods of introspection and self-reflection in many adjacent fields, among them, linguistics [e.g., @berez-kroeker2018; @bochynska2023reproducible].
 
 Researchers have pointed to questionable research practices (QRPs), such as p-hacking--knowingly manipulating an analysis until a significant p-value is obtained [See @head2015extent]--and HARKing--hypothesizing after the results are known [See @murphy2019harking]--, along with small sample sizes, poor theory, lack of transparency, misguided incentive structure in academia, etc., as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
-To wit, many of the aforementioned QRPs may be an unfortunate consequence of misaligned incentive structures in academia, where publication is the universal currency. 
+It is likely that many of the aforementioned QRPs are an unfortunate consequence of misaligned incentive structures in academia, where publication is the universal currency. 
 The pervasive pressure to publish likely leads many researchers to focus on quantity over quality. 
 Couple this with the difficulty of publishing negative or null results, and the result is a research landscape in which many fields suffer from publication bias and there is little to no incentive to prioritize time consuming open science practices. 
 Taking this into account, it is not hard to understand why QRPs might be perceived as a necessary evil by some.
 
 In the aftermath of the aforementioned crisis, there has been a push for increased transparency and reproducible methodology to help mitigate the effects of QRPs. 
+The clearest example of this is the Transparency and Openness Promotion Guidelines (TOP), which are author guidelines for journals that aim to help evaluate adherence to open science principles [See @nosek2015promoting, as well as <https://www.cos.io/initiatives/top-guidelines>]. 
 The resulting methodological framework and associated techniques have reshaped research methods in Psychology, and, slowly but surely, are making their way into related fields. 
 While many agree that open science practices represent a positive step forward in improving scientific rigor, these practices, by and large, have not been adopted in the field of linguistics [@bochynska2023reproducible]. 
 One reason for the slow adoption in linguistics may be related to the fact that engaging in open science is no trivial feat. 
-To wit, it often requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
+On the contrary, it often requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
 Many researchers need to implement new techniques with limited pedagogical resources and embrace alternative methods of disseminating their research, all of which can constitute a steep learning curve. 
 That being said, what engaging in open science ultimately entails is sure to be field-specific and vary accordingly. 
 In some disciplines, for instance, it may only involve a few of the practices we outline in the present work without the need for innovative methodologies. 
@@ -986,7 +996,7 @@ One of the primary benefits of pre-prints is that they allow researchers to shar
 This can be especially important in fields where research moves quickly, such as biology or computer science. 
 Pre-prints also allow researchers to receive feedback on their work from their peers, which can help to improve the quality of their research. 
 The provision of commentary and reviews of pre-prints yields benefits, not only to the authors, but also to reviewers, journals, publishers, and the readership. 
-This inclusive process allows more researchers and reviewers to participate in discussing the research findings and can educe the need for repeated rounds of re-review or extensive revisions. 
+This inclusive process allows more researchers and reviewers to participate in discussing the research findings and can reduce the need for repeated rounds of re-review or extensive revisions. 
 
 One of the most significant benefits of pre-prints is their "early view" and "open access" effect, which leads to more attention from readers, increasing visibility and development of the overall research [@biswas2023]. 
 Pre-prints are not just quick dissemination; they also promote transparency and reproducibility in scientific research. 
@@ -1076,32 +1086,45 @@ The FOSIL project details many of the open, transparent practices described here
 #| fig-path: "./figs/credit/"
 #| fig-cap: "Author contributions according to the CRediT author roles taxonomy. Contributions are indicated as being substantial (dark diamonds) or moderate (light diamonds)."
 
-contributoR::contributor(
-  contributions = list(
-  "001" = tibble(role = 1:14, weight = "high"), # JVC
-  "002" = tibble(role = 1:3, weight = "low"),
-  "003" = tibble(role = 1:3, weight = "low"),
-  "004" = tibble(
+# Create list of author contributions
+contributions <- list(
+  "001" = tibble(role = 1:14, weight = "high"),                # JVC
+  "002" = tibble(role = c(1, 13, 14), weight = "low"),         # GCD
+  "003" = tibble(                                              # IRA
+      role = c(1, 2, 7, 13, 14), 
+      weight = c("low", "low", "high", "low", "low")
+    ), 
+  "004" = tibble(                                              # JS
       role = c(1, 7, 13, 14), 
       weight = c("low", "high", "high", "low")
-    ), # JS
-  "005" = tibble(role = c(13, 14), weight = c("low", "high")), #SR
-  "006" = tibble(role = 1:3, weight = "low"),
-  "007" = tibble(role = 1:3, weight = "low"),
-  "008" = tibble(role = 1:3, weight = "low"),
-  "009" = tibble(role = 1:3, weight = "low"),
-  "010" = tibble(role = 1:3, weight = "low"),
-  "011" = tibble(role = 1:3, weight = "low"),
-  "012" = tibble(role = 1:3, weight = "low"),
-  "013" = tibble(role = 1:3, weight = "low"),
-  "014" = tibble(role = 1:3, weight = "low"), 
-  "015" = tibble(role = 1:3, weight = "low"), 
-  "016" = tibble(role = 1:3, weight = "low")
-  ), 
-  weight = TRUE
-)
+    ), 
+  "005" = tibble(role = c(13, 14), weight = c("low", "high")), # SR
+  "006" = tibble(role = 13, weight = "low"),                   # AG
+  "007" = tibble(role = 13, weight = "low"),                   # AM
+  "008" = tibble(role = 13, weight = "low"),                   # KL
+  "009" = tibble(role = 13, weight = "low"),                   # JT
+  "010" = tibble(role = 13, weight = "low"),                   # RTG
+  "011" = tibble(role = 13, weight = "low"),                   # KT
+  "012" = tibble(role = 13, weight = "low"),                   # IC
+  "013" = tibble(role = c(1, 13, 14), weight = "low"),         # NR
+  "014" = tibble(role = c(1, 7, 13, 14), weight = "low"),      # KP
+  "015" = tibble(role = 14, weight = "high"),                  # MFR
+  "016" = tibble(role = c(1, 14), weight = c("low", "high"))   # RE
+  )
+
+# Generate contributors plot
+contributor(contributions, weight = TRUE, being = 0.2, end = 0.8)
 ```
 
+```{r}
+#| label: print-contributors
+
+# Pass list to contributor DF and print in prose
+contributor_text <- contributor_df_builder(contributions) |>
+  contribution_to_text()
+```
+
+The authors made the following contributions: `r contributor_text`
 
 {{< pagebreak >}}
 
