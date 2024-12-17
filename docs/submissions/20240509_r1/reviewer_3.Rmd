@@ -58,8 +58,7 @@ Organization: I would make the big headers each of your sections from the figure
 :::
 
 We thank the reviewer for this excellent idea. 
-Unfortunately, after revising figure 1, we don't think it would be as straightforward to implement (some of the smaller points are woven into the same sections as the bigger ones, e.g., we talk about conflicts of interest and positionality statements together). 
-
+We have made this organizational change to the revised manuscript. 
 \Done
 
 

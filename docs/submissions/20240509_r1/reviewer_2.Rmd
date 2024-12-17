@@ -90,7 +90,7 @@ We have overhauled the figure and include it here for convenience (see below).
 #| out-width: "100%"
 #| fig-cap: Some open science practices amenable to research in linguistics as they pertain to one's stance, workflow, and the dissemination of research products.
 
-knitr::include_graphics(here("figs", "os-flow", "fig-os-flow_edit.png"))
+knitr::include_graphics(here("figs", "os-flow", "fig-os-flow.png"))
 ```
 
 \Done
