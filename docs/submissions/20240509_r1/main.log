@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.11)  16 DEC 2024 13:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.11)  17 DEC 2024 01:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -775,18 +775,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8929024F35AB40A4AA2C2901EDE75013;2988.
  ) 
 Here is how much of TeX's memory you used:
- 17541 strings out of 475217
- 278790 string characters out of 5765320
- 712855 words of memory out of 5000000
- 39714 multiletter control sequences out of 15000+600000
+ 17543 strings out of 475217
+ 278841 string characters out of 5765320
+ 712899 words of memory out of 5000000
+ 39715 multiletter control sequences out of 15000+600000
  606372 words of font info for 304 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  75i,8n,117p,1001b,605s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (26 pages, 354783 bytes).
+Output written on main.pdf (26 pages, 359383 bytes).
 PDF statistics:
- 493 PDF objects out of 1000 (max. 8388607)
- 448 compressed objects within 5 object streams
- 112 named destinations out of 1000 (max. 500000)
+ 497 PDF objects out of 1000 (max. 8388607)
+ 452 compressed objects within 5 object streams
+ 113 named destinations out of 1000 (max. 500000)
  36798 words of extra memory for PDF output out of 42996 (max. 10000000)
 

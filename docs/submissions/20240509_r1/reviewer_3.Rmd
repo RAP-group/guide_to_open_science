@@ -3,11 +3,32 @@
 Since QRPs appear to be a critical component of the commentary here, I would spend at least a paragraph in the introduction explaining them / the original few papers on them and how this interwove with the time period of the 2015 collaboration to lead to TOP guidelines.
 :::
 
-This was also mentioned by R2 in R2: intro, explain harking #21
+We thank the reviewer for this comment, which was common among the other reviewers as well. 
+In the revised manuscript we have dedicated more space to discussing/explaining QRPs and incentive structure in academia.
+Particularly relevant for the reviewer's comment is the revised text we include below: 
 
-Use response from R2: intro, explain harking #21 to guide this answer
+> Researchers have pointed to questionable research practices (QRPs), such as p-hacking--knowingly manipulating an analysis until a significant p-value is obtained [See @head2015extent]--and HARKing--hypothesizing after the results are known [See @murphy2019harking]--, along with small sample sizes, poor theory, lack of transparency, misguided incentive structure in academia, etc., as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
+It is likely that many of the aforementioned QRPs are an unfortunate consequence of misaligned incentive structures in academia, where publication is the universal currency. 
+The pervasive pressure to publish likely leads many researchers to focus on quantity over quality. 
+Couple this with the difficulty of publishing negative or null results, and the result is a research landscape in which many fields suffer from publication bias and there is little to no incentive to prioritize time consuming open science practices. 
+Taking this into account, it is not hard to understand why QRPs might be perceived as a necessary evil by some.
+>
+> In the aftermath of the aforementioned crisis, there has been a push for increased transparency and reproducible methodology to help mitigate the effects of QRPs. 
+The clearest example of this is the Transparency and Openness Promotion Guidelines (TOP), which are author guidelines for journals that aim to help evaluate adherence to open science principles [See @nosek2015promoting, as well as <https://www.cos.io/initiatives/top-guidelines>]. 
+The resulting methodological framework and associated techniques have reshaped research methods in Psychology, and, slowly but surely, are making their way into related fields. 
+While many agree that open science practices represent a positive step forward in improving scientific rigor, these practices, by and large, have not been adopted in the field of linguistics [@bochynska2023reproducible]. 
+One reason for the slow adoption in linguistics may be related to the fact that engaging in open science is no trivial feat. 
+On the contrary, it often requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
+Many researchers need to implement new techniques with limited pedagogical resources and embrace alternative methods of disseminating their research, all of which can constitute a steep learning curve. 
+That being said, what engaging in open science ultimately entails is sure to be field-specific and vary accordingly. 
+In some disciplines, for instance, it may only involve a few of the practices we outline in the present work without the need for innovative methodologies. 
+Nonetheless, given how new open science practices are, it is reasonable to assume that current senior researchers were not trained in these innovative methodologies. 
+As a consequence, many early career researchers (ERC) find themselves at a crossroads in which they are forced to learn open science on their own, often without institutional support. 
+Ironically, there is also a growing expectation that ECRs implement these novel tools in order to be successful in their programs, on the job market, or to advance in their careers. 
 
-consider additional paragraph mentioned above
+
+
+\Done
 
 
 
@@ -15,7 +36,10 @@ consider additional paragraph mentioned above
 I love this figure. Given the pervasiveness of TOP guidelines, maybe make the connection between them direct. I think you could comment on how those guidelines are heavily quant focused and ignore the intersection of the researcher and the research (and how positionality statements acknowledge these things).
 :::
 
-mentioning how it is quant focused is a good idea (possibly calm down R2). this is an opportunity to mention that everything we are talking about is not one-size-fits-all
+Though this figure has changed significantly, we thank the reviewer for their praise nonetheless. 
+We have also made the connection with the TOP guidelines more clear and heavily revised the positionality statement section. 
+
+\Done
 
 
 
@@ -23,14 +47,21 @@ mentioning how it is quant focused is a good idea (possibly calm down R2). this 
 When you talk about repositories, mention that there are lists of “trusted repositories” that are better than researcher websites, are more accessible, etc.
 :::
 
-add this info in relevant place (this also touches on points made by R2 regarding tables for repositories.)
+In the revised manuscript we now include a table that highlights some of the more common data sharing platforms and highlight some of the key features. 
+
+\Done
+
 
 
 :::reviewer
 Organization: I would make the big headers each of your sections from the figure and then subheader the points in each.
 :::
 
-consider this option
+We thank the reviewer for this excellent idea. 
+Unfortunately, after revising figure 1, we don't think it would be as straightforward to implement (some of the smaller points are woven into the same sections as the bigger ones, e.g., we talk about conflicts of interest and positionality statements together). 
+
+\Done
+
 
 
 :::reviewer
@@ -39,7 +70,11 @@ Maybe provide a link to tutorials that show people how to do literate programmin
 Oh here’s code ocean ha. Maybe a touch earlier.
 :::
 
-Consider moving this earlier
+We again thank the reviewer for this practical and useful idea. 
+We have provided examples of literate programming, highlighting this very manuscript as an example tutorial. 
+We make the entire project available on the OSF, GitHub, as well as an online server instance via Code Ocean. 
+
+\Done
 
 
 
@@ -47,11 +82,17 @@ Consider moving this earlier
 I think the section on pre-reg should start with a quite note that they are not only for experimental studies, you can pre-reg ideas, etc. I think there’s been a lot of push back against them because it doesn’t feel like it fits in qual research or more exploratory studies.
 :::
 
-Excellent points and addresses many of R2's qualms. Incorporate this idea at beginning of prereg section
+We wholeheartedly agree with the reviewer's observation. 
+In the revised text we have tried to emphasize that pre-registrations are adaptable to many subfields of linguistics by providing more concrete examples throughout this section. 
+
+\Done
 
 
 :::reviewer
 In the pre-print section, this is a good place for TOP as well – many of the guidelines encourage them, so that’s a helpful signal.
 :::
 
-Incoporate TOP here
+It is not entirely clear to us how exactly the reviewer envisions promoting TOP in this section. 
+Which of the guidelines encourage pre-prints? 
+We use the OSF [and corresponding publication, @nosek2015promoting] as our guide, but do not see a clear connection. 
+We are happy to include this in a future revision of the manuscript once we have a better idea of what exactly the reviewer means. 
