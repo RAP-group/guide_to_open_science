@@ -1,0 +1,9 @@
+Platform,Long-term Support,Version Control,DOI Assignment,Anonymous Sharing,Key Features
+Open Science Framework (OSF),+,+,+,+,Project management and collaboration
+GitHub,+,+,Integrates with Zenodo,+ (public repositories),"Project management/collaboration, ideal for coding"
+GitLab,+,+,Integrates with Zenodo,Limited,"Project management/collaboration, ideal for coding"
+Bitbucket,+,+,Integrates with Zenodo,Limited,"Project management/collaboration, ideal for coding"
+Zenodo,+,+ (via GitHub integration),+,+,Supports range of file types
+Figshare,+,Limited,+,+,Sharing datasets and figures
+Box,-,-,-,Limited,Basic file storage and sharing
+Google Drive,-,-,-,Limited,Basic file storage and sharing

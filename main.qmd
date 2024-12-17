@@ -60,6 +60,14 @@ author            :
     affiliations: Goethe University Frankfurt
     email: Parrish@em.uni-Frankfurt.de
     orcid: 0000-0001-8227-1370
+  - name: Meritxell Feliu Ribas
+    affiliations: Rutgers University
+    email: mfeliuribas@spanport.rutgers.edu
+    orcid: 
+  - name: Robert Esposito
+    affiliations: Rutgers University
+    email: rme70@rutgers.edu
+    orcid: 
 
 bibliography      : "./bib/os_refs.bib"
 csl               : "./bib/apa-6th-edition.csl"
@@ -97,18 +105,47 @@ knitr::opts_chunk$set(
   echo = F, 
   message = F, 
   warning = F,
-  fig.asp = 0.5625,
+  fig.asp = 0.618,
   out.width = "100%",
+  fig.width = 6,
   dpi = 300, 
   fig.path = 'figs/', 
   dev = c("png", "pdf")
   )
 
+# fig-width calculator
+out2fig <- function(out.width, out.width.default = 1, fig.width.default = 6) {
+    fig.width.default * out.width / out.width.default 
+}
+
+# Load libraries
 library("here")
 library("fs")
 library("dplyr")
 library("tidyr")
 library("stringr")
+library("glue")
+library("readr")
+library("janitor")
+library("ggplot2")
+library("googlesheets4")
+library("patchwork")
+library("rvest")
+library("xfun")
+library("chromote")
+library("contributoR")
+
+# Set plotting theme
+theme_clean <- function(...) {
+  list(
+    theme_minimal(...), 
+    theme(
+      axis.title.y = element_text(size = rel(.9), hjust = 0.95),
+      axis.title.x = element_text(size = rel(.9), hjust = 0.95),
+      panel.grid.major = element_line(colour = 'grey90', linewidth = 0.15),
+      panel.grid.minor = element_line(colour = 'grey90', linewidth = 0.15))
+  )
+}
 ```
 
 {{< pagebreak >}}
@@ -126,7 +163,7 @@ As a result, specific transparency practices have emerged, such as open access p
 While many agree that open science practices represent a positive step forward in improving scientific rigor, these practices, by and large, have not been adopted in the field of linguistics [@bochynska2023reproducible]. 
 Few, if any, researchers have had explicit instruction on the practices of open science as part of their professional training. 
 Nonetheless, today's speech researcher is expected to be up to date on the current protocols of open science in order incorporate the methodological practices aimed at improving reproducibility/replicability.
-The present work intends to help make open science practices understandable and accessible to researchers in linguistics from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
+The present work intends to help make open science practices understandable and accessible to researchers in linguistics from all backgrounds and at every stage, from students/early career researchers to senior researchers and advisors. 
 We outline eight specific open science practices that linguists can adopt to make their research more open, transparent, inclusive, and accessible to a wider audience.
 
 *Keywords:* Open science, Reproducibility, Replicability, Transparency, Positionality, Linguistics
@@ -144,7 +181,7 @@ In recent years, numerous fields of research have seen a push for increased repr
 These practices, collectively, have been referred to as open science. 
 @parsons2022community refer to open science as an umbrella term "[...] reflecting the idea that scientific knowledge of all kinds, where appropriate, should be openly accessible, transparent, rigorous, reproducible, replicable, accumulative, and inclusive, all which are considered fundamental features of the scientific endeavor" (p. 11). 
 As a result, specific transparency practices have emerged, such as open access publishing, preregistration, sharing data, analyses, and code, performing study replications, and declaring positionality and conflicts of interest. 
-Though it may come as a surprise to some, these open, transparent research practices have not been the norm in empirical and quantitative sciences. 
+Though it may come as a surprise to some, these open, transparent research practices have not been the norm in empirical and quantitative sciences, despite painstaking efforts being made in recent years [e.g., @berez-kroeker2018; @berez-kroeker2022, among others]. 
 
 To properly contextualize the need for open science, one must first consider the so-called reproducibility (replication) crisis.
 In the early 2010's, a team of researchers in Psychology embarked on a large-scale replication project to scrutinize what many considered to be the fields' major findings. 
@@ -152,43 +189,85 @@ Specifically, they attempted to replicate 100 influential studies [@open2015esti
 The endeavor produced astounding results---of note, that approximately 53% of the major findings did not replicate---and inspired similar large-scale replication projects in other fields, yielding similar results.^[For Economics, see @camerer2016evaluating; for the Social Sciences, see @camerer2018evaluating; and, for cancer research, see @errington2021investigating.] 
 This series of events represents what is now referred to as the replication (or reproducibility) crisis [See also @forrt2021]. 
 Unsurprisingly, the results generated an uproar in the psychological sciences.
-The alarming findings garnered media attention [e.g., @oliver2016] and have led to periods of introspection and self-reflection in many adjacent fields, among them, linguistics.
+The alarming findings garnered media attention [e.g., @oliver2016] and have led to periods of introspection and self-reflection in many adjacent fields, among them, linguistics [e.g., @berez-kroeker2018; @bochynska2023reproducible].
 
-Researchers have pointed to questionable research practices (QRPs), such as p-hacking and HARKing, along with small sample sizes, poor theory, lack of transparency, etc. as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
+Researchers have pointed to questionable research practices (QRPs), such as p-hacking--knowingly manipulating an analysis until a significant p-value is obtained [See @head2015extent]--and HARKing--hypothesizing after the results are known [See @murphy2019harking]--, along with small sample sizes, poor theory, lack of transparency, misguided incentive structure in academia, etc., as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
+It is likely that many of the aforementioned QRPs are an unfortunate consequence of misaligned incentive structures in academia, where publication is the universal currency. 
+The pervasive pressure to publish likely leads many researchers to focus on quantity over quality. 
+Couple this with the difficulty of publishing negative or null results, and the result is a research landscape in which many fields suffer from publication bias and there is little to no incentive to prioritize time consuming open science practices. 
+Taking this into account, it is not hard to understand why QRPs might be perceived as a necessary evil by some.
+
 In the aftermath of the aforementioned crisis, there has been a push for increased transparency and reproducible methodology to help mitigate the effects of QRPs. 
+The clearest example of this is the Transparency and Openness Promotion Guidelines (TOP), which are author guidelines for journals that aim to help evaluate adherence to open science principles [See @nosek2015promoting, as well as <https://www.cos.io/initiatives/top-guidelines>]. 
 The resulting methodological framework and associated techniques have reshaped research methods in Psychology, and, slowly but surely, are making their way into related fields. 
 While many agree that open science practices represent a positive step forward in improving scientific rigor, these practices, by and large, have not been adopted in the field of linguistics [@bochynska2023reproducible]. 
 One reason for the slow adoption in linguistics may be related to the fact that engaging in open science is no trivial feat. 
-To wit, it requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
-It necessitates that researchers implement new techniques with limited pedagogical resources and embrace alternative methods of disseminating their research, all of which constitutes a steep learning curve.
-Given how new open science practices are, it is reasonable to assume that current senior researchers were not trained in these innovative methodologies. 
+On the contrary, it often requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
+Many researchers need to implement new techniques with limited pedagogical resources and embrace alternative methods of disseminating their research, all of which can constitute a steep learning curve. 
+That being said, what engaging in open science ultimately entails is sure to be field-specific and vary accordingly. 
+In some disciplines, for instance, it may only involve a few of the practices we outline in the present work without the need for innovative methodologies. 
+Nonetheless, given how new open science practices are, it is reasonable to assume that current senior researchers were not trained in these innovative methodologies. 
 As a consequence, many early career researchers (ERC) find themselves at a crossroads in which they are forced to learn open science on their own, often without institutional support. 
-Ironically, there is also a growing expectation that ECRs implement these novel tools in order to be successful in their programs/careers. 
+Ironically, there is also a growing expectation that ECRs implement these novel tools in order to be successful in their programs, on the job market, or to advance in their careers. 
 
-The present work intends to help make open science practices understandable and accessible to researchers in linguistics from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
-To this end, we identify three areas, stance, workflow, and dissemination, in which linguists can engage in open science.
+The present work intends to both highlight and contribute to a line of research focused on making open science practices understandable and accessible to researchers in linguistics from all backgrounds and at every stage, from students/ERCs to senior researchers and advisors. 
+To this end, we identify the following three areas of stance, workflow and dissemination, in which linguists can engage in open science (see @fig-os-flow-edit).
 The first area, *stance*, refers to practices that focus on the researchers position or attitude towards openness and transparency. 
 The second area, *workflow*, deals with methods and techniques researchers can implement to make their research projects more open and transparent. 
 Finally, *dissemination* refers to novel ways in which researchers can help ensure that their research products are accessible and free from QRPs. 
-In total, we describe eight open science practices, illustrated in @fig-os-flow, within these areas: positionality statements and declarations of conflict of interest, open data, reproducible code/projects and literate programming, preregistration, registered reports, and pre-prints. 
-We provide practical examples and detailed descriptions of the aforementioned practices with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research.  
+While our coverage of these areas cannot be exhaustive, in what follows, we dedicate five sections of this paper to highlighting eight open science practices within these areas: positionality statements and declarations of conflict of interest, open data (as both a stance and a dissemination practice), reproducible code/projects and literate programming, preregistration, registered reports, and pre-prints. 
+We provide practical examples and detailed descriptions of the aforementioned practices with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research. 
+Importantly, the present work should be considered a complement to the extant work fomenting open science practices in the speech sciences. 
+
+<!--
+OS workflow chart 
+
+- generated using mermaid
+- post edited for greyscale
+- imported in R chunk 'fig-os-flow-edit'
+
+```{mermaid}
+%%| label: os-flow
+%%| out-width: 100%
+%%| eval: false
+---
+config:
+  theme: base
+  themeVariables:
+    primaryTextColor: '#000'  
+    primaryColor: '#DEF5E5FF' 
+    secondaryColor: '#B7E6C5FF'
+    tertiaryColor: '#84D9B1FF' 
+    fontSize: '13px'
+    fontFamily: 'Times New Roman, Times, serif'
+---
+mindmap
+  root((**Open science**))
+    **Stance**
+      (Positionality statements)
+      (Declaration of<br>conflicts of interest)
+      (Decision to share materials)
+    **Workflow**
+      (Literate programming)
+      (Reproducible code/projects)
+      (Shareable environments)
+    **Dissemination**
+      (Preregistration)
+      (Registered reports)
+      (Pre-prints)
+      ("Publish materials<br>(data, code, stimuli, etc.)")
+```
+-->
 
 
 ```{r}
-#| label: fig-os-flow
-#| fig-cap: Eight open science practices amenable to research in lingusitics.
-knitr::include_graphics(
-  here("figs", "os-flow", "fig-os-flow.png")
-  )
-```
+#| label: fig-os-flow-edit
+#| fig-width: 6.315
+#| fig-cap: Some open science practices amenable to research in linguistics as they pertain to one's stance, workflow, and the dissemination of research products.
 
-```{mermaid fig-os-flow-raw}
-%%| fig-width: 6
-%%| fig-height: 2
-%%| eval: false
-%%| file: ./figs/os-flow/fig-os-flow.mmd
+# Load OS flow chart image
+knitr::include_graphics(here("figs", "os-flow", "fig-os-flow_edit.png"))
 ```
-
 
 # Positionality statements
 
@@ -197,130 +276,180 @@ Similar to a statement of conflict of interest, a positionality statement can in
 One's positionality differs from a statement of conflict of interest in that it can also influence how research is undertaken and can encompass the researcher's social, cultural, and personal identity, as well as their biases and assumptions [@holmes2020researcher]. 
 Among others, relevant personal characteristics that may be included in a positionality statement are gender and racial identity, age, sexual orientation, immigration status, and ideological stances [@berger2015now]. 
 These traits may indirectly impact research endeavors, since participants may be more willing to engage in a study if they perceive the researcher as sympathetic [@de2006but], or may even offer different responses based on the researcher's perceived identity [@berger2015now]. 
-
-While positionality statements have been adopted in some disciplines of the humanities and social sciences as a way of recognizing the various ways in which researchers' backgrounds and identities may intersect with their research endeavors, they are a relatively new incorporation in the field of linguistics, appearing primarily in subfields such as applied linguistics, linguistic anthropology, and linguistic ethnography [@bucholtz2023researcher]. 
-Positionality statements are increasingly considered crucial components of the research process, as they increase transparency into research practices [@steltenpohl_video] and contextualize the environment in which studies take place, or, in other words, they "[define] the boundaries within which research was produced" [@jafar2018positionality, p. 1]. 
-Traditionally, positionality statements have been more prevalent in qualitative research. 
-We believe they should be considered equally important in quantitative research, since, aside from contributing to ongoing efforts to promote transparency and openness in research practices, recognizing and addressing a researcher's positionality can increase the validity of their findings [@jafar2018positionality]. 
-Moreover, @bucholtz2023researcher note that considering a researcher's positionality may be especially important in linguistics, "[...] which relies on racially minoritized communities as sources of data yet lack adequate (if any) representation of those communities among faculty researchers" (p. 2). 
-
-Many researchers support and advocate for the inclusion of positionality statements in their research publications [e.g., @bucholtz2023researcher; @jafar2018positionality; @steltenpohl_video]. 
-Nonetheless, others contest this practice, pointing to the universalism of research, that is, the belief that scholarly endeavors should be assessed on their inherent merits, regardless of the status or personal identity of the person making the contribution [@savolainen2023positionality]. 
-@savolainen2023positionality draw connections between positionality statements and conflict of interest statements, arguing that, while researchers are required to disclose any and all financial gains associated with a research project, "positionality statements grant authors the freedom to decide which parts of their biography they choose to share and how they choose to frame it." (p. 1334). 
-Importantly, statements of conflict of interest are underused in linguistic research. 
-@bochynska2023reproducible surveyed open and transparent practices in linguistics and found that only 10% of the articles sampled included statements of conflict of interest, and, among those 10%, none declared any conflicts [See also @cristea2018; @hardwicke2020empirical; @hardwicke2022]. 
-Positionality statements are likely even less common. 
-
 While positionality statements, due to their reflexive nature, may encompass larger pieces of writing, they can also take the form of short paragraphs that illustrate a few personal characteristics deemed relevant for the particular research endeavor.
-For instance, "Gabriela is a white immigrant cis-gender woman from Romania whose research focuses on how non-native speakers are ideologically framed as linguistically deficient in comparison to native speakers who are characterized by their linguistic authority and expertise." 
-Lastly, in showing their commitment to Diversity, Equity, Inclusivity, and Belonging (DEIB) initiatives, journals have started to encourage authors to include positionality statements with their submissions (e.g., the Journal of Social and Personal Relationships). 
-It is our stance that researchers should reflect on their positionality before starting a project and consider including a positionality statement. 
+For instance, "Gabriela is a white immigrant cis-gender woman from Romania whose research focuses on how non-native speakers are ideologically framed as linguistically deficient in comparison to native speakers who are characterized by their linguistic authority and expertise".
 When submitting a study for publication, the positionality statement can be included in additional materials if the word limit is a concern. 
-For examples of positionality statements in linguistic research, the interested reader is directed to @bochynska2023reproducible and @baeseberk_2023. 
 
-In sum, we believe positionality statements are essential in linguistic research as they promote critical self-reflection, increase transparency, and help address diversity and inclusion concerns. 
-Furthermore, including positionality statements in quantitative research can increase the validity of findings. 
+Though positionality statements have been adopted in some disciplines of the humanities and social sciences as a way of recognizing the various ways in which researchers' backgrounds and identities may intersect with their research endeavors, they are a relatively new incorporation in the field of linguistics, appearing primarily in subfields, such as applied linguistics, linguistic anthropology, and linguistic ethnography [@bucholtz2023researcher]. 
+@savolainen2023positionality draw connections between positionality statements and relatively more common statements of conflict of interest, arguing that, while researchers are required to disclose any and all financial gains associated with a research project, "positionality statements grant authors the freedom to decide which parts of their biography they choose to share and how they choose to frame it" (p. 1334). 
+While statements of conflict of interest are notably underused in linguistic research [See @bochynska2023reproducible]^[@bochynska2023reproducible surveyed open and transparent practices in linguistics and found that only 10% of the articles sampled included statements of conflict of interest, and, among those 10%, none declared any conflicts. For a clear example of what a declaration of conflicts of interest can entail in linguistics, the interested reader is directed to @bochynska2023reproducible. Of particular value are the *Competing interests* section and the coding form available at <https://escholarship.org/uc/item/6m62j7p6#main> and <https://osf.io/ehyx3>, respectively. Additionally, @cristea2018, @hardwicke2022, and @hardwicke2020empirical represent illustrative examples in psychiatry, psychology, and the social sciences more broadly.], positionality statements are likely even less common. 
+Nonetheless, they are considered by some to be increasingly crucial components of the research process, as they increase transparency into research practices [@steltenpohl_video] and contextualize the environment in which studies take place, or, in other words, they "[define] the boundaries within which research was produced" [@jafar2018positionality, p. 1]. 
+Traditionally, positionality statements have been more prevalent in qualitative research. 
+Our stance is that, when appropriate, they should be considered equally important in quantitative research as well. 
+Aside from contributing to ongoing efforts to promote transparency and openness in research practices, recognizing and addressing one's positionality can, in some instances, support a study's quantitative validity by helping to reduce notions of bias [See @jafar2018positionality, for a discussion in the field of medicine]. 
+
+The support and advocacy for the inclusion of positionality statements in research publications is increasing [@bucholtz2023researcher; @jafar2018positionality; @steltenpohl_video]. 
+@bucholtz2023researcher note that considering a researcher's positionality may be especially important in linguistic research on certain language communities, such as indigenous communities, "[...] which relies on racially minoritized communities as sources of data yet lack adequate (if any) representation of those communities among faculty researchers" (p. 2). 
+Nonetheless, others contest this practice. 
+For example, some investigators point to the universalism of research, that is, the belief that scholarly endeavors should be assessed on their inherent merits, regardless of the status or personal identity of the person making the contribution [@savolainen2023positionality]. 
+In addition and in opposition to @bucholtz2023researcher, the self-identification associated with a positionality statement may also place some individuals, particularly women and individuals from marginalized groups, in a vulnerable position [@massoud2022price]. 
+Specifically, in the field of law and society, @massoud2022price posits that the pressure to state one's positionality can lead to increased anxiety, as well as cause readers to question the researcher's neutrality, and, ultimately, shift the focus away from the contributions of the research. 
+
+How can one marry the aforementioned benefits of including one's positionality with the legitimate counterpoints related to marginalized individuals? 
+We believe researchers should only consider the option of including their positionality if they feel comfortable doing so. 
+@roberts2020racial, for instance, argue against mandating one's positionality. 
+Some journals have started to encourage authors to include positionality statements with their submissions (e.g., the Journal of Social and Personal Relationships) as a means to show their commitment to Diversity, Equity, Inclusivity, and Belonging (DEIB) initiatives. 
+No journals, to the best of our knowledge, require positionality statements. 
+
+In sum, we believe positionality statements can be productive in linguistic research, as they promote critical self-reflection, increase transparency, can potentially help address diversity and inclusion concerns, and may increase the validity of findings in quantitative research. 
 By reflecting on who it is that does the research, linguistics can become a more diverse, inclusive, and transparent field. 
-
+That being said, it is important to consider the impact and potential burden of disclosing positionality on marginalized researchers, particularly in collaborative research settings. 
+In the end, regarding one's positionality, *what* and *how* to share are fundamental considerations that cannot be overlooked by investigators, journals, publishing houses, and consumers of academic research. 
+It is our stance that researchers should reflect on their positionality before starting a project, and, if and when it makes sense, consider including a positionality statement. 
+For examples of positionality statements in linguistic research, the interested reader is directed to @bochynska2023reproducible and @baeseberk_2023. 
 
 # Open data
 
 The term *open data* refers to data collected for research that is freely and easily available to anybody interested in accessing it for any purpose [@open2023].
-In academic research, statements such as "data available upon request" are commonplace.
-In spite of such assurances, we now know they do not typically result in adequate sharing of research materials [@spellman2017open; @wicherts2006poor].
-Recent efforts have attempted to encourage researchers to make linguistic data open and accessible via servers (e.g., the IRIS database). 
-Some journals offer open science badges (e.g., *Language Learning*, *Language and Speech*), and, in some cases, have made data sharing a requirement for publication (e.g., *Applied Psycholinguistics*). 
+In academic research, statements such as "data available upon request" are commonplace [See @hardwicke2018populating].
+In spite of such assurances, we now know they do not typically result in adequate sharing of research materials [@spellman2017open; @wicherts2006poor; @hardwicke2018populating].
+Recent efforts have attempted to encourage researchers to make linguistic data open and accessible via servers. 
+An illustrative example is the IRIS database (<https://www.iris-database.org>), a language sciences digital repository that is freely accessible and permits the up- and downloading of research instruments and materials.
+Additional efforts include open science badges--visual symbols offered by some journals (e.g., *Language Learning*, *Language and Speech*) on published articles. 
+These badges are awarded to researchers for adhering to certain open science principles, such sharing code and data or preregistering a study. 
+In arguably more extreme cases, other journals have made data sharing a requirement for publication (e.g., *Applied Psycholinguistics*). 
 Nonetheless, open data is still the exception rather than the norm in linguistics [@bochynska2023reproducible]. 
 In this section, we provide more detail regarding the benefits of open data and consider the specific challenges researchers face in the field of linguistics. 
 
 The underlying motivation for open data is relatively straightforward, particularly in the wake of the reproducibility crisis.
-Though researchers may understandably hesitate to share their data, we believe understanding the benefits of open data can help alleviate any concerns. 
-Making linguistic data freely available improves credibility in our findings, to other researchers and the general public. 
-Prohibiting or impeding access to data collected for publicly funded research is unethical and a detriment to inclusivity. 
+Though researchers may understandably hesitate to share their data, we believe understanding the benefits of open data can help alleviate many concerns. 
+Among researchers, there can exist anxieties unrelated to technical considerations about sharing data [@stieglitz2020researchers]. 
+@stieglitz2020researchers, in a study investigating 995 researchers from 13 universities in Germany across various fields, found that there were anxieties about competitive pressures, such as losing the opportunity to publish again from the same data set before another researcher does. 
+In this case, anxieties can be quelled with the knowledge that the data can be made available after all research inquiries by the original researchers have been completed.
+Making linguistic data freely available improves credibility in our findings, to other researchers, and the general public, and may help develop more accurate generalizations and theories [See @berez-kroeker2022]. 
+Prohibiting or impeding access to data collected for publicly funded research is, in many cases, unethical and can be a detriment to inclusivity. 
 Open data is fundamental for cumulative science in numerous ways. 
 It affords third parties the opportunity to scrutinize original findings, which promotes reproducibility and reduces errors, such as those related to statistical analyses and reporting of outcomes [e.g., @roettger2021]. 
 Furthermore, it allows for published data to be reanalyzed in novel ways and utilized in meta-analyses. 
-Revisiting old data sets using innovative techniques can support or contradict past narrative conclusions [e.g., @casillas2021interlingual].
+Revisiting old data sets using innovative techniques can support or contradict past narrative conclusions.
+For instance, using meta-analytic techniques, @casillas2021interlingual reexamined extant research regarding 'compromise categories' in early bilinguals. 
+This line of research posits that bilingual individuals produce speech sounds intermediate to those produced by monolingual speakers of either language. 
+By systematically reevaluating prior data and incorporating new acoustic analyses of coronal stops from early Spanish-English bilinguals, @casillas2021interlingual suggested that the cumulative evidence for 'compromise' stop categories was negligible. 
+In lieu of intermediate phonetic categories, the study proposed early bilinguals can exhibit performance mismatches resulting from dynamic interlingual interactions. 
+This reanalysis contradicted earlier assumptions about bilingual phonology and provided in-depth scrutiny of statistical power and evidence accumulation in bilingualism research.
 In short, open data is a cornerstone of scientific research in the 21st century that enables wider access to research information, which, in turn, facilitates validation, motivates replication, promotes reproducibility, and makes possible future scientific progress. 
 
-Open data are particularly important for the field of linguistics, for all of the aforementioned reasons, and also because linguistics is Western, Educated, Industrialized, Rich, and Democratic [WEIRD, @bochynska2023reproducible].
-That is to say, the majority of linguistic research is concentrated on specific language, mainly Indo-Germanic, in overrepresented communities, by privileged scholars. Making linguistic data accessible to all researchers promotes participation *in* and *with* underrepresented communities. 
-Furthermore, it can increase the study of diverse and underreported languages, which fosters a more inclusive and comprehensive understanding of the global linguistic landscape. 
+Open data are particularly important for the field of linguistics, for all of the aforementioned reasons, and also because some linguists have described the state of the field, as far as English-language publications are concerned, as being Western, Educated, Industrialized, Rich, and Democratic [WEIRD, see @bochynska2023reproducible; @nagle_baese-berk_amengual_casillas_2024; @faytak_wp-preprint].
+That is to say, the majority of linguistic research appears to be concentrated on specific languages, mainly Indo-Germanic, in overrepresented communities, by privileged scholars. 
+Making linguistic data accessible to all researchers can promote participation *in* and *with* underrepresented communities. 
+Furthermore, it can increase the study of diverse and underreported languages by affording more researchers the opportunity to interact and learn from data that would otherwise not be available to them, which, in turn, can foster a more inclusive and comprehensive understanding of the global linguistic landscape. 
 
-Having stated all the above, it is necessary to recognize that the field of linguistics faces unique challenges with regard to open data. 
+Having stated all the above, it is necessary to recognize that linguistics faces a unique set of challenges with its multitude of subfields, each potentially working with a variety of data formats. 
+Due to such diversity, one must determine which aspects of open science are relevant to their data. 
+For example, a neurolinguistic study investigating event related potentials (ERPs) could share raw data for transparency, as well as preprocessed data with the code used to transform the raw data and a corresponding description for facilitation of reanalysis. 
+In another field, the creation of a corpus will benefit from open access and the use of standardized file formats; the analysis of a corpus will benefit from sharing the search queries, the analysis code, and a description of the analysis code.
 At the heart of these challenges are ethical concerns that must be considered with care. 
-The privacy and consent of participants must be safeguarded.
+First and foremost, the privacy and consent of participants must be safeguarded.
 Linguistic data often include personal information, which can be especially difficult to anonymize. 
-Though written and behavioral data do not typically pose many issues, audio and video recordings constitute a large portion of linguistic research materials. 
-In such cases, anonymizing participant information can be troublesome, particularly when working with minority languages or smaller communities.
-Sociolinguistic interviews, for instance, represent a substantial and valuable contribution to linguistics and often contain sensitive information. 
-Moreover, the advent of generative artificial intelligence technologies, such as Large Language Models, may pose unknown challenges in the near future that necessitate additional steps to secure the protection of sensitive data against misuse.
+While on the surface written and behavioral data may not appear to pose as many issues as audio and video recordings, which constitute a large portion of linguistic research materials, it is imperative that one consider the sources from which all types of data are derived.^[Sociolinguistic interviews, for instance, represent a substantial and valuable contribution to linguistics and often necessarily contain sensitive information.]
+As expressed by @holten2022, if we haphazardly take language to represent trivial data points and lose focus on the individual embedded within a community, as well as the values of said community, we are doomed to "dehumanize and decontextualize" it (p. 50). 
+This is particularly true when working with minority languages and/or marginalized communities. 
+In cases such as these, the researcher must be held accountable, not only for the anonymization of participant information, but also for respecting and upholding the specific goals and restrictions put forth by the community.
+This includes, but is not limited to, the use, access, and storage of all collected data. 
+In sum, careful consideration of the priorities of the researcher and the researched, which often do not align, is paramount [for more detailed views, see @adetula2022psychology; @holten2022; @hudley2020toward; @leonard2021centering; @mufwene2020decolonial; @singh2023global; @tsikewa2021reimagining, among others].
+In addition, generative artificial intelligence technologies, such as Large Language Models, are burgeoning. 
+These technologies will certainly pose currently unknown challenges in the near future and may necessitate additional steps to secure the protection of sensitive data against misuse, particularly regarding adherence to the original agreement of informed consent, and, importantly, in upholding the conditions of use put forth by the stakeholders in marignalized communities.
+
 While these challenges are substantial, we believe acceptable solutions exist in many, if not all, cases. 
 When primary data, such as audio or video files, cannot be shared, derived data in the form of tabular files can take its place. 
 For instance, if institutional policies prohibit the sharing of audio files, a comma-separated or tab-separated file (csv, tsv) containing the variables of interest (e.g., formant values, response times, etc.) can be made public instead. 
 Tabular data files can be anonymized easily using arbitrary identification codes. 
-Online data collection platforms, such as Prolific, typically remove identifying information by default and provide participant-specific identification numbers.
-In more uncommon cases in which institutional policies do not permit the sharing of derived data sets, synthetic data containing the same statistical properties can be generated and shared freely [See @quintana2020].
+Online data collection platforms, such as Prolific (<https://www.prolific.com>), typically remove identifying information by default and provide participant-specific identification numbers.
+In more uncommon cases in which institutional policies do not permit the sharing of derived data sets, synthetic data containing the same statistical properties can be generated and shared freely [See @quintana2020].^[In short, the method consists of capturing the statistical properties of the original data set and using them to simulate new data that preserve the relationships between the variables of interest. A tutorial on the method described in @quintana2020 is freely available on github (<https://github.com/elifesciences-publications/synthpop-primer>), and an online RStudio instance can be accessed at <https://mybinder.org/v2/gh/dsquintana/synthpop-primer/master?urlpath=rstudio>. All relevant materials are available on the OSF: <https://osf.io/z524n/>.]
+To quote the Directorate-General for Research & Innovation of the European Commission [-@ecommission2016], we believe the field can follow the principle that data should be "as open as possible, as closed as necessary" (p. 4). 
 
-A substantial hurdle that cannot be overlooked revolves around the fact that researchers must learn to use new technologies to participate in open, transparent research. 
+Another substantial hurdle that cannot be overlooked revolves around the fact that researchers must learn to use new technologies to participate in open, transparent research. 
 Making data open *and* accessible is not as simple as merely uploading a data file. 
-Researchers should include a codebook or README file explaining the metadata of the file(s), as well as an explanation of the variables it contains and the context in which it was obtained. 
+Ideally, researchers should include relevant information to contextualize the data set at the project-level (i.e., a project-summary document), the data-level (i.e., a README file explaining the data set), and the variable-level (i.e., a data dictionary) [@lewis2024data]. 
+The inclusion of resources at these three levels is the optimal way for authors to provide the necessary context for an independent researcher to access and utilize the data set. 
+Unfortunately, most publicly available data do not adhere to this standard. 
+For this reason, we direct the interested reader to templates provided in @lewis2024data for documentation at the project-level (<https://osf.io/q6g8d>, <https://osf.io/d3pum>), data-level (<https://osf.io/tk4cb>), and variable-level (<https://osf.io/ynqcu>). 
+
 Once the data has been prepared for sharing, the researcher must decide where to share it. 
 Platforms such as google drive, dropbox, etc. are not recommended because they are linked to personal accounts that may change or become unavailable over time. 
 Free repositories designed for the purpose of sharing research materials, such as the Open Science Framework [@foster2017open], github, etc., are preferable and can be accessed simply by sharing a link. 
 These repositories represent stable, long-term solutions with ample storage capacity. 
 The data sets (and other materials) can be downloaded directly, free of any kind of payment or exchange of personal information (such as an email address) by the user. 
 For relevant examples, we direct the interested reader to <https://osf.io/zx9ky/>, <https://osf.io/3bmcp/>, or <https://github.com/RAP-group/empathy_intonation_perc>. 
+@tbl-platform-features summarizes some of the options used by researchers and describes which features are available on each platform. 
+
+```{r}
+#| label: tbl-platform-features
+#| tbl-cap: Common data-sharing platforms and their respective features. 
+
+# Load csv file and convert '-' to unicode minus sign
+# Convert csv to markdown table
+read_csv(here("tables", "platform_features.csv")) |> 
+  mutate(across(everything(), \(x) str_replace_all(x, "-", "−"))) |> 
+  knitr::kable()
+```
 
 To summarize, open data is important because it facilitates transparency, rigor, reproducibility, replication, accumulation of knowledge, and, importantly, it makes participating in the scientific endeavor more inclusive. 
-Linguistics, in general, does not engage in open science practices [@bochynska2023reproducible], including sharing data. 
-While linguistics does face legitimate, field-specific challenges, ultimately the benefits of open data outnumber these challenges, and researchers should take the stance to share what is ethically reasonable. 
+According to some accounts, linguistics, in general, does not engage in open science practices, including sharing data [See @bochynska2023reproducible], though others characterize its participation in different terms. 
+For instance, as stated in @berez-kroeker2018 "Practitioners in different subfields 'do transparency' differently, and these practices could serve as models for an eventual amalgamated standard" (p. 9).
+While linguistics does face legitimate, field-specific challenges related to non-WEIRD communities, ultimately, the benefits of open data outnumber many of these challenges. 
+Researchers should take the stance to share what is reasonable and ethically responsible all the while holding at the forefront the priorities of the individuals from which the data are derived, especially regarding marginalized communities. 
 
 
 # Reproducible code/projects and literate programming
 
-As we have seen, reproducibility is now a crucial aspect of any scientific study. 
+Having seen the consequences from the reproducibility crisis in other fields, reproducibility must be a crucial aspect of any scientific study. 
 Researchers must be able to provide a clear and transparent account of their findings, including the methods used to obtain them. 
 Reproducibility can help to ensure that research results are valid, reliable, and can be used by others to build on existing knowledge. 
 In this section, we explore the importance of reproducibility, what we know about it in the field of linguistics, and how researchers can make their code and projects more reproducible.
 
 In general, reproducibility helps to increase the credibility of research findings and allows other researchers to verify and build on existing work. 
-At worst, a lack of reproducibility can lead to irreproducible results and wasted resources. 
-This can have serious implications for public health and policy decisions based on research findings.
-In order to ensure reproducibility, it is necessary to be transparent about the methods used in research. 
-This includes not only the data collection and analysis methods but also the code used to conduct the analysis. 
+A lack of reproducibility can lead to findings that cannot be replicated, resulting in wasted resources, and, conceivably, downstream impacts on public health and policy decisions that are often grounded in funded research. 
+For these reasons, among others, transparency in research methods are essential to ensure reproducibility, which includes not only the data collection and analysis methods, but also the code used to conduct the analysis.
+In linguistics there is increasing awareness of the importance of reproducibility and how a lack thereof could potentially impede advancements in linguistic theory and theories of language acquisition, in addition to having implications for education and language policy decisions based on research findings.
+As a consequence, many investigators are showing heightened interest in safeguarding the reproducibility of their research.
 
-In linguistics there is increasing awareness of the importance of reproducibility, and many researchers are beginning to take steps to improve the reproducibility of their research.
-There are several steps that researchers can take to make their code and projects more reproducible. 
-One approach is to create reports that document the research process by including descriptions of the data, the methods used to analyze the data, and the results.  
+For quantitative research, there are several steps that researchers can take to make their code and projects more reproducible. 
+One approach is to create reports that document the research process by including descriptions of the data, the methods used to analyze the data, and the results. 
 This documentation can then be made publicly available and used by third parties to retrace the steps to reproduce the research findings. 
 While better than nothing at all, a more complete approach includes the analysis code in the same document in which the very manuscript is written. 
 This integration of analysis code and prose into a single, dynamic document is known as literate programming [@knuth1984literate; @knuth1992]. 
 Under the hood, a series of macros and functions are used to tangle the code and prose of the document into a separate file, usually a word document or a pdf, which can then be submitted for publication. 
 Literate programming reduces the likelihood of copy and paste errors that often occur when passing the results of a statistical analysis from the analysis software to the word processing program. 
 If the analysis changes in any way, e.g., more data is included, a different analytic strategy is applied, etc., the document is retangled to update the output file. 
-Currently there are several implementations of literate programming for research purposes, the most common of which are R markdown files (Rmd) and Quarto markdown files (qmd). 
-These formats use the R package `knitr` [@knitr2014; @knitr2015; @knitr2023] to tangle (also "knit" or "render") the output file. 
-In fact, the present manuscript was generated using literate programming and is available for download here: <https://osf.io/bsu2q/>.
+Currently there are several implementations of literate programming for research purposes, the most common of which are RMarkdown files (.Rmd) Quarto markdown files (.qmd), and Jupyter notebooks (.ipynb). 
+In the case of the former two, RMarkdown and Quarto, the R package `knitr` [@knitr2015; @knitr2023] tangles (also "knit" or "render") the output file. 
+Jupyter notebooks require a front-end web page and a back-end kernel. 
+The present manuscript was generated using literate programming via Quarto and is available for download on the Open Science Framework: <https://osf.io/bsu2q/?view_only=68d1e41b327f4a28a9fcd0fc6537ecaf>.
 
 While the implementation of literate programming into a research workflow is ideal, the gold standard is to use literate, dynamic documents in conjunction with reproducible projects. 
 These projects include all of the data, code, and documentation necessary to reproduce the research findings, not only in a single report, but rather in many reports and/or presentations, simultaneously. 
 This approach makes it easier for others to reproduce research findings and build on previous work because it obviates the complications involved with user-specific file paths and differing operating systems. 
 Ideally, if the project works on one user's computer, it should work on any computer running the same software. 
-This allows a researcher to download an entire project and reproduce the analyses and reports at the click of a button. 
+In this sense, any researcher could theoretically download an entire project and reproduce the analyses and reports at the click of a button. 
 A popular choice for reproducible projects is the open source software Posit (formerly RStudio), which utilizes `.Rproj` files called RStudio projects. 
-Examples of completed reproducible projects are available to the interested reader here: <https://osf.io/un45x/> and <https://osf.io/cp9bs/>.
+Posit has recently released a new integrated development environment (IDE) called Positron that also works at the project-level, but has the added benefit of being relatively language-neutral. 
+That is to say, one can use R, Python, Julia, Stan, and a number of other programming languages within a single IDE. 
+Examples of completed reproducible projects are available to the interested reader here: <https://osf.io/un45x/> and <https://osf.io/cp9bs/>. 
+Additionally, the project files of the present work, including data, code, and markdown files, are publicly available on the OSF: <https://osf.io/bsu2q/?view_only=68d1e41b327f4a28a9fcd0fc6537ecaf>. 
 
 Exciting, new technology that facilitates open science is coming out at a rapid pace. 
 This is excellent news for anybody interested in learning the new tools, but also creates other issues, particularly with regard to outdated software. 
 Dependency management tools like `renv` [@renv2023] and `targets` [@targets2021] can be helpful in future-proofing projects and ensuring reproducibility. 
 These tools help to manage the dependencies that are necessary to run code by providing specific versions of the software used originally by the researchers.
-Computational reproducibility platforms like Binder and Code Ocean can also be used to create virtual environments in which projects can be reproduced online. 
-Thus, these platforms allow researchers to share their code and data in ways that can be easily replicated by anybody with an internet connection.
+Computational reproducibility platforms like Binder, Code Ocean, and Nix can also be used to create instances of virtual environments in which projects can be reproduced online. 
+Thus, these platforms allow researchers to share their code and data in ways that can be easily reproduced by anybody with an internet connection. 
+As an example, the present project is also available online in a stable Code Ocean container that captures the original computational environment: <LINK TO BE PROVIDED AFTER PEER REVIEW>. 
+The interested reader is encouraged to re-run our code and re-render our files to further their understanding of how computational reproducibility platforms work in conjunction with literate programming.
 
 At this juncture it is important to note that there is no way to completely future-proof code or projects. 
 Researchers must continually strive to maintain the reproducibility of their work. 
-This includes updating code and documentation as needed and testing projects on different operating systems to ensure that it can be run in different environments.
+This may imply updating code and documentation as needed, and, where feasible, testing projects on different operating systems to ensure that they can be run in different environments.
 
 Summarizing, reproducibility is a crucial aspect of scientific research. 
 It helps to ensure that research findings are valid, reliable, and can be used by others to build on existing knowledge. 
@@ -335,25 +464,154 @@ These innovations, preregistrations and registered reports, were designed with t
 
 ## Preregistration
 
-A preregistration is a time-stamped document that provides comprehensive detail about a study, including, but not limited to, research questions, hypotheses, methodologies, and analytic strategies. 
+```{r}
+#| label: pr-setup
+#| eval: false
+
+#
+# note: this requires an internet connection and the google chrome browser
+#       in order to reproduce the scraping process
+
+# Get preregistration data from the OSF: 
+prereg_url <- "https://osf.io/search?resourceType=Registration"
+
+# Initiate realtime session 
+pr_sess <- read_html_live(prereg_url)
+
+# Open google chrome and load the website
+pr_sess$view()
+
+# Toggle 'Date created' dropdown menu to populate data in margin
+pr_sess$click("[data-test-filter-facet-toggle='Date created']")
+
+# Scrape table for number of preregistrations by year
+pr_sess |> 
+  html_elements(css = "._facet-value_13c61c") |>
+  html_text2() |> 
+  as_tibble() |> 
+  separate(col = "value", into = c("year", "count"), sep = " ") |>
+  mutate_all(as.double) |> 
+  arrange(year) |> 
+  mutate(cumsum = cumsum(count)) |> 
+  write_csv(here("data", "tidy", glue("{Sys.Date()}_preregistrations_osf.csv")))
+```
+
+
+
+```{r}
+#| label: pr-plot-prep
+
+# Load pr data
+pr_versions <- dir_ls(
+  here("data", "tidy"), 
+  regexp = "preregistrations_osf.csv"
+  ) |> 
+  as_tibble() 
+
+# Find most up to date version
+pr_dat <- read_csv(pull(pr_versions[nrow(pr_versions), 1]))
+
+#
+# Generate left panel of PR figure, 'pr1'
+#
+
+pr1 <- pr_dat |> 
+  ggplot() + 
+  aes(x = year, y = count) + 
+  geom_segment(
+    aes(x = year, xend = year, y = -1000, yend = count), 
+    color = "#cc0033", linewidth = 4.5, show.legend = F, lineend = "round"
+  ) + 
+  scale_x_continuous(breaks = seq(2011, 2024, 1)) + 
+  scale_y_continuous(
+    breaks = seq(0, 35000, 5000), 
+    labels = glue("{seq(0, 35, 5)}k")
+  ) + 
+  coord_cartesian(ylim = c(0, 35000), xlim = c(2010, 2025), expand = F) + 
+  labs(y = "Counts", x = NULL) + 
+  theme_clean(base_family = "Palatino", base_size = 13) + 
+  theme(axis.text.x = element_text(size = 9, angle = 45, hjust = 1))
+
+#
+# Generate right panel of PR figure, 'pr2'
+#
+
+# Get total number of preregistrations
+n_pr_2024 <- max(pr_dat$cumsum)
+
+# Create tibble for labeling 'pr2' figure
+pr_max <- tibble(
+  year = 2021, 
+  cumsum = 180000, 
+  text = glue("{formatC(n_pr_2024, format = 'd', big.mark = ',')} preregistrations\non OSF since 2011")
+)
+
+# Create tibble for 'pr2' arrow
+pr_arrow <- tibble(
+  year = 2021.5, 
+  cumsum = 185000, 
+  xend = 2023.75, 
+  yend = n_pr_2024 + 5000
+)
+
+# Make 'pr2'
+pr2 <- pr_dat |> 
+  ggplot() + 
+  aes(x = year, y = cumsum) + 
+  geom_text(
+    data = pr_max, 
+    aes(x = year, y = cumsum, label = text), 
+    hjust = 1, size = 3.5
+  ) + 
+  geom_line() + 
+  geom_point(
+    color = "white", fill = "#cc0033", 
+    size = 4, pch = 21, stroke = 1
+  ) + 
+  geom_curve(
+    data = pr_arrow, 
+    aes(x = year, y = cumsum, xend = xend, yend = yend),
+    arrow = arrow(
+      length = unit(0.025, "npc"), 
+      type = "closed"
+    ),
+    curvature = -0.3, lineend = "round", 
+    colour = "#cc0033", linewidth = 0.75, angle = 90
+  ) + 
+  scale_x_continuous(breaks = seq(2011, 2024, 1)) + 
+  scale_y_continuous(
+    breaks = seq(0, 210000, 30000), 
+    labels = glue("{seq(0, 210, 30)}k")
+  ) + 
+  coord_cartesian(ylim = c(0, 210000), xlim = c(2011, 2024)) + 
+  labs(y = "Cumulative counts", x = NULL) + 
+  theme_clean(base_family = "Palatino", base_size = 13) + 
+  theme(axis.text.x = element_text(size = 9, angle = 45, hjust = 1))
+```
+
+A preregistration is a time-stamped document that provides comprehensive detail about a study, including, but not limited to, research questions, hypotheses, methodologies, and analytic strategies [@mellor2018]. 
 Preregistrations are written prior to data collection and do not undergo peer review.
 The depth of content detail within a preregistration spans a spectrum: in the simplest case, a preregistration can comprise merely a hypothesis or perhaps a brief description of the methods; on the other extreme, a detailed preregistration can include code, power analyses, participant exclusion criteria and beyond. 
 In this section, we provide information regarding the various components of a preregistration, centering on their advantageous impact on linguistic research.
 Specifically, we focus on *who* might want to consider preregistrations, *why* they might want to do so, *what* content they can include, and *how* they can complete a preregistration for a linguistics research project.
 
-Linguistic research is multifaceted and spans diverse areas such as corpus analysis, conversation/discourse analysis, experimental research, and more. 
-However, as highlighted by @roettger2021preregistration, researchers are human and humans have evolved to filter the world in irrational ways, which can lead to QRPs and other problems that may affect the replicability of published research. 
+Linguistic research is multifaceted and spans diverse areas such as phonetics, phonology, syntax, morphology, sociolinguistics, natural language processing, and conversation/discourse analysis, to name just a few. 
+These areas range from purely theoretical to quantitative and experimental, with many falling somewhere in between.
+Importantly, as highlighted by @roettger2021preregistration, researchers are human and humans have evolved to filter the world in irrational ways, which can lead to QRPs and other problems that may affect the replicability of published research. 
 Preregistration emerged as a powerful instrument empowering linguists to bolster the trustworthiness and credibility of their inquiries by establishing a systematic and predefined methodology. 
 We believe the practice of preregistration extends its benefits to researchers at all levels, including students and ECRs, senior academics, and professionals alike.
 
-Researchers face vital decisions while engaging in research, with inherent flexibility involved in the process of designing and conducting experiments, as well as analyzing the results [@simmons2011false]. 
-This type of flexibility, termed "researcher degrees of freedom", can have serious down-stream consequences in quantitative research, particularly in linguistics [e.g., @msa].
-For instance, a researcher studying lexical stress could concentrate on distinct acoustic cues typically associated with stress, i.e., pitch, duration, and intensity. 
+Researchers face vital decisions while engaging in research, with inherent flexibility involved in the process of designing and carrying out projects, as well as in the analysis of the data and interpretation of the results [@simmons2011false]. 
+This type of flexibility, termed "researcher degrees of freedom", can have serious down-stream consequences in quantitative research, particularly in linguistics.
+For instance, @msa provided the same speech-production data set to different research teams and asked them to answer the same research question. 
+They found substantial variability in both the acoustic analyses and the analytic strategies, neither of which could be explained by analysts' prior beliefs, expertise, or the perceived quality of their analyses. 
+Crucially, these decisions, both acoustic and analytic, impacted the teams' answers to the research question. 
+To provide a simple example, a researcher studying lexical stress could concentrate on distinct acoustic cues typically associated with stress, i.e., pitch, duration, and intensity. 
 Beyond selecting acoustic cues to measure, she must also select a domain for these measurements, such as the mid-point of stressed/unstressed syllables or an average value over the entirety of the syllable.
-These choices wield significant influence on subsequent outcomes. 
-Preregistration serves the purpose of meticulously documenting these choices *a priori*, thus acting as a deterrent against QRPs, like HARKing or p-hacking. 
+Choices such as these, i.e., the researcher degrees of freedom, can wield significant influence on subsequent outcomes. 
+Preregistration serves the purpose of meticulously documenting these choices *a priori*, thus acting as a deterrent against QRPs, like HARKing or p-hacking [@wicherts2016]. 
 This is because the researcher establishes what decisions will be made, such as measurement choices and analytic strategies, before data collection commences.
-A benefit of including a high level of specificity in the preregistration is that is forces researchers to consider facets of their study that might usually be deferred to a later stage, e.g., specific statistical tests.  
+A benefit of including a high level of specificity in the preregistration is that is forces researchers to consider facets of their study that might usually be deferred to a later stage, e.g., specific statistical tests. 
 This proactive approach demands more initial time investment from the researcher, but also increases the likelihood of uncovering crucial flaws in the study design.
 
 The scope of preregistration extends to any facet of research deemed worthy of temporal documentation preceding the initiation of the study. 
@@ -362,33 +620,142 @@ The specific elements that will comprise a preregistration can be considerably d
 Consider, for instance, a psycholinguist conducting a self-paced reading study. 
 In this context, the focus of the preregistration might include the formulation of hypotheses, as well as a complete description of the experimental paradigm. 
 Additionally, the researcher may include a characterization of participant demographics, recruitment strategies, sample size considerations, independent variable manipulations, data transformations, and analytic strategies to test hypotheses. 
-Importantly, not all of the aforementioned components are equally prioritized in all preregistrations.
+Importantly, not all of the aforementioned components are equally prioritized in all preregistrations. 
+In sum, one can preregister any aspect of their research that they deem worthy of documenting *a priori*. 
 
-It is important to acknowledge that incorporating the entirety of these components into a preregistration represents a formidable challenge, as it front loads large portions of work that often take place after a study has begun, e.g., determining sample size, statistical models, etc. 
+It is important to acknowledge that in many cases incorporating the entirety of these components into a preregistration represents a formidable challenge, as it front loads large portions of work that often take place after a study has begun, e.g., determining sample size, statistical models, etc. 
 In such instances, researchers are encouraged to commence with elements they perceive as most valuable to their study. 
 Many concerns about preregistration revolve around the potential burden of 'extra work'. 
 Conversely, preregistration is intended to streamline the workflow, fostering efficiency both in the short term and the long run, as it provides the researcher with complete control over the level of detail she chooses to include. 
 The depth of preregistration directly correlates with the effort invested; the more comprehensive the preregistration, the greater the initial workload, leading to reduced effort in subsequent stages.
-<!-- @fig-pr-detail summarizes some aspects of research projects that are often preregistered. -->
-We provide examples of preregistrations at the following links: <https://osf.io/nprgz> and <https://osf.io/qvjzy>.
 
-<!--
-```{dot}
-//| label: fig-pr-detail
-//| fig-cap: "Select levels of detail as suggestions to help gauge the extent of information to incorporate into a preregistration. The shading indicates the degree of detail; darker shades imply more exhaustive information (thus requiring more upfront work)"
-//| file: ./figs/pr-detail/pr-detail.dot
-//| eval: false
+The Open Science Framework allows researchers to preregister a study.^[See also <https://aspredicted.org>.]
+Since its inception, the amount of preregistrations has grown each year (See @fig-pr, left panel) and the cumulative number of registrations totals over `r prettyNum(n_pr_2024, big.mark = ",")` at the time of writing this text (See @fig-pr, right panel). 
+We provide useful examples of preregistrations at the following links: <https://osf.io/nprgz> and <https://osf.io/qvjzy>.
+
+```{r}
+#| label: fig-pr
+#| fig-asp: 0.45
+#| fig-width: 9
+#| fig-path: "./figs/preregistration/"
+#| fig-cap: "Preregistrations on the Open Science Framework. The left panel plots pregistrations as a function of year. The right panel plots cumulative preregistrations since 2011. Data scraped from <https://osf.io/search> on 12-12-2024."
+
+# Generate pr plot by combining 'pr1' and 'pr2'
+pr1 + pr2
 ```
--->
+
 
 ## Registered reports
 
-The reproducibility crisis has drawn attention to the shortcomings of the traditional model of publishing scientific research. In the current model, researchers generate hypotheses, design studies, collect data, analyze data, interpret results, and submit their findings for publication. However, this model has been criticized for lending itself to QRPs, such as p-hacking and harking, which can result in publication bias.
+```{r}
+#| label: get-rr-data
+#| eval: false
+
+# Data downloaded from: 
+# https://docs.google.com/spreadsheets/d/1D4_k-8C_UENTRtbPzXfhjEyu3BfLxdOsn9j-otrO870/edit#gid=0
+# Today's date
+file_name_raw  <- glue("{Sys.Date()}_registered_reports_raw.csv")
+file_name_raw2 <- glue("{Sys.Date()}_registered_reports2_raw.csv")
+file_name_tidy <- glue("{Sys.Date()}_registered_reports.csv")
+
+# Read in osf google sheet and save as raw csv
+read_sheet("https://docs.google.com/spreadsheets/d/1D4_k-8C_UENTRtbPzXfhjEyu3BfLxdOsn9j-otrO870/edit#gid=0") |> 
+  write_csv(here("data", "raw", file_name_raw))
+
+# Import csv and tidy
+#  - remove empty rows
+#  - replace checkmarks with '1'
+#  - search for journals with 'ling' or 'lang' in title
+rr_dat <- read_csv(
+  file = here("data", "raw", file_name_raw), 
+  skip = 1
+  ) |>
+  filter(!is.na(Journal)) |> 
+  clean_names() |>
+  mutate(across(everything(), ~ str_replace(.x, "✓", "1"))) |> 
+  mutate(is_ling = if_else(str_detect(journal, "ling|Ling|lang|Lang"), 1, 0))
+
+# Store OSF website section on RRs
+osf_url <- "https://www.cos.io/initiatives/registered-reports"
+
+# Scrape RR table for additional journals
+rr_updated <- osf_url |> 
+  read_html() |> 
+  html_elements(css = "td:nth-child(1)") |>
+  html_text2() |> 
+  as_tibble() |> 
+  transmute(
+    journal = value, 
+    is_ling = if_else(str_detect(value, "ling|Ling|lang|Lang"), 1, 0)
+  ) |> 
+  write_csv(here("data", "raw", file_name_raw2))
+
+# Join with google sheet data for complete set
+# Save as tidy csv
+rr <- left_join(rr_updated, rr_dat, by = c("journal", "is_ling")) |> 
+  write_csv(here("data", "tidy", file_name_tidy))
+```
+
+```{r}
+#| label: rr-setup
+# Find most up to date version
+versions <- dir_ls(here("data", "tidy"), regexp = "osf.csv", invert = T) |> 
+  as_tibble() 
+
+# Load data
+rr <- read_csv(pull(versions[nrow(versions), 1]))
+
+# Number of journals offering RR in 2019
+n_rr_2019 <- 156
+
+# Number of ling/lang journals offering RR in 2024
+n_rr_2024 <- rr |> 
+  group_by(is_ling) |>
+  count()
+
+# Percent increase in journals offering RR since 2019
+rr_perc_increase <- round((n_rr_2024$n |> sum() - n_rr_2019) / n_rr_2019 * 100)
+
+# n of permanent RRs
+n_permanent <- rr |> 
+  filter(is_ling == 1, x3_permanence_of_adoption == "Indefinite") |> 
+  nrow()
+
+# n of replication RRs
+n_replications <- rr |> 
+  filter(is_ling == 1, x5_offered_for_replication_studies == "1") |> 
+  nrow()
+
+# n of meta analysis RRs
+n_ma <- rr |> 
+  filter(is_ling == 1, x6_offered_for_meta_analysis == "1") |> 
+  nrow()
+
+# which journal for meta-analyses?
+rr_ma_name <- rr |> 
+  filter(is_ling == 1, x6_offered_for_meta_analysis == "1") |> 
+  pull(journal)
+
+# n allowing RRs using existing data sets
+n_existing_data <- rr |> 
+  filter(is_ling == 1, x7_offered_for_analyses_of_existing_data_sets == "1") |> 
+  nrow()
+
+# n of RRs requiring public data deposition
+n_data_dep <- rr |> 
+  filter(is_ling == 1, x12_requires_public_data_deposition == "1") |> 
+  nrow()
+```
+
+The reproducibility crisis has drawn attention to the shortcomings of the traditional model of publishing scientific research. 
+In the current model, researchers generate hypotheses, design studies, collect data, analyze data, interpret results, and submit their findings for publication. 
+However, this model has been criticized for lending itself to QRPs, such as p-hacking and HARKing, which can result in publication bias.
 
 To address these issues, researchers have attempted various reforms, such as meta-analysis and preregistration. 
 Meta-analysis is a statistical technique that combines the results of multiple studies to increase the power of analysis. 
 Preregistration, as we have seen, involves publicly registering a study's design and methods before collecting data, to mitigate QRPs.
-Registered reports (RRs) represent a new publication model that conceptually combines preregistration with peer review. 
+Registered reports (RRs) represent a new publication model that conceptually combines preregistration with peer review [@nosek2014]. 
+Preregistration is often confused with RRs, but they differ in that preregistration is a separate step that occurs before the traditional publishing pipeline, whereas RR is integrated into the publishing process. 
 In this model, researchers submit a detailed proposal of their study, including their hypotheses, methods, and analyses, for review before data collection. 
 If the proposal is accepted, the study is guaranteed publication, regardless of the results. 
 This incentivizes rigorous methodology and reduces QRPs, as researchers cannot manipulate their analyses to obtain significant results.
@@ -397,22 +764,79 @@ This incentivizes rigorous methodology and reduces QRPs, as researchers cannot m
 
 ```{r}
 #| label: fig-dissemination-cycle
-#| fig-cap: Flow chart of the standard publication model and registered reports.
+#| fig-asp: 1
+#| fig-cap: A comparison flow chart of the standard publication model and registered reports.
 knitr::include_graphics(
   here("figs", "dissemination-cycle", "fig-dissemination-cycle.png")
-  )
+)
 ```
 
+<!--
 ```{mermaid fig-dissemination-cycle-raw}
 %%| fig-width: 6.5
 %%| fig-height: 4.5
 %%| eval: false
 %%| file: ./figs/dissemination-cycle/fig-dissemination-cycle.mmd
 ```
-
+-->
 
 RRs were first introduced in 2013 by the Center for Open Science (COS), and have since been adopted by many journals across various fields, including psychology, neuroscience, and medicine.
-Preregistration is often confused with RR, but they differ in that preregistration is a separate step that occurs before the traditional publishing pipeline, whereas RR is integrated into the publishing process. 
+In 2019, there were approximately `r n_rr_2019` journals offering the option to submit a registered report. 
+This number has jumped to `r nrow(rr)` at the time of writing this manuscript, an increase of `r rr_perc_increase`%.
+Of those `r nrow(rr)`, only `r n_rr_2024[2, 2]` are journals related to language or linguistics. 
+@tbl-rr lists the language/linguistics journals along with information regarding relevant restrictions. 
+These data are freely available on the OSF website at <https://www.cos.io/initiatives/registered-reports>. 
+Empty cells in @tbl-rr indicate missing data and TBA implies that the relevant parameter is 'to be announced'. 
+
+```{r}
+#| label: tbl-rr
+#| tbl-cap: Journals related to 'language' or 'linguistics' that include registered reports as a possible article submission type. The data were retrieved from the Open Science Framework on 12-14-2024. The complete list of journals is freely available at <https://www.cos.io/initiatives/registered-reports>. Empty cells indicate missing/unavailable data and TBA implies that a pending decision is 'to be announced'.
+
+if(F) {
+  rr |> 
+    filter(is_ling == 1) |> 
+    select(
+      Journal = journal, 
+      Permanence = x3_permanence_of_adoption, 
+      `Permits replication studies` = x5_offered_for_replication_studies, 
+      `Permits meta-analytic studies` = x6_offered_for_meta_analysis, 
+      `Permits use of existing data` = x7_offered_for_analyses_of_existing_data_sets, 
+      `Requires data deposition` = x12_requires_public_data_deposition
+    ) |> 
+    mutate(
+      `Permits replication studies` = case_when(
+        `Permits replication studies` == "1" ~ "✓", 
+        `Permits replication studies` == "NA" ~ " ", 
+        `Permits replication studies` == "TBA" ~  "TBA" 
+      ), 
+      `Permits meta-analytic studies` = case_when(
+        `Permits meta-analytic studies` == "1" ~ "✓", 
+        `Permits meta-analytic studies` == "NA" ~ " ", 
+        `Permits meta-analytic studies` == "TBA" ~  "TBA" 
+      ), 
+      `Permits use of existing data` = case_when(
+        `Permits use of existing data` == "1" ~ "✓", 
+        `Permits use of existing data` == "NA" ~ " ", 
+        `Permits use of existing data` == "TBA" ~  "TBA" 
+      ), 
+      `Requires data deposition` = case_when(
+        `Requires data deposition` == "1" ~ "✓", 
+        `Requires data deposition` == "NA" ~ " ", 
+        `Requires data deposition` == "TBA" ~  "TBA" 
+      )
+    ) |> 
+    write_csv(here("tables", "rr_journals.csv"))
+}
+
+read_csv(here("tables", "rr_journals.csv")) |>
+  mutate(across(everything(), \(x) replace_na(x, " "))) |>
+  knitr::kable()
+```
+
+The majority of the listed journals plan to offer RRs as a possible submission option indefinitely (n = `r n_permanent`), as opposed to only for special issues or during a trial period. 
+Likewise, `r numbers_to_words(n_replications)` of these 14 journals permit RRs as an option for replication studies.
+Only `r numbers_to_words(n_ma)` journal (`r rr_ma_name`) specifically states that it will consider RRs that plan to conduct meta-analyses, and `r numbers_to_words(n_existing_data)` of the journals consider RRs as an option for studies that propose analyzing data sets that already exist.
+Finally, for `r numbers_to_words(n_data_dep)` of the 14 journals, a public data deposition is a requirement for RRs.^[A public data deposition implies that the authors must publish 'all relevant data collected as part of the research within a freely accessible repository' [See @cos_rr_2024].]
 
 RRs cannot solve all the problems with the current model, but they can help reduce QRPs and increase transparency in scientific research.
 RRs are gaining popularity, but some fields, such as linguistics, have been slow to adopt them. 
@@ -425,28 +849,162 @@ As more journals adopt RRs, the scientific community can move towards a more rig
 
 # Pre-prints
 
+```{r}
+#| label: pp-setup
+#| eval: false
+
+#
+# note: this requires an internet connection and the google chrome browser
+#       in order to reproduce the scraping process
+
+# Scrape OSF table for number of preprints by year from this URL
+preprint_url <- "https://osf.io/search?resourceType=Preprint"
+
+# Initiate realtime session 
+pp_sess <- read_html_live(preprint_url)
+
+# Open google chrome and load the website
+pp_sess$view()
+
+# Toggle 'Date created' dropdown menu to populate data in margin
+pp_sess$click("[data-test-filter-facet-toggle='Date created']")
+
+# Scrape table for number of preprints registered by year
+pp_sess |> 
+  html_elements(css = "._facet-value_13c61c") |>
+  html_text2() |> 
+  as_tibble() |> 
+  separate(col = "value", into = c("year", "count"), sep = " ") |>
+  mutate_all(as.double) |> 
+  arrange(year) |> 
+  mutate(cumsum = cumsum(count)) |> 
+  write_csv(here("data", "tidy", glue("{Sys.Date()}_preprints_osf.csv")))
+```
+
+```{r}
+#| label: pp-plot-prep
+
+# Load pp data
+pp_versions <- dir_ls(here("data", "tidy"), regexp = "preprints_osf.csv") |> 
+  as_tibble() 
+
+# Find most up to date version
+pp_dat <- read_csv(pull(pp_versions[nrow(pp_versions), 1]))
+
+#
+# Generate left panel of PP figure, 'pp1'
+#
+
+pp1 <- pp_dat |> 
+  ggplot() + 
+  aes(x = year, y = count) + 
+  geom_segment(
+    aes(x = year, xend = year, y = -1000, yend = count), 
+    color = "#cc0033", linewidth = 4.5, show.legend = F, lineend = "round"
+  ) + 
+  scale_x_continuous(breaks = seq(2016, 2024, 1)) + 
+  scale_y_continuous(
+    breaks = seq(0, 30000, 5000), 
+    labels = glue("{seq(0, 30, 5)}k")
+  ) + 
+  coord_cartesian(ylim = c(0, 30000), xlim = c(2015, 2025), expand = F) + 
+  labs(y = "Counts", x = NULL) + 
+  theme_clean(base_family = "Palatino", base_size = 13) + 
+  theme(axis.text.x = element_text(size = 9, angle = 45, hjust = 1))
+
+#
+# Generate right panel of PP figure, 'pp2'
+#
+
+# Get total number of preprints
+n_pp_2024 <- max(pp_dat$cumsum)
+
+# Create tibble for labeling 'pp2' figure
+pp_max <- tibble(
+  year = 2021, 
+  cumsum = 150000, 
+  text = glue("{formatC(n_pp_2024, format = 'd', big.mark = ',')} preprints\non OSF since 2016")
+)
+
+# Create tibble for 'pp2' arrow
+pp_arrow <- tibble(
+  year = 2021.5, 
+  cumsum = 150000, 
+  xend = 2023.75, 
+  yend = n_pp_2024 + 5000
+)
+
+# Make 'pp2'
+pp2 <- pp_dat |> 
+  ggplot() + 
+  aes(x = year, y = cumsum) + 
+  geom_text(
+    data = pp_max, 
+    aes(x = year, y = cumsum, label = text), 
+    hjust = 1, size = 3.5
+  ) + 
+  geom_line() + 
+  geom_point(
+    color = "white", fill = "#cc0033", 
+    size = 4, pch = 21, stroke = 1
+  ) + 
+  geom_curve(
+    data = pp_arrow, 
+    aes(x = year, y = cumsum, xend = xend, yend = yend),
+    arrow = arrow(
+      length = unit(0.025, "npc"), 
+      type = "closed"
+    ),
+    curvature = -0.3, lineend = "round", 
+    colour = "#cc0033", linewidth = 0.75, angle = 90
+  ) + 
+  scale_x_continuous(breaks = seq(2016, 2024, 1)) + 
+  scale_y_continuous(
+    breaks = seq(0, 180000, 30000), 
+    labels = glue("{seq(0, 180, 30)}k")
+  ) + 
+  coord_cartesian(ylim = c(0, 180000), xlim = c(2016, 2024)) + 
+  labs(y = "Cumulative counts", x = NULL) + 
+  theme_clean(base_family = "Palatino", base_size = 13) + 
+  theme(axis.text.x = element_text(size = 9, angle = 45, hjust = 1))
+```
+
 A pre-print is a version of a research article, open and accessible, that has not yet undergone peer review but is publicly available online, through a pre-print server. 
 The general process consists of an initial screening process, followed by a posting of the manuscript on the preprint server within a few days of submission, bypassing peer review, and making the research findings freely accessible online [@puebla_polka_rieger_2021]. 
 Pre-prints allow researchers to share their findings with the scientific community and get feedback before their work is published in a traditional academic journal. 
 This process can speed up the dissemination of knowledge and facilitate collaboration between researchers. 
 While pre-prints accelerate the dissemination of research, it is vital to remember that this process does not always lead to journal publication. 
+<!--
 This can occur for several reasons, such as authors may choose not to pursue this route, or the research may be intended for different dissemination avenues [@ettinger_2022]. 
+-->
 Pre-prints have become increasingly popular in recent years, particularly in fields such as biology, physics, and computer science. 
-The adoption of pre-prints has been slower in some fields, such as the social sciences and humanities, but this is changing as more researchers become aware of the benefits of open science, and new national and regional platforms by open science advocates continue to emerge. 
+The adoption of pre-prints has been slower in some fields, such as the social sciences and humanities, but this is changing as more researchers become aware of the benefits of open science, and new national and regional platforms by open science advocates continue to emerge [@gawne_styles2022]. 
+@fig-pp illustrates the growth of pre-prints on the Open Science Framework since 2016. 
+
+```{r}
+#| label: fig-pp
+#| fig-asp: 0.45
+#| fig-width: 9
+#| fig-path: "./figs/preprints/"
+#| fig-cap: "Preprints on the Open Science Framework. The left panel plots preprints as a function of year. The right panel plots cumulative preprints since 2016. Data scraped from <https://osf.io/search> on 12-15-2024."
+
+# Generate pr plot by combining 'pr1' and 'pr2'
+pp1 + pp2
+```
 
 One of the primary benefits of pre-prints is that they allow researchers to share their findings quickly and easily. 
 This can be especially important in fields where research moves quickly, such as biology or computer science. 
 Pre-prints also allow researchers to receive feedback on their work from their peers, which can help to improve the quality of their research. 
-The provision of commentary and reviews of pre-prints yields benefits not only to the authors but also extends support to the authors, but this process also supports reviewers, journals and publishers, and the reader audience. 
-This inclusive process allows more researchers and reviewers to participate in discussing the research findings and reduces the need for repeated rounds of re-review or extensive revisions. 
+The provision of commentary and reviews of pre-prints yields benefits, not only to the authors, but also to reviewers, journals, publishers, and the readership. 
+This inclusive process allows more researchers and reviewers to participate in discussing the research findings and can reduce the need for repeated rounds of re-review or extensive revisions. 
 
 One of the most significant benefits of pre-prints is their "early view" and "open access" effect, which leads to more attention from readers, increasing visibility and development of the overall research [@biswas2023]. 
 Pre-prints are not just quick dissemination; they also promote transparency and reproducibility in scientific research. 
 Recognizing these benefits, more major publishers have either launched pre-print platforms or entered partnerships over the past 5-7 years, allowing pre-prints to be incorporated into the workflow [@puebla_polka_rieger_2021]. 
-By making research findings available to the public before peer-review, pre-prints not only improve the accuracy and reliability of research findings but also encourage collaborative efforts to identify potential errors, refine methodologies, and accelerate knowledge dissemination.
+By making research findings available to the public before peer-review, pre-prints not only improve the accuracy and reliability of research findings, but also encourage collaborative efforts to identify potential errors, refine methodologies, and accelerate knowledge dissemination.
 
 Another benefit of pre-prints is that they can help to reduce publication bias, a widespread challenge in traditional publishing. 
-Publication bias occurs when positive results are more likely to be published than negative results. 
+Publication bias occurs when positive results are more likely to be published than negative results [@matosin2014]. 
 This can skew the scientific literature and lead to a misunderstanding of the state of the research. 
 Pre-prints address this obstacle by openly sharing all research findings, regardless of outcome, creating a fairer and more accurate representation of the current scientific landscape of that field. 
 
@@ -461,10 +1019,19 @@ Moreover, data show that more senior researchers had more experience sharing thr
 Nonetheless, the data collected from these surveys showed positive attitudes and willingness to contribute to open science through the submission of pre-prints. 
 These findings encourage ECRs to submit their research for pre-prints to receive valuable feedback from established scholars in their field of study and to increase visibility of their research, particularly in rapidly evolving fields. 
 
-Researchers interested in making a pre-print publicly available can follow these simple steps. 
-First, select a pre-print server that aligns with the course of research. 
-Next, all pre-prints undergo a short screening, confirming author background, basic research content, and compliance with the ethical standards of the pre-print platform. 
-Once the pre-print passes the screening process, the content is made available online in open access format, encouraging others to comment and share. 
+Researchers interested in making a pre-print publicly available will find the process to be quite simple. 
+One must first select a pre-print server that aligns with the course of research (See @tbl-pp). 
+Next, the pre-print is likely to undergo a short screening, confirming author background, basic research content, and compliance with the ethical standards of the pre-print platform. 
+Once the pre-print passes the screening process, the content is made available online in open access format. 
+
+```{r}
+#| label: tbl-pp
+#| tbl-cap: Available pre-print servers related to language and/or linguistics.
+
+read_csv(here("tables", "preprint_servers.csv")) |> 
+  select(-`Database Size`) |>
+  knitr::kable()
+```
 
 The growing visibility of pre-prints, and their acceptance as valid research outputs by diverse stakeholders, including researchers, funders, and national institutions, has fueled collaborative research efforts and strengthened support for their presence in a variety of research disciplines. 
 Pre-prints play an important role in advancing the tenets of open science by promoting transparency, reproducibility, and collaboration. 
@@ -504,3 +1071,72 @@ The FOSIL project details many of the open, transparent practices described here
 
 ::: {#refs}
 :::
+
+
+{{< pagebreak >}}
+
+# Supplementary materials
+
+## Author contributions
+
+```{r}
+#| label: fig-credit
+#| fig-asp: 0.45
+#| fig-width: 7
+#| fig-path: "./figs/credit/"
+#| fig-cap: "Author contributions according to the CRediT author roles taxonomy. Contributions are indicated as being substantial (dark diamonds) or moderate (light diamonds)."
+
+# Create list of author contributions
+contributions <- list(
+  "001" = tibble(role = 1:14, weight = "high"),                # JVC
+  "002" = tibble(role = c(1, 13, 14), weight = "low"),         # GCD
+  "003" = tibble(                                              # IRA
+      role = c(1, 2, 7, 13, 14), 
+      weight = c("low", "low", "high", "low", "low")
+    ), 
+  "004" = tibble(                                              # JS
+      role = c(1, 7, 13, 14), 
+      weight = c("low", "high", "high", "low")
+    ), 
+  "005" = tibble(role = c(13, 14), weight = c("low", "high")), # SR
+  "006" = tibble(role = 13, weight = "low"),                   # AG
+  "007" = tibble(role = 13, weight = "low"),                   # AM
+  "008" = tibble(role = 13, weight = "low"),                   # KL
+  "009" = tibble(role = 13, weight = "low"),                   # JT
+  "010" = tibble(role = 13, weight = "low"),                   # RTG
+  "011" = tibble(role = 13, weight = "low"),                   # KT
+  "012" = tibble(role = 13, weight = "low"),                   # IC
+  "013" = tibble(role = c(1, 13, 14), weight = "low"),         # NR
+  "014" = tibble(role = c(1, 7, 13, 14), weight = "low"),      # KP
+  "015" = tibble(role = 14, weight = "high"),                  # MFR
+  "016" = tibble(role = c(1, 14), weight = c("low", "high"))   # RE
+  )
+
+# Generate contributors plot
+contributor(contributions, weight = TRUE, being = 0.2, end = 0.8)
+```
+
+```{r}
+#| label: print-contributors
+
+# Pass list to contributor DF and print in prose
+contributor_text <- contributor_df_builder(contributions) |>
+  contribution_to_text()
+```
+
+The authors made the following contributions: `r contributor_text`
+
+{{< pagebreak >}}
+
+## Reproducibility information
+
+### About this document
+
+This document was written in quarto (version 1.6): <https://quarto.org>.
+
+### Session info
+
+```{r, 'session-info', comment=""}
+devtools::session_info()$platform
+as.data.frame(devtools::package_info())[, c(3, 8)]
+```

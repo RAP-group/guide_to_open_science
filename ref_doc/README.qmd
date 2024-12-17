@@ -1,0 +1,17 @@
+---
+format: gfm
+---
+
+# ref_doc
+
+Last update: `r Sys.Date()`  
+
+This directory contains the `apa_style.docx` template used by `./main.qmd` to format the manuscript.
+
+```{r}
+#| label: dir
+#| echo: false
+
+fs::dir_tree(regexp = ".rmarkdown", invert = TRUE)
+```
+
