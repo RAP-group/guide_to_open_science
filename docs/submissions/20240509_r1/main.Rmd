@@ -28,7 +28,7 @@ library("here")
 
 Dear Dr. Volker Gast, 
 
-Thank you for taking the time to consider our manuscript _`r rmarkdown::metadata$title`_ (`r rmarkdown::metadata$manuscript`) for publication in _`r rmarkdown::metadata$journal`_. 
+Thank you for taking the time to consider our manuscript _`r rmarkdown::metadata$title`_ (LING.2023.0249) for publication in _`r rmarkdown::metadata$journal`_. 
 Our understanding is that we needed to consider the reviewers' comments and revise accordingly before the manuscript could be reevaluated for publication. 
 We noted three specific areas that were consistently highlighted by the reviewers as needing improvement: a 'superficial' treatment of the core practices, missing key references, and concrete examples related to the field of linguistics. 
 We have considered thoroughly the detailed feedback provided by all three reviewers and resubmit what we believe to be a much improved version of the manuscript. 

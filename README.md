@@ -9,7 +9,7 @@ Preprint: https://doi.org/10.31234/osf.io/spz4w
 FOSIL website: https://fosil-project.github.io  
 RStudio server instance via CodeOcean: <add link later>
 
-Last update: 2024-12-15
+Last update: 2024-12-17
 
 **Important info**
 
@@ -17,7 +17,7 @@ Last update: 2024-12-15
 - Format: APA
 - First submission: 2023-12-22
 - Round 1 reviews received: 2024-05-09
-- Second submission: 2024-12-16
+- Second submission: 2024-12-17
 
 ``` r
 fs::dir_tree()
@@ -36,15 +36,9 @@ fs::dir_tree()
     │   ├── README.md
     │   ├── README.qmd
     │   ├── raw
-    │   │   ├── 2024-11-15_registered_reports_raw.csv
-    │   │   ├── 2024-12-12_registered_reports_raw.csv
-    │   │   ├── 2024-12-13_registered_reports_raw.csv
     │   │   ├── 2024-12-14_registered_reports2_raw.csv
     │   │   └── 2024-12-14_registered_reports_raw.csv
     │   └── tidy
-    │       ├── 2024-11-15_registered_reports.csv
-    │       ├── 2024-12-12_registered_reports.csv
-    │       ├── 2024-12-13_registered_reports.csv
     │       ├── 2024-12-14_registered_reports.csv
     │       ├── 2024-12-15_preprints_osf.csv
     │       └── 2024-12-15_preregistrations_osf.csv
@@ -55,24 +49,38 @@ fs::dir_tree()
     │   │   ├── 20231222.docx
     │   │   ├── 20231222.pdf
     │   │   ├── 20231223.docx
-    │   │   └── 20231223.pdf
+    │   │   ├── 20231223.pdf
+    │   │   ├── 20241217.docx
+    │   │   └── 20241217.pdf
+    │   ├── proofs
+    │   │   └── LING.2023.0249.R1_Proof_hi.pdf
     │   └── submissions
     │       ├── 20231222_v1
     │       │   ├── fig-dissemination-cycle.png
     │       │   ├── fig-os-flow.png
     │       │   ├── main_document.pdf
     │       │   └── title_page.docx
-    │       └── 20240509_r1
-    │           ├── editor_comments.txt
-    │           ├── main.Rmd
-    │           ├── main.log
-    │           ├── main.pdf
-    │           ├── reviewer_1.Rmd
-    │           ├── reviewer_1.pdf
-    │           ├── reviewer_2.Rmd
-    │           ├── reviewer_2.pdf
-    │           ├── reviewer_3.Rmd
-    │           └── reviewer_3.txt
+    │       ├── 20240509_r1
+    │       │   ├── editor_comments.txt
+    │       │   ├── main.Rmd
+    │       │   ├── main.log
+    │       │   ├── main.pdf
+    │       │   ├── reviewer_1.Rmd
+    │       │   ├── reviewer_1.pdf
+    │       │   ├── reviewer_2.Rmd
+    │       │   ├── reviewer_2.pdf
+    │       │   ├── reviewer_3.Rmd
+    │       │   └── reviewer_3.txt
+    │       └── 20241217_v2
+    │           ├── author_response.pdf
+    │           ├── author_response_blind.pdf
+    │           ├── fig-credit-1.png
+    │           ├── fig-dissemination-cycle.png
+    │           ├── fig-os-flow.png
+    │           ├── fig-pp-1.png
+    │           ├── fig-pr-1.png
+    │           ├── main_document.docx
+    │           └── title_page.docx
     ├── figs
     │   ├── README.md
     │   ├── README.qmd
@@ -87,8 +95,7 @@ fs::dir_tree()
     │   ├── os-flow
     │   │   ├── fig-os-flow.mmd
     │   │   ├── fig-os-flow.png
-    │   │   ├── fig-os-flow_edit.png
-    │   │   └── fig-os-flow_edit.psd
+    │   │   └── fig-os-flow.psd
     │   ├── preprints
     │   │   ├── fig-pp-1.pdf
     │   │   └── fig-pp-1.png

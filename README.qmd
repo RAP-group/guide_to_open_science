@@ -20,7 +20,7 @@ Last update: `r Sys.Date()`
 - Format: APA
 - First submission: 2023-12-22
 - Round 1 reviews received: 2024-05-09
-- Second submission: 2024-12-16
+- Second submission: 2024-12-17
 
 ```{r}
 #| label: dir
