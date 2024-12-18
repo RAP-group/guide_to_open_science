@@ -9,8 +9,8 @@ author            :
     email: joseph.casillas@rutgers.edu
     orcid: 0000-0001-8735-9910
   - name: Gabriela Constantin-Dureci
-    affiliations: Rutgers University
-    email: gabriela.constantin.dureci@rutgers.edu
+    affiliations: Drexel University
+    email: gc824@drexel.edu
     orcid: 0000-0001-5737-5549
   - name: Iván Rascón Andreu
     affiliations: Rutgers University
