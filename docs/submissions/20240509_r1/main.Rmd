@@ -1,6 +1,6 @@
 ---
 title          : "Opening open science to all: Demystifying reproducibility and transparency practices in linguistic research"
-authors        : "Joseph V. Casillas, Gabriela Constantin-Dureci, Iván Rascón Andreu, Jiawei Shao, Stephanie A. Rodríguez, Adrija Gadamsetty, Alexandria Minetti, Krishita Laungani, John Thatcher, Rhode-Taina Gardere, Katherine Taveras, Isabelle Chang, Nicole Rodríguez, Meritxell Feliu Ribas & Kyle Parrish"
+authors        : "Joseph V. Casillas, Gabriela Constantin-Dureci, Iván Rascón Andreu, Jiawei Shao, Stephanie A. Rodríguez, Adrija Gadamsetty, Alexandria Minetti, Krishita Laungani, John Thatcher, Rhode-Taina Gardere, Katherine Taveras, Isabelle Chang, Nicole Rodríguez, Kyle Parrish, Meritxell Feliu Ribas, & Robert Esposito"
 journal        : "Linguistics: An Interdisciplinary Journal of the Language Sciences"
 manuscript-id  : "LING.2023.0249"
 manuscript-src : "headings"
@@ -30,7 +30,7 @@ Dear Dr. Volker Gast,
 
 Thank you for taking the time to consider our manuscript _`r rmarkdown::metadata$title`_ (`r rmarkdown::metadata$manuscript`) for publication in _`r rmarkdown::metadata$journal`_. 
 Our understanding is that we needed to consider the reviewers' comments and revise accordingly before the manuscript could be reevaluated for publication. 
-We noted X specific areas that were consistently highlighted by the reviewers as needing improvement: x, y, and z. 
+We noted three specific areas that were consistently highlighted by the reviewers as needing improvement: a 'superficial' treatment of the core practices, missing key references, and concrete examples related to the field of linguistics. 
 We have considered thoroughly the detailed feedback provided by all three reviewers and resubmit what we believe to be a much improved version of the manuscript. 
 In this letter we address the reviewers' concerns point-by-point. 
 Where feasible, we quote all revised text in this document, otherwise, we refer the reader to the relevant sections of the revised manuscript. 

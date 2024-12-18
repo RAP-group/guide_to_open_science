@@ -34,10 +34,11 @@ This acronym has been spelled out in the abstract of the revised manuscript.
 In the revised manuscript we have defined both terms, included references, and elaborated a bit more on the relationship between QRPs and incentive structures in academia. 
 
 > Researchers have pointed to questionable research practices (QRPs), such as p-hacking--knowingly manipulating an analysis until a significant p-value is obtained [See @head2015extent]--and HARKing--hypothesizing after the results are known [See @murphy2019harking]--, along with small sample sizes, poor theory, lack of transparency, misguided incentive structure in academia, etc., as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
-To wit, many of the aforementioned QRPs may be an unfortunate consequence of misaligned incentive structures in academia, where publication is the universal currency. 
+For instance, the aforementioned QRPs may be an unfortunate consequence of misaligned incentive structures in academia, where publication is the universal currency. 
 The pervasive pressure to publish likely leads many researchers to focus on quantity over quality. 
-Couple this with the difficulty of publishing negative or null results, and the result is a research landscape in which many fields suffer from publication bias and there is little to no incentive to prioritize time consuming open science practices. 
-Taking this into account, it is not hard to understand why QRPs might be perceived as a necessary evil by some.
+Couple this with the difficulty of publishing negative or null results, and the result is a research landscape in which many fields suffer from publication bias with little or no incentive to prioritize time consuming open science practices. 
+Taking this into account, it is not hard to understand why some researchers may turn to QRPs. 
+While it is difficult to quantify how prevalent QRPs are in a given field, in a survey of applied linguists, @isbell2022misconduct found that 94% reported having engaged in one more, and 17% admitted to having committed some form of fraud. 
 
 \Done
 
@@ -55,10 +56,14 @@ We agree that the challenges associated with increasing transparency vary across
 In response, we have rephrased the paragraph to acknowledge that while some researchers may face a learning curve or feelings of vulnerability when adopting new transparency practices, this is not universally the case. 
 The revised paragraph now reads as follows:
 
-> To wit, it often requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
+> One reason for the slow adoption in linguistics may be related to the fact that engaging in open science is no trivial feat. 
+On the contrary, it often requires learning new skills, thoughtful planning, as well as an openness and willingness to share materials, code, and data. 
 Many researchers need to implement new techniques with limited pedagogical resources and embrace alternative methods of disseminating their research, all of which can constitute a steep learning curve. 
 That being said, what engaging in open science ultimately entails is sure to be field-specific and vary accordingly. 
 In some disciplines, for instance, it may only involve a few of the practices we outline in the present work without the need for innovative methodologies. 
+Nonetheless, given how new open science practices are, it is reasonable to assume that current senior researchers were not trained in these innovative methodologies. 
+As a consequence, many early career researchers (ECR) find themselves at a crossroads in which they are forced to learn open science on their own, often without institutional support. 
+Ironically, there is also a growing expectation that ECRs implement these novel tools in order to be successful in their programs, on the job market, or to advance in their careers.
 
 \Done
 
@@ -120,7 +125,9 @@ The reviewer's point is duly noted.
 In the revised manuscript we have rephrased this sentence to make it more clear that we are referring to work on minority languages. 
 The sentence in question now reads as follows: 
 
-> Moreover, Bucholtz et al. (2023) note that considering a researcher's positionality may be especially important in linguistic research on certain language communities, such as indigenous communities, "[...] which relies on racially minoritized communities as sources of data yet lack adequate (if any) representation of those communities among faculty researchers" (p. 2).
+> The support and advocacy for the inclusion of positionality statements in research publications is increasing [@bucholtz2023researcher; @jafar2018positionality; @steltenpohl_video]. 
+@bucholtz2023researcher note that considering a researcher's positionality may be especially important in linguistic research on certain language communities, such as indigenous communities, "[...] which relies on racially minoritized communities as sources of data yet lack adequate (if any) representation of those communities among faculty researchers" (p. 2). 
+Nonetheless, others contest this practice. 
 
 \Done
 
@@ -220,10 +227,10 @@ We have added a reference to the aforementioned sentence [See @hardwicke2018popu
 In the revised manuscript we have expanded upon our discussion of the IRIS database and open science badges. 
 The relevant text is included below. 
 
-> Recent efforts have attempted to encourage researchers to make linguistic data open and accessible via servers. 
+> Researchers are increasingly encouraged to make linguistic data open and accessible via servers. 
 An illustrative example is the IRIS database (<https://www.iris-database.org>), a language sciences digital repository that is freely accessible and permits the up- and downloading of research instruments and materials.
 Additional efforts include open science badges--visual symbols offered by some journals (e.g., *Language Learning*, *Language and Speech*) on published articles. 
-These badges are awarded to researchers for adhering to certain open science principles, such sharing code and data or preregistering a study. 
+These badges are awarded to researchers for adhering to certain open science principles, such as sharing code, data, or preregistering a study. 
 In arguably more extreme cases, other journals have made data sharing a requirement for publication (e.g., *Applied Psycholinguistics*). 
 
 \Done
@@ -288,7 +295,7 @@ We agree with the reviewer's assessment and have toned down the message accordin
 In addition, we have added more references that highlight this assertion about the field. 
 The revised text is included below.
 
-> Open data are particularly important for the field of linguistics, for all of the aforementioned reasons, and also because some linguists have described the state of the field, as far as English-language publications are concerned, as being Western, Educated, Industrialized, Rich, and Democratic [WEIRD, see @bochynska2023reproducible; @nagle_baese-berk_amengual_casillas_2024; @faytak_wp-preprint].
+> Open materials are particularly important for the field of linguistics, for all of the aforementioned reasons, and also because some linguists have described the state of the field, as far as English-language publications are concerned, as being Western, Educated, Industrialized, Rich, and Democratic [WEIRD, see @bochynska2023reproducible; @nagle_baese-berk_amengual_casillas_2024; @faytak_wp-preprint].
 That is to say, the majority of linguistic research appears to be concentrated on specific languages, mainly Indo-Germanic, in overrepresented communities, by privileged scholars. 
 
 \Done
@@ -304,9 +311,9 @@ That is to say, the majority of linguistic research appears to be concentrated o
 We have tried to make this point more clear in the revised manuscript. 
 We include the relevant paragraph here for convenience. 
 
-> Open data are particularly important for the field of linguistics, for all of the aforementioned reasons, and also because some linguists have described the state of the field, as far as English-language publications are concerned, as being Western, Educated, Industrialized, Rich, and Democratic [WEIRD, see @bochynska2023reproducible; @nagle_baese-berk_amengual_casillas_2024; @faytak_wp-preprint].
+> Open materials are particularly important for the field of linguistics, for all of the aforementioned reasons, and also because some linguists have described the state of the field, as far as English-language publications are concerned, as being Western, Educated, Industrialized, Rich, and Democratic [WEIRD, see @bochynska2023reproducible; @nagle_baese-berk_amengual_casillas_2024; @faytak_wp-preprint].
 That is to say, the majority of linguistic research appears to be concentrated on specific languages, mainly Indo-Germanic, in overrepresented communities, by privileged scholars. 
-Making linguistic data accessible to all researchers can promote participation *in* and *with* underrepresented communities. 
+Making materials in linguistic research accessible to all researchers can promote participation *in* and *with* underrepresented communities. 
 Furthermore, it can increase the study of diverse and underreported languages by affording more researchers the opportunity to interact and learn from data that would otherwise not be available to them, which, in turn, can foster a more inclusive and comprehensive understanding of the global linguistic landscape. 
 
 \Done
@@ -391,10 +398,8 @@ derived data sets, synthetic data containing the same statistical properties can
 
 In the revised manuscript we have included more information regarding how the process works and provided links to code and an example tutorial. 
 
-> In more uncommon cases in which institutional policies do not permit the sharing of derived data sets, synthetic data containing the same statistical properties can be generated and shared freely [See @quintana2020].
-In short, the method consists of capturing the statistical properties of the original data set and using them to simulate new data that preserve the relationships between the variables of interest. 
-A tutorial on the method described in @quintana2020 is freely available on github (<https://github.com/elifesciences-publications/synthpop-primer>), and an online RStudio instance can be accessed at <https://mybinder.org/v2/gh/dsquintana/synthpop-primer/master?urlpath=rstudio>. 
-All relevant materials are available on the OSF: <https://osf.io/z524n/>.
+> In more uncommon cases in which institutional policies do not permit the sharing of derived data sets, synthetic data containing the same statistical properties can be generated and shared freely [See @quintana2020]. 
+In short, the method consists of capturing the statistical properties of the original data set and using them to simulate new data that preserve the relationships between the variables of interest. A tutorial on the method described in @quintana2020 is freely available on github (<https://github.com/elifesciences-publications/synthpop-primer>), and an online RStudio instance can be accessed at <https://mybinder.org/v2/gh/dsquintana/synthpop-primer/master?urlpath=rstudio>. All relevant materials are available on the OSF: <https://osf.io/z524n/>.
 
 \Done
 
@@ -427,11 +432,12 @@ For this reason we also have included links to templates any researcher could us
 In the revised manuscript there relevant text reads as follows: 
 
 > Another substantial hurdle that cannot be overlooked revolves around the fact that researchers must learn to use new technologies to participate in open, transparent research. 
-Making data open *and* accessible is not as simple as merely uploading a data file. 
+Making materials open *and* accessible is not as simple as merely uploading a data file. 
 Ideally, researchers should include relevant information to contextualize the data set at the project-level (i.e., a project-summary document), the data-level (i.e., a README file explaining the data set), and the variable-level (i.e., a data dictionary) [@lewis2024data]. 
-The inclusion of resources at these three levels is the optimal way for authors to provide the necessary context for an independent researcher to access and utilize the data set. 
-Unfortunately, most publicly available data do not adhere to this standard. 
+The inclusion of resources at these three levels is the optimal way for authors to provide the necessary context for an independent researcher to access and utilize their materials 
+Unfortunately, most publicly available materials do not adhere to this standard. 
 For this reason, we direct the interested reader to templates provided in @lewis2024data for documentation at the project-level (<https://osf.io/q6g8d>, <https://osf.io/d3pum>), data-level (<https://osf.io/tk4cb>), and variable-level (<https://osf.io/ynqcu>). 
+In addition, the reader is referred to the project, data, and variable level documentation of the present project, all of which are freely available on the OSF: <https://osf.io/bsu2q/?view_only=68d1e41b327f4a28a9fcd0fc6537ecaf>.
 
 \Done
 
@@ -480,7 +486,7 @@ Again, the reviewer's point is duly noted.
 We have reorganized and rewritten large portions of this section to include more field-specific challenges. 
 For the sake of convenience we highlight but one here and recommend a reread of the section in its entirety. 
 
-> Having stated all the above, it is necessary to recognize that linguistics faces a unique set of challenges with its multitude of subfields, each potentially working with a variety of data formats. 
+> Having stated all the above, it is necessary to recognize that linguistics faces a unique set of challenges with regard to data, as there are a multitude of subfields, each of which potentially works with a variety of data formats. 
 Due to such diversity, one must determine which aspects of open science are relevant to their data. 
 For example, a neurolinguistic study investigating event related potentials (ERPs) could share raw data for transparency, as well as preprocessed data with the code used to transform the raw data and a corresponding description for facilitation of reanalysis. 
 In another field, the creation of a corpus will benefit from open access and the use of standardized file formats; the analysis of a corpus will benefit from sharing the search queries, the analysis code, and a description of the analysis code.
@@ -499,7 +505,7 @@ At the heart of these challenges are ethical concerns that must be considered wi
 We have rephrased this sentence in the revised manuscript. 
 It now reads as follows: 
 
-> Having seen the consequences from the reproducibility crisis in other fields, reproducibility must be a crucial aspect of any scientific study.
+> Having seen the consequences from the reproducibility crisis in other fields, reproducibility must be a crucial aspect of any scientific study. 
 
 \Done
 
@@ -619,6 +625,7 @@ We have taken care to be more inclusive in our wording, and, in turn, more faith
 The revised text now reads as follows: 
 
 > Researchers face vital decisions while engaging in research, with inherent flexibility involved in the process of designing and carrying out projects, as well as in the analysis of the data and interpretation of the results [@simmons2011false]. 
+
 \Done
 
 
@@ -638,7 +645,7 @@ Crucially, these decisions, both acoustic and analytic, impacted the teams' answ
 To provide a simple example, a researcher studying lexical stress could concentrate on distinct acoustic cues typically associated with stress, i.e., pitch, duration, and intensity. 
 Beyond selecting acoustic cues to measure, she must also select a domain for these measurements, such as the mid-point of stressed/unstressed syllables or an average value over the entirety of the syllable.
 Choices such as these, i.e., the researcher degrees of freedom, can wield significant influence on subsequent outcomes. 
-Preregistration serves the purpose of meticulously documenting these choices *a priori*, thus acting as a deterrent against QRPs, like HARKing or p-hacking [@wicherts2016]. 
+Preregistration serves the purpose of meticulously documenting these choices *a priori*, thus acting as a deterrent against QRPs, like HARKing or p-hacking [@wicherts2016].  
 
 \Done
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.11)  17 DEC 2024 18:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.11)  17 DEC 2024 21:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -624,7 +624,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 ]
 
 [3]
-Underfull \vbox (badness 10000) detected at line 307
+Underfull \vbox (badness 10000) detected at line 302
  []
 
 
@@ -633,140 +633,140 @@ Underfull \vbox (badness 10000) detected at line 307
 
 [5]
 
-[6
+[6]
+
+[7
 
 ]
-<../../../figs/os-flow/fig-os-flow.png, id=261, 1516.66624pt x 807.51688pt>
+<../../../figs/os-flow/fig-os-flow.png, id=266, 1516.66624pt x 807.51688pt>
 File: ../../../figs/os-flow/fig-os-flow.png Graphic file (type png)
 <use ../../../figs/os-flow/fig-os-flow.png>
-Package pdftex.def Info: ../../../figs/os-flow/fig-os-flow.png  used on input line 416.
+Package pdftex.def Info: ../../../figs/os-flow/fig-os-flow.png  used on input line 427.
 (pdftex.def)             Requested size: 430.00462pt x 228.93716pt.
 
 
-[7]
+[8]
 
-[8 <../../../figs/os-flow/fig-os-flow.png>]
-
-[9]
+[9 <../../../figs/os-flow/fig-os-flow.png>]
 
 [10]
-Overfull \hbox (0.79643pt too wide) in paragraph at lines 577--579
+
+[11]
+Overfull \hbox (0.79643pt too wide) in paragraph at lines 590--592
 []\T1/ptm/b/n/10 (-20) ``Revisiting old data sets using innovative techniques can support or contradict past narrative conclusions
  []
 
 
-
-[11]
 
 [12]
 
 [13]
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 771--772
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 783--784
 []|\T1/ptm/m/n/10 (+20) Project man-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 771--772
+Underfull \hbox (badness 10000) in paragraph at lines 783--784
 \T1/ptm/m/n/10 (+20) age-ment and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 772--773
+Underfull \hbox (badness 10000) in paragraph at lines 784--785
 []|\T1/ptm/m/n/10 (+20) Project man-age-
  []
 
 
-Overfull \hbox (2.9679pt too wide) in paragraph at lines 772--773
+Overfull \hbox (2.9679pt too wide) in paragraph at lines 784--785
 \T1/ptm/m/n/10 (-20) ment/collaboration,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 773--774
+Underfull \hbox (badness 10000) in paragraph at lines 785--786
 []|\T1/ptm/m/n/10 (+20) Project man-age-
  []
 
 
-Overfull \hbox (2.9679pt too wide) in paragraph at lines 773--774
+Overfull \hbox (2.9679pt too wide) in paragraph at lines 785--786
 \T1/ptm/m/n/10 (-20) ment/collaboration,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 774--775
+Underfull \hbox (badness 10000) in paragraph at lines 786--787
 []|\T1/ptm/m/n/10 (+20) Project man-age-
  []
 
 
-Overfull \hbox (2.9679pt too wide) in paragraph at lines 774--775
+Overfull \hbox (2.9679pt too wide) in paragraph at lines 786--787
 \T1/ptm/m/n/10 (-20) ment/collaboration,
  []
 
 
-Underfull \hbox (badness 5607) in paragraph at lines 776--777
+Underfull \hbox (badness 5607) in paragraph at lines 788--789
 []|\T1/ptm/m/n/10 (+20) Sharing datasets
  []
 
 
 
-[15]
-Underfull \vbox (badness 10000) detected at line 839
- []
-
-
-
 [16]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 885.
+
+[17]
+
+[18]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 897.
 (/Users/casillas/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
-[17]
-Overfull \hbox (10.1173pt too wide) in paragraph at lines 911--913
+[19]
+Overfull \hbox (10.1173pt too wide) in paragraph at lines 923--925
 []\T1/ptm/b/n/10 (-20) ``Linguistic re-search is mul-ti-faceted and spans di-verse ar-eas such as cor-pus anal-y-sis, con-ver-sa-tion/discourse
  []
 
 
-
-[18]
-Overfull \hbox (3.29337pt too wide) in paragraph at lines 950--952
+Overfull \hbox (3.29337pt too wide) in paragraph at lines 963--965
 []\T1/ptm/m/n/10 (-20) We have in-cluded a de-scrip-tion of the Coretta et al. (2023) study in or-der to fa-cil-i-tate un-der-stand-ing/appreciating
  []
 
 
 
-[19]
-Overfull \hbox (0.98721pt too wide) in paragraph at lines 1009--1010
+[20]
+Overfull \hbox (0.98721pt too wide) in paragraph at lines 1022--1023
 []|\T1/ptm/m/n/8 (-20) https://web-archive.southampton.ac.uk/cogprints.org/| 
  []
 
 
-Overfull \hbox (0.99413pt too wide) in paragraph at lines 1015--1015
+Overfull \hbox (0.99413pt too wide) in paragraph at lines 1028--1028
 []|\T1/ptm/m/n/8 (-20) +140,000|  
  []
 
 
 
-[20]
-
 [21]
 
 [22]
 
-[23
+[23]
+
+[24
 
 ]
 
-[24]
-
 [25]
+
+[26]
+
+[27]
 
 Package caption Warning: Unused \captionsetup[table] on input line 26.
 See the caption package documentation for explanation.
 
 
 
-[26] (./main.aux)
+[28] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
@@ -775,18 +775,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8929024F35AB40A4AA2C2901EDE75013;2988.
  ) 
 Here is how much of TeX's memory you used:
- 17543 strings out of 475217
- 278786 string characters out of 5765320
- 712899 words of memory out of 5000000
- 39715 multiletter control sequences out of 15000+600000
- 606372 words of font info for 304 fonts, out of 8000000 for 9000
+ 17559 strings out of 475217
+ 279076 string characters out of 5765320
+ 714084 words of memory out of 5000000
+ 39719 multiletter control sequences out of 15000+600000
+ 606822 words of font info for 308 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 75i,8n,117p,1001b,605s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,117p,1001b,539s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/casillas/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (26 pages, 390528 bytes).
+Output written on main.pdf (28 pages, 398942 bytes).
 PDF statistics:
- 497 PDF objects out of 1000 (max. 8388607)
- 452 compressed objects within 5 object streams
- 113 named destinations out of 1000 (max. 500000)
+ 518 PDF objects out of 1000 (max. 8388607)
+ 471 compressed objects within 5 object streams
+ 119 named destinations out of 1000 (max. 500000)
  36798 words of extra memory for PDF output out of 42996 (max. 10000000)
 

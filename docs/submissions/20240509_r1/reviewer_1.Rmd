@@ -41,7 +41,6 @@ We view our contribution as additive in nature.
 
 
 
-
 :::reviewer
 The second weakness is that the eight steps outlined here are handled only superficially, and in some cases, in a way that can be potentially harmful. Each section could be a paper unto itself (and interesting special issue idea, perhaps?). Below I highlight a few of the major oversights in the sections.
 
@@ -65,32 +64,39 @@ As this entire section has been reorganized, we direct the reviewer to pages 7-1
 Regarding open data, we have expanded our discussion regarding marginalized communities. 
 We highlight here some of the changes, but also encourage the reviewer to consider the entirety of the revised section in context (see pages 10-14).
 
-> Having stated all the above, it is necessary to recognize that the field of linguistics faces unique challenges with regard to open data. 
+> 
+Having stated all the above, it is necessary to recognize that linguistics faces a unique set of challenges with regard to data, as there are a multitude of subfields, each of which potentially works with a variety of data formats. 
+Due to such diversity, one must determine which aspects of open science are relevant to their data. 
+For example, a neurolinguistic study investigating event related potentials (ERPs) could share raw data for transparency, as well as preprocessed data with the code used to transform the raw data and a corresponding description for facilitation of reanalysis. 
+In another field, the creation of a corpus will benefit from open access and the use of standardized file formats; the analysis of a corpus will benefit from sharing the search queries, the analysis code, and a description of the analysis code.
 At the heart of these challenges are ethical concerns that must be considered with care. 
 First and foremost, the privacy and consent of participants must be safeguarded.
 Linguistic data often include personal information, which can be especially difficult to anonymize. 
 While on the surface written and behavioral data may not appear to pose as many issues as audio and video recordings, which constitute a large portion of linguistic research materials, it is imperative that one consider the sources from which all types of data are derived.
-As expressed by @holten2022, if we haphazardly take language to represent trivial data points and lose focus on the individual embedded within a community, we are doomed to "dehumanize and decontextualize" it (p. 50). 
+As expressed by @holten2022, if we haphazardly take language to represent trivial data points and lose focus on the individual embedded within a community, as well as the values of said community, we are doomed to "dehumanize and decontextualize" it (p. 50). 
 This is particularly true when working with minority languages and/or marginalized communities. 
-In cases such as these, the researcher must be held accountable not only for the anonymization of participant information, but also for respecting and upholding the specific goals and restrictions put forth by the community.
-This includes, but is not limited to, the use, access and storage of all collected data. 
+In cases such as these, the researcher must be held accountable, not only for the anonymization of participant information, but also for respecting and upholding the specific goals and restrictions put forth by the community.
+This includes, but is not limited to, the use, access, and storage of all collected data. 
 In sum, careful consideration of the priorities of the researcher and the researched, which often do not align, is paramount [for more detailed views, see @adetula2022psychology; @holten2022; @hudley2020toward; @leonard2021centering; @mufwene2020decolonial; @singh2023global; @tsikewa2021reimagining, among others].
 In addition, generative artificial intelligence technologies, such as Large Language Models, are burgeoning. 
-These technologies will certainly pose currently unknown challenges in the near future that necessitate additional steps to secure the protection of sensitive data against misuse, and uphold the conditions of use put forth by the stakeholders of marignalized communities.
+These technologies will certainly pose currently unknown challenges in the near future and may necessitate additional steps to secure the protection of sensitive data against misuse, particularly regarding adherence to the original agreement of informed consent, and, importantly, in upholding the conditions of use put forth by the stakeholders in marignalized communities.
 
-> To summarize, open data is important because it facilitates transparency, rigor, reproducibility, replication, accumulation of knowledge, and, importantly, it makes participating in the scientific endeavor more inclusive. 
-According to some accounts, linguistics, in general, does not engage in open science practices, including sharing data [See @bochynska2023reproducible], though others characterize its participation in different terms. 
+As well as...
+
+> To summarize, open materials are important because they facilitate transparency, rigor, reproducibility, replication, accumulation of knowledge, and, importantly, they make participating in the scientific endeavor more inclusive. 
+According to some accounts, linguistics, in general, does not engage in open science practices, including sharing research materials [See @bochynska2023reproducible], though others characterize its participation in different terms. 
 For instance, as stated in @berez-kroeker2018 "Practitioners in different subfields 'do transparency' differently, and these practices could serve as models for an eventual amalgamated standard" (p. 9).
-While linguistics does face legitimate, field-specific challenges related to non-WEIRD communities, ultimately, the benefits of open data outnumber many of these challenges. 
-Researchers should take the stance to share what is reasonable and ethically responsible all the while holding at the forefront the priorities of the individuals from which the data are derived, especially regarding marginalized communities. 
+While linguistics does face legitimate, field-specific challenges related to non-WEIRD communities, ultimately, the benefits of open materials outnumber many of these challenges. 
+Researchers should take the stance to share what is reasonable and ethically responsible all the while holding at the forefront the priorities of the individuals from which the materials are derived, especially regarding data from marginalized communities. 
 
 Finally, we have also included discussion of incentive structure in academia and its effects on HARKing, p-hacking and early career researchers. 
 
 > Researchers have pointed to questionable research practices (QRPs), such as p-hacking--knowingly manipulating an analysis until a significant p-value is obtained [See @head2015extent]--and HARKing--hypothesizing after the results are known [See @murphy2019harking]--, along with small sample sizes, poor theory, lack of transparency, misguided incentive structure in academia, etc., as factors that ultimately led to the replication crisis, though it is likely that many factors are/were simultaneously at play. 
-To wit, many of the aforementioned QRPs may be an unfortunate consequence of misaligned incentive structures in academia, where publication is the universal currency. 
+For instance, the aforementioned QRPs may be an unfortunate consequence of misaligned incentive structures in academia, where publication is the universal currency. 
 The pervasive pressure to publish likely leads many researchers to focus on quantity over quality. 
-Couple this with the difficulty of publishing negative or null results, and the result is a research landscape in which many fields suffer from publication bias and there is little to no incentive to prioritize time consuming open science practices. 
-Taking this into account, it is not hard to understand why QRPs might be perceived as a necessary evil by some.
+Couple this with the difficulty of publishing negative or null results, and the result is a research landscape in which many fields suffer from publication bias with little or no incentive to prioritize time consuming open science practices. 
+Taking this into account, it is not hard to understand why some researchers may turn to QRPs. 
+While it is difficult to quantify how prevalent QRPs are in a given field, in a survey of applied linguists, @isbell2022misconduct found that 94% reported having engaged in one more, and 17% admitted to having committed some form of fraud. 
 
 Again, we only highlight some of the changes here, but suggest a reread of the relevant sections in the revised manuscript. 
 
