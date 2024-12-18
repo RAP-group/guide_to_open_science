@@ -152,7 +152,7 @@ theme_clean <- function(...) {
 
 # Author note {.unnumbered}
 
-Correspondence concerning this article should be addressed to Joseph V. Casillas, Rutgers University - Department of Spanish and Portuguese, 15 Seminary Place, New Brunswick, NJ 08904, USA . E-mail: joseph.casillas@rutgers.edu.
+Correspondence concerning this article should be addressed to Joseph V. Casillas, Rutgers University - Department of Spanish and Portuguese, 15 Seminary Place, New Brunswick, NJ 08904, USA. E-mail: joseph.casillas@rutgers.edu.
 
 {{< pagebreak >}}
 
@@ -216,7 +216,7 @@ We identify the following three areas of stance, workflow and dissemination, in 
 The first area, *stance*, refers to practices that focus on the researchers position or attitude towards openness and transparency. 
 The second area, *workflow*, deals with methods and techniques researchers can implement to make their research projects more open and transparent. 
 Finally, *dissemination* refers to novel ways in which researchers can help ensure that their research products are accessible and free from QRPs. 
-While our coverage of these areas cannot be exhaustive, we highlight eight open science practices within these areas: positionality statements and declarations of conflict of interest, open materials^[The idea of open materials can be viewed as both a stance (i.e., one's willingness to make materials available), and part of the workflow/dissemination process (i.e., how one goes about making materials open and accessible). We touch on this idea in each of the following sections.], reproducible code/projects and literate programming, preregistration, registered reports, and pre-prints. 
+While our coverage of these areas cannot be exhaustive, we highlight eight open science practices within these areas: positionality statements and declarations of conflict of interest, open data and materials^[The idea of open data and materials can be viewed as both a stance (i.e., one's willingness to make materials available), and part of the workflow/dissemination process (i.e., how one goes about making materials open and accessible). We touch on this idea in each of the following sections.], literate programming, reproducible code/projects, shareable computational environments, preregistration, registered reports, and pre-prints. 
 We provide practical examples and detailed descriptions of the aforementioned practices with the goal of helping the interested linguist commence their journey of engaging in open science practices in their own research. 
 Importantly, the present work should be considered a complement to the extant work fomenting open science practices in the speech sciences. 
 
@@ -258,8 +258,6 @@ mindmap
       (Pre-prints)
 ```
 -->
-
-
 
 ```{r}
 #| label: fig-os-flow
@@ -311,13 +309,13 @@ In the end, regarding one's positionality, *what* and *how* to share are fundame
 It is our stance that researchers should reflect on their positionality before starting a project, and, if and when it makes sense, consider including a positionality statement. 
 For additional information and examples of positionality statements in linguistic research, the interested reader is directed to @bochynska2023reproducible, @baeseberk_2023, and <https://fosil-project.github.io/posts/positionality-statements/>. 
 
-## Open materials
+## Open research data and materials
 
 Recent efforts have pushed for researchers to make their materials (data, code, instruments, etc.) open to the public. 
 Open data, specifically, refers to data collected for research that is freely and easily available to anybody interested in accessing it for any purpose [@open2023].
 In academic research, statements such as "data available upon request" are commonplace [See @hardwicke2018populating].
 In spite of such assurances, we now know they do not typically result in adequate sharing of research materials [@spellman2017open; @wicherts2006poor; @hardwicke2018populating].
-Recent efforts have attempted to encourage researchers to make linguistic data open and accessible via servers. 
+Researchers are increasingly encouraged to make linguistic data open and accessible via servers. 
 An illustrative example is the IRIS database (<https://www.iris-database.org>), a language sciences digital repository that is freely accessible and permits the up- and downloading of research instruments and materials.
 Additional efforts include open science badges--visual symbols offered by some journals (e.g., *Language Learning*, *Language and Speech*) on published articles. 
 These badges are awarded to researchers for adhering to certain open science principles, such as sharing code, data, or preregistering a study. 
@@ -1053,7 +1051,7 @@ As a consequence, there has been a push for increased transparency and reproduci
 The resulting methodological framework and associated techniques, now referred to as open science, have reshaped research methods in psychology and have slowly but surely made their way into adjacent fields, such as linguistics.
 While open science provides novel techniques and integrates state-of-the-art innovations, it also comes with challenges, particularly with regard to the steep learning curve researchers face when learning these new methods. 
 We advocate for the "buffet" approach, in which select open science practices are integrated into the researcher's workflow slowly over time [e.g., @bergmann2018integrate]. 
-We have provided descriptions and relevant examples of these practices to accompany the many guides already available for learning open science [e.g., @cruwell20187; @lewis2020open, <https://FOSIL-project.github.io>, among many others]. 
+We have provided descriptions and relevant examples of these practices to accompany the many guides already available for learning open science [e.g., @cruwell20187; @lewis2020open, <https://FOSIL-project.github.io>, <https://book.fosteropenscience.eu/>, among many others]. 
 
 <!--
 We leave the interested reader with a series of tutorials designed for linguists: <https://FOSIL-project.github.io>. 
