@@ -2,7 +2,7 @@
 
 # figs
 
-Last update: 2024-12-15
+Last update: 2024-12-17
 
 This directory contains all of the figures included in the manuscript.
 
@@ -20,8 +20,7 @@ This directory contains all of the figures included in the manuscript.
     ├── os-flow
     │   ├── fig-os-flow.mmd
     │   ├── fig-os-flow.png
-    │   ├── fig-os-flow_edit.png
-    │   └── fig-os-flow_edit.psd
+    │   └── fig-os-flow.psd
     ├── preprints
     │   ├── fig-pp-1.pdf
     │   └── fig-pp-1.png
