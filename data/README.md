@@ -2,7 +2,7 @@
 
 # data
 
-Last update: 2024-12-17
+Last update: 2025-04-10
 
 This directory contains the `raw` and `tidy` data directories.
 
@@ -11,11 +11,16 @@ This directory contains the `raw` and `tidy` data directories.
     ├── README.qmd
     ├── raw
     │   ├── 2024-12-14_registered_reports2_raw.csv
-    │   └── 2024-12-14_registered_reports_raw.csv
+    │   ├── 2024-12-14_registered_reports_raw.csv
+    │   ├── 2025-04-10_registered_reports2_raw.csv
+    │   └── 2025-04-10_registered_reports_raw.csv
     └── tidy
         ├── 2024-12-14_registered_reports.csv
         ├── 2024-12-15_preprints_osf.csv
-        └── 2024-12-15_preregistrations_osf.csv
+        ├── 2024-12-15_preregistrations_osf.csv
+        ├── 2025-04-10_preprints_osf.csv
+        ├── 2025-04-10_preregistrations_osf.csv
+        └── 2025-04-10_registered_reports.csv
 
 ## raw
 

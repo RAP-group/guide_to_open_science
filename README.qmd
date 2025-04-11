@@ -6,9 +6,9 @@ format: gfm
 
 Opening open science to all: Demystifying reproducibility and transparency practices in linguistic research
 
-Preprint: https://doi.org/10.31234/osf.io/spz4w  
-FOSIL website: https://fosil-project.github.io  
-RStudio server instance via CodeOcean: <add link later>
+Preprint: <https://doi.org/10.31234/osf.io/spz4w>  
+FOSIL website: <https://fosil-project.github.io>  
+RStudio server instance via CodeOcean: <https://codeocean.com/capsule/4240825/tree>
 
 
 
@@ -21,6 +21,7 @@ Last update: `r Sys.Date()`
 - First submission: 2023-12-22
 - Round 1 reviews received: 2024-05-09
 - Second submission: 2024-12-17
+- Accepted: 2025-04-06
 
 ```{r}
 #| label: dir
