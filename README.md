@@ -5,11 +5,12 @@
 Opening open science to all: Demystifying reproducibility and
 transparency practices in linguistic research
 
-Preprint: https://doi.org/10.31234/osf.io/spz4w  
-FOSIL website: https://fosil-project.github.io  
-RStudio server instance via CodeOcean: <add link later>
+Preprint: <https://doi.org/10.31234/osf.io/spz4w>  
+FOSIL website: <https://fosil-project.github.io>  
+RStudio server instance via CodeOcean:
+<https://codeocean.com/capsule/4240825/tree>
 
-Last update: 2024-12-17
+Last update: 2025-04-10
 
 **Important info**
 
@@ -18,6 +19,7 @@ Last update: 2024-12-17
 - First submission: 2023-12-22
 - Round 1 reviews received: 2024-05-09
 - Second submission: 2024-12-17
+- Accepted: 2025-04-06
 
 ``` r
 fs::dir_tree()
@@ -32,16 +34,22 @@ fs::dir_tree()
     │   ├── README.qmd
     │   ├── apa-6th-edition.csl
     │   └── os_refs.bib
+    ├── build_qmd.sh
     ├── data
     │   ├── README.md
     │   ├── README.qmd
     │   ├── raw
     │   │   ├── 2024-12-14_registered_reports2_raw.csv
-    │   │   └── 2024-12-14_registered_reports_raw.csv
+    │   │   ├── 2024-12-14_registered_reports_raw.csv
+    │   │   ├── 2025-04-10_registered_reports2_raw.csv
+    │   │   └── 2025-04-10_registered_reports_raw.csv
     │   └── tidy
     │       ├── 2024-12-14_registered_reports.csv
     │       ├── 2024-12-15_preprints_osf.csv
-    │       └── 2024-12-15_preregistrations_osf.csv
+    │       ├── 2024-12-15_preregistrations_osf.csv
+    │       ├── 2025-04-10_preprints_osf.csv
+    │       ├── 2025-04-10_preregistrations_osf.csv
+    │       └── 2025-04-10_registered_reports.csv
     ├── docs
     │   ├── README.md
     │   ├── README.qmd
@@ -71,9 +79,18 @@ fs::dir_tree()
     │       │   ├── reviewer_2.pdf
     │       │   ├── reviewer_3.Rmd
     │       │   └── reviewer_3.txt
-    │       └── 20241217_v2
-    │           ├── author_response.pdf
-    │           ├── author_response_blind.pdf
+    │       ├── 20241217_v2
+    │       │   ├── author_response.pdf
+    │       │   ├── author_response_blind.pdf
+    │       │   ├── fig-credit-1.png
+    │       │   ├── fig-dissemination-cycle.png
+    │       │   ├── fig-os-flow.png
+    │       │   ├── fig-pp-1.png
+    │       │   ├── fig-pr-1.png
+    │       │   ├── main_document.docx
+    │       │   ├── main_document_highlighted_diffs.docx
+    │       │   └── title_page.docx
+    │       └── 20250410_v3
     │           ├── fig-credit-1.png
     │           ├── fig-dissemination-cycle.png
     │           ├── fig-os-flow.png

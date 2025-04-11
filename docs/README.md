@@ -2,7 +2,7 @@
 
 # docs
 
-Last update: 2024-12-17
+Last update: 2025-04-10
 
 This directory contains the `pre-print` and `submissions` directories.
 
@@ -16,6 +16,8 @@ This directory contains the `pre-print` and `submissions` directories.
     │   ├── 20231223.pdf
     │   ├── 20241217.docx
     │   └── 20241217.pdf
+    ├── proofs
+    │   └── LING.2023.0249.R1_Proof_hi.pdf
     └── submissions
         ├── 20231222_v1
         │   ├── fig-dissemination-cycle.png
@@ -33,7 +35,18 @@ This directory contains the `pre-print` and `submissions` directories.
         │   ├── reviewer_2.pdf
         │   ├── reviewer_3.Rmd
         │   └── reviewer_3.txt
-        └── 20241217_v2
+        ├── 20241217_v2
+        │   ├── author_response.pdf
+        │   ├── author_response_blind.pdf
+        │   ├── fig-credit-1.png
+        │   ├── fig-dissemination-cycle.png
+        │   ├── fig-os-flow.png
+        │   ├── fig-pp-1.png
+        │   ├── fig-pr-1.png
+        │   ├── main_document.docx
+        │   ├── main_document_highlighted_diffs.docx
+        │   └── title_page.docx
+        └── 20250410_v3
             ├── fig-credit-1.png
             ├── fig-dissemination-cycle.png
             ├── fig-os-flow.png

@@ -2,7 +2,7 @@
 
 # tables
 
-Last update: 2024-12-17
+Last update: 2025-04-10
 
 This directory contains the csv files used to produce markdown tables in
 the manuscript, as well as the `table_draft.docx` draft file.

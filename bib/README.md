@@ -2,7 +2,7 @@
 
 # bib
 
-Last update: 2024-12-17
+Last update: 2025-04-10
 
 This directory contains the bibtex file and csl class for APA
 formatting.
