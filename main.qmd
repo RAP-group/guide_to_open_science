@@ -135,6 +135,8 @@ library("xfun")
 library("chromote")
 library("contributoR")
 
+options(chromote.headless = "new")
+
 # Set plotting theme
 theme_clean <- function(...) {
   list(
@@ -377,7 +379,7 @@ Ideally, researchers should include relevant information to contextualize the da
 The inclusion of resources at these three levels is the optimal way for authors to provide the necessary context for an independent researcher to access and utilize their materials 
 Unfortunately, most publicly available materials do not adhere to this standard. 
 For this reason, we direct the interested reader to templates provided in @lewis2024data for documentation at the project-level (<https://osf.io/q6g8d>, <https://osf.io/d3pum>), data-level (<https://osf.io/tk4cb>), and variable-level (<https://osf.io/ynqcu>). 
-In addition, the reader is referred to the project, data, and variable level documentation of the present project, all of which are freely available on the OSF: <https://osf.io/bsu2q/?view_only=68d1e41b327f4a28a9fcd0fc6537ecaf>.
+In addition, the reader is referred to the project, data, and variable level documentation of the present project, all of which are freely available on the OSF: <https://osf.io/bsu2q/>.
 
 Once the research materials have been prepared for sharing, the researcher must decide where to share them. 
 Platforms such as google drive, dropbox, etc. are not recommended because they are linked to personal accounts that may change or become unavailable over time. 
@@ -430,7 +432,7 @@ If the analysis changes in any way, e.g., more data is included, a different ana
 Currently there are several implementations of literate programming for research purposes, the most common of which are RMarkdown files (.Rmd) Quarto markdown files (.qmd), and Jupyter notebooks (.ipynb). 
 In the case of the former two, RMarkdown and Quarto, the R package `knitr` [@knitr2015; @knitr2023] tangles (also "knit" or "render") the output file. 
 Jupyter notebooks require a front-end web page and a back-end kernel. 
-The present manuscript was generated using literate programming via Quarto and is available for download on the Open Science Framework: <https://osf.io/bsu2q/?view_only=68d1e41b327f4a28a9fcd0fc6537ecaf>. 
+The present manuscript was generated using literate programming via Quarto and is available for download on the Open Science Framework: <https://osf.io/bsu2q/>. 
 Additionally, a brief tutorial in R is available at <https://fosil-project.github.io/posts/literate-programming/>.
 
 ## Reproducible code/projects
@@ -444,7 +446,7 @@ A popular choice for reproducible projects is the open source software Posit (fo
 Posit has recently released a new integrated development environment (IDE) called Positron that also works at the project-level, but has the added benefit of being relatively language-neutral. 
 That is to say, one can use R, Python, Julia, Stan, and a number of other programming languages within a single IDE. 
 More information and examples of completed reproducible projects are available to the interested reader here: <https://osf.io/un45x/>, <https://osf.io/cp9bs/>, and <https://fosil-project.github.io/posts/reproducible-code-projects/>. 
-Additionally, the project files of the present work, including data, code, and markdown files, are publicly available on the OSF: <https://osf.io/bsu2q/?view_only=68d1e41b327f4a28a9fcd0fc6537ecaf>. 
+Additionally, the project files of the present work, including data, code, and markdown files, are publicly available on the OSF: <https://osf.io/bsu2q/>. 
 
 ## Shareable computational environments
 
@@ -519,7 +521,8 @@ pr_versions <- dir_ls(
   as_tibble() 
 
 # Find most up to date version
-pr_dat <- read_csv(pull(pr_versions[nrow(pr_versions), 1]))
+pr_dat <- read_csv(pull(pr_versions[nrow(pr_versions), 1])) |> 
+  filter(year != 2025) 
 
 #
 # Generate left panel of PR figure, 'pr1'
@@ -573,7 +576,7 @@ pr2 <- pr_dat |>
     aes(x = year, y = cumsum, label = text), 
     hjust = 1, size = 3.5
   ) + 
-  geom_line() + 
+  geom_line(linewidth = 1.5, color = "#cc0033") + 
   geom_point(
     color = "white", fill = "#cc0033", 
     size = 4, pch = 21, stroke = 1
@@ -793,12 +796,12 @@ knitr::include_graphics(
 RRs were first introduced in 2013 by the Center for Open Science (COS), and have since been adopted by many journals across various fields, including psychology, neuroscience, and medicine.
 In 2019, there were approximately `r n_rr_2019` journals offering RRs. 
 This number has jumped to `r nrow(rr)` at the time of writing this manuscript, an increase of `r rr_perc_increase`%.
-Of those `r nrow(rr)`, only `r n_rr_2024[2, 2]` are journals related to language or linguistics. 
+Of those `r nrow(rr)`, only `r pull(n_rr_2024[2, 2])` are journals related to language or linguistics. 
 @tbl-rr lists the language/linguistics journals along with information regarding relevant restrictions. 
 
 ```{r}
 #| label: tbl-rr
-#| tbl-cap: Journals related to 'language' or 'linguistics' that include registered reports as a possible article submission type. The data were retrieved from the Open Science Framework on 12-14-2024. The complete list of journals is freely available at <https://www.cos.io/initiatives/registered-reports>. Empty cells indicate missing/unavailable data and TBA implies that a pending decision is 'to be announced'.
+#| tbl-cap: Journals related to 'language' or 'linguistics' that include registered reports as a possible article submission type. The data were retrieved from the Open Science Framework on 04-10-2025. The complete list of journals is freely available at <https://www.cos.io/initiatives/registered-reports>. Empty cells indicate missing/unavailable data and TBA implies that a pending decision is 'to be announced'.
 
 if(F) {
   rr |> 
@@ -896,7 +899,8 @@ pp_versions <- dir_ls(here("data", "tidy"), regexp = "preprints_osf.csv") |>
   as_tibble() 
 
 # Find most up to date version
-pp_dat <- read_csv(pull(pp_versions[nrow(pp_versions), 1]))
+pp_dat <- read_csv(pull(pp_versions[nrow(pp_versions), 1])) |> 
+  filter(year != 2025)
 
 #
 # Generate left panel of PP figure, 'pp1'
@@ -950,7 +954,7 @@ pp2 <- pp_dat |>
     aes(x = year, y = cumsum, label = text), 
     hjust = 1, size = 3.5
   ) + 
-  geom_line() + 
+  geom_line(linewidth = 1.5, color = "#cc0033") + 
   geom_point(
     color = "white", fill = "#cc0033", 
     size = 4, pch = 21, stroke = 1
@@ -1007,7 +1011,7 @@ The adoption of pre-prints has been slower in some fields, such as the social sc
 #| fig-asp: 0.45
 #| fig-width: 9
 #| fig-path: "./figs/preprints/"
-#| fig-cap: "Preprints on the Open Science Framework. The left panel plots preprints as a function of year. The right panel plots cumulative preprints since 2016. Data scraped from <https://osf.io/search> on 12-15-2024."
+#| fig-cap: "Preprints on the Open Science Framework. The left panel plots preprints as a function of year. The right panel plots cumulative preprints since 2016. Data scraped from <https://osf.io/search> on 04-10-2025."
 
 # Generate pr plot by combining 'pr1' and 'pr2'
 pp1 + pp2
@@ -1092,28 +1096,28 @@ In the present work we have outlined eight specific open science practices, clas
 
 # Create list of author contributions
 contributions <- list(
-  "001" = tibble(role = 1:14, weight = "high"),                # JVC
-  "002" = tibble(role = c(1, 13, 14), weight = "low"),         # GCD
-  "003" = tibble(                                              # IRA
+  "JVC" = tibble(role = 1:14, weight = "high"), 
+  "GCD" = tibble(role = c(1, 13, 14), weight = "low"), 
+  "IRA" = tibble( 
       role = c(1, 2, 7, 13, 14), 
       weight = c("low", "low", "high", "low", "low")
     ), 
-  "004" = tibble(                                              # JS
+  "JS" = tibble( 
       role = c(1, 7, 13, 14), 
       weight = c("low", "high", "high", "low")
     ), 
-  "005" = tibble(role = c(13, 14), weight = c("low", "high")), # SR
-  "006" = tibble(role = 13, weight = "low"),                   # AG
-  "007" = tibble(role = 13, weight = "low"),                   # AM
-  "008" = tibble(role = 13, weight = "low"),                   # KL
-  "009" = tibble(role = 13, weight = "low"),                   # JT
-  "010" = tibble(role = 13, weight = "low"),                   # RTG
-  "011" = tibble(role = 13, weight = "low"),                   # KT
-  "012" = tibble(role = 13, weight = "low"),                   # IC
-  "013" = tibble(role = c(1, 13, 14), weight = "low"),         # NR
-  "014" = tibble(role = c(1, 7, 13, 14), weight = "low"),      # KP
-  "015" = tibble(role = 14, weight = "high"),                  # MFR
-  "016" = tibble(role = c(1, 14), weight = c("low", "high"))   # RE
+  "SR" = tibble(role = c(13, 14), weight = c("low", "high")), 
+  "AG" = tibble(role = 13, weight = "low"), 
+  "AM" = tibble(role = 13, weight = "low"), 
+  "KL" = tibble(role = 13, weight = "low"), 
+  "JT" = tibble(role = 13, weight = "low"), 
+  "RTG" = tibble(role = 13, weight = "low"), 
+  "KT" = tibble(role = 13, weight = "low"), 
+  "IC" = tibble(role = 13, weight = "low"), 
+  "NR" = tibble(role = c(1, 13, 14), weight = "low"), 
+  "KP" = tibble(role = c(1, 7, 13, 14), weight = "low"), 
+  "MFR" = tibble(role = 14, weight = "high"), 
+  "RE" = tibble(role = c(1, 14), weight = c("low", "high")) 
   )
 
 # Generate contributors plot
