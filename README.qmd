@@ -8,7 +8,7 @@ Opening open science to all: Demystifying reproducibility and transparency pract
 
 Preprint: <https://doi.org/10.31234/osf.io/spz4w>  
 FOSIL website: <https://fosil-project.github.io>  
-RStudio server instance via CodeOcean: <https://codeocean.com/capsule/4240825/tree>
+RStudio server instance via CodeOcean: <https://codeocean.com/capsule/2385779/tree>
 
 
 

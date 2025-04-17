@@ -8,9 +8,9 @@ transparency practices in linguistic research
 Preprint: <https://doi.org/10.31234/osf.io/spz4w>  
 FOSIL website: <https://fosil-project.github.io>  
 RStudio server instance via CodeOcean:
-<https://codeocean.com/capsule/4240825/tree>
+<https://codeocean.com/capsule/2385779/tree>
 
-Last update: 2025-04-10
+Last update: 2025-04-17
 
 **Important info**
 
@@ -61,6 +61,7 @@ fs::dir_tree()
     │   │   ├── 20241217.docx
     │   │   └── 20241217.pdf
     │   ├── proofs
+    │   │   ├── Attached standard file_ main_document[CE][2025-04-11].docx
     │   │   └── LING.2023.0249.R1_Proof_hi.pdf
     │   └── submissions
     │       ├── 20231222_v1
